@@ -31,28 +31,40 @@ func NewCT_TransformEffect() *CT_TransformEffect {
 
 func (m *CT_TransformEffect) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.SxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sx"},
-			Value: fmt.Sprintf("%v", *m.SxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sx"},
+			Value: fmt.Sprintf("%v", *m.SxAttr),
+		})
 	}
 	if m.SyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sy"},
-			Value: fmt.Sprintf("%v", *m.SyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sy"},
+			Value: fmt.Sprintf("%v", *m.SyAttr),
+		})
 	}
 	if m.KxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "kx"},
-			Value: fmt.Sprintf("%v", *m.KxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "kx"},
+			Value: fmt.Sprintf("%v", *m.KxAttr),
+		})
 	}
 	if m.KyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ky"},
-			Value: fmt.Sprintf("%v", *m.KyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ky"},
+			Value: fmt.Sprintf("%v", *m.KyAttr),
+		})
 	}
 	if m.TxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tx"},
-			Value: fmt.Sprintf("%v", *m.TxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tx"},
+			Value: fmt.Sprintf("%v", *m.TxAttr),
+		})
 	}
 	if m.TyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ty"},
-			Value: fmt.Sprintf("%v", *m.TyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ty"},
+			Value: fmt.Sprintf("%v", *m.TyAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

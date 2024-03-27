@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_AnchorLock struct {
-}
+type CT_AnchorLock struct{}
 
 func NewCT_AnchorLock() *CT_AnchorLock {
 	ret := &CT_AnchorLock{}

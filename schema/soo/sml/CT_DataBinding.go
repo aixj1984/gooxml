@@ -38,23 +38,33 @@ func NewCT_DataBinding() *CT_DataBinding {
 
 func (m *CT_DataBinding) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DataBindingNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "DataBindingName"},
-			Value: fmt.Sprintf("%v", *m.DataBindingNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "DataBindingName"},
+			Value: fmt.Sprintf("%v", *m.DataBindingNameAttr),
+		})
 	}
 	if m.FileBindingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "FileBinding"},
-			Value: fmt.Sprintf("%d", b2i(*m.FileBindingAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "FileBinding"},
+			Value: fmt.Sprintf("%d", b2i(*m.FileBindingAttr)),
+		})
 	}
 	if m.ConnectionIDAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ConnectionID"},
-			Value: fmt.Sprintf("%v", *m.ConnectionIDAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ConnectionID"},
+			Value: fmt.Sprintf("%v", *m.ConnectionIDAttr),
+		})
 	}
 	if m.FileBindingNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "FileBindingName"},
-			Value: fmt.Sprintf("%v", *m.FileBindingNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "FileBindingName"},
+			Value: fmt.Sprintf("%v", *m.FileBindingNameAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "DataBindingLoadMode"},
-		Value: fmt.Sprintf("%v", m.DataBindingLoadModeAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "DataBindingLoadMode"},
+		Value: fmt.Sprintf("%v", m.DataBindingLoadModeAttr),
+	})
 	e.EncodeToken(start)
 	if m.Any != nil {
 		m.Any.MarshalXML(e, xml.StartElement{})

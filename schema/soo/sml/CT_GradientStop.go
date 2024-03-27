@@ -31,8 +31,10 @@ func NewCT_GradientStop() *CT_GradientStop {
 }
 
 func (m *CT_GradientStop) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "position"},
-		Value: fmt.Sprintf("%v", m.PositionAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "position"},
+		Value: fmt.Sprintf("%v", m.PositionAttr),
+	})
 	e.EncodeToken(start)
 	secolor := xml.StartElement{Name: xml.Name{Local: "ma:color"}}
 	e.EncodeElement(m.Color, secolor)

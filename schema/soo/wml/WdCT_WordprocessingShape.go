@@ -39,8 +39,10 @@ func NewWdCT_WordprocessingShape() *WdCT_WordprocessingShape {
 
 func (m *WdCT_WordprocessingShape) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NormalEastAsianFlowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "normalEastAsianFlow"},
-			Value: fmt.Sprintf("%d", b2i(*m.NormalEastAsianFlowAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "normalEastAsianFlow"},
+			Value: fmt.Sprintf("%d", b2i(*m.NormalEastAsianFlowAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.CNvPr != nil {

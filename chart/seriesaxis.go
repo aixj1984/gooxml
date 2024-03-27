@@ -23,7 +23,6 @@ func (s SeriesAxis) X() *crt.CT_SerAx {
 }
 
 func (s SeriesAxis) InitializeDefaults() {
-
 }
 
 func (s SeriesAxis) AxisID() uint32 {

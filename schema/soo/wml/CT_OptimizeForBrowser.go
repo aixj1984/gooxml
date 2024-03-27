@@ -29,12 +29,16 @@ func NewCT_OptimizeForBrowser() *CT_OptimizeForBrowser {
 
 func (m *CT_OptimizeForBrowser) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.TargetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:target"},
-			Value: fmt.Sprintf("%v", *m.TargetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:target"},
+			Value: fmt.Sprintf("%v", *m.TargetAttr),
+		})
 	}
 	if m.ValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:val"},
-			Value: fmt.Sprintf("%v", *m.ValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:val"},
+			Value: fmt.Sprintf("%v", *m.ValAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

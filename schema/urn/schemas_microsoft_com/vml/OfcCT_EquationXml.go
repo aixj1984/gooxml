@@ -28,8 +28,10 @@ func NewOfcCT_EquationXml() *OfcCT_EquationXml {
 
 func (m *OfcCT_EquationXml) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ContentTypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "contentType"},
-			Value: fmt.Sprintf("%v", *m.ContentTypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "contentType"},
+			Value: fmt.Sprintf("%v", *m.ContentTypeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Any != nil {

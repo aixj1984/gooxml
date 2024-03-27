@@ -25,8 +25,10 @@ func NewCT_LineJoinMiterProperties() *CT_LineJoinMiterProperties {
 
 func (m *CT_LineJoinMiterProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.LimAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lim"},
-			Value: fmt.Sprintf("%v", *m.LimAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lim"},
+			Value: fmt.Sprintf("%v", *m.LimAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type WdCT_WrapNone struct {
-}
+type WdCT_WrapNone struct{}
 
 func NewWdCT_WrapNone() *WdCT_WrapNone {
 	ret := &WdCT_WrapNone{}

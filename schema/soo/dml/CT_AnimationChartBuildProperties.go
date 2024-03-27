@@ -27,12 +27,16 @@ func NewCT_AnimationChartBuildProperties() *CT_AnimationChartBuildProperties {
 
 func (m *CT_AnimationChartBuildProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.BldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bld"},
-			Value: fmt.Sprintf("%v", *m.BldAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bld"},
+			Value: fmt.Sprintf("%v", *m.BldAttr),
+		})
 	}
 	if m.AnimBgAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "animBg"},
-			Value: fmt.Sprintf("%d", b2i(*m.AnimBgAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "animBg"},
+			Value: fmt.Sprintf("%d", b2i(*m.AnimBgAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

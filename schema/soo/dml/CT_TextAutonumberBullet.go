@@ -33,8 +33,10 @@ func (m *CT_TextAutonumberBullet) MarshalXML(e *xml.Encoder, start xml.StartElem
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.StartAtAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "startAt"},
-			Value: fmt.Sprintf("%v", *m.StartAtAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "startAt"},
+			Value: fmt.Sprintf("%v", *m.StartAtAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

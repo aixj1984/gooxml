@@ -27,14 +27,22 @@ func NewCT_Path2DArcTo() *CT_Path2DArcTo {
 }
 
 func (m *CT_Path2DArcTo) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "wR"},
-		Value: fmt.Sprintf("%v", m.WRAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hR"},
-		Value: fmt.Sprintf("%v", m.HRAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "stAng"},
-		Value: fmt.Sprintf("%v", m.StAngAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "swAng"},
-		Value: fmt.Sprintf("%v", m.SwAngAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "wR"},
+		Value: fmt.Sprintf("%v", m.WRAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "hR"},
+		Value: fmt.Sprintf("%v", m.HRAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "stAng"},
+		Value: fmt.Sprintf("%v", m.StAngAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "swAng"},
+		Value: fmt.Sprintf("%v", m.SwAngAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

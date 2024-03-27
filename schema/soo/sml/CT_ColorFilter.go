@@ -29,12 +29,16 @@ func NewCT_ColorFilter() *CT_ColorFilter {
 
 func (m *CT_ColorFilter) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DxfIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dxfId"},
-			Value: fmt.Sprintf("%v", *m.DxfIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dxfId"},
+			Value: fmt.Sprintf("%v", *m.DxfIdAttr),
+		})
 	}
 	if m.CellColorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cellColor"},
-			Value: fmt.Sprintf("%d", b2i(*m.CellColorAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cellColor"},
+			Value: fmt.Sprintf("%d", b2i(*m.CellColorAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

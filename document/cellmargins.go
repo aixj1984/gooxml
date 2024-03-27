@@ -24,6 +24,7 @@ func setCellMarginPercent(w *wml.CT_TblWidth, pct float64) {
 	w.WAttr.ST_DecimalNumberOrPercent = &wml.ST_DecimalNumberOrPercent{}
 	w.WAttr.ST_DecimalNumberOrPercent.ST_UnqualifiedPercentage = gooxml.Int64(int64(pct * 50))
 }
+
 func setCellMargin(w *wml.CT_TblWidth, d measurement.Distance) {
 	w.TypeAttr = wml.ST_TblWidthDxa
 	w.WAttr = &wml.ST_MeasurementOrPercent{}

@@ -36,24 +36,34 @@ func NewCT_FileVersion() *CT_FileVersion {
 
 func (m *CT_FileVersion) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.AppNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "appName"},
-			Value: fmt.Sprintf("%v", *m.AppNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "appName"},
+			Value: fmt.Sprintf("%v", *m.AppNameAttr),
+		})
 	}
 	if m.LastEditedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lastEdited"},
-			Value: fmt.Sprintf("%v", *m.LastEditedAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lastEdited"},
+			Value: fmt.Sprintf("%v", *m.LastEditedAttr),
+		})
 	}
 	if m.LowestEditedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lowestEdited"},
-			Value: fmt.Sprintf("%v", *m.LowestEditedAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lowestEdited"},
+			Value: fmt.Sprintf("%v", *m.LowestEditedAttr),
+		})
 	}
 	if m.RupBuildAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rupBuild"},
-			Value: fmt.Sprintf("%v", *m.RupBuildAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rupBuild"},
+			Value: fmt.Sprintf("%v", *m.RupBuildAttr),
+		})
 	}
 	if m.CodeNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "codeName"},
-			Value: fmt.Sprintf("%v", *m.CodeNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "codeName"},
+			Value: fmt.Sprintf("%v", *m.CodeNameAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

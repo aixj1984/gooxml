@@ -26,8 +26,10 @@ func NewCT_FunctionGroup() *CT_FunctionGroup {
 
 func (m *CT_FunctionGroup) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

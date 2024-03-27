@@ -34,12 +34,16 @@ func NewCT_ConditionalFormatting() *CT_ConditionalFormatting {
 
 func (m *CT_ConditionalFormatting) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PivotAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "pivot"},
-			Value: fmt.Sprintf("%d", b2i(*m.PivotAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "pivot"},
+			Value: fmt.Sprintf("%d", b2i(*m.PivotAttr)),
+		})
 	}
 	if m.SqrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sqref"},
-			Value: fmt.Sprintf("%v", *m.SqrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sqref"},
+			Value: fmt.Sprintf("%v", *m.SqrefAttr),
+		})
 	}
 	e.EncodeToken(start)
 	secfRule := xml.StartElement{Name: xml.Name{Local: "ma:cfRule"}}

@@ -38,12 +38,16 @@ func (m *WdCT_WrapTight) MarshalXML(e *xml.Encoder, start xml.StartElement) erro
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.DistLAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "distL"},
-			Value: fmt.Sprintf("%v", *m.DistLAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "distL"},
+			Value: fmt.Sprintf("%v", *m.DistLAttr),
+		})
 	}
 	if m.DistRAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "distR"},
-			Value: fmt.Sprintf("%v", *m.DistRAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "distR"},
+			Value: fmt.Sprintf("%v", *m.DistRAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sewrapPolygon := xml.StartElement{Name: xml.Name{Local: "wp:wrapPolygon"}}

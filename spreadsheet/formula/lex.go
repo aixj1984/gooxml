@@ -35,6 +35,7 @@ func printable(s string) string {
 	s = strings.Replace(s, "\t", "\\t", -1)
 	return s
 }
+
 func (n node) String() string {
 	return fmt.Sprintf("{%s %s}", n.token, printable(string(n.val)))
 }

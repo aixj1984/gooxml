@@ -36,5 +36,4 @@ func TestHeaderRemoveParagraph(t *testing.T) {
 			t.Errorf("expected no paragraphs, found %d", len(hdr.Paragraphs()))
 		}
 	}
-
 }

@@ -54,51 +54,75 @@ func NewCT_RevisionHeaders() *CT_RevisionHeaders {
 }
 
 func (m *CT_RevisionHeaders) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "guid"},
-		Value: fmt.Sprintf("%v", m.GuidAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "guid"},
+		Value: fmt.Sprintf("%v", m.GuidAttr),
+	})
 	if m.LastGuidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lastGuid"},
-			Value: fmt.Sprintf("%v", *m.LastGuidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lastGuid"},
+			Value: fmt.Sprintf("%v", *m.LastGuidAttr),
+		})
 	}
 	if m.SharedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "shared"},
-			Value: fmt.Sprintf("%d", b2i(*m.SharedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "shared"},
+			Value: fmt.Sprintf("%d", b2i(*m.SharedAttr)),
+		})
 	}
 	if m.DiskRevisionsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "diskRevisions"},
-			Value: fmt.Sprintf("%d", b2i(*m.DiskRevisionsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "diskRevisions"},
+			Value: fmt.Sprintf("%d", b2i(*m.DiskRevisionsAttr)),
+		})
 	}
 	if m.HistoryAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "history"},
-			Value: fmt.Sprintf("%d", b2i(*m.HistoryAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "history"},
+			Value: fmt.Sprintf("%d", b2i(*m.HistoryAttr)),
+		})
 	}
 	if m.TrackRevisionsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "trackRevisions"},
-			Value: fmt.Sprintf("%d", b2i(*m.TrackRevisionsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "trackRevisions"},
+			Value: fmt.Sprintf("%d", b2i(*m.TrackRevisionsAttr)),
+		})
 	}
 	if m.ExclusiveAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "exclusive"},
-			Value: fmt.Sprintf("%d", b2i(*m.ExclusiveAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "exclusive"},
+			Value: fmt.Sprintf("%d", b2i(*m.ExclusiveAttr)),
+		})
 	}
 	if m.RevisionIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "revisionId"},
-			Value: fmt.Sprintf("%v", *m.RevisionIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "revisionId"},
+			Value: fmt.Sprintf("%v", *m.RevisionIdAttr),
+		})
 	}
 	if m.VersionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "version"},
-			Value: fmt.Sprintf("%v", *m.VersionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "version"},
+			Value: fmt.Sprintf("%v", *m.VersionAttr),
+		})
 	}
 	if m.KeepChangeHistoryAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "keepChangeHistory"},
-			Value: fmt.Sprintf("%d", b2i(*m.KeepChangeHistoryAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "keepChangeHistory"},
+			Value: fmt.Sprintf("%d", b2i(*m.KeepChangeHistoryAttr)),
+		})
 	}
 	if m.ProtectedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "protected"},
-			Value: fmt.Sprintf("%d", b2i(*m.ProtectedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "protected"},
+			Value: fmt.Sprintf("%d", b2i(*m.ProtectedAttr)),
+		})
 	}
 	if m.PreserveHistoryAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "preserveHistory"},
-			Value: fmt.Sprintf("%v", *m.PreserveHistoryAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "preserveHistory"},
+			Value: fmt.Sprintf("%v", *m.PreserveHistoryAttr),
+		})
 	}
 	e.EncodeToken(start)
 	seheader := xml.StartElement{Name: xml.Name{Local: "ma:header"}}

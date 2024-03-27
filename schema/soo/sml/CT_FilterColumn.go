@@ -45,15 +45,21 @@ func NewCT_FilterColumn() *CT_FilterColumn {
 }
 
 func (m *CT_FilterColumn) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "colId"},
-		Value: fmt.Sprintf("%v", m.ColIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "colId"},
+		Value: fmt.Sprintf("%v", m.ColIdAttr),
+	})
 	if m.HiddenButtonAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hiddenButton"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenButtonAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hiddenButton"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenButtonAttr)),
+		})
 	}
 	if m.ShowButtonAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showButton"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowButtonAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showButton"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowButtonAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Filters != nil {

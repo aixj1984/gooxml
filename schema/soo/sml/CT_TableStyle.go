@@ -36,19 +36,27 @@ func NewCT_TableStyle() *CT_TableStyle {
 }
 
 func (m *CT_TableStyle) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.PivotAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "pivot"},
-			Value: fmt.Sprintf("%d", b2i(*m.PivotAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "pivot"},
+			Value: fmt.Sprintf("%d", b2i(*m.PivotAttr)),
+		})
 	}
 	if m.TableAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "table"},
-			Value: fmt.Sprintf("%d", b2i(*m.TableAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "table"},
+			Value: fmt.Sprintf("%d", b2i(*m.TableAttr)),
+		})
 	}
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TableStyleElement != nil {

@@ -33,8 +33,10 @@ func NewCT_SlideSorterViewProperties() *CT_SlideSorterViewProperties {
 
 func (m *CT_SlideSorterViewProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ShowFormattingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showFormatting"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowFormattingAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showFormatting"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowFormattingAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	secViewPr := xml.StartElement{Name: xml.Name{Local: "p:cViewPr"}}

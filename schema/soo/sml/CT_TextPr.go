@@ -61,8 +61,10 @@ func NewCT_TextPr() *CT_TextPr {
 
 func (m *CT_TextPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PromptAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "prompt"},
-			Value: fmt.Sprintf("%d", b2i(*m.PromptAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "prompt"},
+			Value: fmt.Sprintf("%d", b2i(*m.PromptAttr)),
+		})
 	}
 	if m.FileTypeAttr != ST_FileTypeUnset {
 		attr, err := m.FileTypeAttr.MarshalXMLAttr(xml.Name{Local: "fileType"})
@@ -72,52 +74,76 @@ func (m *CT_TextPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.CodePageAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "codePage"},
-			Value: fmt.Sprintf("%v", *m.CodePageAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "codePage"},
+			Value: fmt.Sprintf("%v", *m.CodePageAttr),
+		})
 	}
 	if m.CharacterSetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "characterSet"},
-			Value: fmt.Sprintf("%v", *m.CharacterSetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "characterSet"},
+			Value: fmt.Sprintf("%v", *m.CharacterSetAttr),
+		})
 	}
 	if m.FirstRowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "firstRow"},
-			Value: fmt.Sprintf("%v", *m.FirstRowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "firstRow"},
+			Value: fmt.Sprintf("%v", *m.FirstRowAttr),
+		})
 	}
 	if m.SourceFileAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sourceFile"},
-			Value: fmt.Sprintf("%v", *m.SourceFileAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sourceFile"},
+			Value: fmt.Sprintf("%v", *m.SourceFileAttr),
+		})
 	}
 	if m.DelimitedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "delimited"},
-			Value: fmt.Sprintf("%d", b2i(*m.DelimitedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "delimited"},
+			Value: fmt.Sprintf("%d", b2i(*m.DelimitedAttr)),
+		})
 	}
 	if m.DecimalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "decimal"},
-			Value: fmt.Sprintf("%v", *m.DecimalAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "decimal"},
+			Value: fmt.Sprintf("%v", *m.DecimalAttr),
+		})
 	}
 	if m.ThousandsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "thousands"},
-			Value: fmt.Sprintf("%v", *m.ThousandsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "thousands"},
+			Value: fmt.Sprintf("%v", *m.ThousandsAttr),
+		})
 	}
 	if m.TabAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tab"},
-			Value: fmt.Sprintf("%d", b2i(*m.TabAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tab"},
+			Value: fmt.Sprintf("%d", b2i(*m.TabAttr)),
+		})
 	}
 	if m.SpaceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "space"},
-			Value: fmt.Sprintf("%d", b2i(*m.SpaceAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "space"},
+			Value: fmt.Sprintf("%d", b2i(*m.SpaceAttr)),
+		})
 	}
 	if m.CommaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "comma"},
-			Value: fmt.Sprintf("%d", b2i(*m.CommaAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "comma"},
+			Value: fmt.Sprintf("%d", b2i(*m.CommaAttr)),
+		})
 	}
 	if m.SemicolonAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "semicolon"},
-			Value: fmt.Sprintf("%d", b2i(*m.SemicolonAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "semicolon"},
+			Value: fmt.Sprintf("%d", b2i(*m.SemicolonAttr)),
+		})
 	}
 	if m.ConsecutiveAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "consecutive"},
-			Value: fmt.Sprintf("%d", b2i(*m.ConsecutiveAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "consecutive"},
+			Value: fmt.Sprintf("%d", b2i(*m.ConsecutiveAttr)),
+		})
 	}
 	if m.QualifierAttr != ST_QualifierUnset {
 		attr, err := m.QualifierAttr.MarshalXMLAttr(xml.Name{Local: "qualifier"})
@@ -127,8 +153,10 @@ func (m *CT_TextPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DelimiterAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "delimiter"},
-			Value: fmt.Sprintf("%v", *m.DelimiterAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "delimiter"},
+			Value: fmt.Sprintf("%v", *m.DelimiterAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TextFields != nil {

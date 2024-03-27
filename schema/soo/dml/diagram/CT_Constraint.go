@@ -47,12 +47,16 @@ func (m *CT_Constraint) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "val"},
-			Value: fmt.Sprintf("%v", *m.ValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "val"},
+			Value: fmt.Sprintf("%v", *m.ValAttr),
+		})
 	}
 	if m.FactAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fact"},
-			Value: fmt.Sprintf("%v", *m.FactAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fact"},
+			Value: fmt.Sprintf("%v", *m.FactAttr),
+		})
 	}
 	if m.TypeAttr != ST_ConstraintTypeUnset {
 		attr, err := m.TypeAttr.MarshalXMLAttr(xml.Name{Local: "type"})
@@ -69,8 +73,10 @@ func (m *CT_Constraint) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ForNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "forName"},
-			Value: fmt.Sprintf("%v", *m.ForNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "forName"},
+			Value: fmt.Sprintf("%v", *m.ForNameAttr),
+		})
 	}
 	if m.PtTypeAttr != ST_ElementTypeUnset {
 		attr, err := m.PtTypeAttr.MarshalXMLAttr(xml.Name{Local: "ptType"})
@@ -94,8 +100,10 @@ func (m *CT_Constraint) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RefForNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refForName"},
-			Value: fmt.Sprintf("%v", *m.RefForNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refForName"},
+			Value: fmt.Sprintf("%v", *m.RefForNameAttr),
+		})
 	}
 	if m.RefPtTypeAttr != ST_ElementTypeUnset {
 		attr, err := m.RefPtTypeAttr.MarshalXMLAttr(xml.Name{Local: "refPtType"})

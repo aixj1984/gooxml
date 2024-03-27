@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_TableMissing struct {
-}
+type CT_TableMissing struct{}
 
 func NewCT_TableMissing() *CT_TableMissing {
 	ret := &CT_TableMissing{}

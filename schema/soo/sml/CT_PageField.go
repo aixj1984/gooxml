@@ -38,23 +38,33 @@ func NewCT_PageField() *CT_PageField {
 }
 
 func (m *CT_PageField) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fld"},
-		Value: fmt.Sprintf("%v", m.FldAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "fld"},
+		Value: fmt.Sprintf("%v", m.FldAttr),
+	})
 	if m.ItemAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "item"},
-			Value: fmt.Sprintf("%v", *m.ItemAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "item"},
+			Value: fmt.Sprintf("%v", *m.ItemAttr),
+		})
 	}
 	if m.HierAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hier"},
-			Value: fmt.Sprintf("%v", *m.HierAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hier"},
+			Value: fmt.Sprintf("%v", *m.HierAttr),
+		})
 	}
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.CapAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cap"},
-			Value: fmt.Sprintf("%v", *m.CapAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cap"},
+			Value: fmt.Sprintf("%v", *m.CapAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

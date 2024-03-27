@@ -26,11 +26,15 @@ func NewCT_NumFmt() *CT_NumFmt {
 }
 
 func (m *CT_NumFmt) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "formatCode"},
-		Value: fmt.Sprintf("%v", m.FormatCodeAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "formatCode"},
+		Value: fmt.Sprintf("%v", m.FormatCodeAttr),
+	})
 	if m.SourceLinkedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sourceLinked"},
-			Value: fmt.Sprintf("%d", b2i(*m.SourceLinkedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sourceLinked"},
+			Value: fmt.Sprintf("%d", b2i(*m.SourceLinkedAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

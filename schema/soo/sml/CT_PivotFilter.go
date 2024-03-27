@@ -53,11 +53,15 @@ func NewCT_PivotFilter() *CT_PivotFilter {
 }
 
 func (m *CT_PivotFilter) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fld"},
-		Value: fmt.Sprintf("%v", m.FldAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "fld"},
+		Value: fmt.Sprintf("%v", m.FldAttr),
+	})
 	if m.MpFldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "mpFld"},
-			Value: fmt.Sprintf("%v", *m.MpFldAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "mpFld"},
+			Value: fmt.Sprintf("%v", *m.MpFldAttr),
+		})
 	}
 	attr, err := m.TypeAttr.MarshalXMLAttr(xml.Name{Local: "type"})
 	if err != nil {
@@ -65,34 +69,50 @@ func (m *CT_PivotFilter) MarshalXML(e *xml.Encoder, start xml.StartElement) erro
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.EvalOrderAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "evalOrder"},
-			Value: fmt.Sprintf("%v", *m.EvalOrderAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "evalOrder"},
+			Value: fmt.Sprintf("%v", *m.EvalOrderAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.IMeasureHierAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "iMeasureHier"},
-			Value: fmt.Sprintf("%v", *m.IMeasureHierAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "iMeasureHier"},
+			Value: fmt.Sprintf("%v", *m.IMeasureHierAttr),
+		})
 	}
 	if m.IMeasureFldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "iMeasureFld"},
-			Value: fmt.Sprintf("%v", *m.IMeasureFldAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "iMeasureFld"},
+			Value: fmt.Sprintf("%v", *m.IMeasureFldAttr),
+		})
 	}
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.DescriptionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "description"},
-			Value: fmt.Sprintf("%v", *m.DescriptionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "description"},
+			Value: fmt.Sprintf("%v", *m.DescriptionAttr),
+		})
 	}
 	if m.StringValue1Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "stringValue1"},
-			Value: fmt.Sprintf("%v", *m.StringValue1Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "stringValue1"},
+			Value: fmt.Sprintf("%v", *m.StringValue1Attr),
+		})
 	}
 	if m.StringValue2Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "stringValue2"},
-			Value: fmt.Sprintf("%v", *m.StringValue2Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "stringValue2"},
+			Value: fmt.Sprintf("%v", *m.StringValue2Attr),
+		})
 	}
 	e.EncodeToken(start)
 	seautoFilter := xml.StartElement{Name: xml.Name{Local: "ma:autoFilter"}}

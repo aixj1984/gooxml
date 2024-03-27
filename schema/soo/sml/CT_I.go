@@ -42,12 +42,16 @@ func (m *CT_I) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-			Value: fmt.Sprintf("%v", *m.RAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r"},
+			Value: fmt.Sprintf("%v", *m.RAttr),
+		})
 	}
 	if m.IAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "i"},
-			Value: fmt.Sprintf("%v", *m.IAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "i"},
+			Value: fmt.Sprintf("%v", *m.IAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.X != nil {

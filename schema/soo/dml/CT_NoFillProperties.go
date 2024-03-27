@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_NoFillProperties struct {
-}
+type CT_NoFillProperties struct{}
 
 func NewCT_NoFillProperties() *CT_NoFillProperties {
 	ret := &CT_NoFillProperties{}

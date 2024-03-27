@@ -29,7 +29,7 @@ var update = flag.Bool("test.update", false, "update golden file")
 func CompareGoldenXML(t *testing.T, expectedFn string, got []byte) {
 	golden := filepath.Join("testdata", expectedFn)
 	if *update {
-		if err := ioutil.WriteFile(golden, got, 0644); err != nil {
+		if err := ioutil.WriteFile(golden, got, 0o644); err != nil {
 			t.Fatal(err)
 		}
 	}
@@ -67,7 +67,7 @@ func CompareZip(t *testing.T, expectedFn string, got []byte, cmpFileContents boo
 func CompareGoldenZipFilesOnly(t *testing.T, expectedFn string, got []byte) {
 	golden := filepath.Join("testdata", expectedFn)
 	if *update {
-		if err := ioutil.WriteFile(golden, got, 0644); err != nil {
+		if err := ioutil.WriteFile(golden, got, 0o644); err != nil {
 			t.Fatal(err)
 		}
 	}
@@ -77,7 +77,7 @@ func CompareGoldenZipFilesOnly(t *testing.T, expectedFn string, got []byte) {
 func CompareGoldenZip(t *testing.T, expectedFn string, got []byte) {
 	golden := filepath.Join("testdata", expectedFn)
 	if *update {
-		if err := ioutil.WriteFile(golden, got, 0644); err != nil {
+		if err := ioutil.WriteFile(golden, got, 0o644); err != nil {
 			t.Fatal(err)
 		}
 	}
@@ -144,7 +144,6 @@ func compareFiles(exp, got *zip.File) func(t *testing.T) {
 			fmt.Println(string(gotAll))
 			t.Errorf("mismatched contents %d vs %d", len(expAll), len(gotAll))
 		}
-
 	}
 }
 
@@ -177,9 +176,9 @@ func xmlIndentFile(fn string) error {
 
 func dumpXmlDiff(t *testing.T, exp, got []byte) {
 	expF := tempFilePath("expected")
-	ioutil.WriteFile(expF, exp, 0644)
+	ioutil.WriteFile(expF, exp, 0o644)
 	gotF := tempFilePath("got")
-	ioutil.WriteFile(gotF, got, 0644)
+	ioutil.WriteFile(gotF, got, 0o644)
 
 	xmlIndentFile(expF)
 	xmlIndentFile(gotF)

@@ -55,52 +55,76 @@ func NewCT_Row() *CT_Row {
 
 func (m *CT_Row) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-			Value: fmt.Sprintf("%v", *m.RAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r"},
+			Value: fmt.Sprintf("%v", *m.RAttr),
+		})
 	}
 	if m.SpansAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spans"},
-			Value: fmt.Sprintf("%v", *m.SpansAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spans"},
+			Value: fmt.Sprintf("%v", *m.SpansAttr),
+		})
 	}
 	if m.SAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "s"},
-			Value: fmt.Sprintf("%v", *m.SAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "s"},
+			Value: fmt.Sprintf("%v", *m.SAttr),
+		})
 	}
 	if m.CustomFormatAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "customFormat"},
-			Value: fmt.Sprintf("%d", b2i(*m.CustomFormatAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "customFormat"},
+			Value: fmt.Sprintf("%d", b2i(*m.CustomFormatAttr)),
+		})
 	}
 	if m.HtAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ht"},
-			Value: fmt.Sprintf("%v", *m.HtAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ht"},
+			Value: fmt.Sprintf("%v", *m.HtAttr),
+		})
 	}
 	if m.HiddenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hidden"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hidden"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr)),
+		})
 	}
 	if m.CustomHeightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "customHeight"},
-			Value: fmt.Sprintf("%d", b2i(*m.CustomHeightAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "customHeight"},
+			Value: fmt.Sprintf("%d", b2i(*m.CustomHeightAttr)),
+		})
 	}
 	if m.OutlineLevelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "outlineLevel"},
-			Value: fmt.Sprintf("%v", *m.OutlineLevelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "outlineLevel"},
+			Value: fmt.Sprintf("%v", *m.OutlineLevelAttr),
+		})
 	}
 	if m.CollapsedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "collapsed"},
-			Value: fmt.Sprintf("%d", b2i(*m.CollapsedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "collapsed"},
+			Value: fmt.Sprintf("%d", b2i(*m.CollapsedAttr)),
+		})
 	}
 	if m.ThickTopAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "thickTop"},
-			Value: fmt.Sprintf("%d", b2i(*m.ThickTopAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "thickTop"},
+			Value: fmt.Sprintf("%d", b2i(*m.ThickTopAttr)),
+		})
 	}
 	if m.ThickBotAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "thickBot"},
-			Value: fmt.Sprintf("%d", b2i(*m.ThickBotAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "thickBot"},
+			Value: fmt.Sprintf("%d", b2i(*m.ThickBotAttr)),
+		})
 	}
 	if m.PhAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ph"},
-			Value: fmt.Sprintf("%d", b2i(*m.PhAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ph"},
+			Value: fmt.Sprintf("%d", b2i(*m.PhAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.C != nil {

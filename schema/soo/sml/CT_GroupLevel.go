@@ -38,17 +38,25 @@ func NewCT_GroupLevel() *CT_GroupLevel {
 }
 
 func (m *CT_GroupLevel) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueName"},
-		Value: fmt.Sprintf("%v", m.UniqueNameAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "caption"},
-		Value: fmt.Sprintf("%v", m.CaptionAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "uniqueName"},
+		Value: fmt.Sprintf("%v", m.UniqueNameAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "caption"},
+		Value: fmt.Sprintf("%v", m.CaptionAttr),
+	})
 	if m.UserAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "user"},
-			Value: fmt.Sprintf("%d", b2i(*m.UserAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "user"},
+			Value: fmt.Sprintf("%d", b2i(*m.UserAttr)),
+		})
 	}
 	if m.CustomRollUpAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "customRollUp"},
-			Value: fmt.Sprintf("%d", b2i(*m.CustomRollUpAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "customRollUp"},
+			Value: fmt.Sprintf("%d", b2i(*m.CustomRollUpAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Groups != nil {

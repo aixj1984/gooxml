@@ -26,8 +26,10 @@ func NewCT_Field() *CT_Field {
 }
 
 func (m *CT_Field) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "x"},
-		Value: fmt.Sprintf("%v", m.XAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "x"},
+		Value: fmt.Sprintf("%v", m.XAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

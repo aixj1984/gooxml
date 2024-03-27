@@ -54,7 +54,6 @@ func (v DateAxis) SetMinorTickMark(m crt.ST_TickMark) {
 		v.x.MinorTickMark = crt.NewCT_TickMark()
 		v.x.MinorTickMark.ValAttr = m
 	}
-
 }
 
 func (v DateAxis) SetTickLabelPosition(p crt.ST_TickLblPos) {

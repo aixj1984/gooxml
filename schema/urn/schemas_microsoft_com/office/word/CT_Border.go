@@ -35,8 +35,10 @@ func (m *CT_Border) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.WidthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "width"},
-			Value: fmt.Sprintf("%v", *m.WidthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "width"},
+			Value: fmt.Sprintf("%v", *m.WidthAttr),
+		})
 	}
 	if m.ShadowAttr != ST_BorderShadowUnset {
 		attr, err := m.ShadowAttr.MarshalXMLAttr(xml.Name{Local: "shadow"})

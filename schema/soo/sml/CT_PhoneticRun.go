@@ -32,10 +32,14 @@ func NewCT_PhoneticRun() *CT_PhoneticRun {
 }
 
 func (m *CT_PhoneticRun) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sb"},
-		Value: fmt.Sprintf("%v", m.SbAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "eb"},
-		Value: fmt.Sprintf("%v", m.EbAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sb"},
+		Value: fmt.Sprintf("%v", m.SbAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "eb"},
+		Value: fmt.Sprintf("%v", m.EbAttr),
+	})
 	e.EncodeToken(start)
 	set := xml.StartElement{Name: xml.Name{Local: "ma:t"}}
 	gooxml.AddPreserveSpaceAttr(&set, m.T)

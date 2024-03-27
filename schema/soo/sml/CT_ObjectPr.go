@@ -52,52 +52,76 @@ func NewCT_ObjectPr() *CT_ObjectPr {
 
 func (m *CT_ObjectPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.LockedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "locked"},
-			Value: fmt.Sprintf("%d", b2i(*m.LockedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "locked"},
+			Value: fmt.Sprintf("%d", b2i(*m.LockedAttr)),
+		})
 	}
 	if m.DefaultSizeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "defaultSize"},
-			Value: fmt.Sprintf("%d", b2i(*m.DefaultSizeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "defaultSize"},
+			Value: fmt.Sprintf("%d", b2i(*m.DefaultSizeAttr)),
+		})
 	}
 	if m.PrintAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "print"},
-			Value: fmt.Sprintf("%d", b2i(*m.PrintAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "print"},
+			Value: fmt.Sprintf("%d", b2i(*m.PrintAttr)),
+		})
 	}
 	if m.DisabledAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "disabled"},
-			Value: fmt.Sprintf("%d", b2i(*m.DisabledAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "disabled"},
+			Value: fmt.Sprintf("%d", b2i(*m.DisabledAttr)),
+		})
 	}
 	if m.UiObjectAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uiObject"},
-			Value: fmt.Sprintf("%d", b2i(*m.UiObjectAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "uiObject"},
+			Value: fmt.Sprintf("%d", b2i(*m.UiObjectAttr)),
+		})
 	}
 	if m.AutoFillAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoFill"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoFillAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoFill"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoFillAttr)),
+		})
 	}
 	if m.AutoLineAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoLine"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoLineAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoLine"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoLineAttr)),
+		})
 	}
 	if m.AutoPictAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoPict"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoPictAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoPict"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoPictAttr)),
+		})
 	}
 	if m.MacroAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "macro"},
-			Value: fmt.Sprintf("%v", *m.MacroAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "macro"},
+			Value: fmt.Sprintf("%v", *m.MacroAttr),
+		})
 	}
 	if m.AltTextAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "altText"},
-			Value: fmt.Sprintf("%v", *m.AltTextAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "altText"},
+			Value: fmt.Sprintf("%v", *m.AltTextAttr),
+		})
 	}
 	if m.DdeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dde"},
-			Value: fmt.Sprintf("%d", b2i(*m.DdeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dde"},
+			Value: fmt.Sprintf("%d", b2i(*m.DdeAttr)),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	seanchor := xml.StartElement{Name: xml.Name{Local: "ma:anchor"}}

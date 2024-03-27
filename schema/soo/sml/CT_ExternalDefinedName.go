@@ -30,15 +30,21 @@ func NewCT_ExternalDefinedName() *CT_ExternalDefinedName {
 }
 
 func (m *CT_ExternalDefinedName) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.RefersToAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refersTo"},
-			Value: fmt.Sprintf("%v", *m.RefersToAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refersTo"},
+			Value: fmt.Sprintf("%v", *m.RefersToAttr),
+		})
 	}
 	if m.SheetIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sheetId"},
-			Value: fmt.Sprintf("%v", *m.SheetIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sheetId"},
+			Value: fmt.Sprintf("%v", *m.SheetIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

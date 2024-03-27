@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_InverseTransform struct {
-}
+type CT_InverseTransform struct{}
 
 func NewCT_InverseTransform() *CT_InverseTransform {
 	ret := &CT_InverseTransform{}

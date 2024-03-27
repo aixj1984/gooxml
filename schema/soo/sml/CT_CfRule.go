@@ -69,26 +69,38 @@ func (m *CT_CfRule) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DxfIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dxfId"},
-			Value: fmt.Sprintf("%v", *m.DxfIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dxfId"},
+			Value: fmt.Sprintf("%v", *m.DxfIdAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "priority"},
-		Value: fmt.Sprintf("%v", m.PriorityAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "priority"},
+		Value: fmt.Sprintf("%v", m.PriorityAttr),
+	})
 	if m.StopIfTrueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "stopIfTrue"},
-			Value: fmt.Sprintf("%d", b2i(*m.StopIfTrueAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "stopIfTrue"},
+			Value: fmt.Sprintf("%d", b2i(*m.StopIfTrueAttr)),
+		})
 	}
 	if m.AboveAverageAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "aboveAverage"},
-			Value: fmt.Sprintf("%d", b2i(*m.AboveAverageAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "aboveAverage"},
+			Value: fmt.Sprintf("%d", b2i(*m.AboveAverageAttr)),
+		})
 	}
 	if m.PercentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "percent"},
-			Value: fmt.Sprintf("%d", b2i(*m.PercentAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "percent"},
+			Value: fmt.Sprintf("%d", b2i(*m.PercentAttr)),
+		})
 	}
 	if m.BottomAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bottom"},
-			Value: fmt.Sprintf("%d", b2i(*m.BottomAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bottom"},
+			Value: fmt.Sprintf("%d", b2i(*m.BottomAttr)),
+		})
 	}
 	if m.OperatorAttr != ST_ConditionalFormattingOperatorUnset {
 		attr, err := m.OperatorAttr.MarshalXMLAttr(xml.Name{Local: "operator"})
@@ -98,8 +110,10 @@ func (m *CT_CfRule) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.TextAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "text"},
-			Value: fmt.Sprintf("%v", *m.TextAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "text"},
+			Value: fmt.Sprintf("%v", *m.TextAttr),
+		})
 	}
 	if m.TimePeriodAttr != ST_TimePeriodUnset {
 		attr, err := m.TimePeriodAttr.MarshalXMLAttr(xml.Name{Local: "timePeriod"})
@@ -109,16 +123,22 @@ func (m *CT_CfRule) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RankAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rank"},
-			Value: fmt.Sprintf("%v", *m.RankAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rank"},
+			Value: fmt.Sprintf("%v", *m.RankAttr),
+		})
 	}
 	if m.StdDevAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "stdDev"},
-			Value: fmt.Sprintf("%v", *m.StdDevAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "stdDev"},
+			Value: fmt.Sprintf("%v", *m.StdDevAttr),
+		})
 	}
 	if m.EqualAverageAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "equalAverage"},
-			Value: fmt.Sprintf("%d", b2i(*m.EqualAverageAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "equalAverage"},
+			Value: fmt.Sprintf("%d", b2i(*m.EqualAverageAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Formula != nil {

@@ -20,7 +20,6 @@ func (c ConditionalFormattingRule) InitializeDefaults() {
 	c.SetType(sml.ST_CfTypeCellIs)
 	c.SetOperator(sml.ST_ConditionalFormattingOperatorGreaterThan)
 	c.SetPriority(1)
-
 }
 
 // X returns the inner wrapped XML type.

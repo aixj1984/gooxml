@@ -59,20 +59,28 @@ func NewCT_ModifyVerifier() *CT_ModifyVerifier {
 
 func (m *CT_ModifyVerifier) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.AlgorithmNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "algorithmName"},
-			Value: fmt.Sprintf("%v", *m.AlgorithmNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "algorithmName"},
+			Value: fmt.Sprintf("%v", *m.AlgorithmNameAttr),
+		})
 	}
 	if m.HashValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hashValue"},
-			Value: fmt.Sprintf("%v", *m.HashValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hashValue"},
+			Value: fmt.Sprintf("%v", *m.HashValueAttr),
+		})
 	}
 	if m.SaltValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "saltValue"},
-			Value: fmt.Sprintf("%v", *m.SaltValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "saltValue"},
+			Value: fmt.Sprintf("%v", *m.SaltValueAttr),
+		})
 	}
 	if m.SpinValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spinValue"},
-			Value: fmt.Sprintf("%v", *m.SpinValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spinValue"},
+			Value: fmt.Sprintf("%v", *m.SpinValueAttr),
+		})
 	}
 	if m.CryptProviderTypeAttr != sharedTypes.ST_CryptProvUnset {
 		attr, err := m.CryptProviderTypeAttr.MarshalXMLAttr(xml.Name{Local: "cryptProviderType"})
@@ -96,40 +104,58 @@ func (m *CT_ModifyVerifier) MarshalXML(e *xml.Encoder, start xml.StartElement) e
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.CryptAlgorithmSidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cryptAlgorithmSid"},
-			Value: fmt.Sprintf("%v", *m.CryptAlgorithmSidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cryptAlgorithmSid"},
+			Value: fmt.Sprintf("%v", *m.CryptAlgorithmSidAttr),
+		})
 	}
 	if m.SpinCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spinCount"},
-			Value: fmt.Sprintf("%v", *m.SpinCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spinCount"},
+			Value: fmt.Sprintf("%v", *m.SpinCountAttr),
+		})
 	}
 	if m.SaltDataAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "saltData"},
-			Value: fmt.Sprintf("%v", *m.SaltDataAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "saltData"},
+			Value: fmt.Sprintf("%v", *m.SaltDataAttr),
+		})
 	}
 	if m.HashDataAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hashData"},
-			Value: fmt.Sprintf("%v", *m.HashDataAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hashData"},
+			Value: fmt.Sprintf("%v", *m.HashDataAttr),
+		})
 	}
 	if m.CryptProviderAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cryptProvider"},
-			Value: fmt.Sprintf("%v", *m.CryptProviderAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cryptProvider"},
+			Value: fmt.Sprintf("%v", *m.CryptProviderAttr),
+		})
 	}
 	if m.AlgIdExtAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "algIdExt"},
-			Value: fmt.Sprintf("%v", *m.AlgIdExtAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "algIdExt"},
+			Value: fmt.Sprintf("%v", *m.AlgIdExtAttr),
+		})
 	}
 	if m.AlgIdExtSourceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "algIdExtSource"},
-			Value: fmt.Sprintf("%v", *m.AlgIdExtSourceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "algIdExtSource"},
+			Value: fmt.Sprintf("%v", *m.AlgIdExtSourceAttr),
+		})
 	}
 	if m.CryptProviderTypeExtAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cryptProviderTypeExt"},
-			Value: fmt.Sprintf("%v", *m.CryptProviderTypeExtAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cryptProviderTypeExt"},
+			Value: fmt.Sprintf("%v", *m.CryptProviderTypeExtAttr),
+		})
 	}
 	if m.CryptProviderTypeExtSourceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cryptProviderTypeExtSource"},
-			Value: fmt.Sprintf("%v", *m.CryptProviderTypeExtSourceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cryptProviderTypeExtSource"},
+			Value: fmt.Sprintf("%v", *m.CryptProviderTypeExtSourceAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

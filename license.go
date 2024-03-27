@@ -56,6 +56,7 @@ func init() {
 }
 
 // LicenseType is the type of license
+//
 //go:generate stringer -type=LicenseType
 type LicenseType byte
 

@@ -21,15 +21,19 @@ import (
 func ParseStdlibTime(s string) (time.Time, error) {
 	return time.Time{}, nil
 }
+
 func ParseSliceST_Sqref(s string) (ST_Sqref, error) {
 	return ST_Sqref(strings.Fields(s)), nil
 }
+
 func ParseSliceST_CellSpans(s string) (ST_CellSpans, error) {
 	return ST_CellSpans(strings.Fields(s)), nil
 }
+
 func (s ST_Sqref) String() string {
 	return strings.Join(s, " ")
 }
+
 func (s ST_CellSpans) String() string {
 	return strings.Join(s, " ")
 }
@@ -11396,5 +11400,7 @@ func init() {
 	gooxml.RegisterConstructor("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "AG_AutoFormat", NewAG_AutoFormat)
 }
 
-type ST_Sqref []string
-type ST_CellSpans []string
+type (
+	ST_Sqref     []string
+	ST_CellSpans []string
+)

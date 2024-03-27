@@ -58,68 +58,100 @@ func NewCT_StylePaneFilter() *CT_StylePaneFilter {
 
 func (m *CT_StylePaneFilter) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.AllStylesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:allStyles"},
-			Value: fmt.Sprintf("%v", *m.AllStylesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:allStyles"},
+			Value: fmt.Sprintf("%v", *m.AllStylesAttr),
+		})
 	}
 	if m.CustomStylesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:customStyles"},
-			Value: fmt.Sprintf("%v", *m.CustomStylesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:customStyles"},
+			Value: fmt.Sprintf("%v", *m.CustomStylesAttr),
+		})
 	}
 	if m.LatentStylesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:latentStyles"},
-			Value: fmt.Sprintf("%v", *m.LatentStylesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:latentStyles"},
+			Value: fmt.Sprintf("%v", *m.LatentStylesAttr),
+		})
 	}
 	if m.StylesInUseAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:stylesInUse"},
-			Value: fmt.Sprintf("%v", *m.StylesInUseAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:stylesInUse"},
+			Value: fmt.Sprintf("%v", *m.StylesInUseAttr),
+		})
 	}
 	if m.HeadingStylesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:headingStyles"},
-			Value: fmt.Sprintf("%v", *m.HeadingStylesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:headingStyles"},
+			Value: fmt.Sprintf("%v", *m.HeadingStylesAttr),
+		})
 	}
 	if m.NumberingStylesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:numberingStyles"},
-			Value: fmt.Sprintf("%v", *m.NumberingStylesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:numberingStyles"},
+			Value: fmt.Sprintf("%v", *m.NumberingStylesAttr),
+		})
 	}
 	if m.TableStylesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:tableStyles"},
-			Value: fmt.Sprintf("%v", *m.TableStylesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:tableStyles"},
+			Value: fmt.Sprintf("%v", *m.TableStylesAttr),
+		})
 	}
 	if m.DirectFormattingOnRunsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:directFormattingOnRuns"},
-			Value: fmt.Sprintf("%v", *m.DirectFormattingOnRunsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:directFormattingOnRuns"},
+			Value: fmt.Sprintf("%v", *m.DirectFormattingOnRunsAttr),
+		})
 	}
 	if m.DirectFormattingOnParagraphsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:directFormattingOnParagraphs"},
-			Value: fmt.Sprintf("%v", *m.DirectFormattingOnParagraphsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:directFormattingOnParagraphs"},
+			Value: fmt.Sprintf("%v", *m.DirectFormattingOnParagraphsAttr),
+		})
 	}
 	if m.DirectFormattingOnNumberingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:directFormattingOnNumbering"},
-			Value: fmt.Sprintf("%v", *m.DirectFormattingOnNumberingAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:directFormattingOnNumbering"},
+			Value: fmt.Sprintf("%v", *m.DirectFormattingOnNumberingAttr),
+		})
 	}
 	if m.DirectFormattingOnTablesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:directFormattingOnTables"},
-			Value: fmt.Sprintf("%v", *m.DirectFormattingOnTablesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:directFormattingOnTables"},
+			Value: fmt.Sprintf("%v", *m.DirectFormattingOnTablesAttr),
+		})
 	}
 	if m.ClearFormattingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:clearFormatting"},
-			Value: fmt.Sprintf("%v", *m.ClearFormattingAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:clearFormatting"},
+			Value: fmt.Sprintf("%v", *m.ClearFormattingAttr),
+		})
 	}
 	if m.Top3HeadingStylesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:top3HeadingStyles"},
-			Value: fmt.Sprintf("%v", *m.Top3HeadingStylesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:top3HeadingStyles"},
+			Value: fmt.Sprintf("%v", *m.Top3HeadingStylesAttr),
+		})
 	}
 	if m.VisibleStylesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:visibleStyles"},
-			Value: fmt.Sprintf("%v", *m.VisibleStylesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:visibleStyles"},
+			Value: fmt.Sprintf("%v", *m.VisibleStylesAttr),
+		})
 	}
 	if m.AlternateStyleNamesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:alternateStyleNames"},
-			Value: fmt.Sprintf("%v", *m.AlternateStyleNamesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:alternateStyleNames"},
+			Value: fmt.Sprintf("%v", *m.AlternateStyleNamesAttr),
+		})
 	}
 	if m.ValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:val"},
-			Value: fmt.Sprintf("%v", *m.ValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:val"},
+			Value: fmt.Sprintf("%v", *m.ValAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

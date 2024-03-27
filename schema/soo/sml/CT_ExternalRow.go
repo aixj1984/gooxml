@@ -30,8 +30,10 @@ func NewCT_ExternalRow() *CT_ExternalRow {
 }
 
 func (m *CT_ExternalRow) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-		Value: fmt.Sprintf("%v", m.RAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r"},
+		Value: fmt.Sprintf("%v", m.RAttr),
+	})
 	e.EncodeToken(start)
 	if m.Cell != nil {
 		secell := xml.StartElement{Name: xml.Name{Local: "ma:cell"}}

@@ -40,12 +40,16 @@ func (m *CT_PageNumber) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.StartAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:start"},
-			Value: fmt.Sprintf("%v", *m.StartAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:start"},
+			Value: fmt.Sprintf("%v", *m.StartAttr),
+		})
 	}
 	if m.ChapStyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:chapStyle"},
-			Value: fmt.Sprintf("%v", *m.ChapStyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:chapStyle"},
+			Value: fmt.Sprintf("%v", *m.ChapStyleAttr),
+		})
 	}
 	if m.ChapSepAttr != ST_ChapterSepUnset {
 		attr, err := m.ChapSepAttr.MarshalXMLAttr(xml.Name{Local: "w:chapSep"})

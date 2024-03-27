@@ -28,8 +28,10 @@ func NewCT_AnimationDgmElement() *CT_AnimationDgmElement {
 
 func (m *CT_AnimationDgmElement) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.BldStepAttr != ST_DgmBuildStepUnset {
 		attr, err := m.BldStepAttr.MarshalXMLAttr(xml.Name{Local: "bldStep"})

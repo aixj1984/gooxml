@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_TextShapeAutofit struct {
-}
+type CT_TextShapeAutofit struct{}
 
 func NewCT_TextShapeAutofit() *CT_TextShapeAutofit {
 	ret := &CT_TextShapeAutofit{}

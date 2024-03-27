@@ -34,21 +34,31 @@ func NewCT_NonVisualDrawingProps() *CT_NonVisualDrawingProps {
 }
 
 func (m *CT_NonVisualDrawingProps) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.DescrAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "descr"},
-			Value: fmt.Sprintf("%v", *m.DescrAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "descr"},
+			Value: fmt.Sprintf("%v", *m.DescrAttr),
+		})
 	}
 	if m.HiddenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hidden"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hidden"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr)),
+		})
 	}
 	if m.TitleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "title"},
-			Value: fmt.Sprintf("%v", *m.TitleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "title"},
+			Value: fmt.Sprintf("%v", *m.TitleAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.HlinkClick != nil {

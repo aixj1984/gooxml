@@ -29,11 +29,15 @@ func NewCT_DocPartName() *CT_DocPartName {
 }
 
 func (m *CT_DocPartName) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:val"},
-		Value: fmt.Sprintf("%v", m.ValAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:val"},
+		Value: fmt.Sprintf("%v", m.ValAttr),
+	})
 	if m.DecoratedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:decorated"},
-			Value: fmt.Sprintf("%v", *m.DecoratedAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:decorated"},
+			Value: fmt.Sprintf("%v", *m.DecoratedAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

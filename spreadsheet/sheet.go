@@ -406,7 +406,6 @@ func (s Sheet) RemoveMergedCell(mc MergedCell) {
 			s.x.MergeCells.MergeCell = s.x.MergeCells.MergeCell[:len(s.x.MergeCells.MergeCell)-1]
 		}
 	}
-
 }
 
 func (s Sheet) ExtentsIndex() (string, uint32, string, uint32) {
@@ -782,7 +781,6 @@ func (s *Sheet) SetFrozen(firstRow, firstCol bool) {
 		v.SetXSplit(1)
 		v.SetTopLeft("B1")
 	}
-
 }
 
 // FormulaContext returns a formula evaluation context that can be used to

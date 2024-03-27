@@ -33,8 +33,10 @@ func NewCT_AutoFilter() *CT_AutoFilter {
 
 func (m *CT_AutoFilter) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ref"},
-			Value: fmt.Sprintf("%v", *m.RefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ref"},
+			Value: fmt.Sprintf("%v", *m.RefAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.FilterColumn != nil {

@@ -27,8 +27,10 @@ func NewCT_TableCol() *CT_TableCol {
 }
 
 func (m *CT_TableCol) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w"},
-		Value: fmt.Sprintf("%v", m.WAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w"},
+		Value: fmt.Sprintf("%v", m.WAttr),
+	})
 	e.EncodeToken(start)
 	if m.ExtLst != nil {
 		seextLst := xml.StartElement{Name: xml.Name{Local: "a:extLst"}}

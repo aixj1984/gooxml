@@ -30,16 +30,22 @@ func NewCT_Language() *CT_Language {
 
 func (m *CT_Language) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:val"},
-			Value: fmt.Sprintf("%v", *m.ValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:val"},
+			Value: fmt.Sprintf("%v", *m.ValAttr),
+		})
 	}
 	if m.EastAsiaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:eastAsia"},
-			Value: fmt.Sprintf("%v", *m.EastAsiaAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:eastAsia"},
+			Value: fmt.Sprintf("%v", *m.EastAsiaAttr),
+		})
 	}
 	if m.BidiAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:bidi"},
-			Value: fmt.Sprintf("%v", *m.BidiAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:bidi"},
+			Value: fmt.Sprintf("%v", *m.BidiAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

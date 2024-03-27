@@ -37,8 +37,10 @@ func NewCT_Cxn() *CT_Cxn {
 }
 
 func (m *CT_Cxn) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "modelId"},
-		Value: fmt.Sprintf("%v", m.ModelIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "modelId"},
+		Value: fmt.Sprintf("%v", m.ModelIdAttr),
+	})
 	if m.TypeAttr != ST_CxnTypeUnset {
 		attr, err := m.TypeAttr.MarshalXMLAttr(xml.Name{Local: "type"})
 		if err != nil {
@@ -46,25 +48,39 @@ func (m *CT_Cxn) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		}
 		start.Attr = append(start.Attr, attr)
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "srcId"},
-		Value: fmt.Sprintf("%v", m.SrcIdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "destId"},
-		Value: fmt.Sprintf("%v", m.DestIdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "srcOrd"},
-		Value: fmt.Sprintf("%v", m.SrcOrdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "destOrd"},
-		Value: fmt.Sprintf("%v", m.DestOrdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "srcId"},
+		Value: fmt.Sprintf("%v", m.SrcIdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "destId"},
+		Value: fmt.Sprintf("%v", m.DestIdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "srcOrd"},
+		Value: fmt.Sprintf("%v", m.SrcOrdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "destOrd"},
+		Value: fmt.Sprintf("%v", m.DestOrdAttr),
+	})
 	if m.ParTransIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "parTransId"},
-			Value: fmt.Sprintf("%v", *m.ParTransIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "parTransId"},
+			Value: fmt.Sprintf("%v", *m.ParTransIdAttr),
+		})
 	}
 	if m.SibTransIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sibTransId"},
-			Value: fmt.Sprintf("%v", *m.SibTransIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sibTransId"},
+			Value: fmt.Sprintf("%v", *m.SibTransIdAttr),
+		})
 	}
 	if m.PresIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "presId"},
-			Value: fmt.Sprintf("%v", *m.PresIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "presId"},
+			Value: fmt.Sprintf("%v", *m.PresIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

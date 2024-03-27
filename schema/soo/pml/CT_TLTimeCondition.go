@@ -43,8 +43,10 @@ func (m *CT_TLTimeCondition) MarshalXML(e *xml.Encoder, start xml.StartElement) 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DelayAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "delay"},
-			Value: fmt.Sprintf("%v", *m.DelayAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "delay"},
+			Value: fmt.Sprintf("%v", *m.DelayAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TgtEl != nil {

@@ -35,24 +35,34 @@ func NewCT_Break() *CT_Break {
 
 func (m *CT_Break) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.MinAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "min"},
-			Value: fmt.Sprintf("%v", *m.MinAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "min"},
+			Value: fmt.Sprintf("%v", *m.MinAttr),
+		})
 	}
 	if m.MaxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "max"},
-			Value: fmt.Sprintf("%v", *m.MaxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "max"},
+			Value: fmt.Sprintf("%v", *m.MaxAttr),
+		})
 	}
 	if m.ManAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "man"},
-			Value: fmt.Sprintf("%d", b2i(*m.ManAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "man"},
+			Value: fmt.Sprintf("%d", b2i(*m.ManAttr)),
+		})
 	}
 	if m.PtAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "pt"},
-			Value: fmt.Sprintf("%d", b2i(*m.PtAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "pt"},
+			Value: fmt.Sprintf("%d", b2i(*m.PtAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -38,32 +38,46 @@ func NewCT_CalcCell() *CT_CalcCell {
 
 func (m *CT_CalcCell) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-			Value: fmt.Sprintf("%v", *m.RAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r"},
+			Value: fmt.Sprintf("%v", *m.RAttr),
+		})
 	}
 	if m.RefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ref"},
-			Value: fmt.Sprintf("%v", *m.RefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ref"},
+			Value: fmt.Sprintf("%v", *m.RefAttr),
+		})
 	}
 	if m.IAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "i"},
-			Value: fmt.Sprintf("%v", *m.IAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "i"},
+			Value: fmt.Sprintf("%v", *m.IAttr),
+		})
 	}
 	if m.SAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "s"},
-			Value: fmt.Sprintf("%d", b2i(*m.SAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "s"},
+			Value: fmt.Sprintf("%d", b2i(*m.SAttr)),
+		})
 	}
 	if m.LAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "l"},
-			Value: fmt.Sprintf("%d", b2i(*m.LAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "l"},
+			Value: fmt.Sprintf("%d", b2i(*m.LAttr)),
+		})
 	}
 	if m.TAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "t"},
-			Value: fmt.Sprintf("%d", b2i(*m.TAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "t"},
+			Value: fmt.Sprintf("%d", b2i(*m.TAttr)),
+		})
 	}
 	if m.AAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "a"},
-			Value: fmt.Sprintf("%d", b2i(*m.AAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "a"},
+			Value: fmt.Sprintf("%d", b2i(*m.AAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

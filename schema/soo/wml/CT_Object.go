@@ -33,12 +33,16 @@ func NewCT_Object() *CT_Object {
 
 func (m *CT_Object) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DxaOrigAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:dxaOrig"},
-			Value: fmt.Sprintf("%v", *m.DxaOrigAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:dxaOrig"},
+			Value: fmt.Sprintf("%v", *m.DxaOrigAttr),
+		})
 	}
 	if m.DyaOrigAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:dyaOrig"},
-			Value: fmt.Sprintf("%v", *m.DyaOrigAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:dyaOrig"},
+			Value: fmt.Sprintf("%v", *m.DyaOrigAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Drawing != nil {

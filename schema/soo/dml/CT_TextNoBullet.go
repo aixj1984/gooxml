@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_TextNoBullet struct {
-}
+type CT_TextNoBullet struct{}
 
 func NewCT_TextNoBullet() *CT_TextNoBullet {
 	ret := &CT_TextNoBullet{}

@@ -20,8 +20,7 @@ func NewEvaluator() Evaluator {
 	return &defEval{}
 }
 
-type defEval struct {
-}
+type defEval struct{}
 
 func (d *defEval) Eval(ctx Context, formula string) Result {
 	expr := ParseString(formula)

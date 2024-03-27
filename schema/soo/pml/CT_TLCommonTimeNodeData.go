@@ -86,12 +86,16 @@ func NewCT_TLCommonTimeNodeData() *CT_TLCommonTimeNodeData {
 
 func (m *CT_TLCommonTimeNodeData) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.PresetIDAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "presetID"},
-			Value: fmt.Sprintf("%v", *m.PresetIDAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "presetID"},
+			Value: fmt.Sprintf("%v", *m.PresetIDAttr),
+		})
 	}
 	if m.PresetClassAttr != ST_TLTimeNodePresetClassTypeUnset {
 		attr, err := m.PresetClassAttr.MarshalXMLAttr(xml.Name{Local: "presetClass"})
@@ -101,36 +105,52 @@ func (m *CT_TLCommonTimeNodeData) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.PresetSubtypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "presetSubtype"},
-			Value: fmt.Sprintf("%v", *m.PresetSubtypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "presetSubtype"},
+			Value: fmt.Sprintf("%v", *m.PresetSubtypeAttr),
+		})
 	}
 	if m.DurAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dur"},
-			Value: fmt.Sprintf("%v", *m.DurAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dur"},
+			Value: fmt.Sprintf("%v", *m.DurAttr),
+		})
 	}
 	if m.RepeatCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "repeatCount"},
-			Value: fmt.Sprintf("%v", *m.RepeatCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "repeatCount"},
+			Value: fmt.Sprintf("%v", *m.RepeatCountAttr),
+		})
 	}
 	if m.RepeatDurAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "repeatDur"},
-			Value: fmt.Sprintf("%v", *m.RepeatDurAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "repeatDur"},
+			Value: fmt.Sprintf("%v", *m.RepeatDurAttr),
+		})
 	}
 	if m.SpdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spd"},
-			Value: fmt.Sprintf("%v", *m.SpdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spd"},
+			Value: fmt.Sprintf("%v", *m.SpdAttr),
+		})
 	}
 	if m.AccelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "accel"},
-			Value: fmt.Sprintf("%v", *m.AccelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "accel"},
+			Value: fmt.Sprintf("%v", *m.AccelAttr),
+		})
 	}
 	if m.DecelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "decel"},
-			Value: fmt.Sprintf("%v", *m.DecelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "decel"},
+			Value: fmt.Sprintf("%v", *m.DecelAttr),
+		})
 	}
 	if m.AutoRevAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoRev"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoRevAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoRev"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoRevAttr)),
+		})
 	}
 	if m.RestartAttr != ST_TLTimeNodeRestartTypeUnset {
 		attr, err := m.RestartAttr.MarshalXMLAttr(xml.Name{Local: "restart"})
@@ -154,16 +174,22 @@ func (m *CT_TLCommonTimeNodeData) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.TmFilterAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tmFilter"},
-			Value: fmt.Sprintf("%v", *m.TmFilterAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tmFilter"},
+			Value: fmt.Sprintf("%v", *m.TmFilterAttr),
+		})
 	}
 	if m.EvtFilterAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "evtFilter"},
-			Value: fmt.Sprintf("%v", *m.EvtFilterAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "evtFilter"},
+			Value: fmt.Sprintf("%v", *m.EvtFilterAttr),
+		})
 	}
 	if m.DisplayAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "display"},
-			Value: fmt.Sprintf("%d", b2i(*m.DisplayAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "display"},
+			Value: fmt.Sprintf("%d", b2i(*m.DisplayAttr)),
+		})
 	}
 	if m.MasterRelAttr != ST_TLTimeNodeMasterRelationUnset {
 		attr, err := m.MasterRelAttr.MarshalXMLAttr(xml.Name{Local: "masterRel"})
@@ -173,16 +199,22 @@ func (m *CT_TLCommonTimeNodeData) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.BldLvlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bldLvl"},
-			Value: fmt.Sprintf("%v", *m.BldLvlAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bldLvl"},
+			Value: fmt.Sprintf("%v", *m.BldLvlAttr),
+		})
 	}
 	if m.GrpIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "grpId"},
-			Value: fmt.Sprintf("%v", *m.GrpIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "grpId"},
+			Value: fmt.Sprintf("%v", *m.GrpIdAttr),
+		})
 	}
 	if m.AfterEffectAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "afterEffect"},
-			Value: fmt.Sprintf("%d", b2i(*m.AfterEffectAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "afterEffect"},
+			Value: fmt.Sprintf("%d", b2i(*m.AfterEffectAttr)),
+		})
 	}
 	if m.NodeTypeAttr != ST_TLTimeNodeTypeUnset {
 		attr, err := m.NodeTypeAttr.MarshalXMLAttr(xml.Name{Local: "nodeType"})
@@ -192,8 +224,10 @@ func (m *CT_TLCommonTimeNodeData) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.NodePhAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "nodePh"},
-			Value: fmt.Sprintf("%d", b2i(*m.NodePhAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "nodePh"},
+			Value: fmt.Sprintf("%d", b2i(*m.NodePhAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.StCondLst != nil {

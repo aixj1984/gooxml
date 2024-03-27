@@ -35,16 +35,22 @@ func NewCT_TableStyles() *CT_TableStyles {
 
 func (m *CT_TableStyles) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	if m.DefaultTableStyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "defaultTableStyle"},
-			Value: fmt.Sprintf("%v", *m.DefaultTableStyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "defaultTableStyle"},
+			Value: fmt.Sprintf("%v", *m.DefaultTableStyleAttr),
+		})
 	}
 	if m.DefaultPivotStyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "defaultPivotStyle"},
-			Value: fmt.Sprintf("%v", *m.DefaultPivotStyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "defaultPivotStyle"},
+			Value: fmt.Sprintf("%v", *m.DefaultPivotStyleAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TableStyle != nil {

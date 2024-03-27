@@ -30,8 +30,10 @@ func NewCT_TblGridChange() *CT_TblGridChange {
 }
 
 func (m *CT_TblGridChange) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeToken(start)
 	setblGrid := xml.StartElement{Name: xml.Name{Local: "w:tblGrid"}}
 	e.EncodeElement(m.TblGrid, setblGrid)

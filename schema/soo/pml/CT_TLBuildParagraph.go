@@ -51,36 +51,52 @@ func (m *CT_TLBuildParagraph) MarshalXML(e *xml.Encoder, start xml.StartElement)
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.BldLvlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bldLvl"},
-			Value: fmt.Sprintf("%v", *m.BldLvlAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bldLvl"},
+			Value: fmt.Sprintf("%v", *m.BldLvlAttr),
+		})
 	}
 	if m.AnimBgAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "animBg"},
-			Value: fmt.Sprintf("%d", b2i(*m.AnimBgAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "animBg"},
+			Value: fmt.Sprintf("%d", b2i(*m.AnimBgAttr)),
+		})
 	}
 	if m.AutoUpdateAnimBgAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoUpdateAnimBg"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoUpdateAnimBgAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoUpdateAnimBg"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoUpdateAnimBgAttr)),
+		})
 	}
 	if m.RevAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rev"},
-			Value: fmt.Sprintf("%d", b2i(*m.RevAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rev"},
+			Value: fmt.Sprintf("%d", b2i(*m.RevAttr)),
+		})
 	}
 	if m.AdvAutoAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "advAuto"},
-			Value: fmt.Sprintf("%v", *m.AdvAutoAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "advAuto"},
+			Value: fmt.Sprintf("%v", *m.AdvAutoAttr),
+		})
 	}
 	if m.SpidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spid"},
-			Value: fmt.Sprintf("%v", *m.SpidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spid"},
+			Value: fmt.Sprintf("%v", *m.SpidAttr),
+		})
 	}
 	if m.GrpIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "grpId"},
-			Value: fmt.Sprintf("%v", *m.GrpIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "grpId"},
+			Value: fmt.Sprintf("%v", *m.GrpIdAttr),
+		})
 	}
 	if m.UiExpandAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uiExpand"},
-			Value: fmt.Sprintf("%d", b2i(*m.UiExpandAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "uiExpand"},
+			Value: fmt.Sprintf("%d", b2i(*m.UiExpandAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TmplLst != nil {

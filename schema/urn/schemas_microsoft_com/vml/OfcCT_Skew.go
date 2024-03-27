@@ -32,8 +32,10 @@ func NewOfcCT_Skew() *OfcCT_Skew {
 
 func (m *OfcCT_Skew) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.OnAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.OnAttr.MarshalXMLAttr(xml.Name{Local: "on"})
@@ -43,16 +45,22 @@ func (m *OfcCT_Skew) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.OffsetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "offset"},
-			Value: fmt.Sprintf("%v", *m.OffsetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "offset"},
+			Value: fmt.Sprintf("%v", *m.OffsetAttr),
+		})
 	}
 	if m.OriginAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "origin"},
-			Value: fmt.Sprintf("%v", *m.OriginAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "origin"},
+			Value: fmt.Sprintf("%v", *m.OriginAttr),
+		})
 	}
 	if m.MatrixAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "matrix"},
-			Value: fmt.Sprintf("%v", *m.MatrixAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "matrix"},
+			Value: fmt.Sprintf("%v", *m.MatrixAttr),
+		})
 	}
 	if m.ExtAttr != ST_ExtUnset {
 		attr, err := m.ExtAttr.MarshalXMLAttr(xml.Name{Local: "ext"})

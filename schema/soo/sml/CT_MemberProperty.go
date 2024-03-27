@@ -43,39 +43,57 @@ func NewCT_MemberProperty() *CT_MemberProperty {
 
 func (m *CT_MemberProperty) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.ShowCellAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showCell"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowCellAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showCell"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowCellAttr)),
+		})
 	}
 	if m.ShowTipAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showTip"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowTipAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showTip"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowTipAttr)),
+		})
 	}
 	if m.ShowAsCaptionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showAsCaption"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowAsCaptionAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showAsCaption"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowAsCaptionAttr)),
+		})
 	}
 	if m.NameLenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "nameLen"},
-			Value: fmt.Sprintf("%v", *m.NameLenAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "nameLen"},
+			Value: fmt.Sprintf("%v", *m.NameLenAttr),
+		})
 	}
 	if m.PPosAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "pPos"},
-			Value: fmt.Sprintf("%v", *m.PPosAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "pPos"},
+			Value: fmt.Sprintf("%v", *m.PPosAttr),
+		})
 	}
 	if m.PLenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "pLen"},
-			Value: fmt.Sprintf("%v", *m.PLenAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "pLen"},
+			Value: fmt.Sprintf("%v", *m.PLenAttr),
+		})
 	}
 	if m.LevelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "level"},
-			Value: fmt.Sprintf("%v", *m.LevelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "level"},
+			Value: fmt.Sprintf("%v", *m.LevelAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "field"},
-		Value: fmt.Sprintf("%v", m.FieldAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "field"},
+		Value: fmt.Sprintf("%v", m.FieldAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

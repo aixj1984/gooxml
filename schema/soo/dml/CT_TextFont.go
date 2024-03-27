@@ -28,11 +28,15 @@ func NewCT_TextFont() *CT_TextFont {
 }
 
 func (m *CT_TextFont) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "typeface"},
-		Value: fmt.Sprintf("%v", m.TypefaceAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "typeface"},
+		Value: fmt.Sprintf("%v", m.TypefaceAttr),
+	})
 	if m.PanoseAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "panose"},
-			Value: fmt.Sprintf("%v", *m.PanoseAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "panose"},
+			Value: fmt.Sprintf("%v", *m.PanoseAttr),
+		})
 	}
 	if m.PitchFamilyAttr != ST_PitchFamilyUnset {
 		attr, err := m.PitchFamilyAttr.MarshalXMLAttr(xml.Name{Local: "pitchFamily"})
@@ -42,8 +46,10 @@ func (m *CT_TextFont) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.CharsetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "charset"},
-			Value: fmt.Sprintf("%v", *m.CharsetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "charset"},
+			Value: fmt.Sprintf("%v", *m.CharsetAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

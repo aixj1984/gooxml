@@ -42,12 +42,16 @@ func (m *CT_PresetShadowEffect) MarshalXML(e *xml.Encoder, start xml.StartElemen
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.DistAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dist"},
-			Value: fmt.Sprintf("%v", *m.DistAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dist"},
+			Value: fmt.Sprintf("%v", *m.DistAttr),
+		})
 	}
 	if m.DirAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dir"},
-			Value: fmt.Sprintf("%v", *m.DirAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dir"},
+			Value: fmt.Sprintf("%v", *m.DirAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ScrgbClr != nil {

@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_TextBulletSizeFollowText struct {
-}
+type CT_TextBulletSizeFollowText struct{}
 
 func NewCT_TextBulletSizeFollowText() *CT_TextBulletSizeFollowText {
 	ret := &CT_TextBulletSizeFollowText{}

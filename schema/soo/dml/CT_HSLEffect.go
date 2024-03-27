@@ -28,16 +28,22 @@ func NewCT_HSLEffect() *CT_HSLEffect {
 
 func (m *CT_HSLEffect) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.HueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hue"},
-			Value: fmt.Sprintf("%v", *m.HueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hue"},
+			Value: fmt.Sprintf("%v", *m.HueAttr),
+		})
 	}
 	if m.SatAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sat"},
-			Value: fmt.Sprintf("%v", *m.SatAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sat"},
+			Value: fmt.Sprintf("%v", *m.SatAttr),
+		})
 	}
 	if m.LumAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lum"},
-			Value: fmt.Sprintf("%v", *m.LumAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lum"},
+			Value: fmt.Sprintf("%v", *m.LumAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

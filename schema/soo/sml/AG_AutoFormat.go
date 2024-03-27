@@ -32,32 +32,46 @@ func NewAG_AutoFormat() *AG_AutoFormat {
 
 func (m *AG_AutoFormat) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.AutoFormatIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoFormatId"},
-			Value: fmt.Sprintf("%v", *m.AutoFormatIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoFormatId"},
+			Value: fmt.Sprintf("%v", *m.AutoFormatIdAttr),
+		})
 	}
 	if m.ApplyNumberFormatsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "applyNumberFormats"},
-			Value: fmt.Sprintf("%d", b2i(*m.ApplyNumberFormatsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "applyNumberFormats"},
+			Value: fmt.Sprintf("%d", b2i(*m.ApplyNumberFormatsAttr)),
+		})
 	}
 	if m.ApplyBorderFormatsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "applyBorderFormats"},
-			Value: fmt.Sprintf("%d", b2i(*m.ApplyBorderFormatsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "applyBorderFormats"},
+			Value: fmt.Sprintf("%d", b2i(*m.ApplyBorderFormatsAttr)),
+		})
 	}
 	if m.ApplyFontFormatsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "applyFontFormats"},
-			Value: fmt.Sprintf("%d", b2i(*m.ApplyFontFormatsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "applyFontFormats"},
+			Value: fmt.Sprintf("%d", b2i(*m.ApplyFontFormatsAttr)),
+		})
 	}
 	if m.ApplyPatternFormatsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "applyPatternFormats"},
-			Value: fmt.Sprintf("%d", b2i(*m.ApplyPatternFormatsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "applyPatternFormats"},
+			Value: fmt.Sprintf("%d", b2i(*m.ApplyPatternFormatsAttr)),
+		})
 	}
 	if m.ApplyAlignmentFormatsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "applyAlignmentFormats"},
-			Value: fmt.Sprintf("%d", b2i(*m.ApplyAlignmentFormatsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "applyAlignmentFormats"},
+			Value: fmt.Sprintf("%d", b2i(*m.ApplyAlignmentFormatsAttr)),
+		})
 	}
 	if m.ApplyWidthHeightFormatsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "applyWidthHeightFormats"},
-			Value: fmt.Sprintf("%d", b2i(*m.ApplyWidthHeightFormatsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "applyWidthHeightFormats"},
+			Value: fmt.Sprintf("%d", b2i(*m.ApplyWidthHeightFormatsAttr)),
+		})
 	}
 	return nil
 }

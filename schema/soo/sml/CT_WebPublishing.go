@@ -43,24 +43,34 @@ func NewCT_WebPublishing() *CT_WebPublishing {
 
 func (m *CT_WebPublishing) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CssAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "css"},
-			Value: fmt.Sprintf("%d", b2i(*m.CssAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "css"},
+			Value: fmt.Sprintf("%d", b2i(*m.CssAttr)),
+		})
 	}
 	if m.ThicketAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "thicket"},
-			Value: fmt.Sprintf("%d", b2i(*m.ThicketAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "thicket"},
+			Value: fmt.Sprintf("%d", b2i(*m.ThicketAttr)),
+		})
 	}
 	if m.LongFileNamesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "longFileNames"},
-			Value: fmt.Sprintf("%d", b2i(*m.LongFileNamesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "longFileNames"},
+			Value: fmt.Sprintf("%d", b2i(*m.LongFileNamesAttr)),
+		})
 	}
 	if m.VmlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "vml"},
-			Value: fmt.Sprintf("%d", b2i(*m.VmlAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "vml"},
+			Value: fmt.Sprintf("%d", b2i(*m.VmlAttr)),
+		})
 	}
 	if m.AllowPngAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "allowPng"},
-			Value: fmt.Sprintf("%d", b2i(*m.AllowPngAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "allowPng"},
+			Value: fmt.Sprintf("%d", b2i(*m.AllowPngAttr)),
+		})
 	}
 	if m.TargetScreenSizeAttr != ST_TargetScreenSizeUnset {
 		attr, err := m.TargetScreenSizeAttr.MarshalXMLAttr(xml.Name{Local: "targetScreenSize"})
@@ -70,16 +80,22 @@ func (m *CT_WebPublishing) MarshalXML(e *xml.Encoder, start xml.StartElement) er
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DpiAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dpi"},
-			Value: fmt.Sprintf("%v", *m.DpiAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dpi"},
+			Value: fmt.Sprintf("%v", *m.DpiAttr),
+		})
 	}
 	if m.CodePageAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "codePage"},
-			Value: fmt.Sprintf("%v", *m.CodePageAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "codePage"},
+			Value: fmt.Sprintf("%v", *m.CodePageAttr),
+		})
 	}
 	if m.CharacterSetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "characterSet"},
-			Value: fmt.Sprintf("%v", *m.CharacterSetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "characterSet"},
+			Value: fmt.Sprintf("%v", *m.CharacterSetAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

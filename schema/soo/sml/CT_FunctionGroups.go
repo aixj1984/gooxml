@@ -31,8 +31,10 @@ func NewCT_FunctionGroups() *CT_FunctionGroups {
 
 func (m *CT_FunctionGroups) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.BuiltInGroupCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "builtInGroupCount"},
-			Value: fmt.Sprintf("%v", *m.BuiltInGroupCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "builtInGroupCount"},
+			Value: fmt.Sprintf("%v", *m.BuiltInGroupCountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.FunctionGroup != nil {

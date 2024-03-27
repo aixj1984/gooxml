@@ -25,8 +25,10 @@ func NewAG_Adj() *AG_Adj {
 
 func (m *AG_Adj) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.AdjAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "adj"},
-			Value: fmt.Sprintf("%v", *m.AdjAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "adj"},
+			Value: fmt.Sprintf("%v", *m.AdjAttr),
+		})
 	}
 	return nil
 }

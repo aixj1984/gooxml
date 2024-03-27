@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_EmptyElement struct {
-}
+type CT_EmptyElement struct{}
 
 func NewCT_EmptyElement() *CT_EmptyElement {
 	ret := &CT_EmptyElement{}

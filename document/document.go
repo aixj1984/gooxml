@@ -554,6 +554,7 @@ func (d *Document) validateBookmarks() error {
 	}
 	return nil
 }
+
 func (d *Document) validateTableCells() error {
 	for _, elt := range d.x.Body.EG_BlockLevelElts {
 		for _, c := range elt.EG_ContentBlockContent {
@@ -652,7 +653,6 @@ func (d *Document) FormFields() []FormField {
 					// for text input boxes, we need a pointer to where to set
 					// the text as well
 					if ic.FldChar.FfData.TextInput != nil {
-
 						// ensure we always have at lest two IC's
 						for j := i + 1; j < len(runs)-1; j++ {
 							if len(runs[j].x.EG_RunInnerContent) == 0 {

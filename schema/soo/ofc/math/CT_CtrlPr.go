@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_CtrlPr struct {
-}
+type CT_CtrlPr struct{}
 
 func NewCT_CtrlPr() *CT_CtrlPr {
 	ret := &CT_CtrlPr{}

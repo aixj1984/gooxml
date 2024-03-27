@@ -38,8 +38,10 @@ func NewAG_OfficeShapeAttributes() *AG_OfficeShapeAttributes {
 
 func (m *AG_OfficeShapeAttributes) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.SptAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:spt"},
-			Value: fmt.Sprintf("%v", *m.SptAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:spt"},
+			Value: fmt.Sprintf("%v", *m.SptAttr),
+		})
 	}
 	if m.ConnectortypeAttr != OfcST_ConnectorTypeUnset {
 		attr, err := m.ConnectortypeAttr.MarshalXMLAttr(xml.Name{Local: "connectortype"})

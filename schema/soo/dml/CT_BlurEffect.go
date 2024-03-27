@@ -27,12 +27,16 @@ func NewCT_BlurEffect() *CT_BlurEffect {
 
 func (m *CT_BlurEffect) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RadAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rad"},
-			Value: fmt.Sprintf("%v", *m.RadAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rad"},
+			Value: fmt.Sprintf("%v", *m.RadAttr),
+		})
 	}
 	if m.GrowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "grow"},
-			Value: fmt.Sprintf("%d", b2i(*m.GrowAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "grow"},
+			Value: fmt.Sprintf("%d", b2i(*m.GrowAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

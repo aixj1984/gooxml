@@ -28,20 +28,28 @@ func NewCT_Schema() *CT_Schema {
 
 func (m *CT_Schema) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.UriAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ma:uri"},
-			Value: fmt.Sprintf("%v", *m.UriAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ma:uri"},
+			Value: fmt.Sprintf("%v", *m.UriAttr),
+		})
 	}
 	if m.ManifestLocationAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ma:manifestLocation"},
-			Value: fmt.Sprintf("%v", *m.ManifestLocationAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ma:manifestLocation"},
+			Value: fmt.Sprintf("%v", *m.ManifestLocationAttr),
+		})
 	}
 	if m.SchemaLocationAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ma:schemaLocation"},
-			Value: fmt.Sprintf("%v", *m.SchemaLocationAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ma:schemaLocation"},
+			Value: fmt.Sprintf("%v", *m.SchemaLocationAttr),
+		})
 	}
 	if m.SchemaLanguageAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ma:schemaLanguage"},
-			Value: fmt.Sprintf("%v", *m.SchemaLanguageAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ma:schemaLanguage"},
+			Value: fmt.Sprintf("%v", *m.SchemaLanguageAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

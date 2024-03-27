@@ -28,12 +28,16 @@ func NewCT_Sym() *CT_Sym {
 
 func (m *CT_Sym) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.FontAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:font"},
-			Value: fmt.Sprintf("%v", *m.FontAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:font"},
+			Value: fmt.Sprintf("%v", *m.FontAttr),
+		})
 	}
 	if m.CharAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:char"},
-			Value: fmt.Sprintf("%v", *m.CharAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:char"},
+			Value: fmt.Sprintf("%v", *m.CharAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

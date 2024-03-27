@@ -27,11 +27,15 @@ func NewCT_OutlineViewSlideEntry() *CT_OutlineViewSlideEntry {
 }
 
 func (m *CT_OutlineViewSlideEntry) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.CollapseAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "collapse"},
-			Value: fmt.Sprintf("%d", b2i(*m.CollapseAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "collapse"},
+			Value: fmt.Sprintf("%d", b2i(*m.CollapseAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

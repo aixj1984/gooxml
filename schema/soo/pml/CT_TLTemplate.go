@@ -32,8 +32,10 @@ func NewCT_TLTemplate() *CT_TLTemplate {
 
 func (m *CT_TLTemplate) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.LvlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lvl"},
-			Value: fmt.Sprintf("%v", *m.LvlAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lvl"},
+			Value: fmt.Sprintf("%v", *m.LvlAttr),
+		})
 	}
 	e.EncodeToken(start)
 	setnLst := xml.StartElement{Name: xml.Name{Local: "p:tnLst"}}

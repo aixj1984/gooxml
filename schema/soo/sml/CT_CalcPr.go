@@ -51,8 +51,10 @@ func NewCT_CalcPr() *CT_CalcPr {
 
 func (m *CT_CalcPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CalcIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "calcId"},
-			Value: fmt.Sprintf("%v", *m.CalcIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "calcId"},
+			Value: fmt.Sprintf("%v", *m.CalcIdAttr),
+		})
 	}
 	if m.CalcModeAttr != ST_CalcModeUnset {
 		attr, err := m.CalcModeAttr.MarshalXMLAttr(xml.Name{Local: "calcMode"})
@@ -62,8 +64,10 @@ func (m *CT_CalcPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.FullCalcOnLoadAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fullCalcOnLoad"},
-			Value: fmt.Sprintf("%d", b2i(*m.FullCalcOnLoadAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fullCalcOnLoad"},
+			Value: fmt.Sprintf("%d", b2i(*m.FullCalcOnLoadAttr)),
+		})
 	}
 	if m.RefModeAttr != ST_RefModeUnset {
 		attr, err := m.RefModeAttr.MarshalXMLAttr(xml.Name{Local: "refMode"})
@@ -73,40 +77,58 @@ func (m *CT_CalcPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.IterateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "iterate"},
-			Value: fmt.Sprintf("%d", b2i(*m.IterateAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "iterate"},
+			Value: fmt.Sprintf("%d", b2i(*m.IterateAttr)),
+		})
 	}
 	if m.IterateCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "iterateCount"},
-			Value: fmt.Sprintf("%v", *m.IterateCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "iterateCount"},
+			Value: fmt.Sprintf("%v", *m.IterateCountAttr),
+		})
 	}
 	if m.IterateDeltaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "iterateDelta"},
-			Value: fmt.Sprintf("%v", *m.IterateDeltaAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "iterateDelta"},
+			Value: fmt.Sprintf("%v", *m.IterateDeltaAttr),
+		})
 	}
 	if m.FullPrecisionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fullPrecision"},
-			Value: fmt.Sprintf("%d", b2i(*m.FullPrecisionAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fullPrecision"},
+			Value: fmt.Sprintf("%d", b2i(*m.FullPrecisionAttr)),
+		})
 	}
 	if m.CalcCompletedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "calcCompleted"},
-			Value: fmt.Sprintf("%d", b2i(*m.CalcCompletedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "calcCompleted"},
+			Value: fmt.Sprintf("%d", b2i(*m.CalcCompletedAttr)),
+		})
 	}
 	if m.CalcOnSaveAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "calcOnSave"},
-			Value: fmt.Sprintf("%d", b2i(*m.CalcOnSaveAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "calcOnSave"},
+			Value: fmt.Sprintf("%d", b2i(*m.CalcOnSaveAttr)),
+		})
 	}
 	if m.ConcurrentCalcAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "concurrentCalc"},
-			Value: fmt.Sprintf("%d", b2i(*m.ConcurrentCalcAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "concurrentCalc"},
+			Value: fmt.Sprintf("%d", b2i(*m.ConcurrentCalcAttr)),
+		})
 	}
 	if m.ConcurrentManualCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "concurrentManualCount"},
-			Value: fmt.Sprintf("%v", *m.ConcurrentManualCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "concurrentManualCount"},
+			Value: fmt.Sprintf("%v", *m.ConcurrentManualCountAttr),
+		})
 	}
 	if m.ForceFullCalcAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "forceFullCalc"},
-			Value: fmt.Sprintf("%d", b2i(*m.ForceFullCalcAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "forceFullCalc"},
+			Value: fmt.Sprintf("%d", b2i(*m.ForceFullCalcAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

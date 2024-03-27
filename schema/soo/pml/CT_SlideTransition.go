@@ -44,12 +44,16 @@ func (m *CT_SlideTransition) MarshalXML(e *xml.Encoder, start xml.StartElement) 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.AdvClickAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "advClick"},
-			Value: fmt.Sprintf("%d", b2i(*m.AdvClickAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "advClick"},
+			Value: fmt.Sprintf("%d", b2i(*m.AdvClickAttr)),
+		})
 	}
 	if m.AdvTmAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "advTm"},
-			Value: fmt.Sprintf("%v", *m.AdvTmAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "advTm"},
+			Value: fmt.Sprintf("%v", *m.AdvTmAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Choice != nil {

@@ -45,45 +45,67 @@ func NewCT_PCDKPI() *CT_PCDKPI {
 }
 
 func (m *CT_PCDKPI) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueName"},
-		Value: fmt.Sprintf("%v", m.UniqueNameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "uniqueName"},
+		Value: fmt.Sprintf("%v", m.UniqueNameAttr),
+	})
 	if m.CaptionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "caption"},
-			Value: fmt.Sprintf("%v", *m.CaptionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "caption"},
+			Value: fmt.Sprintf("%v", *m.CaptionAttr),
+		})
 	}
 	if m.DisplayFolderAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "displayFolder"},
-			Value: fmt.Sprintf("%v", *m.DisplayFolderAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "displayFolder"},
+			Value: fmt.Sprintf("%v", *m.DisplayFolderAttr),
+		})
 	}
 	if m.MeasureGroupAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "measureGroup"},
-			Value: fmt.Sprintf("%v", *m.MeasureGroupAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "measureGroup"},
+			Value: fmt.Sprintf("%v", *m.MeasureGroupAttr),
+		})
 	}
 	if m.ParentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "parent"},
-			Value: fmt.Sprintf("%v", *m.ParentAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "parent"},
+			Value: fmt.Sprintf("%v", *m.ParentAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "value"},
-		Value: fmt.Sprintf("%v", m.ValueAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "value"},
+		Value: fmt.Sprintf("%v", m.ValueAttr),
+	})
 	if m.GoalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "goal"},
-			Value: fmt.Sprintf("%v", *m.GoalAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "goal"},
+			Value: fmt.Sprintf("%v", *m.GoalAttr),
+		})
 	}
 	if m.StatusAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "status"},
-			Value: fmt.Sprintf("%v", *m.StatusAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "status"},
+			Value: fmt.Sprintf("%v", *m.StatusAttr),
+		})
 	}
 	if m.TrendAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "trend"},
-			Value: fmt.Sprintf("%v", *m.TrendAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "trend"},
+			Value: fmt.Sprintf("%v", *m.TrendAttr),
+		})
 	}
 	if m.WeightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "weight"},
-			Value: fmt.Sprintf("%v", *m.WeightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "weight"},
+			Value: fmt.Sprintf("%v", *m.WeightAttr),
+		})
 	}
 	if m.TimeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "time"},
-			Value: fmt.Sprintf("%v", *m.TimeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "time"},
+			Value: fmt.Sprintf("%v", *m.TimeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

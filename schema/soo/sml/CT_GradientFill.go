@@ -48,24 +48,34 @@ func (m *CT_GradientFill) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DegreeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "degree"},
-			Value: fmt.Sprintf("%v", *m.DegreeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "degree"},
+			Value: fmt.Sprintf("%v", *m.DegreeAttr),
+		})
 	}
 	if m.LeftAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "left"},
-			Value: fmt.Sprintf("%v", *m.LeftAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "left"},
+			Value: fmt.Sprintf("%v", *m.LeftAttr),
+		})
 	}
 	if m.RightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "right"},
-			Value: fmt.Sprintf("%v", *m.RightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "right"},
+			Value: fmt.Sprintf("%v", *m.RightAttr),
+		})
 	}
 	if m.TopAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "top"},
-			Value: fmt.Sprintf("%v", *m.TopAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "top"},
+			Value: fmt.Sprintf("%v", *m.TopAttr),
+		})
 	}
 	if m.BottomAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bottom"},
-			Value: fmt.Sprintf("%v", *m.BottomAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bottom"},
+			Value: fmt.Sprintf("%v", *m.BottomAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Stop != nil {

@@ -36,15 +36,21 @@ func NewCT_SimpleField() *CT_SimpleField {
 }
 
 func (m *CT_SimpleField) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:instr"},
-		Value: fmt.Sprintf("%v", m.InstrAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:instr"},
+		Value: fmt.Sprintf("%v", m.InstrAttr),
+	})
 	if m.FldLockAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:fldLock"},
-			Value: fmt.Sprintf("%v", *m.FldLockAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:fldLock"},
+			Value: fmt.Sprintf("%v", *m.FldLockAttr),
+		})
 	}
 	if m.DirtyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:dirty"},
-			Value: fmt.Sprintf("%v", *m.DirtyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:dirty"},
+			Value: fmt.Sprintf("%v", *m.DirtyAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.FldData != nil {

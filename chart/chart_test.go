@@ -49,6 +49,7 @@ func TestTitle(t *testing.T) {
 		t.Errorf("after remove, title deleted should be true")
 	}
 }
+
 func TestDateAxis(t *testing.T) {
 	spc := crt.NewChartSpace()
 	c := chart.MakeChart(spc)
@@ -57,6 +58,7 @@ func TestDateAxis(t *testing.T) {
 	c.AddCategoryAxis()
 	c.AddLineChart()
 }
+
 func TestArea3DChart(t *testing.T) {
 	spc := crt.NewChartSpace()
 	c := chart.MakeChart(spc)
@@ -233,8 +235,8 @@ func TestPieChart(t *testing.T) {
 	if s.X() == nil {
 		t.Errorf("expected non-nil series")
 	}
-
 }
+
 func TestPie3DChart(t *testing.T) {
 	spc := crt.NewChartSpace()
 	c := chart.MakeChart(spc)
@@ -282,6 +284,7 @@ func TestSurfaceChart(t *testing.T) {
 	va := c.AddValueAxis()
 	crt.AddAxis(va)
 }
+
 func TestSurface3DChart(t *testing.T) {
 	spc := crt.NewChartSpace()
 	c := chart.MakeChart(spc)

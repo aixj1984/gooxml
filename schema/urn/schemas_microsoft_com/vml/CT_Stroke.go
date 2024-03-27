@@ -62,8 +62,10 @@ func NewCT_Stroke() *CT_Stroke {
 
 func (m *CT_Stroke) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.OnAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.OnAttr.MarshalXMLAttr(xml.Name{Local: "on"})
@@ -73,16 +75,22 @@ func (m *CT_Stroke) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.WeightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "weight"},
-			Value: fmt.Sprintf("%v", *m.WeightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "weight"},
+			Value: fmt.Sprintf("%v", *m.WeightAttr),
+		})
 	}
 	if m.ColorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "color"},
-			Value: fmt.Sprintf("%v", *m.ColorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "color"},
+			Value: fmt.Sprintf("%v", *m.ColorAttr),
+		})
 	}
 	if m.OpacityAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "opacity"},
-			Value: fmt.Sprintf("%v", *m.OpacityAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "opacity"},
+			Value: fmt.Sprintf("%v", *m.OpacityAttr),
+		})
 	}
 	if m.LinestyleAttr != ST_StrokeLineStyleUnset {
 		attr, err := m.LinestyleAttr.MarshalXMLAttr(xml.Name{Local: "linestyle"})
@@ -92,8 +100,10 @@ func (m *CT_Stroke) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.MiterlimitAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "miterlimit"},
-			Value: fmt.Sprintf("%v", *m.MiterlimitAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "miterlimit"},
+			Value: fmt.Sprintf("%v", *m.MiterlimitAttr),
+		})
 	}
 	if m.JoinstyleAttr != ST_StrokeJoinStyleUnset {
 		attr, err := m.JoinstyleAttr.MarshalXMLAttr(xml.Name{Local: "joinstyle"})
@@ -110,8 +120,10 @@ func (m *CT_Stroke) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DashstyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dashstyle"},
-			Value: fmt.Sprintf("%v", *m.DashstyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dashstyle"},
+			Value: fmt.Sprintf("%v", *m.DashstyleAttr),
+		})
 	}
 	if m.FilltypeAttr != ST_FillTypeUnset {
 		attr, err := m.FilltypeAttr.MarshalXMLAttr(xml.Name{Local: "filltype"})
@@ -121,8 +133,10 @@ func (m *CT_Stroke) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.SrcAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "src"},
-			Value: fmt.Sprintf("%v", *m.SrcAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "src"},
+			Value: fmt.Sprintf("%v", *m.SrcAttr),
+		})
 	}
 	if m.ImageaspectAttr != ST_ImageAspectUnset {
 		attr, err := m.ImageaspectAttr.MarshalXMLAttr(xml.Name{Local: "imageaspect"})
@@ -132,8 +146,10 @@ func (m *CT_Stroke) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ImagesizeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "imagesize"},
-			Value: fmt.Sprintf("%v", *m.ImagesizeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "imagesize"},
+			Value: fmt.Sprintf("%v", *m.ImagesizeAttr),
+		})
 	}
 	if m.ImagealignshapeAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.ImagealignshapeAttr.MarshalXMLAttr(xml.Name{Local: "imagealignshape"})
@@ -143,8 +159,10 @@ func (m *CT_Stroke) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.Color2Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "color2"},
-			Value: fmt.Sprintf("%v", *m.Color2Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "color2"},
+			Value: fmt.Sprintf("%v", *m.Color2Attr),
+		})
 	}
 	if m.StartarrowAttr != ST_StrokeArrowTypeUnset {
 		attr, err := m.StartarrowAttr.MarshalXMLAttr(xml.Name{Local: "startarrow"})
@@ -189,16 +207,22 @@ func (m *CT_Stroke) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.HrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:href"},
-			Value: fmt.Sprintf("%v", *m.HrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:href"},
+			Value: fmt.Sprintf("%v", *m.HrefAttr),
+		})
 	}
 	if m.AlthrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:althref"},
-			Value: fmt.Sprintf("%v", *m.AlthrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:althref"},
+			Value: fmt.Sprintf("%v", *m.AlthrefAttr),
+		})
 	}
 	if m.TitleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:title"},
-			Value: fmt.Sprintf("%v", *m.TitleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:title"},
+			Value: fmt.Sprintf("%v", *m.TitleAttr),
+		})
 	}
 	if m.ForcedashAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.ForcedashAttr.MarshalXMLAttr(xml.Name{Local: "forcedash"})
@@ -208,8 +232,10 @@ func (m *CT_Stroke) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.RIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.RIdAttr),
+		})
 	}
 	if m.InsetpenAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.InsetpenAttr.MarshalXMLAttr(xml.Name{Local: "insetpen"})
@@ -219,8 +245,10 @@ func (m *CT_Stroke) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RelidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:relid"},
-			Value: fmt.Sprintf("%v", *m.RelidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:relid"},
+			Value: fmt.Sprintf("%v", *m.RelidAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Left != nil {

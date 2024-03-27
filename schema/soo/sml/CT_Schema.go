@@ -34,19 +34,27 @@ func NewCT_Schema() *CT_Schema {
 }
 
 func (m *CT_Schema) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ID"},
-		Value: fmt.Sprintf("%v", m.IDAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "ID"},
+		Value: fmt.Sprintf("%v", m.IDAttr),
+	})
 	if m.SchemaRefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "SchemaRef"},
-			Value: fmt.Sprintf("%v", *m.SchemaRefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "SchemaRef"},
+			Value: fmt.Sprintf("%v", *m.SchemaRefAttr),
+		})
 	}
 	if m.NamespaceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "Namespace"},
-			Value: fmt.Sprintf("%v", *m.NamespaceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "Namespace"},
+			Value: fmt.Sprintf("%v", *m.NamespaceAttr),
+		})
 	}
 	if m.SchemaLanguageAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "SchemaLanguage"},
-			Value: fmt.Sprintf("%v", *m.SchemaLanguageAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "SchemaLanguage"},
+			Value: fmt.Sprintf("%v", *m.SchemaLanguageAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Any != nil {

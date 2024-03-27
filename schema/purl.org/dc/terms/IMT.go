@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type IMT struct {
-}
+type IMT struct{}
 
 func NewIMT() *IMT {
 	ret := &IMT{}

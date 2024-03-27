@@ -43,11 +43,15 @@ func NewCT_DataField() *CT_DataField {
 
 func (m *CT_DataField) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fld"},
-		Value: fmt.Sprintf("%v", m.FldAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "fld"},
+		Value: fmt.Sprintf("%v", m.FldAttr),
+	})
 	if m.SubtotalAttr != ST_DataConsolidateFunctionUnset {
 		attr, err := m.SubtotalAttr.MarshalXMLAttr(xml.Name{Local: "subtotal"})
 		if err != nil {
@@ -63,16 +67,22 @@ func (m *CT_DataField) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.BaseFieldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "baseField"},
-			Value: fmt.Sprintf("%v", *m.BaseFieldAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "baseField"},
+			Value: fmt.Sprintf("%v", *m.BaseFieldAttr),
+		})
 	}
 	if m.BaseItemAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "baseItem"},
-			Value: fmt.Sprintf("%v", *m.BaseItemAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "baseItem"},
+			Value: fmt.Sprintf("%v", *m.BaseItemAttr),
+		})
 	}
 	if m.NumFmtIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "numFmtId"},
-			Value: fmt.Sprintf("%v", *m.NumFmtIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "numFmtId"},
+			Value: fmt.Sprintf("%v", *m.NumFmtIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

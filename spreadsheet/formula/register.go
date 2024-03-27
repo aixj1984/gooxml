@@ -36,9 +36,11 @@ type Function func(args []Result) Result
 // the context to reach into the sheet and pull out required values.
 type FunctionComplex func(ctx Context, ev Evaluator, args []Result) Result
 
-var regLock sync.Mutex
-var registered = map[string]Function{}
-var registeredComplex = map[string]FunctionComplex{}
+var (
+	regLock           sync.Mutex
+	registered        = map[string]Function{}
+	registeredComplex = map[string]FunctionComplex{}
+)
 
 // RegisterFunction registers a standard function.
 func RegisterFunction(name string, fn Function) {

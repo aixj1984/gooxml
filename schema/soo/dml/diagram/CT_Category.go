@@ -26,10 +26,14 @@ func NewCT_Category() *CT_Category {
 }
 
 func (m *CT_Category) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "type"},
-		Value: fmt.Sprintf("%v", m.TypeAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "pri"},
-		Value: fmt.Sprintf("%v", m.PriAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "type"},
+		Value: fmt.Sprintf("%v", m.TypeAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "pri"},
+		Value: fmt.Sprintf("%v", m.PriAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

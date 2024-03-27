@@ -38,16 +38,22 @@ func NewCT_CommonSlideViewProperties() *CT_CommonSlideViewProperties {
 
 func (m *CT_CommonSlideViewProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.SnapToGridAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "snapToGrid"},
-			Value: fmt.Sprintf("%d", b2i(*m.SnapToGridAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "snapToGrid"},
+			Value: fmt.Sprintf("%d", b2i(*m.SnapToGridAttr)),
+		})
 	}
 	if m.SnapToObjectsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "snapToObjects"},
-			Value: fmt.Sprintf("%d", b2i(*m.SnapToObjectsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "snapToObjects"},
+			Value: fmt.Sprintf("%d", b2i(*m.SnapToObjectsAttr)),
+		})
 	}
 	if m.ShowGuidesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showGuides"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowGuidesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showGuides"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowGuidesAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	secViewPr := xml.StartElement{Name: xml.Name{Local: "p:cViewPr"}}

@@ -80,7 +80,7 @@ func (x *XSDAny) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 type nsSet struct {
 	urlToPrefix map[string]string
 	prefixToURL map[string]string
-	prefixes    []string //required for deterministic output
+	prefixes    []string // required for deterministic output
 }
 
 func (n *nsSet) getPrefix(ns string) string {
@@ -185,6 +185,7 @@ func convertToXNodes(an []*any) []*XSDAny {
 	}
 	return ret
 }
+
 func convertToNodes(xn []*XSDAny) []*any {
 	ret := []*any{}
 	for _, x := range xn {

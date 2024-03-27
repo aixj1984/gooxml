@@ -76,7 +76,6 @@ func (r Relationships) AddRelationship(target, ctype string) Relationship {
 	// find the next ID that is unused
 	for _, ok := used[fmt.Sprintf("rId%d", nextID)]; ok; _, ok = used[fmt.Sprintf("rId%d", nextID)] {
 		nextID++
-
 	}
 	rel.IdAttr = fmt.Sprintf("rId%d", nextID)
 	rel.TargetAttr = target

@@ -46,20 +46,28 @@ func (m *CT_DataConsolidate) MarshalXML(e *xml.Encoder, start xml.StartElement) 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.StartLabelsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "startLabels"},
-			Value: fmt.Sprintf("%d", b2i(*m.StartLabelsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "startLabels"},
+			Value: fmt.Sprintf("%d", b2i(*m.StartLabelsAttr)),
+		})
 	}
 	if m.LeftLabelsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "leftLabels"},
-			Value: fmt.Sprintf("%d", b2i(*m.LeftLabelsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "leftLabels"},
+			Value: fmt.Sprintf("%d", b2i(*m.LeftLabelsAttr)),
+		})
 	}
 	if m.TopLabelsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "topLabels"},
-			Value: fmt.Sprintf("%d", b2i(*m.TopLabelsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "topLabels"},
+			Value: fmt.Sprintf("%d", b2i(*m.TopLabelsAttr)),
+		})
 	}
 	if m.LinkAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "link"},
-			Value: fmt.Sprintf("%d", b2i(*m.LinkAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "link"},
+			Value: fmt.Sprintf("%d", b2i(*m.LinkAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.DataRefs != nil {

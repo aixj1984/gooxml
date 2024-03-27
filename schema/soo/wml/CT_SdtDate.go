@@ -37,8 +37,10 @@ func NewCT_SdtDate() *CT_SdtDate {
 
 func (m *CT_SdtDate) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.FullDateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:fullDate"},
-			Value: fmt.Sprintf("%v", *m.FullDateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:fullDate"},
+			Value: fmt.Sprintf("%v", *m.FullDateAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.DateFormat != nil {

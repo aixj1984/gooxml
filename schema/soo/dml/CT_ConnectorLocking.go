@@ -38,44 +38,64 @@ func NewCT_ConnectorLocking() *CT_ConnectorLocking {
 
 func (m *CT_ConnectorLocking) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NoGrpAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noGrp"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoGrpAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noGrp"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoGrpAttr)),
+		})
 	}
 	if m.NoSelectAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noSelect"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoSelectAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noSelect"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoSelectAttr)),
+		})
 	}
 	if m.NoRotAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noRot"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoRotAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noRot"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoRotAttr)),
+		})
 	}
 	if m.NoChangeAspectAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noChangeAspect"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoChangeAspectAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noChangeAspect"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoChangeAspectAttr)),
+		})
 	}
 	if m.NoMoveAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noMove"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoMoveAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noMove"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoMoveAttr)),
+		})
 	}
 	if m.NoResizeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noResize"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoResizeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noResize"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoResizeAttr)),
+		})
 	}
 	if m.NoEditPointsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noEditPoints"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoEditPointsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noEditPoints"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoEditPointsAttr)),
+		})
 	}
 	if m.NoAdjustHandlesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noAdjustHandles"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoAdjustHandlesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noAdjustHandles"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoAdjustHandlesAttr)),
+		})
 	}
 	if m.NoChangeArrowheadsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noChangeArrowheads"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoChangeArrowheadsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noChangeArrowheads"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoChangeArrowheadsAttr)),
+		})
 	}
 	if m.NoChangeShapeTypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noChangeShapeType"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoChangeShapeTypeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noChangeShapeType"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoChangeShapeTypeAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

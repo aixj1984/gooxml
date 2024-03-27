@@ -39,20 +39,28 @@ func (m *CT_TLOleBuildChart) MarshalXML(e *xml.Encoder, start xml.StartElement) 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.AnimBgAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "animBg"},
-			Value: fmt.Sprintf("%d", b2i(*m.AnimBgAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "animBg"},
+			Value: fmt.Sprintf("%d", b2i(*m.AnimBgAttr)),
+		})
 	}
 	if m.SpidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spid"},
-			Value: fmt.Sprintf("%v", *m.SpidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spid"},
+			Value: fmt.Sprintf("%v", *m.SpidAttr),
+		})
 	}
 	if m.GrpIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "grpId"},
-			Value: fmt.Sprintf("%v", *m.GrpIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "grpId"},
+			Value: fmt.Sprintf("%v", *m.GrpIdAttr),
+		})
 	}
 	if m.UiExpandAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uiExpand"},
-			Value: fmt.Sprintf("%d", b2i(*m.UiExpandAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "uiExpand"},
+			Value: fmt.Sprintf("%d", b2i(*m.UiExpandAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

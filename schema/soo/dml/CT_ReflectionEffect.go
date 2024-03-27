@@ -39,52 +39,76 @@ func NewCT_ReflectionEffect() *CT_ReflectionEffect {
 
 func (m *CT_ReflectionEffect) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.BlurRadAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "blurRad"},
-			Value: fmt.Sprintf("%v", *m.BlurRadAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "blurRad"},
+			Value: fmt.Sprintf("%v", *m.BlurRadAttr),
+		})
 	}
 	if m.StAAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "stA"},
-			Value: fmt.Sprintf("%v", *m.StAAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "stA"},
+			Value: fmt.Sprintf("%v", *m.StAAttr),
+		})
 	}
 	if m.StPosAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "stPos"},
-			Value: fmt.Sprintf("%v", *m.StPosAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "stPos"},
+			Value: fmt.Sprintf("%v", *m.StPosAttr),
+		})
 	}
 	if m.EndAAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "endA"},
-			Value: fmt.Sprintf("%v", *m.EndAAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "endA"},
+			Value: fmt.Sprintf("%v", *m.EndAAttr),
+		})
 	}
 	if m.EndPosAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "endPos"},
-			Value: fmt.Sprintf("%v", *m.EndPosAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "endPos"},
+			Value: fmt.Sprintf("%v", *m.EndPosAttr),
+		})
 	}
 	if m.DistAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dist"},
-			Value: fmt.Sprintf("%v", *m.DistAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dist"},
+			Value: fmt.Sprintf("%v", *m.DistAttr),
+		})
 	}
 	if m.DirAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dir"},
-			Value: fmt.Sprintf("%v", *m.DirAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dir"},
+			Value: fmt.Sprintf("%v", *m.DirAttr),
+		})
 	}
 	if m.FadeDirAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fadeDir"},
-			Value: fmt.Sprintf("%v", *m.FadeDirAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fadeDir"},
+			Value: fmt.Sprintf("%v", *m.FadeDirAttr),
+		})
 	}
 	if m.SxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sx"},
-			Value: fmt.Sprintf("%v", *m.SxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sx"},
+			Value: fmt.Sprintf("%v", *m.SxAttr),
+		})
 	}
 	if m.SyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sy"},
-			Value: fmt.Sprintf("%v", *m.SyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sy"},
+			Value: fmt.Sprintf("%v", *m.SyAttr),
+		})
 	}
 	if m.KxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "kx"},
-			Value: fmt.Sprintf("%v", *m.KxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "kx"},
+			Value: fmt.Sprintf("%v", *m.KxAttr),
+		})
 	}
 	if m.KyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ky"},
-			Value: fmt.Sprintf("%v", *m.KyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ky"},
+			Value: fmt.Sprintf("%v", *m.KyAttr),
+		})
 	}
 	if m.AlgnAttr != ST_RectAlignmentUnset {
 		attr, err := m.AlgnAttr.MarshalXMLAttr(xml.Name{Local: "algn"})
@@ -94,8 +118,10 @@ func (m *CT_ReflectionEffect) MarshalXML(e *xml.Encoder, start xml.StartElement)
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RotWithShapeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rotWithShape"},
-			Value: fmt.Sprintf("%d", b2i(*m.RotWithShapeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rotWithShape"},
+			Value: fmt.Sprintf("%d", b2i(*m.RotWithShapeAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

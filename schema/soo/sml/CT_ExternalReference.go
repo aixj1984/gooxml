@@ -24,8 +24,10 @@ func NewCT_ExternalReference() *CT_ExternalReference {
 }
 
 func (m *CT_ExternalReference) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

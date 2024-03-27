@@ -35,16 +35,22 @@ func NewCT_LineNumber() *CT_LineNumber {
 
 func (m *CT_LineNumber) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CountByAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:countBy"},
-			Value: fmt.Sprintf("%v", *m.CountByAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:countBy"},
+			Value: fmt.Sprintf("%v", *m.CountByAttr),
+		})
 	}
 	if m.StartAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:start"},
-			Value: fmt.Sprintf("%v", *m.StartAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:start"},
+			Value: fmt.Sprintf("%v", *m.StartAttr),
+		})
 	}
 	if m.DistanceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:distance"},
-			Value: fmt.Sprintf("%v", *m.DistanceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:distance"},
+			Value: fmt.Sprintf("%v", *m.DistanceAttr),
+		})
 	}
 	if m.RestartAttr != ST_LineNumberRestartUnset {
 		attr, err := m.RestartAttr.MarshalXMLAttr(xml.Name{Local: "w:restart"})

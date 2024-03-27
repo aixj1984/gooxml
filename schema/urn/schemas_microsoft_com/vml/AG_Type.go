@@ -25,8 +25,10 @@ func NewAG_Type() *AG_Type {
 
 func (m *AG_Type) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.TypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "type"},
-			Value: fmt.Sprintf("%v", *m.TypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "type"},
+			Value: fmt.Sprintf("%v", *m.TypeAttr),
+		})
 	}
 	return nil
 }

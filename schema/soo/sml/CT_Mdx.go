@@ -39,8 +39,10 @@ func NewCT_Mdx() *CT_Mdx {
 }
 
 func (m *CT_Mdx) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "n"},
-		Value: fmt.Sprintf("%v", m.NAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "n"},
+		Value: fmt.Sprintf("%v", m.NAttr),
+	})
 	attr, err := m.FAttr.MarshalXMLAttr(xml.Name{Local: "f"})
 	if err != nil {
 		return err

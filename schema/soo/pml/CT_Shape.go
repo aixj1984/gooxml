@@ -40,8 +40,10 @@ func NewCT_Shape() *CT_Shape {
 
 func (m *CT_Shape) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.UseBgFillAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "useBgFill"},
-			Value: fmt.Sprintf("%d", b2i(*m.UseBgFillAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "useBgFill"},
+			Value: fmt.Sprintf("%d", b2i(*m.UseBgFillAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	senvSpPr := xml.StartElement{Name: xml.Name{Local: "p:nvSpPr"}}

@@ -39,16 +39,22 @@ func NewCT_DiagramDefinition() *CT_DiagramDefinition {
 
 func (m *CT_DiagramDefinition) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.UniqueIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueId"},
-			Value: fmt.Sprintf("%v", *m.UniqueIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "uniqueId"},
+			Value: fmt.Sprintf("%v", *m.UniqueIdAttr),
+		})
 	}
 	if m.MinVerAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minVer"},
-			Value: fmt.Sprintf("%v", *m.MinVerAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minVer"},
+			Value: fmt.Sprintf("%v", *m.MinVerAttr),
+		})
 	}
 	if m.DefStyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "defStyle"},
-			Value: fmt.Sprintf("%v", *m.DefStyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "defStyle"},
+			Value: fmt.Sprintf("%v", *m.DefStyleAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Title != nil {

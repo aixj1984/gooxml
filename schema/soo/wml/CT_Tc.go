@@ -32,8 +32,10 @@ func NewCT_Tc() *CT_Tc {
 
 func (m *CT_Tc) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TcPr != nil {

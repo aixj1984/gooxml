@@ -25,8 +25,10 @@ func NewCT_TLSubShapeId() *CT_TLSubShapeId {
 }
 
 func (m *CT_TLSubShapeId) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spid"},
-		Value: fmt.Sprintf("%v", m.SpidAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "spid"},
+		Value: fmt.Sprintf("%v", m.SpidAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

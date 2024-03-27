@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type Point struct {
-}
+type Point struct{}
 
 func NewPoint() *Point {
 	ret := &Point{}

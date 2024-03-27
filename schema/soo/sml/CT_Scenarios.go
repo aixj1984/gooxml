@@ -35,16 +35,22 @@ func NewCT_Scenarios() *CT_Scenarios {
 
 func (m *CT_Scenarios) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CurrentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "current"},
-			Value: fmt.Sprintf("%v", *m.CurrentAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "current"},
+			Value: fmt.Sprintf("%v", *m.CurrentAttr),
+		})
 	}
 	if m.ShowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "show"},
-			Value: fmt.Sprintf("%v", *m.ShowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "show"},
+			Value: fmt.Sprintf("%v", *m.ShowAttr),
+		})
 	}
 	if m.SqrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sqref"},
-			Value: fmt.Sprintf("%v", *m.SqrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sqref"},
+			Value: fmt.Sprintf("%v", *m.SqrefAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sescenario := xml.StartElement{Name: xml.Name{Local: "ma:scenario"}}

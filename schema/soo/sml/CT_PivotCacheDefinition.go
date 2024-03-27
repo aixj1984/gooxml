@@ -89,80 +89,118 @@ func NewCT_PivotCacheDefinition() *CT_PivotCacheDefinition {
 
 func (m *CT_PivotCacheDefinition) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.InvalidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "invalid"},
-			Value: fmt.Sprintf("%d", b2i(*m.InvalidAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "invalid"},
+			Value: fmt.Sprintf("%d", b2i(*m.InvalidAttr)),
+		})
 	}
 	if m.SaveDataAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "saveData"},
-			Value: fmt.Sprintf("%d", b2i(*m.SaveDataAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "saveData"},
+			Value: fmt.Sprintf("%d", b2i(*m.SaveDataAttr)),
+		})
 	}
 	if m.RefreshOnLoadAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refreshOnLoad"},
-			Value: fmt.Sprintf("%d", b2i(*m.RefreshOnLoadAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refreshOnLoad"},
+			Value: fmt.Sprintf("%d", b2i(*m.RefreshOnLoadAttr)),
+		})
 	}
 	if m.OptimizeMemoryAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "optimizeMemory"},
-			Value: fmt.Sprintf("%d", b2i(*m.OptimizeMemoryAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "optimizeMemory"},
+			Value: fmt.Sprintf("%d", b2i(*m.OptimizeMemoryAttr)),
+		})
 	}
 	if m.EnableRefreshAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "enableRefresh"},
-			Value: fmt.Sprintf("%d", b2i(*m.EnableRefreshAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "enableRefresh"},
+			Value: fmt.Sprintf("%d", b2i(*m.EnableRefreshAttr)),
+		})
 	}
 	if m.RefreshedByAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refreshedBy"},
-			Value: fmt.Sprintf("%v", *m.RefreshedByAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refreshedBy"},
+			Value: fmt.Sprintf("%v", *m.RefreshedByAttr),
+		})
 	}
 	if m.RefreshedDateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refreshedDate"},
-			Value: fmt.Sprintf("%v", *m.RefreshedDateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refreshedDate"},
+			Value: fmt.Sprintf("%v", *m.RefreshedDateAttr),
+		})
 	}
 	if m.RefreshedDateIsoAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refreshedDateIso"},
-			Value: fmt.Sprintf("%v", *m.RefreshedDateIsoAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refreshedDateIso"},
+			Value: fmt.Sprintf("%v", *m.RefreshedDateIsoAttr),
+		})
 	}
 	if m.BackgroundQueryAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "backgroundQuery"},
-			Value: fmt.Sprintf("%d", b2i(*m.BackgroundQueryAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "backgroundQuery"},
+			Value: fmt.Sprintf("%d", b2i(*m.BackgroundQueryAttr)),
+		})
 	}
 	if m.MissingItemsLimitAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "missingItemsLimit"},
-			Value: fmt.Sprintf("%v", *m.MissingItemsLimitAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "missingItemsLimit"},
+			Value: fmt.Sprintf("%v", *m.MissingItemsLimitAttr),
+		})
 	}
 	if m.CreatedVersionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "createdVersion"},
-			Value: fmt.Sprintf("%v", *m.CreatedVersionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "createdVersion"},
+			Value: fmt.Sprintf("%v", *m.CreatedVersionAttr),
+		})
 	}
 	if m.RefreshedVersionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refreshedVersion"},
-			Value: fmt.Sprintf("%v", *m.RefreshedVersionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refreshedVersion"},
+			Value: fmt.Sprintf("%v", *m.RefreshedVersionAttr),
+		})
 	}
 	if m.MinRefreshableVersionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minRefreshableVersion"},
-			Value: fmt.Sprintf("%v", *m.MinRefreshableVersionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minRefreshableVersion"},
+			Value: fmt.Sprintf("%v", *m.MinRefreshableVersionAttr),
+		})
 	}
 	if m.RecordCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "recordCount"},
-			Value: fmt.Sprintf("%v", *m.RecordCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "recordCount"},
+			Value: fmt.Sprintf("%v", *m.RecordCountAttr),
+		})
 	}
 	if m.UpgradeOnRefreshAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "upgradeOnRefresh"},
-			Value: fmt.Sprintf("%d", b2i(*m.UpgradeOnRefreshAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "upgradeOnRefresh"},
+			Value: fmt.Sprintf("%d", b2i(*m.UpgradeOnRefreshAttr)),
+		})
 	}
 	if m.TupleCacheAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tupleCache"},
-			Value: fmt.Sprintf("%d", b2i(*m.TupleCacheAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tupleCache"},
+			Value: fmt.Sprintf("%d", b2i(*m.TupleCacheAttr)),
+		})
 	}
 	if m.SupportSubqueryAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "supportSubquery"},
-			Value: fmt.Sprintf("%d", b2i(*m.SupportSubqueryAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "supportSubquery"},
+			Value: fmt.Sprintf("%d", b2i(*m.SupportSubqueryAttr)),
+		})
 	}
 	if m.SupportAdvancedDrillAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "supportAdvancedDrill"},
-			Value: fmt.Sprintf("%d", b2i(*m.SupportAdvancedDrillAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "supportAdvancedDrill"},
+			Value: fmt.Sprintf("%d", b2i(*m.SupportAdvancedDrillAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	secacheSource := xml.StartElement{Name: xml.Name{Local: "ma:cacheSource"}}

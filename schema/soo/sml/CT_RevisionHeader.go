@@ -48,23 +48,37 @@ func NewCT_RevisionHeader() *CT_RevisionHeader {
 }
 
 func (m *CT_RevisionHeader) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "guid"},
-		Value: fmt.Sprintf("%v", m.GuidAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dateTime"},
-		Value: fmt.Sprintf("%v", m.DateTimeAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxSheetId"},
-		Value: fmt.Sprintf("%v", m.MaxSheetIdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "userName"},
-		Value: fmt.Sprintf("%v", m.UserNameAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "guid"},
+		Value: fmt.Sprintf("%v", m.GuidAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "dateTime"},
+		Value: fmt.Sprintf("%v", m.DateTimeAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "maxSheetId"},
+		Value: fmt.Sprintf("%v", m.MaxSheetIdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "userName"},
+		Value: fmt.Sprintf("%v", m.UserNameAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.MinRIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minRId"},
-			Value: fmt.Sprintf("%v", *m.MinRIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minRId"},
+			Value: fmt.Sprintf("%v", *m.MinRIdAttr),
+		})
 	}
 	if m.MaxRIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxRId"},
-			Value: fmt.Sprintf("%v", *m.MaxRIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxRId"},
+			Value: fmt.Sprintf("%v", *m.MaxRIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sesheetIdMap := xml.StartElement{Name: xml.Name{Local: "ma:sheetIdMap"}}

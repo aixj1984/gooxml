@@ -26,8 +26,10 @@ func NewOfcCT_ColorMru() *OfcCT_ColorMru {
 
 func (m *OfcCT_ColorMru) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ColorsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "colors"},
-			Value: fmt.Sprintf("%v", *m.ColorsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "colors"},
+			Value: fmt.Sprintf("%v", *m.ColorsAttr),
+		})
 	}
 	if m.ExtAttr != ST_ExtUnset {
 		attr, err := m.ExtAttr.MarshalXMLAttr(xml.Name{Local: "ext"})

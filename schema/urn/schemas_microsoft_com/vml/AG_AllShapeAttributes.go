@@ -46,8 +46,10 @@ func NewAG_AllShapeAttributes() *AG_AllShapeAttributes {
 
 func (m *AG_AllShapeAttributes) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.OpacityAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "opacity"},
-			Value: fmt.Sprintf("%v", *m.OpacityAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "opacity"},
+			Value: fmt.Sprintf("%v", *m.OpacityAttr),
+		})
 	}
 	if m.StrokedAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.StrokedAttr.MarshalXMLAttr(xml.Name{Local: "stroked"})
@@ -57,12 +59,16 @@ func (m *AG_AllShapeAttributes) MarshalXML(e *xml.Encoder, start xml.StartElemen
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.StrokecolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "strokecolor"},
-			Value: fmt.Sprintf("%v", *m.StrokecolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "strokecolor"},
+			Value: fmt.Sprintf("%v", *m.StrokecolorAttr),
+		})
 	}
 	if m.StrokeweightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "strokeweight"},
-			Value: fmt.Sprintf("%v", *m.StrokeweightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "strokeweight"},
+			Value: fmt.Sprintf("%v", *m.StrokeweightAttr),
+		})
 	}
 	if m.InsetpenAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.InsetpenAttr.MarshalXMLAttr(xml.Name{Local: "insetpen"})
@@ -72,8 +78,10 @@ func (m *AG_AllShapeAttributes) MarshalXML(e *xml.Encoder, start xml.StartElemen
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ChromakeyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "chromakey"},
-			Value: fmt.Sprintf("%v", *m.ChromakeyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "chromakey"},
+			Value: fmt.Sprintf("%v", *m.ChromakeyAttr),
+		})
 	}
 	if m.FilledAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.FilledAttr.MarshalXMLAttr(xml.Name{Local: "filled"})
@@ -83,12 +91,16 @@ func (m *AG_AllShapeAttributes) MarshalXML(e *xml.Encoder, start xml.StartElemen
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.FillcolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fillcolor"},
-			Value: fmt.Sprintf("%v", *m.FillcolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fillcolor"},
+			Value: fmt.Sprintf("%v", *m.FillcolorAttr),
+		})
 	}
 	if m.SptAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:spt"},
-			Value: fmt.Sprintf("%v", *m.SptAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:spt"},
+			Value: fmt.Sprintf("%v", *m.SptAttr),
+		})
 	}
 	if m.ConnectortypeAttr != OfcST_ConnectorTypeUnset {
 		attr, err := m.ConnectortypeAttr.MarshalXMLAttr(xml.Name{Local: "connectortype"})

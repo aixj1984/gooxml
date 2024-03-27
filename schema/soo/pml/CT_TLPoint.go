@@ -29,10 +29,14 @@ func NewCT_TLPoint() *CT_TLPoint {
 }
 
 func (m *CT_TLPoint) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "x"},
-		Value: fmt.Sprintf("%v", m.XAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "y"},
-		Value: fmt.Sprintf("%v", m.YAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "x"},
+		Value: fmt.Sprintf("%v", m.XAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "y"},
+		Value: fmt.Sprintf("%v", m.YAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

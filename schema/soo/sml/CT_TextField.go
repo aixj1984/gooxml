@@ -36,8 +36,10 @@ func (m *CT_TextField) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.PositionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "position"},
-			Value: fmt.Sprintf("%v", *m.PositionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "position"},
+			Value: fmt.Sprintf("%v", *m.PositionAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

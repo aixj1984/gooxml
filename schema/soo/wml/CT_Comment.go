@@ -35,17 +35,25 @@ func NewCT_Comment() *CT_Comment {
 
 func (m *CT_Comment) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.InitialsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:initials"},
-			Value: fmt.Sprintf("%v", *m.InitialsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:initials"},
+			Value: fmt.Sprintf("%v", *m.InitialsAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:author"},
-		Value: fmt.Sprintf("%v", m.AuthorAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:author"},
+		Value: fmt.Sprintf("%v", m.AuthorAttr),
+	})
 	if m.DateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:date"},
-			Value: fmt.Sprintf("%v", *m.DateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:date"},
+			Value: fmt.Sprintf("%v", *m.DateAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeToken(start)
 	if m.EG_BlockLevelElts != nil {
 		for _, c := range m.EG_BlockLevelElts {

@@ -25,10 +25,14 @@ func NewCT_DashStop() *CT_DashStop {
 }
 
 func (m *CT_DashStop) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "d"},
-		Value: fmt.Sprintf("%v", m.DAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sp"},
-		Value: fmt.Sprintf("%v", m.SpAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "d"},
+		Value: fmt.Sprintf("%v", m.DAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sp"},
+		Value: fmt.Sprintf("%v", m.SpAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

@@ -41,25 +41,37 @@ func NewCT_RevisionFormatting() *CT_RevisionFormatting {
 }
 
 func (m *CT_RevisionFormatting) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sheetId"},
-		Value: fmt.Sprintf("%v", m.SheetIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sheetId"},
+		Value: fmt.Sprintf("%v", m.SheetIdAttr),
+	})
 	if m.XfDxfAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xfDxf"},
-			Value: fmt.Sprintf("%d", b2i(*m.XfDxfAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "xfDxf"},
+			Value: fmt.Sprintf("%d", b2i(*m.XfDxfAttr)),
+		})
 	}
 	if m.SAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "s"},
-			Value: fmt.Sprintf("%d", b2i(*m.SAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "s"},
+			Value: fmt.Sprintf("%d", b2i(*m.SAttr)),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sqref"},
-		Value: fmt.Sprintf("%v", m.SqrefAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sqref"},
+		Value: fmt.Sprintf("%v", m.SqrefAttr),
+	})
 	if m.StartAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "start"},
-			Value: fmt.Sprintf("%v", *m.StartAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "start"},
+			Value: fmt.Sprintf("%v", *m.StartAttr),
+		})
 	}
 	if m.LengthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "length"},
-			Value: fmt.Sprintf("%v", *m.LengthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "length"},
+			Value: fmt.Sprintf("%v", *m.LengthAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Dxf != nil {

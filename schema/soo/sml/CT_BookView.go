@@ -61,52 +61,76 @@ func (m *CT_BookView) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.MinimizedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minimized"},
-			Value: fmt.Sprintf("%d", b2i(*m.MinimizedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minimized"},
+			Value: fmt.Sprintf("%d", b2i(*m.MinimizedAttr)),
+		})
 	}
 	if m.ShowHorizontalScrollAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showHorizontalScroll"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowHorizontalScrollAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showHorizontalScroll"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowHorizontalScrollAttr)),
+		})
 	}
 	if m.ShowVerticalScrollAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showVerticalScroll"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowVerticalScrollAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showVerticalScroll"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowVerticalScrollAttr)),
+		})
 	}
 	if m.ShowSheetTabsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showSheetTabs"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowSheetTabsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showSheetTabs"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowSheetTabsAttr)),
+		})
 	}
 	if m.XWindowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xWindow"},
-			Value: fmt.Sprintf("%v", *m.XWindowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "xWindow"},
+			Value: fmt.Sprintf("%v", *m.XWindowAttr),
+		})
 	}
 	if m.YWindowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "yWindow"},
-			Value: fmt.Sprintf("%v", *m.YWindowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "yWindow"},
+			Value: fmt.Sprintf("%v", *m.YWindowAttr),
+		})
 	}
 	if m.WindowWidthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "windowWidth"},
-			Value: fmt.Sprintf("%v", *m.WindowWidthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "windowWidth"},
+			Value: fmt.Sprintf("%v", *m.WindowWidthAttr),
+		})
 	}
 	if m.WindowHeightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "windowHeight"},
-			Value: fmt.Sprintf("%v", *m.WindowHeightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "windowHeight"},
+			Value: fmt.Sprintf("%v", *m.WindowHeightAttr),
+		})
 	}
 	if m.TabRatioAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tabRatio"},
-			Value: fmt.Sprintf("%v", *m.TabRatioAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tabRatio"},
+			Value: fmt.Sprintf("%v", *m.TabRatioAttr),
+		})
 	}
 	if m.FirstSheetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "firstSheet"},
-			Value: fmt.Sprintf("%v", *m.FirstSheetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "firstSheet"},
+			Value: fmt.Sprintf("%v", *m.FirstSheetAttr),
+		})
 	}
 	if m.ActiveTabAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "activeTab"},
-			Value: fmt.Sprintf("%v", *m.ActiveTabAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "activeTab"},
+			Value: fmt.Sprintf("%v", *m.ActiveTabAttr),
+		})
 	}
 	if m.AutoFilterDateGroupingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoFilterDateGrouping"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoFilterDateGroupingAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoFilterDateGrouping"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoFilterDateGroupingAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

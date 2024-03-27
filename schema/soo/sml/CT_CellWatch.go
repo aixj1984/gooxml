@@ -25,8 +25,10 @@ func NewCT_CellWatch() *CT_CellWatch {
 }
 
 func (m *CT_CellWatch) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-		Value: fmt.Sprintf("%v", m.RAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r"},
+		Value: fmt.Sprintf("%v", m.RAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

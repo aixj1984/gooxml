@@ -30,12 +30,18 @@ func NewCT_RevisionQueryTableField() *CT_RevisionQueryTableField {
 }
 
 func (m *CT_RevisionQueryTableField) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sheetId"},
-		Value: fmt.Sprintf("%v", m.SheetIdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ref"},
-		Value: fmt.Sprintf("%v", m.RefAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fieldId"},
-		Value: fmt.Sprintf("%v", m.FieldIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sheetId"},
+		Value: fmt.Sprintf("%v", m.SheetIdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "ref"},
+		Value: fmt.Sprintf("%v", m.RefAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "fieldId"},
+		Value: fmt.Sprintf("%v", m.FieldIdAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

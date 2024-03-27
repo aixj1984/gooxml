@@ -38,16 +38,22 @@ func NewCT_DataBar() *CT_DataBar {
 
 func (m *CT_DataBar) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.MinLengthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minLength"},
-			Value: fmt.Sprintf("%v", *m.MinLengthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minLength"},
+			Value: fmt.Sprintf("%v", *m.MinLengthAttr),
+		})
 	}
 	if m.MaxLengthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxLength"},
-			Value: fmt.Sprintf("%v", *m.MaxLengthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxLength"},
+			Value: fmt.Sprintf("%v", *m.MaxLengthAttr),
+		})
 	}
 	if m.ShowValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showValue"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowValueAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showValue"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowValueAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	secfvo := xml.StartElement{Name: xml.Name{Local: "ma:cfvo"}}

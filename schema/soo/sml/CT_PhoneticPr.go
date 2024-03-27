@@ -30,8 +30,10 @@ func NewCT_PhoneticPr() *CT_PhoneticPr {
 }
 
 func (m *CT_PhoneticPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fontId"},
-		Value: fmt.Sprintf("%v", m.FontIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "fontId"},
+		Value: fmt.Sprintf("%v", m.FontIdAttr),
+	})
 	if m.TypeAttr != ST_PhoneticTypeUnset {
 		attr, err := m.TypeAttr.MarshalXMLAttr(xml.Name{Local: "type"})
 		if err != nil {

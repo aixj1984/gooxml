@@ -13,9 +13,11 @@ import (
 )
 
 // line 20 "lexer.go"
-const formula_start int = 27
-const formula_first_final int = 27
-const formula_error int = 0
+const (
+	formula_start       int = 27
+	formula_first_final int = 27
+	formula_error       int = 0
+)
 
 const formula_en_main int = 27
 

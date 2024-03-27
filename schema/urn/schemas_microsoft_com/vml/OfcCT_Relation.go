@@ -28,16 +28,22 @@ func NewOfcCT_Relation() *OfcCT_Relation {
 
 func (m *OfcCT_Relation) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IdsrcAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "idsrc"},
-			Value: fmt.Sprintf("%v", *m.IdsrcAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "idsrc"},
+			Value: fmt.Sprintf("%v", *m.IdsrcAttr),
+		})
 	}
 	if m.IddestAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "iddest"},
-			Value: fmt.Sprintf("%v", *m.IddestAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "iddest"},
+			Value: fmt.Sprintf("%v", *m.IddestAttr),
+		})
 	}
 	if m.IdcntrAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "idcntr"},
-			Value: fmt.Sprintf("%v", *m.IdcntrAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "idcntr"},
+			Value: fmt.Sprintf("%v", *m.IdcntrAttr),
+		})
 	}
 	if m.ExtAttr != ST_ExtUnset {
 		attr, err := m.ExtAttr.MarshalXMLAttr(xml.Name{Local: "ext"})

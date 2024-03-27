@@ -14,7 +14,6 @@ import (
 )
 
 func TestSort(t *testing.T) {
-
 	tests := []struct {
 		a, b string
 	}{
@@ -37,5 +36,4 @@ func TestSort(t *testing.T) {
 			}
 		}
 	}
-
 }

@@ -50,7 +50,6 @@ func TestCell(t *testing.T) {
 	if *cell.X().V != "1.23" {
 		t.Errorf("expected 1.23, got %s", *cell.X().V)
 	}
-
 }
 
 func TestCellGetNumber(t *testing.T) {

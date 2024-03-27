@@ -39,20 +39,28 @@ func (m *WdCT_WrapSquare) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.DistTAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "distT"},
-			Value: fmt.Sprintf("%v", *m.DistTAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "distT"},
+			Value: fmt.Sprintf("%v", *m.DistTAttr),
+		})
 	}
 	if m.DistBAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "distB"},
-			Value: fmt.Sprintf("%v", *m.DistBAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "distB"},
+			Value: fmt.Sprintf("%v", *m.DistBAttr),
+		})
 	}
 	if m.DistLAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "distL"},
-			Value: fmt.Sprintf("%v", *m.DistLAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "distL"},
+			Value: fmt.Sprintf("%v", *m.DistLAttr),
+		})
 	}
 	if m.DistRAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "distR"},
-			Value: fmt.Sprintf("%v", *m.DistRAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "distR"},
+			Value: fmt.Sprintf("%v", *m.DistRAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.EffectExtent != nil {

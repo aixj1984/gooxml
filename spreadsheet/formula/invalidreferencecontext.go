@@ -12,8 +12,7 @@ package formula
 // Context safely, but returns error results.
 var InvalidReferenceContext = &ivr{}
 
-type ivr struct {
-}
+type ivr struct{}
 
 func (i *ivr) Cell(ref string, ev Evaluator) Result {
 	return MakeErrorResult("invalid reference")
@@ -28,5 +27,4 @@ func (i *ivr) Sheet(name string) Context {
 }
 
 func (i *ivr) SetOffset(col, row uint32) {
-
 }

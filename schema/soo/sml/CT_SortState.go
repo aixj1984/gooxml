@@ -38,12 +38,16 @@ func NewCT_SortState() *CT_SortState {
 
 func (m *CT_SortState) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ColumnSortAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "columnSort"},
-			Value: fmt.Sprintf("%d", b2i(*m.ColumnSortAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "columnSort"},
+			Value: fmt.Sprintf("%d", b2i(*m.ColumnSortAttr)),
+		})
 	}
 	if m.CaseSensitiveAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "caseSensitive"},
-			Value: fmt.Sprintf("%d", b2i(*m.CaseSensitiveAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "caseSensitive"},
+			Value: fmt.Sprintf("%d", b2i(*m.CaseSensitiveAttr)),
+		})
 	}
 	if m.SortMethodAttr != ST_SortMethodUnset {
 		attr, err := m.SortMethodAttr.MarshalXMLAttr(xml.Name{Local: "sortMethod"})
@@ -52,8 +56,10 @@ func (m *CT_SortState) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		}
 		start.Attr = append(start.Attr, attr)
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ref"},
-		Value: fmt.Sprintf("%v", m.RefAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "ref"},
+		Value: fmt.Sprintf("%v", m.RefAttr),
+	})
 	e.EncodeToken(start)
 	if m.SortCondition != nil {
 		sesortCondition := xml.StartElement{Name: xml.Name{Local: "ma:sortCondition"}}

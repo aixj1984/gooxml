@@ -40,32 +40,46 @@ func NewCT_TblLook() *CT_TblLook {
 
 func (m *CT_TblLook) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.FirstRowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:firstRow"},
-			Value: fmt.Sprintf("%v", *m.FirstRowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:firstRow"},
+			Value: fmt.Sprintf("%v", *m.FirstRowAttr),
+		})
 	}
 	if m.LastRowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:lastRow"},
-			Value: fmt.Sprintf("%v", *m.LastRowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:lastRow"},
+			Value: fmt.Sprintf("%v", *m.LastRowAttr),
+		})
 	}
 	if m.FirstColumnAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:firstColumn"},
-			Value: fmt.Sprintf("%v", *m.FirstColumnAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:firstColumn"},
+			Value: fmt.Sprintf("%v", *m.FirstColumnAttr),
+		})
 	}
 	if m.LastColumnAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:lastColumn"},
-			Value: fmt.Sprintf("%v", *m.LastColumnAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:lastColumn"},
+			Value: fmt.Sprintf("%v", *m.LastColumnAttr),
+		})
 	}
 	if m.NoHBandAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:noHBand"},
-			Value: fmt.Sprintf("%v", *m.NoHBandAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:noHBand"},
+			Value: fmt.Sprintf("%v", *m.NoHBandAttr),
+		})
 	}
 	if m.NoVBandAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:noVBand"},
-			Value: fmt.Sprintf("%v", *m.NoVBandAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:noVBand"},
+			Value: fmt.Sprintf("%v", *m.NoVBandAttr),
+		})
 	}
 	if m.ValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:val"},
-			Value: fmt.Sprintf("%v", *m.ValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:val"},
+			Value: fmt.Sprintf("%v", *m.ValAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

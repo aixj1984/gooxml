@@ -38,32 +38,46 @@ func NewCT_OleObject() *CT_OleObject {
 
 func (m *CT_OleObject) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ProgIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "progId"},
-			Value: fmt.Sprintf("%v", *m.ProgIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "progId"},
+			Value: fmt.Sprintf("%v", *m.ProgIdAttr),
+		})
 	}
 	if m.SpidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spid"},
-			Value: fmt.Sprintf("%v", *m.SpidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spid"},
+			Value: fmt.Sprintf("%v", *m.SpidAttr),
+		})
 	}
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.ShowAsIconAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showAsIcon"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowAsIconAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showAsIcon"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowAsIconAttr)),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.ImgWAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "imgW"},
-			Value: fmt.Sprintf("%v", *m.ImgWAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "imgW"},
+			Value: fmt.Sprintf("%v", *m.ImgWAttr),
+		})
 	}
 	if m.ImgHAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "imgH"},
-			Value: fmt.Sprintf("%v", *m.ImgHAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "imgH"},
+			Value: fmt.Sprintf("%v", *m.ImgHAttr),
+		})
 	}
 	e.EncodeToken(start)
 	m.Choice.MarshalXML(e, xml.StartElement{})

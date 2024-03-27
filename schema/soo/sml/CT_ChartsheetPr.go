@@ -32,12 +32,16 @@ func NewCT_ChartsheetPr() *CT_ChartsheetPr {
 
 func (m *CT_ChartsheetPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PublishedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "published"},
-			Value: fmt.Sprintf("%d", b2i(*m.PublishedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "published"},
+			Value: fmt.Sprintf("%d", b2i(*m.PublishedAttr)),
+		})
 	}
 	if m.CodeNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "codeName"},
-			Value: fmt.Sprintf("%v", *m.CodeNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "codeName"},
+			Value: fmt.Sprintf("%v", *m.CodeNameAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TabColor != nil {

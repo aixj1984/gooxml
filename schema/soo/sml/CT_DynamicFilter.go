@@ -42,20 +42,28 @@ func (m *CT_DynamicFilter) MarshalXML(e *xml.Encoder, start xml.StartElement) er
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.ValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "val"},
-			Value: fmt.Sprintf("%v", *m.ValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "val"},
+			Value: fmt.Sprintf("%v", *m.ValAttr),
+		})
 	}
 	if m.ValIsoAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "valIso"},
-			Value: fmt.Sprintf("%v", *m.ValIsoAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "valIso"},
+			Value: fmt.Sprintf("%v", *m.ValIsoAttr),
+		})
 	}
 	if m.MaxValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxVal"},
-			Value: fmt.Sprintf("%v", *m.MaxValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxVal"},
+			Value: fmt.Sprintf("%v", *m.MaxValAttr),
+		})
 	}
 	if m.MaxValIsoAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxValIso"},
-			Value: fmt.Sprintf("%v", *m.MaxValIsoAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxValIso"},
+			Value: fmt.Sprintf("%v", *m.MaxValIsoAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

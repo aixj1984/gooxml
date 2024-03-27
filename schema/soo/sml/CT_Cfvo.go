@@ -40,12 +40,16 @@ func (m *CT_Cfvo) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.ValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "val"},
-			Value: fmt.Sprintf("%v", *m.ValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "val"},
+			Value: fmt.Sprintf("%v", *m.ValAttr),
+		})
 	}
 	if m.GteAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "gte"},
-			Value: fmt.Sprintf("%d", b2i(*m.GteAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "gte"},
+			Value: fmt.Sprintf("%d", b2i(*m.GteAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

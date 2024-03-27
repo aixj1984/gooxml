@@ -50,8 +50,10 @@ func NewAG_OfficeCoreAttributes() *AG_OfficeCoreAttributes {
 
 func (m *AG_OfficeCoreAttributes) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.SpidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:spid"},
-			Value: fmt.Sprintf("%v", *m.SpidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:spid"},
+			Value: fmt.Sprintf("%v", *m.SpidAttr),
+		})
 	}
 	if m.OnedAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.OnedAttr.MarshalXMLAttr(xml.Name{Local: "oned"})
@@ -61,8 +63,10 @@ func (m *AG_OfficeCoreAttributes) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RegroupidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:regroupid"},
-			Value: fmt.Sprintf("%v", *m.RegroupidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:regroupid"},
+			Value: fmt.Sprintf("%v", *m.RegroupidAttr),
+		})
 	}
 	if m.DoubleclicknotifyAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.DoubleclicknotifyAttr.MarshalXMLAttr(xml.Name{Local: "doubleclicknotify"})
@@ -114,8 +118,10 @@ func (m *AG_OfficeCoreAttributes) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.HrpctAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:hrpct"},
-			Value: fmt.Sprintf("%v", *m.HrpctAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:hrpct"},
+			Value: fmt.Sprintf("%v", *m.HrpctAttr),
+		})
 	}
 	if m.HralignAttr != OfcST_HrAlignUnset {
 		attr, err := m.HralignAttr.MarshalXMLAttr(xml.Name{Local: "hralign"})
@@ -146,20 +152,28 @@ func (m *AG_OfficeCoreAttributes) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.BordertopcolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:bordertopcolor"},
-			Value: fmt.Sprintf("%v", *m.BordertopcolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:bordertopcolor"},
+			Value: fmt.Sprintf("%v", *m.BordertopcolorAttr),
+		})
 	}
 	if m.BorderleftcolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:borderleftcolor"},
-			Value: fmt.Sprintf("%v", *m.BorderleftcolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:borderleftcolor"},
+			Value: fmt.Sprintf("%v", *m.BorderleftcolorAttr),
+		})
 	}
 	if m.BorderbottomcolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:borderbottomcolor"},
-			Value: fmt.Sprintf("%v", *m.BorderbottomcolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:borderbottomcolor"},
+			Value: fmt.Sprintf("%v", *m.BorderbottomcolorAttr),
+		})
 	}
 	if m.BorderrightcolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:borderrightcolor"},
-			Value: fmt.Sprintf("%v", *m.BorderrightcolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:borderrightcolor"},
+			Value: fmt.Sprintf("%v", *m.BorderrightcolorAttr),
+		})
 	}
 	if m.DgmlayoutAttr != OfcST_DiagramLayoutUnset {
 		attr, err := m.DgmlayoutAttr.MarshalXMLAttr(xml.Name{Local: "dgmlayout"})
@@ -169,8 +183,10 @@ func (m *AG_OfficeCoreAttributes) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DgmnodekindAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:dgmnodekind"},
-			Value: fmt.Sprintf("%v", *m.DgmnodekindAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:dgmnodekind"},
+			Value: fmt.Sprintf("%v", *m.DgmnodekindAttr),
+		})
 	}
 	if m.DgmlayoutmruAttr != OfcST_DiagramLayoutUnset {
 		attr, err := m.DgmlayoutmruAttr.MarshalXMLAttr(xml.Name{Local: "dgmlayoutmru"})

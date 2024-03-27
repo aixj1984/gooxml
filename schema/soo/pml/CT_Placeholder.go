@@ -59,12 +59,16 @@ func (m *CT_Placeholder) MarshalXML(e *xml.Encoder, start xml.StartElement) erro
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.IdxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "idx"},
-			Value: fmt.Sprintf("%v", *m.IdxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "idx"},
+			Value: fmt.Sprintf("%v", *m.IdxAttr),
+		})
 	}
 	if m.HasCustomPromptAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hasCustomPrompt"},
-			Value: fmt.Sprintf("%d", b2i(*m.HasCustomPromptAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hasCustomPrompt"},
+			Value: fmt.Sprintf("%d", b2i(*m.HasCustomPromptAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

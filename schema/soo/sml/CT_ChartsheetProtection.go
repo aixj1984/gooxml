@@ -39,32 +39,46 @@ func NewCT_ChartsheetProtection() *CT_ChartsheetProtection {
 
 func (m *CT_ChartsheetProtection) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PasswordAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "password"},
-			Value: fmt.Sprintf("%v", *m.PasswordAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "password"},
+			Value: fmt.Sprintf("%v", *m.PasswordAttr),
+		})
 	}
 	if m.AlgorithmNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "algorithmName"},
-			Value: fmt.Sprintf("%v", *m.AlgorithmNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "algorithmName"},
+			Value: fmt.Sprintf("%v", *m.AlgorithmNameAttr),
+		})
 	}
 	if m.HashValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hashValue"},
-			Value: fmt.Sprintf("%v", *m.HashValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hashValue"},
+			Value: fmt.Sprintf("%v", *m.HashValueAttr),
+		})
 	}
 	if m.SaltValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "saltValue"},
-			Value: fmt.Sprintf("%v", *m.SaltValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "saltValue"},
+			Value: fmt.Sprintf("%v", *m.SaltValueAttr),
+		})
 	}
 	if m.SpinCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spinCount"},
-			Value: fmt.Sprintf("%v", *m.SpinCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spinCount"},
+			Value: fmt.Sprintf("%v", *m.SpinCountAttr),
+		})
 	}
 	if m.ContentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "content"},
-			Value: fmt.Sprintf("%d", b2i(*m.ContentAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "content"},
+			Value: fmt.Sprintf("%d", b2i(*m.ContentAttr)),
+		})
 	}
 	if m.ObjectsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "objects"},
-			Value: fmt.Sprintf("%d", b2i(*m.ObjectsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "objects"},
+			Value: fmt.Sprintf("%d", b2i(*m.ObjectsAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

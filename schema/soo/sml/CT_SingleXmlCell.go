@@ -37,12 +37,18 @@ func NewCT_SingleXmlCell() *CT_SingleXmlCell {
 }
 
 func (m *CT_SingleXmlCell) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-		Value: fmt.Sprintf("%v", m.RAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "connectionId"},
-		Value: fmt.Sprintf("%v", m.ConnectionIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r"},
+		Value: fmt.Sprintf("%v", m.RAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "connectionId"},
+		Value: fmt.Sprintf("%v", m.ConnectionIdAttr),
+	})
 	e.EncodeToken(start)
 	sexmlCellPr := xml.StartElement{Name: xml.Name{Local: "ma:xmlCellPr"}}
 	e.EncodeElement(m.XmlCellPr, sexmlCellPr)

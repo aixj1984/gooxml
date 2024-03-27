@@ -38,14 +38,22 @@ func NewCT_SharedUser() *CT_SharedUser {
 }
 
 func (m *CT_SharedUser) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "guid"},
-		Value: fmt.Sprintf("%v", m.GuidAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dateTime"},
-		Value: fmt.Sprintf("%v", m.DateTimeAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "guid"},
+		Value: fmt.Sprintf("%v", m.GuidAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "dateTime"},
+		Value: fmt.Sprintf("%v", m.DateTimeAttr),
+	})
 	e.EncodeToken(start)
 	if m.ExtLst != nil {
 		seextLst := xml.StartElement{Name: xml.Name{Local: "ma:extLst"}}

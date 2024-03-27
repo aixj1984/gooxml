@@ -51,28 +51,40 @@ func NewCT_ImageData() *CT_ImageData {
 
 func (m *CT_ImageData) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.EmbosscolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "embosscolor"},
-			Value: fmt.Sprintf("%v", *m.EmbosscolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "embosscolor"},
+			Value: fmt.Sprintf("%v", *m.EmbosscolorAttr),
+		})
 	}
 	if m.RecolortargetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "recolortarget"},
-			Value: fmt.Sprintf("%v", *m.RecolortargetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "recolortarget"},
+			Value: fmt.Sprintf("%v", *m.RecolortargetAttr),
+		})
 	}
 	if m.HrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:href"},
-			Value: fmt.Sprintf("%v", *m.HrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:href"},
+			Value: fmt.Sprintf("%v", *m.HrefAttr),
+		})
 	}
 	if m.AlthrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:althref"},
-			Value: fmt.Sprintf("%v", *m.AlthrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:althref"},
+			Value: fmt.Sprintf("%v", *m.AlthrefAttr),
+		})
 	}
 	if m.TitleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:title"},
-			Value: fmt.Sprintf("%v", *m.TitleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:title"},
+			Value: fmt.Sprintf("%v", *m.TitleAttr),
+		})
 	}
 	if m.OleidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:oleid"},
-			Value: fmt.Sprintf("%v", *m.OleidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:oleid"},
+			Value: fmt.Sprintf("%v", *m.OleidAttr),
+		})
 	}
 	if m.DetectmouseclickAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.DetectmouseclickAttr.MarshalXMLAttr(xml.Name{Local: "detectmouseclick"})
@@ -82,60 +94,88 @@ func (m *CT_ImageData) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.MovieAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:movie"},
-			Value: fmt.Sprintf("%v", *m.MovieAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:movie"},
+			Value: fmt.Sprintf("%v", *m.MovieAttr),
+		})
 	}
 	if m.RelidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:relid"},
-			Value: fmt.Sprintf("%v", *m.RelidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:relid"},
+			Value: fmt.Sprintf("%v", *m.RelidAttr),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.PictAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:pict"},
-			Value: fmt.Sprintf("%v", *m.PictAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:pict"},
+			Value: fmt.Sprintf("%v", *m.PictAttr),
+		})
 	}
 	if m.RHrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:href"},
-			Value: fmt.Sprintf("%v", *m.RHrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:href"},
+			Value: fmt.Sprintf("%v", *m.RHrefAttr),
+		})
 	}
 	if m.SIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.SIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.SIdAttr),
+		})
 	}
 	if m.SrcAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "src"},
-			Value: fmt.Sprintf("%v", *m.SrcAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "src"},
+			Value: fmt.Sprintf("%v", *m.SrcAttr),
+		})
 	}
 	if m.CropleftAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cropleft"},
-			Value: fmt.Sprintf("%v", *m.CropleftAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cropleft"},
+			Value: fmt.Sprintf("%v", *m.CropleftAttr),
+		})
 	}
 	if m.CroptopAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "croptop"},
-			Value: fmt.Sprintf("%v", *m.CroptopAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "croptop"},
+			Value: fmt.Sprintf("%v", *m.CroptopAttr),
+		})
 	}
 	if m.CroprightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cropright"},
-			Value: fmt.Sprintf("%v", *m.CroprightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cropright"},
+			Value: fmt.Sprintf("%v", *m.CroprightAttr),
+		})
 	}
 	if m.CropbottomAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cropbottom"},
-			Value: fmt.Sprintf("%v", *m.CropbottomAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cropbottom"},
+			Value: fmt.Sprintf("%v", *m.CropbottomAttr),
+		})
 	}
 	if m.GainAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "gain"},
-			Value: fmt.Sprintf("%v", *m.GainAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "gain"},
+			Value: fmt.Sprintf("%v", *m.GainAttr),
+		})
 	}
 	if m.BlacklevelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "blacklevel"},
-			Value: fmt.Sprintf("%v", *m.BlacklevelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "blacklevel"},
+			Value: fmt.Sprintf("%v", *m.BlacklevelAttr),
+		})
 	}
 	if m.GammaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "gamma"},
-			Value: fmt.Sprintf("%v", *m.GammaAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "gamma"},
+			Value: fmt.Sprintf("%v", *m.GammaAttr),
+		})
 	}
 	if m.GrayscaleAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.GrayscaleAttr.MarshalXMLAttr(xml.Name{Local: "grayscale"})
@@ -152,8 +192,10 @@ func (m *CT_ImageData) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ChromakeyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "chromakey"},
-			Value: fmt.Sprintf("%v", *m.ChromakeyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "chromakey"},
+			Value: fmt.Sprintf("%v", *m.ChromakeyAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

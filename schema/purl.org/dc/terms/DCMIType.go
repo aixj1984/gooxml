@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type DCMIType struct {
-}
+type DCMIType struct{}
 
 func NewDCMIType() *DCMIType {
 	ret := &DCMIType{}

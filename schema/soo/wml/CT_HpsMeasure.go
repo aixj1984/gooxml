@@ -25,8 +25,10 @@ func NewCT_HpsMeasure() *CT_HpsMeasure {
 }
 
 func (m *CT_HpsMeasure) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:val"},
-		Value: fmt.Sprintf("%v", m.ValAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:val"},
+		Value: fmt.Sprintf("%v", m.ValAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

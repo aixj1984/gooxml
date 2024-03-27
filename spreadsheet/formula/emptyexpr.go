@@ -7,8 +7,7 @@
 
 package formula
 
-type EmptyExpr struct {
-}
+type EmptyExpr struct{}
 
 func NewEmptyExpr() Expression {
 	return EmptyExpr{}

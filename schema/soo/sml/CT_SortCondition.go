@@ -39,8 +39,10 @@ func NewCT_SortCondition() *CT_SortCondition {
 
 func (m *CT_SortCondition) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DescendingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "descending"},
-			Value: fmt.Sprintf("%d", b2i(*m.DescendingAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "descending"},
+			Value: fmt.Sprintf("%d", b2i(*m.DescendingAttr)),
+		})
 	}
 	if m.SortByAttr != ST_SortByUnset {
 		attr, err := m.SortByAttr.MarshalXMLAttr(xml.Name{Local: "sortBy"})
@@ -49,15 +51,21 @@ func (m *CT_SortCondition) MarshalXML(e *xml.Encoder, start xml.StartElement) er
 		}
 		start.Attr = append(start.Attr, attr)
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ref"},
-		Value: fmt.Sprintf("%v", m.RefAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "ref"},
+		Value: fmt.Sprintf("%v", m.RefAttr),
+	})
 	if m.CustomListAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "customList"},
-			Value: fmt.Sprintf("%v", *m.CustomListAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "customList"},
+			Value: fmt.Sprintf("%v", *m.CustomListAttr),
+		})
 	}
 	if m.DxfIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dxfId"},
-			Value: fmt.Sprintf("%v", *m.DxfIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dxfId"},
+			Value: fmt.Sprintf("%v", *m.DxfIdAttr),
+		})
 	}
 	if m.IconSetAttr != ST_IconSetTypeUnset {
 		attr, err := m.IconSetAttr.MarshalXMLAttr(xml.Name{Local: "iconSet"})
@@ -67,8 +75,10 @@ func (m *CT_SortCondition) MarshalXML(e *xml.Encoder, start xml.StartElement) er
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.IconIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "iconId"},
-			Value: fmt.Sprintf("%v", *m.IconIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "iconId"},
+			Value: fmt.Sprintf("%v", *m.IconIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

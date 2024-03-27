@@ -39,32 +39,46 @@ func NewCT_FileSharing() *CT_FileSharing {
 
 func (m *CT_FileSharing) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ReadOnlyRecommendedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "readOnlyRecommended"},
-			Value: fmt.Sprintf("%d", b2i(*m.ReadOnlyRecommendedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "readOnlyRecommended"},
+			Value: fmt.Sprintf("%d", b2i(*m.ReadOnlyRecommendedAttr)),
+		})
 	}
 	if m.UserNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "userName"},
-			Value: fmt.Sprintf("%v", *m.UserNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "userName"},
+			Value: fmt.Sprintf("%v", *m.UserNameAttr),
+		})
 	}
 	if m.ReservationPasswordAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "reservationPassword"},
-			Value: fmt.Sprintf("%v", *m.ReservationPasswordAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "reservationPassword"},
+			Value: fmt.Sprintf("%v", *m.ReservationPasswordAttr),
+		})
 	}
 	if m.AlgorithmNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "algorithmName"},
-			Value: fmt.Sprintf("%v", *m.AlgorithmNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "algorithmName"},
+			Value: fmt.Sprintf("%v", *m.AlgorithmNameAttr),
+		})
 	}
 	if m.HashValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hashValue"},
-			Value: fmt.Sprintf("%v", *m.HashValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hashValue"},
+			Value: fmt.Sprintf("%v", *m.HashValueAttr),
+		})
 	}
 	if m.SaltValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "saltValue"},
-			Value: fmt.Sprintf("%v", *m.SaltValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "saltValue"},
+			Value: fmt.Sprintf("%v", *m.SaltValueAttr),
+		})
 	}
 	if m.SpinCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spinCount"},
-			Value: fmt.Sprintf("%v", *m.SpinCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spinCount"},
+			Value: fmt.Sprintf("%v", *m.SpinCountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

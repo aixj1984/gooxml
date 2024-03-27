@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_Null struct {
-}
+type CT_Null struct{}
 
 func NewCT_Null() *CT_Null {
 	ret := &CT_Null{}

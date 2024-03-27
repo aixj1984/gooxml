@@ -56,6 +56,7 @@ func (s Styles) InitializeDefault() {
 	s.initializeDocDefaults()
 	s.initializeStyleDefaults()
 }
+
 func (s Styles) initializeStyleDefaults() {
 	// Normal
 	normal := s.AddStyle("Normal", wml.ST_StyleTypeParagraph, true)

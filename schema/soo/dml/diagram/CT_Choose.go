@@ -29,8 +29,10 @@ func NewCT_Choose() *CT_Choose {
 
 func (m *CT_Choose) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	e.EncodeToken(start)
 	seif := xml.StartElement{Name: xml.Name{Local: "if"}}

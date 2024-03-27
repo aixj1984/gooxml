@@ -40,16 +40,22 @@ func (m *CT_Selection) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ActiveCellAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "activeCell"},
-			Value: fmt.Sprintf("%v", *m.ActiveCellAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "activeCell"},
+			Value: fmt.Sprintf("%v", *m.ActiveCellAttr),
+		})
 	}
 	if m.ActiveCellIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "activeCellId"},
-			Value: fmt.Sprintf("%v", *m.ActiveCellIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "activeCellId"},
+			Value: fmt.Sprintf("%v", *m.ActiveCellIdAttr),
+		})
 	}
 	if m.SqrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sqref"},
-			Value: fmt.Sprintf("%v", *m.SqrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sqref"},
+			Value: fmt.Sprintf("%v", *m.SqrefAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

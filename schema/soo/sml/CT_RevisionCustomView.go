@@ -31,8 +31,10 @@ func NewCT_RevisionCustomView() *CT_RevisionCustomView {
 }
 
 func (m *CT_RevisionCustomView) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "guid"},
-		Value: fmt.Sprintf("%v", m.GuidAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "guid"},
+		Value: fmt.Sprintf("%v", m.GuidAttr),
+	})
 	attr, err := m.ActionAttr.MarshalXMLAttr(xml.Name{Local: "action"})
 	if err != nil {
 		return err

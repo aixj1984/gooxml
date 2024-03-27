@@ -58,116 +58,172 @@ func NewCT_ElemPropSet() *CT_ElemPropSet {
 
 func (m *CT_ElemPropSet) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PresAssocIDAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "presAssocID"},
-			Value: fmt.Sprintf("%v", *m.PresAssocIDAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "presAssocID"},
+			Value: fmt.Sprintf("%v", *m.PresAssocIDAttr),
+		})
 	}
 	if m.PresNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "presName"},
-			Value: fmt.Sprintf("%v", *m.PresNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "presName"},
+			Value: fmt.Sprintf("%v", *m.PresNameAttr),
+		})
 	}
 	if m.PresStyleLblAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "presStyleLbl"},
-			Value: fmt.Sprintf("%v", *m.PresStyleLblAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "presStyleLbl"},
+			Value: fmt.Sprintf("%v", *m.PresStyleLblAttr),
+		})
 	}
 	if m.PresStyleIdxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "presStyleIdx"},
-			Value: fmt.Sprintf("%v", *m.PresStyleIdxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "presStyleIdx"},
+			Value: fmt.Sprintf("%v", *m.PresStyleIdxAttr),
+		})
 	}
 	if m.PresStyleCntAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "presStyleCnt"},
-			Value: fmt.Sprintf("%v", *m.PresStyleCntAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "presStyleCnt"},
+			Value: fmt.Sprintf("%v", *m.PresStyleCntAttr),
+		})
 	}
 	if m.LoTypeIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "loTypeId"},
-			Value: fmt.Sprintf("%v", *m.LoTypeIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "loTypeId"},
+			Value: fmt.Sprintf("%v", *m.LoTypeIdAttr),
+		})
 	}
 	if m.LoCatIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "loCatId"},
-			Value: fmt.Sprintf("%v", *m.LoCatIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "loCatId"},
+			Value: fmt.Sprintf("%v", *m.LoCatIdAttr),
+		})
 	}
 	if m.QsTypeIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "qsTypeId"},
-			Value: fmt.Sprintf("%v", *m.QsTypeIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "qsTypeId"},
+			Value: fmt.Sprintf("%v", *m.QsTypeIdAttr),
+		})
 	}
 	if m.QsCatIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "qsCatId"},
-			Value: fmt.Sprintf("%v", *m.QsCatIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "qsCatId"},
+			Value: fmt.Sprintf("%v", *m.QsCatIdAttr),
+		})
 	}
 	if m.CsTypeIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "csTypeId"},
-			Value: fmt.Sprintf("%v", *m.CsTypeIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "csTypeId"},
+			Value: fmt.Sprintf("%v", *m.CsTypeIdAttr),
+		})
 	}
 	if m.CsCatIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "csCatId"},
-			Value: fmt.Sprintf("%v", *m.CsCatIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "csCatId"},
+			Value: fmt.Sprintf("%v", *m.CsCatIdAttr),
+		})
 	}
 	if m.Coherent3DOffAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "coherent3DOff"},
-			Value: fmt.Sprintf("%d", b2i(*m.Coherent3DOffAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "coherent3DOff"},
+			Value: fmt.Sprintf("%d", b2i(*m.Coherent3DOffAttr)),
+		})
 	}
 	if m.PhldrTAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "phldrT"},
-			Value: fmt.Sprintf("%v", *m.PhldrTAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "phldrT"},
+			Value: fmt.Sprintf("%v", *m.PhldrTAttr),
+		})
 	}
 	if m.PhldrAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "phldr"},
-			Value: fmt.Sprintf("%d", b2i(*m.PhldrAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "phldr"},
+			Value: fmt.Sprintf("%d", b2i(*m.PhldrAttr)),
+		})
 	}
 	if m.CustAngAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custAng"},
-			Value: fmt.Sprintf("%v", *m.CustAngAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custAng"},
+			Value: fmt.Sprintf("%v", *m.CustAngAttr),
+		})
 	}
 	if m.CustFlipVertAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custFlipVert"},
-			Value: fmt.Sprintf("%d", b2i(*m.CustFlipVertAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custFlipVert"},
+			Value: fmt.Sprintf("%d", b2i(*m.CustFlipVertAttr)),
+		})
 	}
 	if m.CustFlipHorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custFlipHor"},
-			Value: fmt.Sprintf("%d", b2i(*m.CustFlipHorAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custFlipHor"},
+			Value: fmt.Sprintf("%d", b2i(*m.CustFlipHorAttr)),
+		})
 	}
 	if m.CustSzXAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custSzX"},
-			Value: fmt.Sprintf("%v", *m.CustSzXAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custSzX"},
+			Value: fmt.Sprintf("%v", *m.CustSzXAttr),
+		})
 	}
 	if m.CustSzYAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custSzY"},
-			Value: fmt.Sprintf("%v", *m.CustSzYAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custSzY"},
+			Value: fmt.Sprintf("%v", *m.CustSzYAttr),
+		})
 	}
 	if m.CustScaleXAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custScaleX"},
-			Value: fmt.Sprintf("%v", *m.CustScaleXAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custScaleX"},
+			Value: fmt.Sprintf("%v", *m.CustScaleXAttr),
+		})
 	}
 	if m.CustScaleYAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custScaleY"},
-			Value: fmt.Sprintf("%v", *m.CustScaleYAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custScaleY"},
+			Value: fmt.Sprintf("%v", *m.CustScaleYAttr),
+		})
 	}
 	if m.CustTAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custT"},
-			Value: fmt.Sprintf("%d", b2i(*m.CustTAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custT"},
+			Value: fmt.Sprintf("%d", b2i(*m.CustTAttr)),
+		})
 	}
 	if m.CustLinFactXAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custLinFactX"},
-			Value: fmt.Sprintf("%v", *m.CustLinFactXAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custLinFactX"},
+			Value: fmt.Sprintf("%v", *m.CustLinFactXAttr),
+		})
 	}
 	if m.CustLinFactYAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custLinFactY"},
-			Value: fmt.Sprintf("%v", *m.CustLinFactYAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custLinFactY"},
+			Value: fmt.Sprintf("%v", *m.CustLinFactYAttr),
+		})
 	}
 	if m.CustLinFactNeighborXAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custLinFactNeighborX"},
-			Value: fmt.Sprintf("%v", *m.CustLinFactNeighborXAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custLinFactNeighborX"},
+			Value: fmt.Sprintf("%v", *m.CustLinFactNeighborXAttr),
+		})
 	}
 	if m.CustLinFactNeighborYAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custLinFactNeighborY"},
-			Value: fmt.Sprintf("%v", *m.CustLinFactNeighborYAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custLinFactNeighborY"},
+			Value: fmt.Sprintf("%v", *m.CustLinFactNeighborYAttr),
+		})
 	}
 	if m.CustRadScaleRadAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custRadScaleRad"},
-			Value: fmt.Sprintf("%v", *m.CustRadScaleRadAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custRadScaleRad"},
+			Value: fmt.Sprintf("%v", *m.CustRadScaleRadAttr),
+		})
 	}
 	if m.CustRadScaleIncAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "custRadScaleInc"},
-			Value: fmt.Sprintf("%v", *m.CustRadScaleIncAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "custRadScaleInc"},
+			Value: fmt.Sprintf("%v", *m.CustRadScaleIncAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.PresLayoutVars != nil {

@@ -30,20 +30,28 @@ func NewCT_TileInfoProperties() *CT_TileInfoProperties {
 
 func (m *CT_TileInfoProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.TxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tx"},
-			Value: fmt.Sprintf("%v", *m.TxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tx"},
+			Value: fmt.Sprintf("%v", *m.TxAttr),
+		})
 	}
 	if m.TyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ty"},
-			Value: fmt.Sprintf("%v", *m.TyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ty"},
+			Value: fmt.Sprintf("%v", *m.TyAttr),
+		})
 	}
 	if m.SxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sx"},
-			Value: fmt.Sprintf("%v", *m.SxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sx"},
+			Value: fmt.Sprintf("%v", *m.SxAttr),
+		})
 	}
 	if m.SyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sy"},
-			Value: fmt.Sprintf("%v", *m.SyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sy"},
+			Value: fmt.Sprintf("%v", *m.SyAttr),
+		})
 	}
 	if m.FlipAttr != ST_TileFlipModeUnset {
 		attr, err := m.FlipAttr.MarshalXMLAttr(xml.Name{Local: "flip"})

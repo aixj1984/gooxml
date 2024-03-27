@@ -70,20 +70,28 @@ func (m *CT_TLCommonBehaviorData) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.FromAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "from"},
-			Value: fmt.Sprintf("%v", *m.FromAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "from"},
+			Value: fmt.Sprintf("%v", *m.FromAttr),
+		})
 	}
 	if m.ToAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "to"},
-			Value: fmt.Sprintf("%v", *m.ToAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "to"},
+			Value: fmt.Sprintf("%v", *m.ToAttr),
+		})
 	}
 	if m.ByAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "by"},
-			Value: fmt.Sprintf("%v", *m.ByAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "by"},
+			Value: fmt.Sprintf("%v", *m.ByAttr),
+		})
 	}
 	if m.RctxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rctx"},
-			Value: fmt.Sprintf("%v", *m.RctxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rctx"},
+			Value: fmt.Sprintf("%v", *m.RctxAttr),
+		})
 	}
 	if m.OverrideAttr != ST_TLBehaviorOverrideTypeUnset {
 		attr, err := m.OverrideAttr.MarshalXMLAttr(xml.Name{Local: "override"})

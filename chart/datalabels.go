@@ -19,6 +19,7 @@ type DataLabels struct {
 func MakeDataLabels(x *crt.CT_DLbls) DataLabels {
 	return DataLabels{x}
 }
+
 func (d DataLabels) ensureChoice() {
 	if d.x.Choice == nil {
 		d.x.Choice = crt.NewCT_DLblsChoice()
@@ -30,6 +31,7 @@ func (d DataLabels) SetPosition(p crt.ST_DLblPos) {
 	d.x.Choice.DLblPos = crt.NewCT_DLblPos()
 	d.x.Choice.DLblPos.ValAttr = p
 }
+
 func (d DataLabels) SetShowLegendKey(b bool) {
 	d.ensureChoice()
 	d.x.Choice.ShowLegendKey = crt.NewCT_Boolean()

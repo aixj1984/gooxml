@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_InverseGammaTransform struct {
-}
+type CT_InverseGammaTransform struct{}
 
 func NewCT_InverseGammaTransform() *CT_InverseGammaTransform {
 	ret := &CT_InverseGammaTransform{}

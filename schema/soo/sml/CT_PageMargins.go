@@ -36,18 +36,30 @@ func NewCT_PageMargins() *CT_PageMargins {
 }
 
 func (m *CT_PageMargins) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "left"},
-		Value: fmt.Sprintf("%v", m.LeftAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "right"},
-		Value: fmt.Sprintf("%v", m.RightAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "top"},
-		Value: fmt.Sprintf("%v", m.TopAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bottom"},
-		Value: fmt.Sprintf("%v", m.BottomAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "header"},
-		Value: fmt.Sprintf("%v", m.HeaderAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "footer"},
-		Value: fmt.Sprintf("%v", m.FooterAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "left"},
+		Value: fmt.Sprintf("%v", m.LeftAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "right"},
+		Value: fmt.Sprintf("%v", m.RightAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "top"},
+		Value: fmt.Sprintf("%v", m.TopAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "bottom"},
+		Value: fmt.Sprintf("%v", m.BottomAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "header"},
+		Value: fmt.Sprintf("%v", m.HeaderAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "footer"},
+		Value: fmt.Sprintf("%v", m.FooterAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

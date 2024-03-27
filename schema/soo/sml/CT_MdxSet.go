@@ -34,11 +34,15 @@ func NewCT_MdxSet() *CT_MdxSet {
 }
 
 func (m *CT_MdxSet) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ns"},
-		Value: fmt.Sprintf("%v", m.NsAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "ns"},
+		Value: fmt.Sprintf("%v", m.NsAttr),
+	})
 	if m.CAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "c"},
-			Value: fmt.Sprintf("%v", *m.CAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "c"},
+			Value: fmt.Sprintf("%v", *m.CAttr),
+		})
 	}
 	if m.OAttr != ST_MdxSetOrderUnset {
 		attr, err := m.OAttr.MarshalXMLAttr(xml.Name{Local: "o"})

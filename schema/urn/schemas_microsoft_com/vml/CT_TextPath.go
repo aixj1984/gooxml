@@ -69,16 +69,22 @@ func (m *CT_TextPath) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.StringAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "string"},
-			Value: fmt.Sprintf("%v", *m.StringAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "string"},
+			Value: fmt.Sprintf("%v", *m.StringAttr),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.StyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "style"},
-			Value: fmt.Sprintf("%v", *m.StyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "style"},
+			Value: fmt.Sprintf("%v", *m.StyleAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

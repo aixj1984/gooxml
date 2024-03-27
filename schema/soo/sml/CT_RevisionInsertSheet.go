@@ -33,23 +33,35 @@ func NewCT_RevisionInsertSheet() *CT_RevisionInsertSheet {
 }
 
 func (m *CT_RevisionInsertSheet) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sheetId"},
-		Value: fmt.Sprintf("%v", m.SheetIdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sheetPosition"},
-		Value: fmt.Sprintf("%v", m.SheetPositionAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sheetId"},
+		Value: fmt.Sprintf("%v", m.SheetIdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sheetPosition"},
+		Value: fmt.Sprintf("%v", m.SheetPositionAttr),
+	})
 	if m.RIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rId"},
-			Value: fmt.Sprintf("%v", *m.RIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rId"},
+			Value: fmt.Sprintf("%v", *m.RIdAttr),
+		})
 	}
 	if m.UaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ua"},
-			Value: fmt.Sprintf("%d", b2i(*m.UaAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ua"},
+			Value: fmt.Sprintf("%d", b2i(*m.UaAttr)),
+		})
 	}
 	if m.RaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ra"},
-			Value: fmt.Sprintf("%d", b2i(*m.RaAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ra"},
+			Value: fmt.Sprintf("%d", b2i(*m.RaAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -40,6 +40,7 @@ func TestCreatorKnownType(t *testing.T) {
 		t.Errorf("CreateElement should return the element requested, got %T", el)
 	}
 }
+
 func TestRawEncode(t *testing.T) {
 	f, err := os.Open("testdata/settings.xml")
 	if err != nil {
@@ -73,5 +74,4 @@ func TestRawEncode(t *testing.T) {
 	if gotRaw != exp {
 		t.Errorf("expected\n%q\ngot\n%q\n", exp, gotRaw)
 	}
-
 }

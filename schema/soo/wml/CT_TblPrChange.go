@@ -33,14 +33,20 @@ func NewCT_TblPrChange() *CT_TblPrChange {
 }
 
 func (m *CT_TblPrChange) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:author"},
-		Value: fmt.Sprintf("%v", m.AuthorAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:author"},
+		Value: fmt.Sprintf("%v", m.AuthorAttr),
+	})
 	if m.DateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:date"},
-			Value: fmt.Sprintf("%v", *m.DateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:date"},
+			Value: fmt.Sprintf("%v", *m.DateAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeToken(start)
 	setblPr := xml.StartElement{Name: xml.Name{Local: "w:tblPr"}}
 	e.EncodeElement(m.TblPr, setblPr)

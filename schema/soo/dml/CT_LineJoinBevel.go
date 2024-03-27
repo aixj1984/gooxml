@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_LineJoinBevel struct {
-}
+type CT_LineJoinBevel struct{}
 
 func NewCT_LineJoinBevel() *CT_LineJoinBevel {
 	ret := &CT_LineJoinBevel{}

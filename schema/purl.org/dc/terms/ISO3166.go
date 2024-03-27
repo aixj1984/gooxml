@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type ISO3166 struct {
-}
+type ISO3166 struct{}
 
 func NewISO3166() *ISO3166 {
 	ret := &ISO3166{}

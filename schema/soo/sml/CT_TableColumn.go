@@ -58,14 +58,20 @@ func NewCT_TableColumn() *CT_TableColumn {
 }
 
 func (m *CT_TableColumn) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.UniqueNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueName"},
-			Value: fmt.Sprintf("%v", *m.UniqueNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "uniqueName"},
+			Value: fmt.Sprintf("%v", *m.UniqueNameAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.TotalsRowFunctionAttr != ST_TotalsRowFunctionUnset {
 		attr, err := m.TotalsRowFunctionAttr.MarshalXMLAttr(xml.Name{Local: "totalsRowFunction"})
 		if err != nil {
@@ -74,36 +80,52 @@ func (m *CT_TableColumn) MarshalXML(e *xml.Encoder, start xml.StartElement) erro
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.TotalsRowLabelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "totalsRowLabel"},
-			Value: fmt.Sprintf("%v", *m.TotalsRowLabelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "totalsRowLabel"},
+			Value: fmt.Sprintf("%v", *m.TotalsRowLabelAttr),
+		})
 	}
 	if m.QueryTableFieldIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "queryTableFieldId"},
-			Value: fmt.Sprintf("%v", *m.QueryTableFieldIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "queryTableFieldId"},
+			Value: fmt.Sprintf("%v", *m.QueryTableFieldIdAttr),
+		})
 	}
 	if m.HeaderRowDxfIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "headerRowDxfId"},
-			Value: fmt.Sprintf("%v", *m.HeaderRowDxfIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "headerRowDxfId"},
+			Value: fmt.Sprintf("%v", *m.HeaderRowDxfIdAttr),
+		})
 	}
 	if m.DataDxfIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dataDxfId"},
-			Value: fmt.Sprintf("%v", *m.DataDxfIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dataDxfId"},
+			Value: fmt.Sprintf("%v", *m.DataDxfIdAttr),
+		})
 	}
 	if m.TotalsRowDxfIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "totalsRowDxfId"},
-			Value: fmt.Sprintf("%v", *m.TotalsRowDxfIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "totalsRowDxfId"},
+			Value: fmt.Sprintf("%v", *m.TotalsRowDxfIdAttr),
+		})
 	}
 	if m.HeaderRowCellStyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "headerRowCellStyle"},
-			Value: fmt.Sprintf("%v", *m.HeaderRowCellStyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "headerRowCellStyle"},
+			Value: fmt.Sprintf("%v", *m.HeaderRowCellStyleAttr),
+		})
 	}
 	if m.DataCellStyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dataCellStyle"},
-			Value: fmt.Sprintf("%v", *m.DataCellStyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dataCellStyle"},
+			Value: fmt.Sprintf("%v", *m.DataCellStyleAttr),
+		})
 	}
 	if m.TotalsRowCellStyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "totalsRowCellStyle"},
-			Value: fmt.Sprintf("%v", *m.TotalsRowCellStyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "totalsRowCellStyle"},
+			Value: fmt.Sprintf("%v", *m.TotalsRowCellStyleAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.CalculatedColumnFormula != nil {

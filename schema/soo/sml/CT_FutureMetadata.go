@@ -34,11 +34,15 @@ func NewCT_FutureMetadata() *CT_FutureMetadata {
 }
 
 func (m *CT_FutureMetadata) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Bk != nil {

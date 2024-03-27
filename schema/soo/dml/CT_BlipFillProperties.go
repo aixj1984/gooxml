@@ -33,12 +33,16 @@ func NewCT_BlipFillProperties() *CT_BlipFillProperties {
 
 func (m *CT_BlipFillProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DpiAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dpi"},
-			Value: fmt.Sprintf("%v", *m.DpiAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dpi"},
+			Value: fmt.Sprintf("%v", *m.DpiAttr),
+		})
 	}
 	if m.RotWithShapeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rotWithShape"},
-			Value: fmt.Sprintf("%d", b2i(*m.RotWithShapeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rotWithShape"},
+			Value: fmt.Sprintf("%d", b2i(*m.RotWithShapeAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Blip != nil {

@@ -31,8 +31,10 @@ func NewCT_CustomFilters() *CT_CustomFilters {
 
 func (m *CT_CustomFilters) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.AndAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "and"},
-			Value: fmt.Sprintf("%d", b2i(*m.AndAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "and"},
+			Value: fmt.Sprintf("%d", b2i(*m.AndAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	secustomFilter := xml.StartElement{Name: xml.Name{Local: "ma:customFilter"}}

@@ -64,72 +64,106 @@ func NewCT_PivotAreaReference() *CT_PivotAreaReference {
 
 func (m *CT_PivotAreaReference) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.FieldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "field"},
-			Value: fmt.Sprintf("%v", *m.FieldAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "field"},
+			Value: fmt.Sprintf("%v", *m.FieldAttr),
+		})
 	}
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	if m.SelectedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "selected"},
-			Value: fmt.Sprintf("%d", b2i(*m.SelectedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "selected"},
+			Value: fmt.Sprintf("%d", b2i(*m.SelectedAttr)),
+		})
 	}
 	if m.ByPositionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "byPosition"},
-			Value: fmt.Sprintf("%d", b2i(*m.ByPositionAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "byPosition"},
+			Value: fmt.Sprintf("%d", b2i(*m.ByPositionAttr)),
+		})
 	}
 	if m.RelativeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "relative"},
-			Value: fmt.Sprintf("%d", b2i(*m.RelativeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "relative"},
+			Value: fmt.Sprintf("%d", b2i(*m.RelativeAttr)),
+		})
 	}
 	if m.DefaultSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "defaultSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.DefaultSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "defaultSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.DefaultSubtotalAttr)),
+		})
 	}
 	if m.SumSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sumSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.SumSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sumSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.SumSubtotalAttr)),
+		})
 	}
 	if m.CountASubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "countASubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.CountASubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "countASubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.CountASubtotalAttr)),
+		})
 	}
 	if m.AvgSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "avgSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.AvgSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "avgSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.AvgSubtotalAttr)),
+		})
 	}
 	if m.MaxSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.MaxSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.MaxSubtotalAttr)),
+		})
 	}
 	if m.MinSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.MinSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.MinSubtotalAttr)),
+		})
 	}
 	if m.ProductSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "productSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.ProductSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "productSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.ProductSubtotalAttr)),
+		})
 	}
 	if m.CountSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "countSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.CountSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "countSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.CountSubtotalAttr)),
+		})
 	}
 	if m.StdDevSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "stdDevSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.StdDevSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "stdDevSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.StdDevSubtotalAttr)),
+		})
 	}
 	if m.StdDevPSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "stdDevPSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.StdDevPSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "stdDevPSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.StdDevPSubtotalAttr)),
+		})
 	}
 	if m.VarSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "varSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.VarSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "varSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.VarSubtotalAttr)),
+		})
 	}
 	if m.VarPSubtotalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "varPSubtotal"},
-			Value: fmt.Sprintf("%d", b2i(*m.VarPSubtotalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "varPSubtotal"},
+			Value: fmt.Sprintf("%d", b2i(*m.VarPSubtotalAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.X != nil {

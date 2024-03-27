@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_AlphaFloorEffect struct {
-}
+type CT_AlphaFloorEffect struct{}
 
 func NewCT_AlphaFloorEffect() *CT_AlphaFloorEffect {
 	ret := &CT_AlphaFloorEffect{}

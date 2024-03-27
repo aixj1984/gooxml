@@ -35,12 +35,18 @@ func (m *CT_Relationship) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		}
 		start.Attr = append(start.Attr, attr)
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "Target"},
-		Value: fmt.Sprintf("%v", m.TargetAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "Type"},
-		Value: fmt.Sprintf("%v", m.TypeAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "Id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "Target"},
+		Value: fmt.Sprintf("%v", m.TargetAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "Type"},
+		Value: fmt.Sprintf("%v", m.TypeAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "Id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeElement(m.Content, start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

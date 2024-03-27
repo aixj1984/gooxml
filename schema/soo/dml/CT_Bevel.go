@@ -28,12 +28,16 @@ func NewCT_Bevel() *CT_Bevel {
 
 func (m *CT_Bevel) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.WAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w"},
-			Value: fmt.Sprintf("%v", *m.WAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w"},
+			Value: fmt.Sprintf("%v", *m.WAttr),
+		})
 	}
 	if m.HAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "h"},
-			Value: fmt.Sprintf("%v", *m.HAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "h"},
+			Value: fmt.Sprintf("%v", *m.HAttr),
+		})
 	}
 	if m.PrstAttr != ST_BevelPresetTypeUnset {
 		attr, err := m.PrstAttr.MarshalXMLAttr(xml.Name{Local: "prst"})

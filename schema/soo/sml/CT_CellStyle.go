@@ -41,26 +41,38 @@ func NewCT_CellStyle() *CT_CellStyle {
 
 func (m *CT_CellStyle) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xfId"},
-		Value: fmt.Sprintf("%v", m.XfIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "xfId"},
+		Value: fmt.Sprintf("%v", m.XfIdAttr),
+	})
 	if m.BuiltinIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "builtinId"},
-			Value: fmt.Sprintf("%v", *m.BuiltinIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "builtinId"},
+			Value: fmt.Sprintf("%v", *m.BuiltinIdAttr),
+		})
 	}
 	if m.ILevelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "iLevel"},
-			Value: fmt.Sprintf("%v", *m.ILevelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "iLevel"},
+			Value: fmt.Sprintf("%v", *m.ILevelAttr),
+		})
 	}
 	if m.HiddenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hidden"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hidden"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr)),
+		})
 	}
 	if m.CustomBuiltinAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "customBuiltin"},
-			Value: fmt.Sprintf("%d", b2i(*m.CustomBuiltinAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "customBuiltin"},
+			Value: fmt.Sprintf("%d", b2i(*m.CustomBuiltinAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

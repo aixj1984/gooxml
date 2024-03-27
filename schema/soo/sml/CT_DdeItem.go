@@ -37,20 +37,28 @@ func NewCT_DdeItem() *CT_DdeItem {
 
 func (m *CT_DdeItem) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.OleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ole"},
-			Value: fmt.Sprintf("%d", b2i(*m.OleAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ole"},
+			Value: fmt.Sprintf("%d", b2i(*m.OleAttr)),
+		})
 	}
 	if m.AdviseAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "advise"},
-			Value: fmt.Sprintf("%d", b2i(*m.AdviseAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "advise"},
+			Value: fmt.Sprintf("%d", b2i(*m.AdviseAttr)),
+		})
 	}
 	if m.PreferPicAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "preferPic"},
-			Value: fmt.Sprintf("%d", b2i(*m.PreferPicAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "preferPic"},
+			Value: fmt.Sprintf("%d", b2i(*m.PreferPicAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Values != nil {

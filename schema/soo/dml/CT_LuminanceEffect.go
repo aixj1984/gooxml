@@ -26,12 +26,16 @@ func NewCT_LuminanceEffect() *CT_LuminanceEffect {
 
 func (m *CT_LuminanceEffect) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.BrightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bright"},
-			Value: fmt.Sprintf("%v", *m.BrightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bright"},
+			Value: fmt.Sprintf("%v", *m.BrightAttr),
+		})
 	}
 	if m.ContrastAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "contrast"},
-			Value: fmt.Sprintf("%v", *m.ContrastAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "contrast"},
+			Value: fmt.Sprintf("%v", *m.ContrastAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

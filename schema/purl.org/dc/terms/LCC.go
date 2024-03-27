@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type LCC struct {
-}
+type LCC struct{}
 
 func NewLCC() *LCC {
 	ret := &LCC{}

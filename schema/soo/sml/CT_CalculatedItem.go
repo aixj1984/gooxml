@@ -36,12 +36,16 @@ func NewCT_CalculatedItem() *CT_CalculatedItem {
 
 func (m *CT_CalculatedItem) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.FieldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "field"},
-			Value: fmt.Sprintf("%v", *m.FieldAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "field"},
+			Value: fmt.Sprintf("%v", *m.FieldAttr),
+		})
 	}
 	if m.FormulaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "formula"},
-			Value: fmt.Sprintf("%v", *m.FormulaAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "formula"},
+			Value: fmt.Sprintf("%v", *m.FormulaAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sepivotArea := xml.StartElement{Name: xml.Name{Local: "ma:pivotArea"}}

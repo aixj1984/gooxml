@@ -175,9 +175,11 @@ func New() *Presentation {
 	thm.ThemeElements.FmtScheme.FillStyleLst.EG_FillProperties = append(thm.ThemeElements.FmtScheme.FillStyleLst.EG_FillProperties, fp)
 	// add it twice so OSX word doesn't choke
 	thm.ThemeElements.FmtScheme.FillStyleLst.EG_FillProperties = append(thm.ThemeElements.FmtScheme.FillStyleLst.EG_FillProperties, fp)
-	fp.GradFill = &dml.CT_GradientFillProperties{RotWithShapeAttr: gooxml.Bool(true),
-		GsLst: &dml.CT_GradientStopList{},
-		Lin:   &dml.CT_LinearShadeProperties{}}
+	fp.GradFill = &dml.CT_GradientFillProperties{
+		RotWithShapeAttr: gooxml.Bool(true),
+		GsLst:            &dml.CT_GradientStopList{},
+		Lin:              &dml.CT_LinearShadeProperties{},
+	}
 	fp.GradFill.Lin.AngAttr = gooxml.Int32(5400000)
 	fp.GradFill.Lin.ScaledAttr = gooxml.Bool(false)
 
@@ -497,7 +499,6 @@ func (p *Presentation) Validate() error {
 func (p *Presentation) SlideMasters() []SlideMaster {
 	ret := []SlideMaster{}
 	for i, m := range p.masters {
-
 		ret = append(ret, SlideMaster{p, p.masterRels[i], m})
 	}
 	return ret

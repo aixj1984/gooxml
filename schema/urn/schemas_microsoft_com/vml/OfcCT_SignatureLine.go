@@ -46,12 +46,16 @@ func (m *OfcCT_SignatureLine) MarshalXML(e *xml.Encoder, start xml.StartElement)
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.ProvidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "provid"},
-			Value: fmt.Sprintf("%v", *m.ProvidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "provid"},
+			Value: fmt.Sprintf("%v", *m.ProvidAttr),
+		})
 	}
 	if m.SigninginstructionssetAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.SigninginstructionssetAttr.MarshalXMLAttr(xml.Name{Local: "signinginstructionsset"})
@@ -75,28 +79,40 @@ func (m *OfcCT_SignatureLine) MarshalXML(e *xml.Encoder, start xml.StartElement)
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.SuggestedsignerAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "suggestedsigner"},
-			Value: fmt.Sprintf("%v", *m.SuggestedsignerAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "suggestedsigner"},
+			Value: fmt.Sprintf("%v", *m.SuggestedsignerAttr),
+		})
 	}
 	if m.Suggestedsigner2Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "suggestedsigner2"},
-			Value: fmt.Sprintf("%v", *m.Suggestedsigner2Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "suggestedsigner2"},
+			Value: fmt.Sprintf("%v", *m.Suggestedsigner2Attr),
+		})
 	}
 	if m.SuggestedsigneremailAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "suggestedsigneremail"},
-			Value: fmt.Sprintf("%v", *m.SuggestedsigneremailAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "suggestedsigneremail"},
+			Value: fmt.Sprintf("%v", *m.SuggestedsigneremailAttr),
+		})
 	}
 	if m.SigninginstructionsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "signinginstructions"},
-			Value: fmt.Sprintf("%v", *m.SigninginstructionsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "signinginstructions"},
+			Value: fmt.Sprintf("%v", *m.SigninginstructionsAttr),
+		})
 	}
 	if m.AddlxmlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "addlxml"},
-			Value: fmt.Sprintf("%v", *m.AddlxmlAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "addlxml"},
+			Value: fmt.Sprintf("%v", *m.AddlxmlAttr),
+		})
 	}
 	if m.SigprovurlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sigprovurl"},
-			Value: fmt.Sprintf("%v", *m.SigprovurlAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sigprovurl"},
+			Value: fmt.Sprintf("%v", *m.SigprovurlAttr),
+		})
 	}
 	if m.ExtAttr != ST_ExtUnset {
 		attr, err := m.ExtAttr.MarshalXMLAttr(xml.Name{Local: "ext"})

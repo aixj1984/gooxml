@@ -36,16 +36,22 @@ func NewCT_InnerShadowEffect() *CT_InnerShadowEffect {
 
 func (m *CT_InnerShadowEffect) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.BlurRadAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "blurRad"},
-			Value: fmt.Sprintf("%v", *m.BlurRadAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "blurRad"},
+			Value: fmt.Sprintf("%v", *m.BlurRadAttr),
+		})
 	}
 	if m.DistAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dist"},
-			Value: fmt.Sprintf("%v", *m.DistAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dist"},
+			Value: fmt.Sprintf("%v", *m.DistAttr),
+		})
 	}
 	if m.DirAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dir"},
-			Value: fmt.Sprintf("%v", *m.DirAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dir"},
+			Value: fmt.Sprintf("%v", *m.DirAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ScrgbClr != nil {

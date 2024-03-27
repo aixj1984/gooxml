@@ -29,7 +29,7 @@ type mergeFieldInfo struct {
 }
 
 func parseField(mf string) mergeFieldInfo {
-	//fields := strings.Fields(mf)
+	// fields := strings.Fields(mf)
 	fields := []string{}
 	sb := bytes.Buffer{}
 	pq := -1

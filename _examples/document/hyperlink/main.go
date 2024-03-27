@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-
 	doc := document.New()
 
 	hlStyle := doc.Styles.AddStyle("Hyperlink", wml.ST_StyleTypeCharacter, false)

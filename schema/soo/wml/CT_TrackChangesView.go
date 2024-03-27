@@ -36,24 +36,34 @@ func NewCT_TrackChangesView() *CT_TrackChangesView {
 
 func (m *CT_TrackChangesView) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.MarkupAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:markup"},
-			Value: fmt.Sprintf("%v", *m.MarkupAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:markup"},
+			Value: fmt.Sprintf("%v", *m.MarkupAttr),
+		})
 	}
 	if m.CommentsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:comments"},
-			Value: fmt.Sprintf("%v", *m.CommentsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:comments"},
+			Value: fmt.Sprintf("%v", *m.CommentsAttr),
+		})
 	}
 	if m.InsDelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:insDel"},
-			Value: fmt.Sprintf("%v", *m.InsDelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:insDel"},
+			Value: fmt.Sprintf("%v", *m.InsDelAttr),
+		})
 	}
 	if m.FormattingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:formatting"},
-			Value: fmt.Sprintf("%v", *m.FormattingAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:formatting"},
+			Value: fmt.Sprintf("%v", *m.FormattingAttr),
+		})
 	}
 	if m.InkAnnotationsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:inkAnnotations"},
-			Value: fmt.Sprintf("%v", *m.InkAnnotationsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:inkAnnotations"},
+			Value: fmt.Sprintf("%v", *m.InkAnnotationsAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

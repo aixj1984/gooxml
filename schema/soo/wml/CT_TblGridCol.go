@@ -28,8 +28,10 @@ func NewCT_TblGridCol() *CT_TblGridCol {
 
 func (m *CT_TblGridCol) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.WAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:w"},
-			Value: fmt.Sprintf("%v", *m.WAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:w"},
+			Value: fmt.Sprintf("%v", *m.WAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

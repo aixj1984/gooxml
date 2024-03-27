@@ -46,12 +46,16 @@ func NewOfcCT_ShapeDefaults() *OfcCT_ShapeDefaults {
 
 func (m *OfcCT_ShapeDefaults) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.SpidmaxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spidmax"},
-			Value: fmt.Sprintf("%v", *m.SpidmaxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spidmax"},
+			Value: fmt.Sprintf("%v", *m.SpidmaxAttr),
+		})
 	}
 	if m.StyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "style"},
-			Value: fmt.Sprintf("%v", *m.StyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "style"},
+			Value: fmt.Sprintf("%v", *m.StyleAttr),
+		})
 	}
 	if m.FillAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.FillAttr.MarshalXMLAttr(xml.Name{Local: "fill"})
@@ -61,8 +65,10 @@ func (m *OfcCT_ShapeDefaults) MarshalXML(e *xml.Encoder, start xml.StartElement)
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.FillcolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fillcolor"},
-			Value: fmt.Sprintf("%v", *m.FillcolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fillcolor"},
+			Value: fmt.Sprintf("%v", *m.FillcolorAttr),
+		})
 	}
 	if m.StrokeAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.StrokeAttr.MarshalXMLAttr(xml.Name{Local: "stroke"})
@@ -72,8 +78,10 @@ func (m *OfcCT_ShapeDefaults) MarshalXML(e *xml.Encoder, start xml.StartElement)
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.StrokecolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "strokecolor"},
-			Value: fmt.Sprintf("%v", *m.StrokecolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "strokecolor"},
+			Value: fmt.Sprintf("%v", *m.StrokecolorAttr),
+		})
 	}
 	if m.AllowincellAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.AllowincellAttr.MarshalXMLAttr(xml.Name{Local: "allowincell"})

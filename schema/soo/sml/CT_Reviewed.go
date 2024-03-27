@@ -26,8 +26,10 @@ func NewCT_Reviewed() *CT_Reviewed {
 }
 
 func (m *CT_Reviewed) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rId"},
-		Value: fmt.Sprintf("%v", m.RIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "rId"},
+		Value: fmt.Sprintf("%v", m.RIdAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

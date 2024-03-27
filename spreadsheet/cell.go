@@ -285,6 +285,7 @@ func asLocal(d time.Time) time.Time {
 	return time.Date(d.Year(), d.Month(), d.Day(), d.Hour(),
 		d.Minute(), d.Second(), d.Nanosecond(), time.Local)
 }
+
 func asUTC(d time.Time) time.Time {
 	// Excel appears to interpret and serial dates in the local timezone, so
 	// first ensure the time is converted internally.

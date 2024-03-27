@@ -56,27 +56,35 @@ var ST_LblOffsetPercentPatternRe = regexp.MustCompile(ST_LblOffsetPercentPattern
 func ParseUnionST_HPercent(s string) (ST_HPercent, error) {
 	return ST_HPercent{}, nil
 }
+
 func ParseUnionST_DepthPercent(s string) (ST_DepthPercent, error) {
 	return ST_DepthPercent{}, nil
 }
+
 func ParseUnionST_Thickness(s string) (ST_Thickness, error) {
 	return ST_Thickness{}, nil
 }
+
 func ParseUnionST_GapAmount(s string) (ST_GapAmount, error) {
 	return ST_GapAmount{}, nil
 }
+
 func ParseUnionST_Overlap(s string) (ST_Overlap, error) {
 	return ST_Overlap{}, nil
 }
+
 func ParseUnionST_BubbleScale(s string) (ST_BubbleScale, error) {
 	return ST_BubbleScale{}, nil
 }
+
 func ParseUnionST_HoleSize(s string) (ST_HoleSize, error) {
 	return ST_HoleSize{}, nil
 }
+
 func ParseUnionST_SecondPieSize(s string) (ST_SecondPieSize, error) {
 	return ST_SecondPieSize{}, nil
 }
+
 func ParseUnionST_LblOffset(s string) (ST_LblOffset, error) {
 	return ST_LblOffset{}, nil
 }

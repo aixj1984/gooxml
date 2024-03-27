@@ -33,14 +33,20 @@ func NewCT_ParaRPrChange() *CT_ParaRPrChange {
 }
 
 func (m *CT_ParaRPrChange) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:author"},
-		Value: fmt.Sprintf("%v", m.AuthorAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:author"},
+		Value: fmt.Sprintf("%v", m.AuthorAttr),
+	})
 	if m.DateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:date"},
-			Value: fmt.Sprintf("%v", *m.DateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:date"},
+			Value: fmt.Sprintf("%v", *m.DateAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeToken(start)
 	serPr := xml.StartElement{Name: xml.Name{Local: "w:rPr"}}
 	e.EncodeElement(m.RPr, serPr)

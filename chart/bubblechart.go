@@ -24,7 +24,6 @@ func (c BubbleChart) X() *crt.CT_BubbleChart {
 
 // InitializeDefaults the Bubble chart to its defaults
 func (c BubbleChart) InitializeDefaults() {
-
 }
 
 // AddSeries adds a default series to a Bubble chart.

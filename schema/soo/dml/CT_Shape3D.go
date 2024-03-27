@@ -36,16 +36,22 @@ func NewCT_Shape3D() *CT_Shape3D {
 
 func (m *CT_Shape3D) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ZAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "z"},
-			Value: fmt.Sprintf("%v", *m.ZAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "z"},
+			Value: fmt.Sprintf("%v", *m.ZAttr),
+		})
 	}
 	if m.ExtrusionHAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "extrusionH"},
-			Value: fmt.Sprintf("%v", *m.ExtrusionHAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "extrusionH"},
+			Value: fmt.Sprintf("%v", *m.ExtrusionHAttr),
+		})
 	}
 	if m.ContourWAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "contourW"},
-			Value: fmt.Sprintf("%v", *m.ContourWAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "contourW"},
+			Value: fmt.Sprintf("%v", *m.ContourWAttr),
+		})
 	}
 	if m.PrstMaterialAttr != ST_PresetMaterialTypeUnset {
 		attr, err := m.PrstMaterialAttr.MarshalXMLAttr(xml.Name{Local: "prstMaterial"})

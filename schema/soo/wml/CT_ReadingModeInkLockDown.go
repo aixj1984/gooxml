@@ -34,14 +34,22 @@ func NewCT_ReadingModeInkLockDown() *CT_ReadingModeInkLockDown {
 }
 
 func (m *CT_ReadingModeInkLockDown) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:actualPg"},
-		Value: fmt.Sprintf("%v", m.ActualPgAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:w"},
-		Value: fmt.Sprintf("%v", m.WAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:h"},
-		Value: fmt.Sprintf("%v", m.HAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:fontSz"},
-		Value: fmt.Sprintf("%v", m.FontSzAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:actualPg"},
+		Value: fmt.Sprintf("%v", m.ActualPgAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:w"},
+		Value: fmt.Sprintf("%v", m.WAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:h"},
+		Value: fmt.Sprintf("%v", m.HAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:fontSz"},
+		Value: fmt.Sprintf("%v", m.FontSzAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

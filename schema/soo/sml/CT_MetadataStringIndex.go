@@ -28,11 +28,15 @@ func NewCT_MetadataStringIndex() *CT_MetadataStringIndex {
 }
 
 func (m *CT_MetadataStringIndex) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "x"},
-		Value: fmt.Sprintf("%v", m.XAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "x"},
+		Value: fmt.Sprintf("%v", m.XAttr),
+	})
 	if m.SAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "s"},
-			Value: fmt.Sprintf("%d", b2i(*m.SAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "s"},
+			Value: fmt.Sprintf("%d", b2i(*m.SAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

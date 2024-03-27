@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_AlphaCeilingEffect struct {
-}
+type CT_AlphaCeilingEffect struct{}
 
 func NewCT_AlphaCeilingEffect() *CT_AlphaCeilingEffect {
 	ret := &CT_AlphaCeilingEffect{}

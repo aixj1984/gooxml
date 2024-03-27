@@ -35,24 +35,34 @@ func NewCT_Color() *CT_Color {
 
 func (m *CT_Color) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.AutoAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "auto"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "auto"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoAttr)),
+		})
 	}
 	if m.IndexedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "indexed"},
-			Value: fmt.Sprintf("%v", *m.IndexedAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "indexed"},
+			Value: fmt.Sprintf("%v", *m.IndexedAttr),
+		})
 	}
 	if m.RgbAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rgb"},
-			Value: fmt.Sprintf("%v", *m.RgbAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rgb"},
+			Value: fmt.Sprintf("%v", *m.RgbAttr),
+		})
 	}
 	if m.ThemeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "theme"},
-			Value: fmt.Sprintf("%v", *m.ThemeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "theme"},
+			Value: fmt.Sprintf("%v", *m.ThemeAttr),
+		})
 	}
 	if m.TintAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tint"},
-			Value: fmt.Sprintf("%v", *m.TintAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tint"},
+			Value: fmt.Sprintf("%v", *m.TintAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

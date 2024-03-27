@@ -37,16 +37,26 @@ func NewCT_CommentAuthor() *CT_CommentAuthor {
 }
 
 func (m *CT_CommentAuthor) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "initials"},
-		Value: fmt.Sprintf("%v", m.InitialsAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lastIdx"},
-		Value: fmt.Sprintf("%v", m.LastIdxAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "clrIdx"},
-		Value: fmt.Sprintf("%v", m.ClrIdxAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "initials"},
+		Value: fmt.Sprintf("%v", m.InitialsAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "lastIdx"},
+		Value: fmt.Sprintf("%v", m.LastIdxAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "clrIdx"},
+		Value: fmt.Sprintf("%v", m.ClrIdxAttr),
+	})
 	e.EncodeToken(start)
 	if m.ExtLst != nil {
 		seextLst := xml.StartElement{Name: xml.Name{Local: "p:extLst"}}

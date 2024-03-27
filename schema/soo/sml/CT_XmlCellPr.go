@@ -35,11 +35,15 @@ func NewCT_XmlCellPr() *CT_XmlCellPr {
 }
 
 func (m *CT_XmlCellPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.UniqueNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueName"},
-			Value: fmt.Sprintf("%v", *m.UniqueNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "uniqueName"},
+			Value: fmt.Sprintf("%v", *m.UniqueNameAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sexmlPr := xml.StartElement{Name: xml.Name{Local: "ma:xmlPr"}}

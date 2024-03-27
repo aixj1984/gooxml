@@ -13,6 +13,7 @@ import (
 )
 
 // BinOpType is the binary operation operator type
+//
 //go:generate stringer -type=BinOpType
 type BinOpType byte
 
@@ -62,7 +63,6 @@ func (b BinaryExpr) Eval(ctx Context, ev Evaluator) Result {
 			}
 			return listOp(b.op, lhs.ValueList, rhs.ValueList)
 		}
-
 	}
 
 	// TODO: check for and add support for binary operators on boolean values

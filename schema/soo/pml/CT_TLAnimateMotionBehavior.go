@@ -52,8 +52,10 @@ func (m *CT_TLAnimateMotionBehavior) MarshalXML(e *xml.Encoder, start xml.StartE
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.PathAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "path"},
-			Value: fmt.Sprintf("%v", *m.PathAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "path"},
+			Value: fmt.Sprintf("%v", *m.PathAttr),
+		})
 	}
 	if m.PathEditModeAttr != ST_TLAnimateMotionPathEditModeUnset {
 		attr, err := m.PathEditModeAttr.MarshalXMLAttr(xml.Name{Local: "pathEditMode"})
@@ -63,12 +65,16 @@ func (m *CT_TLAnimateMotionBehavior) MarshalXML(e *xml.Encoder, start xml.StartE
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RAngAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rAng"},
-			Value: fmt.Sprintf("%v", *m.RAngAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rAng"},
+			Value: fmt.Sprintf("%v", *m.RAngAttr),
+		})
 	}
 	if m.PtsTypesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ptsTypes"},
-			Value: fmt.Sprintf("%v", *m.PtsTypesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ptsTypes"},
+			Value: fmt.Sprintf("%v", *m.PtsTypesAttr),
+		})
 	}
 	e.EncodeToken(start)
 	secBhvr := xml.StartElement{Name: xml.Name{Local: "p:cBhvr"}}

@@ -26,11 +26,15 @@ func NewCT_AudioCDTime() *CT_AudioCDTime {
 }
 
 func (m *CT_AudioCDTime) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "track"},
-		Value: fmt.Sprintf("%v", m.TrackAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "track"},
+		Value: fmt.Sprintf("%v", m.TrackAttr),
+	})
 	if m.TimeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "time"},
-			Value: fmt.Sprintf("%v", *m.TimeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "time"},
+			Value: fmt.Sprintf("%v", *m.TimeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

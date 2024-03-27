@@ -28,8 +28,10 @@ func NewCT_TableRow() *CT_TableRow {
 }
 
 func (m *CT_TableRow) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "h"},
-		Value: fmt.Sprintf("%v", m.HAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "h"},
+		Value: fmt.Sprintf("%v", m.HAttr),
+	})
 	e.EncodeToken(start)
 	if m.Tc != nil {
 		setc := xml.StartElement{Name: xml.Name{Local: "a:tc"}}

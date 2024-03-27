@@ -39,8 +39,10 @@ func (m *CT_TLCommandBehavior) MarshalXML(e *xml.Encoder, start xml.StartElement
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.CmdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cmd"},
-			Value: fmt.Sprintf("%v", *m.CmdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cmd"},
+			Value: fmt.Sprintf("%v", *m.CmdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	secBhvr := xml.StartElement{Name: xml.Name{Local: "p:cBhvr"}}

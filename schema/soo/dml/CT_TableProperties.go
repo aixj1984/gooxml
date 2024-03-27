@@ -44,32 +44,46 @@ func NewCT_TableProperties() *CT_TableProperties {
 
 func (m *CT_TableProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RtlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rtl"},
-			Value: fmt.Sprintf("%d", b2i(*m.RtlAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rtl"},
+			Value: fmt.Sprintf("%d", b2i(*m.RtlAttr)),
+		})
 	}
 	if m.FirstRowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "firstRow"},
-			Value: fmt.Sprintf("%d", b2i(*m.FirstRowAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "firstRow"},
+			Value: fmt.Sprintf("%d", b2i(*m.FirstRowAttr)),
+		})
 	}
 	if m.FirstColAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "firstCol"},
-			Value: fmt.Sprintf("%d", b2i(*m.FirstColAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "firstCol"},
+			Value: fmt.Sprintf("%d", b2i(*m.FirstColAttr)),
+		})
 	}
 	if m.LastRowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lastRow"},
-			Value: fmt.Sprintf("%d", b2i(*m.LastRowAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lastRow"},
+			Value: fmt.Sprintf("%d", b2i(*m.LastRowAttr)),
+		})
 	}
 	if m.LastColAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lastCol"},
-			Value: fmt.Sprintf("%d", b2i(*m.LastColAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lastCol"},
+			Value: fmt.Sprintf("%d", b2i(*m.LastColAttr)),
+		})
 	}
 	if m.BandRowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bandRow"},
-			Value: fmt.Sprintf("%d", b2i(*m.BandRowAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bandRow"},
+			Value: fmt.Sprintf("%d", b2i(*m.BandRowAttr)),
+		})
 	}
 	if m.BandColAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bandCol"},
-			Value: fmt.Sprintf("%d", b2i(*m.BandColAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bandCol"},
+			Value: fmt.Sprintf("%d", b2i(*m.BandColAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.NoFill != nil {

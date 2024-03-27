@@ -40,20 +40,28 @@ func NewCT_Row() *CT_Row {
 
 func (m *CT_Row) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RsidRPrAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:rsidRPr"},
-			Value: fmt.Sprintf("%v", *m.RsidRPrAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:rsidRPr"},
+			Value: fmt.Sprintf("%v", *m.RsidRPrAttr),
+		})
 	}
 	if m.RsidRAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:rsidR"},
-			Value: fmt.Sprintf("%v", *m.RsidRAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:rsidR"},
+			Value: fmt.Sprintf("%v", *m.RsidRAttr),
+		})
 	}
 	if m.RsidDelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:rsidDel"},
-			Value: fmt.Sprintf("%v", *m.RsidDelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:rsidDel"},
+			Value: fmt.Sprintf("%v", *m.RsidDelAttr),
+		})
 	}
 	if m.RsidTrAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:rsidTr"},
-			Value: fmt.Sprintf("%v", *m.RsidTrAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:rsidTr"},
+			Value: fmt.Sprintf("%v", *m.RsidTrAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TblPrEx != nil {

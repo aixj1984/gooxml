@@ -26,12 +26,16 @@ func NewCT_RelativeOffsetEffect() *CT_RelativeOffsetEffect {
 
 func (m *CT_RelativeOffsetEffect) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.TxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tx"},
-			Value: fmt.Sprintf("%v", *m.TxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tx"},
+			Value: fmt.Sprintf("%v", *m.TxAttr),
+		})
 	}
 	if m.TyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ty"},
-			Value: fmt.Sprintf("%v", *m.TyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ty"},
+			Value: fmt.Sprintf("%v", *m.TyAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

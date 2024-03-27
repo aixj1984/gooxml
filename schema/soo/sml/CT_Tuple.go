@@ -31,15 +31,21 @@ func NewCT_Tuple() *CT_Tuple {
 
 func (m *CT_Tuple) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.FldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fld"},
-			Value: fmt.Sprintf("%v", *m.FldAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fld"},
+			Value: fmt.Sprintf("%v", *m.FldAttr),
+		})
 	}
 	if m.HierAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hier"},
-			Value: fmt.Sprintf("%v", *m.HierAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hier"},
+			Value: fmt.Sprintf("%v", *m.HierAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "item"},
-		Value: fmt.Sprintf("%v", m.ItemAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "item"},
+		Value: fmt.Sprintf("%v", m.ItemAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

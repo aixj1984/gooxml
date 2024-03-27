@@ -30,10 +30,14 @@ func NewWdCT_LinkedTextboxInformation() *WdCT_LinkedTextboxInformation {
 }
 
 func (m *WdCT_LinkedTextboxInformation) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "seq"},
-		Value: fmt.Sprintf("%v", m.SeqAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "seq"},
+		Value: fmt.Sprintf("%v", m.SeqAttr),
+	})
 	e.EncodeToken(start)
 	if m.ExtLst != nil {
 		seextLst := xml.StartElement{Name: xml.Name{Local: "wp:extLst"}}

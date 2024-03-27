@@ -64,32 +64,46 @@ func NewCT_PageSetup() *CT_PageSetup {
 
 func (m *CT_PageSetup) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PaperSizeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "paperSize"},
-			Value: fmt.Sprintf("%v", *m.PaperSizeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "paperSize"},
+			Value: fmt.Sprintf("%v", *m.PaperSizeAttr),
+		})
 	}
 	if m.PaperHeightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "paperHeight"},
-			Value: fmt.Sprintf("%v", *m.PaperHeightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "paperHeight"},
+			Value: fmt.Sprintf("%v", *m.PaperHeightAttr),
+		})
 	}
 	if m.PaperWidthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "paperWidth"},
-			Value: fmt.Sprintf("%v", *m.PaperWidthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "paperWidth"},
+			Value: fmt.Sprintf("%v", *m.PaperWidthAttr),
+		})
 	}
 	if m.ScaleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "scale"},
-			Value: fmt.Sprintf("%v", *m.ScaleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "scale"},
+			Value: fmt.Sprintf("%v", *m.ScaleAttr),
+		})
 	}
 	if m.FirstPageNumberAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "firstPageNumber"},
-			Value: fmt.Sprintf("%v", *m.FirstPageNumberAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "firstPageNumber"},
+			Value: fmt.Sprintf("%v", *m.FirstPageNumberAttr),
+		})
 	}
 	if m.FitToWidthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fitToWidth"},
-			Value: fmt.Sprintf("%v", *m.FitToWidthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fitToWidth"},
+			Value: fmt.Sprintf("%v", *m.FitToWidthAttr),
+		})
 	}
 	if m.FitToHeightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fitToHeight"},
-			Value: fmt.Sprintf("%v", *m.FitToHeightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fitToHeight"},
+			Value: fmt.Sprintf("%v", *m.FitToHeightAttr),
+		})
 	}
 	if m.PageOrderAttr != ST_PageOrderUnset {
 		attr, err := m.PageOrderAttr.MarshalXMLAttr(xml.Name{Local: "pageOrder"})
@@ -106,16 +120,22 @@ func (m *CT_PageSetup) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.UsePrinterDefaultsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "usePrinterDefaults"},
-			Value: fmt.Sprintf("%d", b2i(*m.UsePrinterDefaultsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "usePrinterDefaults"},
+			Value: fmt.Sprintf("%d", b2i(*m.UsePrinterDefaultsAttr)),
+		})
 	}
 	if m.BlackAndWhiteAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "blackAndWhite"},
-			Value: fmt.Sprintf("%d", b2i(*m.BlackAndWhiteAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "blackAndWhite"},
+			Value: fmt.Sprintf("%d", b2i(*m.BlackAndWhiteAttr)),
+		})
 	}
 	if m.DraftAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "draft"},
-			Value: fmt.Sprintf("%d", b2i(*m.DraftAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "draft"},
+			Value: fmt.Sprintf("%d", b2i(*m.DraftAttr)),
+		})
 	}
 	if m.CellCommentsAttr != ST_CellCommentsUnset {
 		attr, err := m.CellCommentsAttr.MarshalXMLAttr(xml.Name{Local: "cellComments"})
@@ -125,8 +145,10 @@ func (m *CT_PageSetup) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.UseFirstPageNumberAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "useFirstPageNumber"},
-			Value: fmt.Sprintf("%d", b2i(*m.UseFirstPageNumberAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "useFirstPageNumber"},
+			Value: fmt.Sprintf("%d", b2i(*m.UseFirstPageNumberAttr)),
+		})
 	}
 	if m.ErrorsAttr != ST_PrintErrorUnset {
 		attr, err := m.ErrorsAttr.MarshalXMLAttr(xml.Name{Local: "errors"})
@@ -136,20 +158,28 @@ func (m *CT_PageSetup) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.HorizontalDpiAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "horizontalDpi"},
-			Value: fmt.Sprintf("%v", *m.HorizontalDpiAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "horizontalDpi"},
+			Value: fmt.Sprintf("%v", *m.HorizontalDpiAttr),
+		})
 	}
 	if m.VerticalDpiAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "verticalDpi"},
-			Value: fmt.Sprintf("%v", *m.VerticalDpiAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "verticalDpi"},
+			Value: fmt.Sprintf("%v", *m.VerticalDpiAttr),
+		})
 	}
 	if m.CopiesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "copies"},
-			Value: fmt.Sprintf("%v", *m.CopiesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "copies"},
+			Value: fmt.Sprintf("%v", *m.CopiesAttr),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

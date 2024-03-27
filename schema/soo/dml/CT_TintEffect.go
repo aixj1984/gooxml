@@ -27,12 +27,16 @@ func NewCT_TintEffect() *CT_TintEffect {
 
 func (m *CT_TintEffect) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.HueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hue"},
-			Value: fmt.Sprintf("%v", *m.HueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hue"},
+			Value: fmt.Sprintf("%v", *m.HueAttr),
+		})
 	}
 	if m.AmtAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "amt"},
-			Value: fmt.Sprintf("%v", *m.AmtAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "amt"},
+			Value: fmt.Sprintf("%v", *m.AmtAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

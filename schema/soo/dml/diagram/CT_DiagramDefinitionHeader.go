@@ -35,19 +35,27 @@ func NewCT_DiagramDefinitionHeader() *CT_DiagramDefinitionHeader {
 }
 
 func (m *CT_DiagramDefinitionHeader) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueId"},
-		Value: fmt.Sprintf("%v", m.UniqueIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "uniqueId"},
+		Value: fmt.Sprintf("%v", m.UniqueIdAttr),
+	})
 	if m.MinVerAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minVer"},
-			Value: fmt.Sprintf("%v", *m.MinVerAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minVer"},
+			Value: fmt.Sprintf("%v", *m.MinVerAttr),
+		})
 	}
 	if m.DefStyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "defStyle"},
-			Value: fmt.Sprintf("%v", *m.DefStyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "defStyle"},
+			Value: fmt.Sprintf("%v", *m.DefStyleAttr),
+		})
 	}
 	if m.ResIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "resId"},
-			Value: fmt.Sprintf("%v", *m.ResIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "resId"},
+			Value: fmt.Sprintf("%v", *m.ResIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	setitle := xml.StartElement{Name: xml.Name{Local: "title"}}

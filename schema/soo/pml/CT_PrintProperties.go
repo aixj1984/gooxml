@@ -52,16 +52,22 @@ func (m *CT_PrintProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.HiddenSlidesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hiddenSlides"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenSlidesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hiddenSlides"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenSlidesAttr)),
+		})
 	}
 	if m.ScaleToFitPaperAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "scaleToFitPaper"},
-			Value: fmt.Sprintf("%d", b2i(*m.ScaleToFitPaperAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "scaleToFitPaper"},
+			Value: fmt.Sprintf("%d", b2i(*m.ScaleToFitPaperAttr)),
+		})
 	}
 	if m.FrameSlidesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "frameSlides"},
-			Value: fmt.Sprintf("%d", b2i(*m.FrameSlidesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "frameSlides"},
+			Value: fmt.Sprintf("%d", b2i(*m.FrameSlidesAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

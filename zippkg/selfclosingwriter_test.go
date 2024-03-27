@@ -13,7 +13,6 @@ import (
 )
 
 func TestSelfClosing(t *testing.T) {
-
 	td := []struct {
 		Input    string
 		Expected string
@@ -22,8 +21,10 @@ func TestSelfClosing(t *testing.T) {
 		{"<test> </test>", "<test> </test>"},
 		{"<test a=\"123\"></test>", "<test a=\"123\"/>"},
 		{`<Default Extension="jpg" ContentType="image/jpg"></Default>`, `<Default Extension="jpg" ContentType="image/jpg"/>`},
-		{`<Override ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml" PartName="/xl/styles.xml"></Override>`,
-			`<Override ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml" PartName="/xl/styles.xml"/>`},
+		{
+			`<Override ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml" PartName="/xl/styles.xml"></Override>`,
+			`<Override ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml" PartName="/xl/styles.xml"/>`,
+		},
 		{"<TestStruct><Foo>bar</Foo></TestStruct>", "<TestStruct><Foo>bar</Foo></TestStruct>"},
 		{"<test></test><a></a><b></b>", "<test/><a/><b/>"},
 	}

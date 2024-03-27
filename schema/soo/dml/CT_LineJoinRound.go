@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_LineJoinRound struct {
-}
+type CT_LineJoinRound struct{}
 
 func NewCT_LineJoinRound() *CT_LineJoinRound {
 	ret := &CT_LineJoinRound{}

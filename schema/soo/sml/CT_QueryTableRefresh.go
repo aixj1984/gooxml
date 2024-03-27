@@ -50,32 +50,46 @@ func NewCT_QueryTableRefresh() *CT_QueryTableRefresh {
 
 func (m *CT_QueryTableRefresh) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PreserveSortFilterLayoutAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "preserveSortFilterLayout"},
-			Value: fmt.Sprintf("%d", b2i(*m.PreserveSortFilterLayoutAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "preserveSortFilterLayout"},
+			Value: fmt.Sprintf("%d", b2i(*m.PreserveSortFilterLayoutAttr)),
+		})
 	}
 	if m.FieldIdWrappedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fieldIdWrapped"},
-			Value: fmt.Sprintf("%d", b2i(*m.FieldIdWrappedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fieldIdWrapped"},
+			Value: fmt.Sprintf("%d", b2i(*m.FieldIdWrappedAttr)),
+		})
 	}
 	if m.HeadersInLastRefreshAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "headersInLastRefresh"},
-			Value: fmt.Sprintf("%d", b2i(*m.HeadersInLastRefreshAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "headersInLastRefresh"},
+			Value: fmt.Sprintf("%d", b2i(*m.HeadersInLastRefreshAttr)),
+		})
 	}
 	if m.MinimumVersionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minimumVersion"},
-			Value: fmt.Sprintf("%v", *m.MinimumVersionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minimumVersion"},
+			Value: fmt.Sprintf("%v", *m.MinimumVersionAttr),
+		})
 	}
 	if m.NextIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "nextId"},
-			Value: fmt.Sprintf("%v", *m.NextIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "nextId"},
+			Value: fmt.Sprintf("%v", *m.NextIdAttr),
+		})
 	}
 	if m.UnboundColumnsLeftAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "unboundColumnsLeft"},
-			Value: fmt.Sprintf("%v", *m.UnboundColumnsLeftAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "unboundColumnsLeft"},
+			Value: fmt.Sprintf("%v", *m.UnboundColumnsLeftAttr),
+		})
 	}
 	if m.UnboundColumnsRightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "unboundColumnsRight"},
-			Value: fmt.Sprintf("%v", *m.UnboundColumnsRightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "unboundColumnsRight"},
+			Value: fmt.Sprintf("%v", *m.UnboundColumnsRightAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sequeryTableFields := xml.StartElement{Name: xml.Name{Local: "ma:queryTableFields"}}

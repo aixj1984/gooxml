@@ -19,7 +19,6 @@ func init() {
 	// TODO: RegisterFunction("SWITCH", Switch) // Only in Excel 2016+
 	RegisterFunction("TRUE", True) // yup, TRUE()/FALSE() are functions in Excel, news to me...
 	RegisterFunction("_xlfn.XOR", Xor)
-
 }
 
 // And is an implementation of the Excel AND() function.
@@ -96,7 +95,6 @@ func If(args []Result) Result {
 		return args[2]
 	}
 	return MakeBoolResult(false)
-
 }
 
 // IfError is an implementation of the Excel IFERROR() function. It takes two arguments.

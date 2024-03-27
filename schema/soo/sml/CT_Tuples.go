@@ -31,8 +31,10 @@ func NewCT_Tuples() *CT_Tuples {
 
 func (m *CT_Tuples) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "c"},
-			Value: fmt.Sprintf("%v", *m.CAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "c"},
+			Value: fmt.Sprintf("%v", *m.CAttr),
+		})
 	}
 	e.EncodeToken(start)
 	setpl := xml.StartElement{Name: xml.Name{Local: "ma:tpl"}}

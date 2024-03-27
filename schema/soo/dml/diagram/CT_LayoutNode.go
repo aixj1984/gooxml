@@ -41,12 +41,16 @@ func NewCT_LayoutNode() *CT_LayoutNode {
 
 func (m *CT_LayoutNode) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.StyleLblAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "styleLbl"},
-			Value: fmt.Sprintf("%v", *m.StyleLblAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "styleLbl"},
+			Value: fmt.Sprintf("%v", *m.StyleLblAttr),
+		})
 	}
 	if m.ChOrderAttr != ST_ChildOrderTypeUnset {
 		attr, err := m.ChOrderAttr.MarshalXMLAttr(xml.Name{Local: "chOrder"})
@@ -56,8 +60,10 @@ func (m *CT_LayoutNode) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.MoveWithAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "moveWith"},
-			Value: fmt.Sprintf("%v", *m.MoveWithAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "moveWith"},
+			Value: fmt.Sprintf("%v", *m.MoveWithAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Alg != nil {

@@ -47,12 +47,16 @@ func (m *OfcCT_Callout) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.TypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "type"},
-			Value: fmt.Sprintf("%v", *m.TypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "type"},
+			Value: fmt.Sprintf("%v", *m.TypeAttr),
+		})
 	}
 	if m.GapAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "gap"},
-			Value: fmt.Sprintf("%v", *m.GapAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "gap"},
+			Value: fmt.Sprintf("%v", *m.GapAttr),
+		})
 	}
 	if m.AngleAttr != OfcST_AngleUnset {
 		attr, err := m.AngleAttr.MarshalXMLAttr(xml.Name{Local: "angle"})
@@ -69,12 +73,16 @@ func (m *OfcCT_Callout) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DropAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "drop"},
-			Value: fmt.Sprintf("%v", *m.DropAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "drop"},
+			Value: fmt.Sprintf("%v", *m.DropAttr),
+		})
 	}
 	if m.DistanceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "distance"},
-			Value: fmt.Sprintf("%v", *m.DistanceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "distance"},
+			Value: fmt.Sprintf("%v", *m.DistanceAttr),
+		})
 	}
 	if m.LengthspecifiedAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.LengthspecifiedAttr.MarshalXMLAttr(xml.Name{Local: "lengthspecified"})
@@ -84,8 +92,10 @@ func (m *OfcCT_Callout) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.LengthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "length"},
-			Value: fmt.Sprintf("%v", *m.LengthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "length"},
+			Value: fmt.Sprintf("%v", *m.LengthAttr),
+		})
 	}
 	if m.AccentbarAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.AccentbarAttr.MarshalXMLAttr(xml.Name{Local: "accentbar"})

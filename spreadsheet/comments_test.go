@@ -75,5 +75,4 @@ func TestCommentsReusesAuthorIDs(t *testing.T) {
 	if len(c.X().Authors.Author) != 2 {
 		t.Errorf("expected two authors, got %v", c.X().Authors.Author)
 	}
-
 }

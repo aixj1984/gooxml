@@ -28,11 +28,15 @@ func NewCT_GroupMember() *CT_GroupMember {
 }
 
 func (m *CT_GroupMember) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueName"},
-		Value: fmt.Sprintf("%v", m.UniqueNameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "uniqueName"},
+		Value: fmt.Sprintf("%v", m.UniqueNameAttr),
+	})
 	if m.GroupAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "group"},
-			Value: fmt.Sprintf("%d", b2i(*m.GroupAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "group"},
+			Value: fmt.Sprintf("%d", b2i(*m.GroupAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -28,10 +28,14 @@ func NewCT_VolTopicRef() *CT_VolTopicRef {
 }
 
 func (m *CT_VolTopicRef) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-		Value: fmt.Sprintf("%v", m.RAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "s"},
-		Value: fmt.Sprintf("%v", m.SAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r"},
+		Value: fmt.Sprintf("%v", m.RAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "s"},
+		Value: fmt.Sprintf("%v", m.SAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

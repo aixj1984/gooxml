@@ -95,9 +95,9 @@ func init() {
 	// RegisterFunction("SUMIFS",
 	RegisterFunction("SUMPRODUCT", SumProduct)
 	RegisterFunction("SUMSQ", SumSquares)
-	//RegisterFunction("SUMX2MY2"
-	//RegisterFunction("SUMX2PY2"
-	//RegisterFunction("SUMXMY2"
+	// RegisterFunction("SUMX2MY2"
+	// RegisterFunction("SUMX2PY2"
+	// RegisterFunction("SUMXMY2"
 	RegisterFunction("TAN", makeMathWrapper("TAN", math.Tan))
 	RegisterFunction("TANH", makeMathWrapper("TANH", math.Tanh))
 	RegisterFunction("TRUNC", Trunc)
@@ -887,7 +887,6 @@ func Log(args []Result) Result {
 	}
 
 	return MakeNumberResult(math.Log(nArg.ValueNumber) / math.Log(base))
-
 }
 
 func minor(sqMtx [][]Result, idx int) [][]Result {
@@ -907,6 +906,7 @@ func minor(sqMtx [][]Result, idx int) [][]Result {
 	}
 	return ret
 }
+
 func det(sqMtx [][]Result) float64 {
 	// two by two
 	if len(sqMtx) == 2 {

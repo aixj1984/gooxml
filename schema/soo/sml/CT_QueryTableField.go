@@ -42,31 +42,45 @@ func NewCT_QueryTableField() *CT_QueryTableField {
 }
 
 func (m *CT_QueryTableField) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.DataBoundAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dataBound"},
-			Value: fmt.Sprintf("%d", b2i(*m.DataBoundAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dataBound"},
+			Value: fmt.Sprintf("%d", b2i(*m.DataBoundAttr)),
+		})
 	}
 	if m.RowNumbersAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rowNumbers"},
-			Value: fmt.Sprintf("%d", b2i(*m.RowNumbersAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rowNumbers"},
+			Value: fmt.Sprintf("%d", b2i(*m.RowNumbersAttr)),
+		})
 	}
 	if m.FillFormulasAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fillFormulas"},
-			Value: fmt.Sprintf("%d", b2i(*m.FillFormulasAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fillFormulas"},
+			Value: fmt.Sprintf("%d", b2i(*m.FillFormulasAttr)),
+		})
 	}
 	if m.ClippedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "clipped"},
-			Value: fmt.Sprintf("%d", b2i(*m.ClippedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "clipped"},
+			Value: fmt.Sprintf("%d", b2i(*m.ClippedAttr)),
+		})
 	}
 	if m.TableColumnIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tableColumnId"},
-			Value: fmt.Sprintf("%v", *m.TableColumnIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tableColumnId"},
+			Value: fmt.Sprintf("%v", *m.TableColumnIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

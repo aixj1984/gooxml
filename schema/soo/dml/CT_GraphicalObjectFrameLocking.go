@@ -34,28 +34,40 @@ func NewCT_GraphicalObjectFrameLocking() *CT_GraphicalObjectFrameLocking {
 
 func (m *CT_GraphicalObjectFrameLocking) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NoGrpAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noGrp"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoGrpAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noGrp"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoGrpAttr)),
+		})
 	}
 	if m.NoDrilldownAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noDrilldown"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoDrilldownAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noDrilldown"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoDrilldownAttr)),
+		})
 	}
 	if m.NoSelectAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noSelect"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoSelectAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noSelect"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoSelectAttr)),
+		})
 	}
 	if m.NoChangeAspectAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noChangeAspect"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoChangeAspectAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noChangeAspect"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoChangeAspectAttr)),
+		})
 	}
 	if m.NoMoveAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noMove"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoMoveAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noMove"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoMoveAttr)),
+		})
 	}
 	if m.NoResizeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "noResize"},
-			Value: fmt.Sprintf("%d", b2i(*m.NoResizeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "noResize"},
+			Value: fmt.Sprintf("%d", b2i(*m.NoResizeAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

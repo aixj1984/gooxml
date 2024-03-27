@@ -48,8 +48,10 @@ func NewCT_Div() *CT_Div {
 }
 
 func (m *CT_Div) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeToken(start)
 	if m.BlockQuote != nil {
 		seblockQuote := xml.StartElement{Name: xml.Name{Local: "w:blockQuote"}}

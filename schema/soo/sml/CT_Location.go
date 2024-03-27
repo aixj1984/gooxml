@@ -36,21 +36,33 @@ func NewCT_Location() *CT_Location {
 }
 
 func (m *CT_Location) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ref"},
-		Value: fmt.Sprintf("%v", m.RefAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "firstHeaderRow"},
-		Value: fmt.Sprintf("%v", m.FirstHeaderRowAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "firstDataRow"},
-		Value: fmt.Sprintf("%v", m.FirstDataRowAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "firstDataCol"},
-		Value: fmt.Sprintf("%v", m.FirstDataColAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "ref"},
+		Value: fmt.Sprintf("%v", m.RefAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "firstHeaderRow"},
+		Value: fmt.Sprintf("%v", m.FirstHeaderRowAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "firstDataRow"},
+		Value: fmt.Sprintf("%v", m.FirstDataRowAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "firstDataCol"},
+		Value: fmt.Sprintf("%v", m.FirstDataColAttr),
+	})
 	if m.RowPageCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rowPageCount"},
-			Value: fmt.Sprintf("%v", *m.RowPageCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rowPageCount"},
+			Value: fmt.Sprintf("%v", *m.RowPageCountAttr),
+		})
 	}
 	if m.ColPageCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "colPageCount"},
-			Value: fmt.Sprintf("%v", *m.ColPageCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "colPageCount"},
+			Value: fmt.Sprintf("%v", *m.ColPageCountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

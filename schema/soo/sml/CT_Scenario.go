@@ -40,27 +40,39 @@ func NewCT_Scenario() *CT_Scenario {
 }
 
 func (m *CT_Scenario) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.LockedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "locked"},
-			Value: fmt.Sprintf("%d", b2i(*m.LockedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "locked"},
+			Value: fmt.Sprintf("%d", b2i(*m.LockedAttr)),
+		})
 	}
 	if m.HiddenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hidden"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hidden"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr)),
+		})
 	}
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	if m.UserAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "user"},
-			Value: fmt.Sprintf("%v", *m.UserAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "user"},
+			Value: fmt.Sprintf("%v", *m.UserAttr),
+		})
 	}
 	if m.CommentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "comment"},
-			Value: fmt.Sprintf("%v", *m.CommentAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "comment"},
+			Value: fmt.Sprintf("%v", *m.CommentAttr),
+		})
 	}
 	e.EncodeToken(start)
 	seinputCells := xml.StartElement{Name: xml.Name{Local: "ma:inputCells"}}

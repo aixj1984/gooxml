@@ -26,12 +26,18 @@ func NewCT_Point3D() *CT_Point3D {
 }
 
 func (m *CT_Point3D) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "x"},
-		Value: fmt.Sprintf("%v", m.XAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "y"},
-		Value: fmt.Sprintf("%v", m.YAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "z"},
-		Value: fmt.Sprintf("%v", m.ZAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "x"},
+		Value: fmt.Sprintf("%v", m.XAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "y"},
+		Value: fmt.Sprintf("%v", m.YAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "z"},
+		Value: fmt.Sprintf("%v", m.ZAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

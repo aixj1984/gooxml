@@ -30,8 +30,10 @@ func NewCT_SdtComboBox() *CT_SdtComboBox {
 
 func (m *CT_SdtComboBox) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.LastValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:lastValue"},
-			Value: fmt.Sprintf("%v", *m.LastValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:lastValue"},
+			Value: fmt.Sprintf("%v", *m.LastValueAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ListItem != nil {

@@ -76,9 +76,11 @@ func (d *DecodeMap) AddTarget(filePath string, ifc interface{}, sourceFileType s
 	d.pathsToIfcs[fn] = Target{Path: filePath, Typ: sourceFileType, Ifc: ifc, Index: idx}
 	return true
 }
+
 func (d *DecodeMap) RecordIndex(path string, idx int) {
 	d.indices[path] = idx
 }
+
 func (d *DecodeMap) IndexFor(path string) int {
 	return d.indices[path]
 }

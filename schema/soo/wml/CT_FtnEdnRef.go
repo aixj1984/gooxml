@@ -31,11 +31,15 @@ func NewCT_FtnEdnRef() *CT_FtnEdnRef {
 
 func (m *CT_FtnEdnRef) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CustomMarkFollowsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:customMarkFollows"},
-			Value: fmt.Sprintf("%v", *m.CustomMarkFollowsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:customMarkFollows"},
+			Value: fmt.Sprintf("%v", *m.CustomMarkFollowsAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

@@ -32,11 +32,15 @@ func NewCT_TextField() *CT_TextField {
 }
 
 func (m *CT_TextField) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.TypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "type"},
-			Value: fmt.Sprintf("%v", *m.TypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "type"},
+			Value: fmt.Sprintf("%v", *m.TypeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.RPr != nil {

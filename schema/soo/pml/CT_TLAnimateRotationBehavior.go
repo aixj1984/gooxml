@@ -35,16 +35,22 @@ func NewCT_TLAnimateRotationBehavior() *CT_TLAnimateRotationBehavior {
 
 func (m *CT_TLAnimateRotationBehavior) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ByAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "by"},
-			Value: fmt.Sprintf("%v", *m.ByAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "by"},
+			Value: fmt.Sprintf("%v", *m.ByAttr),
+		})
 	}
 	if m.FromAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "from"},
-			Value: fmt.Sprintf("%v", *m.FromAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "from"},
+			Value: fmt.Sprintf("%v", *m.FromAttr),
+		})
 	}
 	if m.ToAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "to"},
-			Value: fmt.Sprintf("%v", *m.ToAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "to"},
+			Value: fmt.Sprintf("%v", *m.ToAttr),
+		})
 	}
 	e.EncodeToken(start)
 	secBhvr := xml.StartElement{Name: xml.Name{Local: "p:cBhvr"}}

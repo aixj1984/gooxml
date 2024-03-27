@@ -34,28 +34,40 @@ func NewCT_XYAdjustHandle() *CT_XYAdjustHandle {
 
 func (m *CT_XYAdjustHandle) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.GdRefXAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "gdRefX"},
-			Value: fmt.Sprintf("%v", *m.GdRefXAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "gdRefX"},
+			Value: fmt.Sprintf("%v", *m.GdRefXAttr),
+		})
 	}
 	if m.MinXAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minX"},
-			Value: fmt.Sprintf("%v", *m.MinXAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minX"},
+			Value: fmt.Sprintf("%v", *m.MinXAttr),
+		})
 	}
 	if m.MaxXAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxX"},
-			Value: fmt.Sprintf("%v", *m.MaxXAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxX"},
+			Value: fmt.Sprintf("%v", *m.MaxXAttr),
+		})
 	}
 	if m.GdRefYAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "gdRefY"},
-			Value: fmt.Sprintf("%v", *m.GdRefYAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "gdRefY"},
+			Value: fmt.Sprintf("%v", *m.GdRefYAttr),
+		})
 	}
 	if m.MinYAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minY"},
-			Value: fmt.Sprintf("%v", *m.MinYAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minY"},
+			Value: fmt.Sprintf("%v", *m.MinYAttr),
+		})
 	}
 	if m.MaxYAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxY"},
-			Value: fmt.Sprintf("%v", *m.MaxYAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxY"},
+			Value: fmt.Sprintf("%v", *m.MaxYAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sepos := xml.StartElement{Name: xml.Name{Local: "a:pos"}}

@@ -30,13 +30,19 @@ func NewCT_Attr() *CT_Attr {
 
 func (m *CT_Attr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.UriAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:uri"},
-			Value: fmt.Sprintf("%v", *m.UriAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:uri"},
+			Value: fmt.Sprintf("%v", *m.UriAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:val"},
-		Value: fmt.Sprintf("%v", m.ValAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:val"},
+		Value: fmt.Sprintf("%v", m.ValAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

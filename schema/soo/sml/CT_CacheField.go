@@ -60,55 +60,81 @@ func NewCT_CacheField() *CT_CacheField {
 }
 
 func (m *CT_CacheField) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.CaptionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "caption"},
-			Value: fmt.Sprintf("%v", *m.CaptionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "caption"},
+			Value: fmt.Sprintf("%v", *m.CaptionAttr),
+		})
 	}
 	if m.PropertyNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "propertyName"},
-			Value: fmt.Sprintf("%v", *m.PropertyNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "propertyName"},
+			Value: fmt.Sprintf("%v", *m.PropertyNameAttr),
+		})
 	}
 	if m.ServerFieldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "serverField"},
-			Value: fmt.Sprintf("%d", b2i(*m.ServerFieldAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "serverField"},
+			Value: fmt.Sprintf("%d", b2i(*m.ServerFieldAttr)),
+		})
 	}
 	if m.UniqueListAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueList"},
-			Value: fmt.Sprintf("%d", b2i(*m.UniqueListAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "uniqueList"},
+			Value: fmt.Sprintf("%d", b2i(*m.UniqueListAttr)),
+		})
 	}
 	if m.NumFmtIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "numFmtId"},
-			Value: fmt.Sprintf("%v", *m.NumFmtIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "numFmtId"},
+			Value: fmt.Sprintf("%v", *m.NumFmtIdAttr),
+		})
 	}
 	if m.FormulaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "formula"},
-			Value: fmt.Sprintf("%v", *m.FormulaAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "formula"},
+			Value: fmt.Sprintf("%v", *m.FormulaAttr),
+		})
 	}
 	if m.SqlTypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sqlType"},
-			Value: fmt.Sprintf("%v", *m.SqlTypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sqlType"},
+			Value: fmt.Sprintf("%v", *m.SqlTypeAttr),
+		})
 	}
 	if m.HierarchyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hierarchy"},
-			Value: fmt.Sprintf("%v", *m.HierarchyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hierarchy"},
+			Value: fmt.Sprintf("%v", *m.HierarchyAttr),
+		})
 	}
 	if m.LevelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "level"},
-			Value: fmt.Sprintf("%v", *m.LevelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "level"},
+			Value: fmt.Sprintf("%v", *m.LevelAttr),
+		})
 	}
 	if m.DatabaseFieldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "databaseField"},
-			Value: fmt.Sprintf("%d", b2i(*m.DatabaseFieldAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "databaseField"},
+			Value: fmt.Sprintf("%d", b2i(*m.DatabaseFieldAttr)),
+		})
 	}
 	if m.MappingCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "mappingCount"},
-			Value: fmt.Sprintf("%v", *m.MappingCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "mappingCount"},
+			Value: fmt.Sprintf("%v", *m.MappingCountAttr),
+		})
 	}
 	if m.MemberPropertyFieldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "memberPropertyField"},
-			Value: fmt.Sprintf("%d", b2i(*m.MemberPropertyFieldAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "memberPropertyField"},
+			Value: fmt.Sprintf("%d", b2i(*m.MemberPropertyFieldAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.SharedItems != nil {

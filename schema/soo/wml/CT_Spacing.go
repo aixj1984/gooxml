@@ -43,32 +43,46 @@ func NewCT_Spacing() *CT_Spacing {
 
 func (m *CT_Spacing) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.BeforeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:before"},
-			Value: fmt.Sprintf("%v", *m.BeforeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:before"},
+			Value: fmt.Sprintf("%v", *m.BeforeAttr),
+		})
 	}
 	if m.BeforeLinesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:beforeLines"},
-			Value: fmt.Sprintf("%v", *m.BeforeLinesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:beforeLines"},
+			Value: fmt.Sprintf("%v", *m.BeforeLinesAttr),
+		})
 	}
 	if m.BeforeAutospacingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:beforeAutospacing"},
-			Value: fmt.Sprintf("%v", *m.BeforeAutospacingAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:beforeAutospacing"},
+			Value: fmt.Sprintf("%v", *m.BeforeAutospacingAttr),
+		})
 	}
 	if m.AfterAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:after"},
-			Value: fmt.Sprintf("%v", *m.AfterAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:after"},
+			Value: fmt.Sprintf("%v", *m.AfterAttr),
+		})
 	}
 	if m.AfterLinesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:afterLines"},
-			Value: fmt.Sprintf("%v", *m.AfterLinesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:afterLines"},
+			Value: fmt.Sprintf("%v", *m.AfterLinesAttr),
+		})
 	}
 	if m.AfterAutospacingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:afterAutospacing"},
-			Value: fmt.Sprintf("%v", *m.AfterAutospacingAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:afterAutospacing"},
+			Value: fmt.Sprintf("%v", *m.AfterAutospacingAttr),
+		})
 	}
 	if m.LineAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:line"},
-			Value: fmt.Sprintf("%v", *m.LineAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:line"},
+			Value: fmt.Sprintf("%v", *m.LineAttr),
+		})
 	}
 	if m.LineRuleAttr != ST_LineSpacingRuleUnset {
 		attr, err := m.LineRuleAttr.MarshalXMLAttr(xml.Name{Local: "w:lineRule"})

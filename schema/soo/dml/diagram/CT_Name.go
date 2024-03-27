@@ -26,11 +26,15 @@ func NewCT_Name() *CT_Name {
 
 func (m *CT_Name) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.LangAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lang"},
-			Value: fmt.Sprintf("%v", *m.LangAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lang"},
+			Value: fmt.Sprintf("%v", *m.LangAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "val"},
-		Value: fmt.Sprintf("%v", m.ValAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "val"},
+		Value: fmt.Sprintf("%v", m.ValAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

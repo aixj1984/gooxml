@@ -27,12 +27,16 @@ func NewOfcCT_Entry() *OfcCT_Entry {
 
 func (m *OfcCT_Entry) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NewAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "new"},
-			Value: fmt.Sprintf("%v", *m.NewAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "new"},
+			Value: fmt.Sprintf("%v", *m.NewAttr),
+		})
 	}
 	if m.OldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "old"},
-			Value: fmt.Sprintf("%v", *m.OldAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "old"},
+			Value: fmt.Sprintf("%v", *m.OldAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -78,73 +78,109 @@ func NewCT_Connection() *CT_Connection {
 }
 
 func (m *CT_Connection) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.SourceFileAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sourceFile"},
-			Value: fmt.Sprintf("%v", *m.SourceFileAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sourceFile"},
+			Value: fmt.Sprintf("%v", *m.SourceFileAttr),
+		})
 	}
 	if m.OdcFileAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "odcFile"},
-			Value: fmt.Sprintf("%v", *m.OdcFileAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "odcFile"},
+			Value: fmt.Sprintf("%v", *m.OdcFileAttr),
+		})
 	}
 	if m.KeepAliveAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "keepAlive"},
-			Value: fmt.Sprintf("%d", b2i(*m.KeepAliveAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "keepAlive"},
+			Value: fmt.Sprintf("%d", b2i(*m.KeepAliveAttr)),
+		})
 	}
 	if m.IntervalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "interval"},
-			Value: fmt.Sprintf("%v", *m.IntervalAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "interval"},
+			Value: fmt.Sprintf("%v", *m.IntervalAttr),
+		})
 	}
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.DescriptionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "description"},
-			Value: fmt.Sprintf("%v", *m.DescriptionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "description"},
+			Value: fmt.Sprintf("%v", *m.DescriptionAttr),
+		})
 	}
 	if m.TypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "type"},
-			Value: fmt.Sprintf("%v", *m.TypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "type"},
+			Value: fmt.Sprintf("%v", *m.TypeAttr),
+		})
 	}
 	if m.ReconnectionMethodAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "reconnectionMethod"},
-			Value: fmt.Sprintf("%v", *m.ReconnectionMethodAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "reconnectionMethod"},
+			Value: fmt.Sprintf("%v", *m.ReconnectionMethodAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refreshedVersion"},
-		Value: fmt.Sprintf("%v", m.RefreshedVersionAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "refreshedVersion"},
+		Value: fmt.Sprintf("%v", m.RefreshedVersionAttr),
+	})
 	if m.MinRefreshableVersionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minRefreshableVersion"},
-			Value: fmt.Sprintf("%v", *m.MinRefreshableVersionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minRefreshableVersion"},
+			Value: fmt.Sprintf("%v", *m.MinRefreshableVersionAttr),
+		})
 	}
 	if m.SavePasswordAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "savePassword"},
-			Value: fmt.Sprintf("%d", b2i(*m.SavePasswordAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "savePassword"},
+			Value: fmt.Sprintf("%d", b2i(*m.SavePasswordAttr)),
+		})
 	}
 	if m.NewAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "new"},
-			Value: fmt.Sprintf("%d", b2i(*m.NewAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "new"},
+			Value: fmt.Sprintf("%d", b2i(*m.NewAttr)),
+		})
 	}
 	if m.DeletedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "deleted"},
-			Value: fmt.Sprintf("%d", b2i(*m.DeletedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "deleted"},
+			Value: fmt.Sprintf("%d", b2i(*m.DeletedAttr)),
+		})
 	}
 	if m.OnlyUseConnectionFileAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "onlyUseConnectionFile"},
-			Value: fmt.Sprintf("%d", b2i(*m.OnlyUseConnectionFileAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "onlyUseConnectionFile"},
+			Value: fmt.Sprintf("%d", b2i(*m.OnlyUseConnectionFileAttr)),
+		})
 	}
 	if m.BackgroundAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "background"},
-			Value: fmt.Sprintf("%d", b2i(*m.BackgroundAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "background"},
+			Value: fmt.Sprintf("%d", b2i(*m.BackgroundAttr)),
+		})
 	}
 	if m.RefreshOnLoadAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refreshOnLoad"},
-			Value: fmt.Sprintf("%d", b2i(*m.RefreshOnLoadAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refreshOnLoad"},
+			Value: fmt.Sprintf("%d", b2i(*m.RefreshOnLoadAttr)),
+		})
 	}
 	if m.SaveDataAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "saveData"},
-			Value: fmt.Sprintf("%d", b2i(*m.SaveDataAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "saveData"},
+			Value: fmt.Sprintf("%d", b2i(*m.SaveDataAttr)),
+		})
 	}
 	if m.CredentialsAttr != ST_CredMethodUnset {
 		attr, err := m.CredentialsAttr.MarshalXMLAttr(xml.Name{Local: "credentials"})
@@ -154,8 +190,10 @@ func (m *CT_Connection) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.SingleSignOnIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "singleSignOnId"},
-			Value: fmt.Sprintf("%v", *m.SingleSignOnIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "singleSignOnId"},
+			Value: fmt.Sprintf("%v", *m.SingleSignOnIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.DbPr != nil {

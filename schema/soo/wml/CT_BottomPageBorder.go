@@ -49,16 +49,22 @@ func NewCT_BottomPageBorder() *CT_BottomPageBorder {
 
 func (m *CT_BottomPageBorder) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.BottomLeftAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:bottomLeft"},
-			Value: fmt.Sprintf("%v", *m.BottomLeftAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:bottomLeft"},
+			Value: fmt.Sprintf("%v", *m.BottomLeftAttr),
+		})
 	}
 	if m.BottomRightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:bottomRight"},
-			Value: fmt.Sprintf("%v", *m.BottomRightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:bottomRight"},
+			Value: fmt.Sprintf("%v", *m.BottomRightAttr),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	attr, err := m.ValAttr.MarshalXMLAttr(xml.Name{Local: "w:val"})
 	if err != nil {
@@ -66,8 +72,10 @@ func (m *CT_BottomPageBorder) MarshalXML(e *xml.Encoder, start xml.StartElement)
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.ColorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:color"},
-			Value: fmt.Sprintf("%v", *m.ColorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:color"},
+			Value: fmt.Sprintf("%v", *m.ColorAttr),
+		})
 	}
 	if m.ThemeColorAttr != ST_ThemeColorUnset {
 		attr, err := m.ThemeColorAttr.MarshalXMLAttr(xml.Name{Local: "w:themeColor"})
@@ -77,28 +85,40 @@ func (m *CT_BottomPageBorder) MarshalXML(e *xml.Encoder, start xml.StartElement)
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ThemeTintAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:themeTint"},
-			Value: fmt.Sprintf("%v", *m.ThemeTintAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:themeTint"},
+			Value: fmt.Sprintf("%v", *m.ThemeTintAttr),
+		})
 	}
 	if m.ThemeShadeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:themeShade"},
-			Value: fmt.Sprintf("%v", *m.ThemeShadeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:themeShade"},
+			Value: fmt.Sprintf("%v", *m.ThemeShadeAttr),
+		})
 	}
 	if m.SzAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:sz"},
-			Value: fmt.Sprintf("%v", *m.SzAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:sz"},
+			Value: fmt.Sprintf("%v", *m.SzAttr),
+		})
 	}
 	if m.SpaceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:space"},
-			Value: fmt.Sprintf("%v", *m.SpaceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:space"},
+			Value: fmt.Sprintf("%v", *m.SpaceAttr),
+		})
 	}
 	if m.ShadowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:shadow"},
-			Value: fmt.Sprintf("%v", *m.ShadowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:shadow"},
+			Value: fmt.Sprintf("%v", *m.ShadowAttr),
+		})
 	}
 	if m.FrameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:frame"},
-			Value: fmt.Sprintf("%v", *m.FrameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:frame"},
+			Value: fmt.Sprintf("%v", *m.FrameAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

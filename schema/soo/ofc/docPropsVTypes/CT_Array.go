@@ -48,10 +48,14 @@ func NewCT_Array() *CT_Array {
 }
 
 func (m *CT_Array) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lBounds"},
-		Value: fmt.Sprintf("%v", m.LBoundsAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uBounds"},
-		Value: fmt.Sprintf("%v", m.UBoundsAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "lBounds"},
+		Value: fmt.Sprintf("%v", m.LBoundsAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "uBounds"},
+		Value: fmt.Sprintf("%v", m.UBoundsAttr),
+	})
 	attr, err := m.BaseTypeAttr.MarshalXMLAttr(xml.Name{Local: "baseType"})
 	if err != nil {
 		return err

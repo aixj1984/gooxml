@@ -43,12 +43,16 @@ func (m *CT_TLAnimateEffectBehavior) MarshalXML(e *xml.Encoder, start xml.StartE
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.FilterAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "filter"},
-			Value: fmt.Sprintf("%v", *m.FilterAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "filter"},
+			Value: fmt.Sprintf("%v", *m.FilterAttr),
+		})
 	}
 	if m.PrLstAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "prLst"},
-			Value: fmt.Sprintf("%v", *m.PrLstAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "prLst"},
+			Value: fmt.Sprintf("%v", *m.PrLstAttr),
+		})
 	}
 	e.EncodeToken(start)
 	secBhvr := xml.StartElement{Name: xml.Name{Local: "p:cBhvr"}}

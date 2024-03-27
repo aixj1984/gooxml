@@ -29,12 +29,16 @@ func NewCT_MeasureDimensionMap() *CT_MeasureDimensionMap {
 
 func (m *CT_MeasureDimensionMap) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.MeasureGroupAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "measureGroup"},
-			Value: fmt.Sprintf("%v", *m.MeasureGroupAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "measureGroup"},
+			Value: fmt.Sprintf("%v", *m.MeasureGroupAttr),
+		})
 	}
 	if m.DimensionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dimension"},
-			Value: fmt.Sprintf("%v", *m.DimensionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dimension"},
+			Value: fmt.Sprintf("%v", *m.DimensionAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

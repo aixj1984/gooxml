@@ -37,20 +37,28 @@ func NewCT_DataValidations() *CT_DataValidations {
 
 func (m *CT_DataValidations) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DisablePromptsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "disablePrompts"},
-			Value: fmt.Sprintf("%d", b2i(*m.DisablePromptsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "disablePrompts"},
+			Value: fmt.Sprintf("%d", b2i(*m.DisablePromptsAttr)),
+		})
 	}
 	if m.XWindowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xWindow"},
-			Value: fmt.Sprintf("%v", *m.XWindowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "xWindow"},
+			Value: fmt.Sprintf("%v", *m.XWindowAttr),
+		})
 	}
 	if m.YWindowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "yWindow"},
-			Value: fmt.Sprintf("%v", *m.YWindowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "yWindow"},
+			Value: fmt.Sprintf("%v", *m.YWindowAttr),
+		})
 	}
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sedataValidation := xml.StartElement{Name: xml.Name{Local: "ma:dataValidation"}}

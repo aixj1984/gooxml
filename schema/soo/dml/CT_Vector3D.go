@@ -26,12 +26,18 @@ func NewCT_Vector3D() *CT_Vector3D {
 }
 
 func (m *CT_Vector3D) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dx"},
-		Value: fmt.Sprintf("%v", m.DxAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dy"},
-		Value: fmt.Sprintf("%v", m.DyAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dz"},
-		Value: fmt.Sprintf("%v", m.DzAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "dx"},
+		Value: fmt.Sprintf("%v", m.DxAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "dy"},
+		Value: fmt.Sprintf("%v", m.DyAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "dz"},
+		Value: fmt.Sprintf("%v", m.DzAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

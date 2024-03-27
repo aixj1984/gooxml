@@ -34,8 +34,10 @@ func (m *CT_NumFmt) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.FormatAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:format"},
-			Value: fmt.Sprintf("%v", *m.FormatAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:format"},
+			Value: fmt.Sprintf("%v", *m.FormatAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

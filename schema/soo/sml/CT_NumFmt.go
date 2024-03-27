@@ -28,10 +28,14 @@ func NewCT_NumFmt() *CT_NumFmt {
 }
 
 func (m *CT_NumFmt) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "numFmtId"},
-		Value: fmt.Sprintf("%v", m.NumFmtIdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "formatCode"},
-		Value: fmt.Sprintf("%v", m.FormatCodeAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "numFmtId"},
+		Value: fmt.Sprintf("%v", m.NumFmtIdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "formatCode"},
+		Value: fmt.Sprintf("%v", m.FormatCodeAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

@@ -10,9 +10,11 @@
 package format
 
 //line isnumber.go:18
-const isnumber_start int = 0
-const isnumber_first_final int = 0
-const isnumber_error int = -1
+const (
+	isnumber_start       int = 0
+	isnumber_first_final int = 0
+	isnumber_error       int = -1
+)
 
 const isnumber_en_main int = 0
 

@@ -100,6 +100,7 @@ func ParseUnionST_Coordinate(s string) (ST_Coordinate, error) {
 	}
 	return r, nil
 }
+
 func ParseUnionST_Coordinate32(s string) (ST_Coordinate32, error) {
 	r := ST_Coordinate32{}
 	if sharedTypes.ST_UniversalMeasurePatternRe.MatchString(s) {
@@ -114,6 +115,7 @@ func ParseUnionST_Coordinate32(s string) (ST_Coordinate32, error) {
 	}
 	return r, nil
 }
+
 func ParseUnionST_AdjCoordinate(s string) (ST_AdjCoordinate, error) {
 	r := ST_AdjCoordinate{}
 	if sharedTypes.ST_UniversalMeasurePatternRe.MatchString(s) {
@@ -211,6 +213,7 @@ func ParseUnionST_TextSpacingPercentOrPercentString(s string) (ST_TextSpacingPer
 	}
 	return r, nil
 }
+
 func ParseUnionST_TextFontScalePercentOrPercentString(s string) (ST_TextFontScalePercentOrPercentString, error) {
 	r := ST_TextFontScalePercentOrPercentString{}
 	if sharedTypes.ST_PercentagePatternRe.MatchString(s) {

@@ -33,12 +33,16 @@ func NewCT_Members() *CT_Members {
 
 func (m *CT_Members) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	if m.LevelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "level"},
-			Value: fmt.Sprintf("%v", *m.LevelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "level"},
+			Value: fmt.Sprintf("%v", *m.LevelAttr),
+		})
 	}
 	e.EncodeToken(start)
 	semember := xml.StartElement{Name: xml.Name{Local: "ma:member"}}

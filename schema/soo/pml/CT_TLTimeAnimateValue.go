@@ -32,12 +32,16 @@ func NewCT_TLTimeAnimateValue() *CT_TLTimeAnimateValue {
 
 func (m *CT_TLTimeAnimateValue) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.TmAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tm"},
-			Value: fmt.Sprintf("%v", *m.TmAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tm"},
+			Value: fmt.Sprintf("%v", *m.TmAttr),
+		})
 	}
 	if m.FmlaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fmla"},
-			Value: fmt.Sprintf("%v", *m.FmlaAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fmla"},
+			Value: fmt.Sprintf("%v", *m.FmlaAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Val != nil {

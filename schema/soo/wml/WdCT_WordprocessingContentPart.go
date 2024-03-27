@@ -38,8 +38,10 @@ func (m *WdCT_WordprocessingContentPart) MarshalXML(e *xml.Encoder, start xml.St
 		}
 		start.Attr = append(start.Attr, attr)
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeToken(start)
 	if m.NvContentPartPr != nil {
 		senvContentPartPr := xml.StartElement{Name: xml.Name{Local: "wp:nvContentPartPr"}}

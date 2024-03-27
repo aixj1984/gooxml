@@ -31,8 +31,10 @@ func NewCT_DataFields() *CT_DataFields {
 
 func (m *CT_DataFields) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sedataField := xml.StartElement{Name: xml.Name{Local: "ma:dataField"}}

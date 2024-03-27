@@ -41,13 +41,19 @@ func NewCT_Set() *CT_Set {
 
 func (m *CT_Set) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxRank"},
-		Value: fmt.Sprintf("%v", m.MaxRankAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "setDefinition"},
-		Value: fmt.Sprintf("%v", m.SetDefinitionAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "maxRank"},
+		Value: fmt.Sprintf("%v", m.MaxRankAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "setDefinition"},
+		Value: fmt.Sprintf("%v", m.SetDefinitionAttr),
+	})
 	if m.SortTypeAttr != ST_SortTypeUnset {
 		attr, err := m.SortTypeAttr.MarshalXMLAttr(xml.Name{Local: "sortType"})
 		if err != nil {
@@ -56,8 +62,10 @@ func (m *CT_Set) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.QueryFailedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "queryFailed"},
-			Value: fmt.Sprintf("%d", b2i(*m.QueryFailedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "queryFailed"},
+			Value: fmt.Sprintf("%d", b2i(*m.QueryFailedAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Tpls != nil {

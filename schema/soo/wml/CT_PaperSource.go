@@ -29,12 +29,16 @@ func NewCT_PaperSource() *CT_PaperSource {
 
 func (m *CT_PaperSource) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.FirstAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:first"},
-			Value: fmt.Sprintf("%v", *m.FirstAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:first"},
+			Value: fmt.Sprintf("%v", *m.FirstAttr),
+		})
 	}
 	if m.OtherAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:other"},
-			Value: fmt.Sprintf("%v", *m.OtherAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:other"},
+			Value: fmt.Sprintf("%v", *m.OtherAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -28,12 +28,16 @@ func NewCT_SdtListItem() *CT_SdtListItem {
 
 func (m *CT_SdtListItem) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DisplayTextAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:displayText"},
-			Value: fmt.Sprintf("%v", *m.DisplayTextAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:displayText"},
+			Value: fmt.Sprintf("%v", *m.DisplayTextAttr),
+		})
 	}
 	if m.ValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:value"},
-			Value: fmt.Sprintf("%v", *m.ValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:value"},
+			Value: fmt.Sprintf("%v", *m.ValueAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

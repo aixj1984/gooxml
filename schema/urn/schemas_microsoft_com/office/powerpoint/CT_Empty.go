@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_Empty struct {
-}
+type CT_Empty struct{}
 
 func NewCT_Empty() *CT_Empty {
 	ret := &CT_Empty{}

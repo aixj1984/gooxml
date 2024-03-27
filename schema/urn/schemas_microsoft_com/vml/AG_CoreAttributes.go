@@ -37,36 +37,52 @@ func NewAG_CoreAttributes() *AG_CoreAttributes {
 
 func (m *AG_CoreAttributes) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.HrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "href"},
-			Value: fmt.Sprintf("%v", *m.HrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "href"},
+			Value: fmt.Sprintf("%v", *m.HrefAttr),
+		})
 	}
 	if m.TargetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "target"},
-			Value: fmt.Sprintf("%v", *m.TargetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "target"},
+			Value: fmt.Sprintf("%v", *m.TargetAttr),
+		})
 	}
 	if m.ClassAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "class"},
-			Value: fmt.Sprintf("%v", *m.ClassAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "class"},
+			Value: fmt.Sprintf("%v", *m.ClassAttr),
+		})
 	}
 	if m.TitleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "title"},
-			Value: fmt.Sprintf("%v", *m.TitleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "title"},
+			Value: fmt.Sprintf("%v", *m.TitleAttr),
+		})
 	}
 	if m.AltAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "alt"},
-			Value: fmt.Sprintf("%v", *m.AltAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "alt"},
+			Value: fmt.Sprintf("%v", *m.AltAttr),
+		})
 	}
 	if m.CoordsizeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "coordsize"},
-			Value: fmt.Sprintf("%v", *m.CoordsizeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "coordsize"},
+			Value: fmt.Sprintf("%v", *m.CoordsizeAttr),
+		})
 	}
 	if m.CoordoriginAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "coordorigin"},
-			Value: fmt.Sprintf("%v", *m.CoordoriginAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "coordorigin"},
+			Value: fmt.Sprintf("%v", *m.CoordoriginAttr),
+		})
 	}
 	if m.WrapcoordsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "wrapcoords"},
-			Value: fmt.Sprintf("%v", *m.WrapcoordsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "wrapcoords"},
+			Value: fmt.Sprintf("%v", *m.WrapcoordsAttr),
+		})
 	}
 	if m.PrintAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.PrintAttr.MarshalXMLAttr(xml.Name{Local: "print"})
@@ -76,12 +92,16 @@ func (m *AG_CoreAttributes) MarshalXML(e *xml.Encoder, start xml.StartElement) e
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.StyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "style"},
-			Value: fmt.Sprintf("%v", *m.StyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "style"},
+			Value: fmt.Sprintf("%v", *m.StyleAttr),
+		})
 	}
 	return nil
 }

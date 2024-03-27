@@ -26,8 +26,10 @@ func NewCT_TextTabStop() *CT_TextTabStop {
 
 func (m *CT_TextTabStop) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PosAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "pos"},
-			Value: fmt.Sprintf("%v", *m.PosAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "pos"},
+			Value: fmt.Sprintf("%v", *m.PosAttr),
+		})
 	}
 	if m.AlgnAttr != ST_TextTabAlignTypeUnset {
 		attr, err := m.AlgnAttr.MarshalXMLAttr(xml.Name{Local: "algn"})

@@ -62,7 +62,6 @@ func setup3DChart(c *crt.CT_Chart) {
 	c.BackWall = crt.NewCT_Surface()
 	c.BackWall.Thickness = crt.NewCT_Thickness()
 	c.BackWall.Thickness.ValAttr.Uint32 = gooxml.Uint32(0)
-
 }
 
 // AddLine3DChart adds a new 3D line chart to a chart.
@@ -348,6 +347,7 @@ func (c Chart) AddDateAxis() DateAxis {
 	vax.SetPosition(crt.ST_AxPosL)
 	return vax
 }
+
 func (c Chart) AddSeriesAxis() SeriesAxis {
 	sa := crt.NewCT_SerAx()
 	if c.x.Chart.PlotArea.CChoice == nil {

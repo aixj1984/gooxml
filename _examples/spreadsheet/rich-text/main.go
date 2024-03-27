@@ -20,7 +20,7 @@ func main() {
 		// and cells
 		for c := 0; c < 5; c++ {
 			cell := row.AddCell()
-			//cell.SetString(fmt.Sprintf("row %d cell %d", r, c))
+			// cell.SetString(fmt.Sprintf("row %d cell %d", r, c))
 			rt := cell.SetRichTextString()
 			run := rt.AddRun()
 			run.SetText(fmt.Sprintf("row %d ", r))

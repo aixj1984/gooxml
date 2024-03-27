@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type Box struct {
-}
+type Box struct{}
 
 func NewBox() *Box {
 	ret := &Box{}

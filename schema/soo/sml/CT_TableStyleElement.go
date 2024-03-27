@@ -37,12 +37,16 @@ func (m *CT_TableStyleElement) MarshalXML(e *xml.Encoder, start xml.StartElement
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.SizeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "size"},
-			Value: fmt.Sprintf("%v", *m.SizeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "size"},
+			Value: fmt.Sprintf("%v", *m.SizeAttr),
+		})
 	}
 	if m.DxfIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dxfId"},
-			Value: fmt.Sprintf("%v", *m.DxfIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dxfId"},
+			Value: fmt.Sprintf("%v", *m.DxfIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

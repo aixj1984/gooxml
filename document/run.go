@@ -227,9 +227,9 @@ func (r Run) AddDrawingInline(img common.ImageRef) (InlineDrawing, error) {
 	inline := InlineDrawing{r.d, inl}
 
 	// required by Word on OSX for the file to open
-	//anchor.SimplePosAttr = gooxml.Bool(false)
+	// anchor.SimplePosAttr = gooxml.Bool(false)
 
-	//anchor.AllowOverlapAttr = true
+	// anchor.AllowOverlapAttr = true
 	inl.CNvGraphicFramePr = dml.NewCT_NonVisualGraphicFrameProperties()
 
 	ic.Drawing.Inline = append(ic.Drawing.Inline, inl)

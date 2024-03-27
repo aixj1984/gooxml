@@ -40,8 +40,10 @@ func NewCT_Caption() *CT_Caption {
 }
 
 func (m *CT_Caption) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.PosAttr != ST_CaptionPosUnset {
 		attr, err := m.PosAttr.MarshalXMLAttr(xml.Name{Local: "w:pos"})
 		if err != nil {
@@ -50,16 +52,22 @@ func (m *CT_Caption) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ChapNumAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:chapNum"},
-			Value: fmt.Sprintf("%v", *m.ChapNumAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:chapNum"},
+			Value: fmt.Sprintf("%v", *m.ChapNumAttr),
+		})
 	}
 	if m.HeadingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:heading"},
-			Value: fmt.Sprintf("%v", *m.HeadingAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:heading"},
+			Value: fmt.Sprintf("%v", *m.HeadingAttr),
+		})
 	}
 	if m.NoLabelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:noLabel"},
-			Value: fmt.Sprintf("%v", *m.NoLabelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:noLabel"},
+			Value: fmt.Sprintf("%v", *m.NoLabelAttr),
+		})
 	}
 	if m.NumFmtAttr != ST_NumberFormatUnset {
 		attr, err := m.NumFmtAttr.MarshalXMLAttr(xml.Name{Local: "w:numFmt"})

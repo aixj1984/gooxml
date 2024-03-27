@@ -32,11 +32,15 @@ func NewCT_ExternalSheetData() *CT_ExternalSheetData {
 }
 
 func (m *CT_ExternalSheetData) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sheetId"},
-		Value: fmt.Sprintf("%v", m.SheetIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sheetId"},
+		Value: fmt.Sprintf("%v", m.SheetIdAttr),
+	})
 	if m.RefreshErrorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refreshError"},
-			Value: fmt.Sprintf("%d", b2i(*m.RefreshErrorAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refreshError"},
+			Value: fmt.Sprintf("%d", b2i(*m.RefreshErrorAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Row != nil {

@@ -40,16 +40,22 @@ func NewCT_TLAnimateBehavior() *CT_TLAnimateBehavior {
 
 func (m *CT_TLAnimateBehavior) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ByAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "by"},
-			Value: fmt.Sprintf("%v", *m.ByAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "by"},
+			Value: fmt.Sprintf("%v", *m.ByAttr),
+		})
 	}
 	if m.FromAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "from"},
-			Value: fmt.Sprintf("%v", *m.FromAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "from"},
+			Value: fmt.Sprintf("%v", *m.FromAttr),
+		})
 	}
 	if m.ToAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "to"},
-			Value: fmt.Sprintf("%v", *m.ToAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "to"},
+			Value: fmt.Sprintf("%v", *m.ToAttr),
+		})
 	}
 	if m.CalcmodeAttr != ST_TLAnimateBehaviorCalcModeUnset {
 		attr, err := m.CalcmodeAttr.MarshalXMLAttr(xml.Name{Local: "calcmode"})

@@ -29,12 +29,16 @@ func NewCT_AnimationChartElement() *CT_AnimationChartElement {
 
 func (m *CT_AnimationChartElement) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.SeriesIdxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "seriesIdx"},
-			Value: fmt.Sprintf("%v", *m.SeriesIdxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "seriesIdx"},
+			Value: fmt.Sprintf("%v", *m.SeriesIdxAttr),
+		})
 	}
 	if m.CategoryIdxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "categoryIdx"},
-			Value: fmt.Sprintf("%v", *m.CategoryIdxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "categoryIdx"},
+			Value: fmt.Sprintf("%v", *m.CategoryIdxAttr),
+		})
 	}
 	attr, err := m.BldStepAttr.MarshalXMLAttr(xml.Name{Local: "bldStep"})
 	if err != nil {

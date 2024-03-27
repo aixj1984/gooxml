@@ -35,8 +35,10 @@ func NewCT_Background() *CT_Background {
 
 func (m *CT_Background) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ColorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:color"},
-			Value: fmt.Sprintf("%v", *m.ColorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:color"},
+			Value: fmt.Sprintf("%v", *m.ColorAttr),
+		})
 	}
 	if m.ThemeColorAttr != ST_ThemeColorUnset {
 		attr, err := m.ThemeColorAttr.MarshalXMLAttr(xml.Name{Local: "w:themeColor"})
@@ -46,12 +48,16 @@ func (m *CT_Background) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ThemeTintAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:themeTint"},
-			Value: fmt.Sprintf("%v", *m.ThemeTintAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:themeTint"},
+			Value: fmt.Sprintf("%v", *m.ThemeTintAttr),
+		})
 	}
 	if m.ThemeShadeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:themeShade"},
-			Value: fmt.Sprintf("%v", *m.ThemeShadeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:themeShade"},
+			Value: fmt.Sprintf("%v", *m.ThemeShadeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Drawing != nil {

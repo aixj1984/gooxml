@@ -34,21 +34,31 @@ func NewCT_InputCells() *CT_InputCells {
 }
 
 func (m *CT_InputCells) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-		Value: fmt.Sprintf("%v", m.RAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r"},
+		Value: fmt.Sprintf("%v", m.RAttr),
+	})
 	if m.DeletedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "deleted"},
-			Value: fmt.Sprintf("%d", b2i(*m.DeletedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "deleted"},
+			Value: fmt.Sprintf("%d", b2i(*m.DeletedAttr)),
+		})
 	}
 	if m.UndoneAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "undone"},
-			Value: fmt.Sprintf("%d", b2i(*m.UndoneAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "undone"},
+			Value: fmt.Sprintf("%d", b2i(*m.UndoneAttr)),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "val"},
-		Value: fmt.Sprintf("%v", m.ValAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "val"},
+		Value: fmt.Sprintf("%v", m.ValAttr),
+	})
 	if m.NumFmtIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "numFmtId"},
-			Value: fmt.Sprintf("%v", *m.NumFmtIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "numFmtId"},
+			Value: fmt.Sprintf("%v", *m.NumFmtIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

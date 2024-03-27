@@ -46,20 +46,28 @@ func NewCT_TblPPr() *CT_TblPPr {
 
 func (m *CT_TblPPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.LeftFromTextAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:leftFromText"},
-			Value: fmt.Sprintf("%v", *m.LeftFromTextAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:leftFromText"},
+			Value: fmt.Sprintf("%v", *m.LeftFromTextAttr),
+		})
 	}
 	if m.RightFromTextAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:rightFromText"},
-			Value: fmt.Sprintf("%v", *m.RightFromTextAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:rightFromText"},
+			Value: fmt.Sprintf("%v", *m.RightFromTextAttr),
+		})
 	}
 	if m.TopFromTextAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:topFromText"},
-			Value: fmt.Sprintf("%v", *m.TopFromTextAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:topFromText"},
+			Value: fmt.Sprintf("%v", *m.TopFromTextAttr),
+		})
 	}
 	if m.BottomFromTextAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:bottomFromText"},
-			Value: fmt.Sprintf("%v", *m.BottomFromTextAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:bottomFromText"},
+			Value: fmt.Sprintf("%v", *m.BottomFromTextAttr),
+		})
 	}
 	if m.VertAnchorAttr != ST_VAnchorUnset {
 		attr, err := m.VertAnchorAttr.MarshalXMLAttr(xml.Name{Local: "w:vertAnchor"})
@@ -83,8 +91,10 @@ func (m *CT_TblPPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.TblpXAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:tblpX"},
-			Value: fmt.Sprintf("%v", *m.TblpXAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:tblpX"},
+			Value: fmt.Sprintf("%v", *m.TblpXAttr),
+		})
 	}
 	if m.TblpYSpecAttr != sharedTypes.ST_YAlignUnset {
 		attr, err := m.TblpYSpecAttr.MarshalXMLAttr(xml.Name{Local: "w:tblpYSpec"})
@@ -94,8 +104,10 @@ func (m *CT_TblPPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.TblpYAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:tblpY"},
-			Value: fmt.Sprintf("%v", *m.TblpYAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:tblpY"},
+			Value: fmt.Sprintf("%v", *m.TblpYAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

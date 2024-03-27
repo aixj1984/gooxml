@@ -20,42 +20,52 @@ func ParseUnionST_ModelId(s string) (ST_ModelId, error) {
 	// TODO: implement
 	return ST_ModelId{}, nil
 }
+
 func ParseUnionST_LayoutShapeType(s string) (ST_LayoutShapeType, error) {
 	// TODO: implement
 	return ST_LayoutShapeType{}, nil
 }
+
 func ParseUnionST_ParameterVal(s string) (ST_ParameterVal, error) {
 	// TODO: implement
 	return ST_ParameterVal{}, nil
 }
+
 func ParseUnionST_FunctionArgument(s string) (ST_FunctionArgument, error) {
 	// TODO: implement
 	return ST_FunctionArgument{}, nil
 }
+
 func ParseUnionST_FunctionValue(s string) (ST_FunctionValue, error) {
 	// TODO: implement
 	return ST_FunctionValue{}, nil
 }
+
 func ParseUnionST_PrSetCustVal(s string) (ST_PrSetCustVal, error) {
 	// TODO: implement
 	return ST_PrSetCustVal{}, nil
 }
+
 func ParseSliceST_AxisTypes(s string) (ST_AxisTypes, error) {
 	// TODO: implement
 	return ST_AxisTypes{}, nil
 }
+
 func ParseSliceST_ElementTypes(s string) (ST_ElementTypes, error) {
 	// TODO: implement
 	return ST_ElementTypes{}, nil
 }
+
 func ParseSliceST_Booleans(s string) (ST_Booleans, error) {
 	// TODO: implement
 	return ST_Booleans{}, nil
 }
+
 func ParseSliceST_Ints(s string) (ST_Ints, error) {
 	// TODO: implement
 	return ST_Ints{}, nil
 }
+
 func ParseSliceST_UnsignedInts(s string) (ST_UnsignedInts, error) {
 	// TODO: implement
 	return ST_UnsignedInts{}, nil
@@ -7151,8 +7161,10 @@ func init() {
 	gooxml.RegisterConstructor("http://schemas.openxmlformats.org/drawingml/2006/diagram", "AG_ConstraintRefAttributes", NewAG_ConstraintRefAttributes)
 }
 
-type ST_AxisTypes []ST_AxisType
-type ST_ElementTypes []ST_ElementType
-type ST_Ints []int32
-type ST_UnsignedInts []uint32
-type ST_Booleans []bool
+type (
+	ST_AxisTypes    []ST_AxisType
+	ST_ElementTypes []ST_ElementType
+	ST_Ints         []int32
+	ST_UnsignedInts []uint32
+	ST_Booleans     []bool
+)

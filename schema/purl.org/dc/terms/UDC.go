@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type UDC struct {
-}
+type UDC struct{}
 
 func NewUDC() *UDC {
 	ret := &UDC{}

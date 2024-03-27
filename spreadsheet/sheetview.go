@@ -46,7 +46,6 @@ func (s SheetView) SetXSplit(v float64) {
 func (s SheetView) SetYSplit(v float64) {
 	s.ensurePane()
 	s.x.Pane.YSplitAttr = gooxml.Float64(v)
-
 }
 
 // SetTopLeft sets the top left visible cell after the split.

@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_TextUnderlineFillFollowText struct {
-}
+type CT_TextUnderlineFillFollowText struct{}
 
 func NewCT_TextUnderlineFillFollowText() *CT_TextUnderlineFillFollowText {
 	ret := &CT_TextUnderlineFillFollowText{}

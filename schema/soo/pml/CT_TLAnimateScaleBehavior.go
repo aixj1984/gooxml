@@ -36,8 +36,10 @@ func NewCT_TLAnimateScaleBehavior() *CT_TLAnimateScaleBehavior {
 
 func (m *CT_TLAnimateScaleBehavior) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ZoomContentsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "zoomContents"},
-			Value: fmt.Sprintf("%d", b2i(*m.ZoomContentsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "zoomContents"},
+			Value: fmt.Sprintf("%d", b2i(*m.ZoomContentsAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	secBhvr := xml.StartElement{Name: xml.Name{Local: "p:cBhvr"}}

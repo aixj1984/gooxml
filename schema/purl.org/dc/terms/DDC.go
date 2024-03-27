@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type DDC struct {
-}
+type DDC struct{}
 
 func NewDDC() *DDC {
 	ret := &DDC{}

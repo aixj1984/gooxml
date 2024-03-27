@@ -55,7 +55,6 @@ func (c Comments) getOrCreateAuthor(author string) uint32 {
 // AddComment adds a new comment and returns a RichText which will contain the
 // styled comment text.
 func (c Comments) AddComment(cellRef string, author string) RichText {
-
 	cmt := sml.NewCT_Comment()
 	c.x.CommentList.Comment = append(c.x.CommentList.Comment, cmt)
 	cmt.RefAttr = cellRef

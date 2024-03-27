@@ -81,12 +81,16 @@ func (m *OfcCT_Extrusion) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ViewpointoriginAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "viewpointorigin"},
-			Value: fmt.Sprintf("%v", *m.ViewpointoriginAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "viewpointorigin"},
+			Value: fmt.Sprintf("%v", *m.ViewpointoriginAttr),
+		})
 	}
 	if m.ViewpointAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "viewpoint"},
-			Value: fmt.Sprintf("%v", *m.ViewpointAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "viewpoint"},
+			Value: fmt.Sprintf("%v", *m.ViewpointAttr),
+		})
 	}
 	if m.PlaneAttr != OfcST_ExtrusionPlaneUnset {
 		attr, err := m.PlaneAttr.MarshalXMLAttr(xml.Name{Local: "plane"})
@@ -96,28 +100,40 @@ func (m *OfcCT_Extrusion) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.SkewangleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "skewangle"},
-			Value: fmt.Sprintf("%v", *m.SkewangleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "skewangle"},
+			Value: fmt.Sprintf("%v", *m.SkewangleAttr),
+		})
 	}
 	if m.SkewamtAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "skewamt"},
-			Value: fmt.Sprintf("%v", *m.SkewamtAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "skewamt"},
+			Value: fmt.Sprintf("%v", *m.SkewamtAttr),
+		})
 	}
 	if m.ForedepthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "foredepth"},
-			Value: fmt.Sprintf("%v", *m.ForedepthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "foredepth"},
+			Value: fmt.Sprintf("%v", *m.ForedepthAttr),
+		})
 	}
 	if m.BackdepthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "backdepth"},
-			Value: fmt.Sprintf("%v", *m.BackdepthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "backdepth"},
+			Value: fmt.Sprintf("%v", *m.BackdepthAttr),
+		})
 	}
 	if m.OrientationAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "orientation"},
-			Value: fmt.Sprintf("%v", *m.OrientationAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "orientation"},
+			Value: fmt.Sprintf("%v", *m.OrientationAttr),
+		})
 	}
 	if m.OrientationangleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "orientationangle"},
-			Value: fmt.Sprintf("%v", *m.OrientationangleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "orientationangle"},
+			Value: fmt.Sprintf("%v", *m.OrientationangleAttr),
+		})
 	}
 	if m.LockrotationcenterAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.LockrotationcenterAttr.MarshalXMLAttr(xml.Name{Local: "lockrotationcenter"})
@@ -134,12 +150,16 @@ func (m *OfcCT_Extrusion) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RotationcenterAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rotationcenter"},
-			Value: fmt.Sprintf("%v", *m.RotationcenterAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rotationcenter"},
+			Value: fmt.Sprintf("%v", *m.RotationcenterAttr),
+		})
 	}
 	if m.RotationangleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rotationangle"},
-			Value: fmt.Sprintf("%v", *m.RotationangleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rotationangle"},
+			Value: fmt.Sprintf("%v", *m.RotationangleAttr),
+		})
 	}
 	if m.ColormodeAttr != OfcST_ColorModeUnset {
 		attr, err := m.ColormodeAttr.MarshalXMLAttr(xml.Name{Local: "colormode"})
@@ -149,20 +169,28 @@ func (m *OfcCT_Extrusion) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ColorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "color"},
-			Value: fmt.Sprintf("%v", *m.ColorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "color"},
+			Value: fmt.Sprintf("%v", *m.ColorAttr),
+		})
 	}
 	if m.ShininessAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "shininess"},
-			Value: fmt.Sprintf("%v", *m.ShininessAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "shininess"},
+			Value: fmt.Sprintf("%v", *m.ShininessAttr),
+		})
 	}
 	if m.SpecularityAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "specularity"},
-			Value: fmt.Sprintf("%v", *m.SpecularityAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "specularity"},
+			Value: fmt.Sprintf("%v", *m.SpecularityAttr),
+		})
 	}
 	if m.DiffusityAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "diffusity"},
-			Value: fmt.Sprintf("%v", *m.DiffusityAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "diffusity"},
+			Value: fmt.Sprintf("%v", *m.DiffusityAttr),
+		})
 	}
 	if m.MetalAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.MetalAttr.MarshalXMLAttr(xml.Name{Local: "metal"})
@@ -172,12 +200,16 @@ func (m *OfcCT_Extrusion) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.EdgeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "edge"},
-			Value: fmt.Sprintf("%v", *m.EdgeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "edge"},
+			Value: fmt.Sprintf("%v", *m.EdgeAttr),
+		})
 	}
 	if m.FacetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "facet"},
-			Value: fmt.Sprintf("%v", *m.FacetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "facet"},
+			Value: fmt.Sprintf("%v", *m.FacetAttr),
+		})
 	}
 	if m.LightfaceAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.LightfaceAttr.MarshalXMLAttr(xml.Name{Local: "lightface"})
@@ -187,16 +219,22 @@ func (m *OfcCT_Extrusion) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.BrightnessAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "brightness"},
-			Value: fmt.Sprintf("%v", *m.BrightnessAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "brightness"},
+			Value: fmt.Sprintf("%v", *m.BrightnessAttr),
+		})
 	}
 	if m.LightpositionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lightposition"},
-			Value: fmt.Sprintf("%v", *m.LightpositionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lightposition"},
+			Value: fmt.Sprintf("%v", *m.LightpositionAttr),
+		})
 	}
 	if m.LightlevelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lightlevel"},
-			Value: fmt.Sprintf("%v", *m.LightlevelAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lightlevel"},
+			Value: fmt.Sprintf("%v", *m.LightlevelAttr),
+		})
 	}
 	if m.LightharshAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.LightharshAttr.MarshalXMLAttr(xml.Name{Local: "lightharsh"})
@@ -206,12 +244,16 @@ func (m *OfcCT_Extrusion) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.Lightposition2Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lightposition2"},
-			Value: fmt.Sprintf("%v", *m.Lightposition2Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lightposition2"},
+			Value: fmt.Sprintf("%v", *m.Lightposition2Attr),
+		})
 	}
 	if m.Lightlevel2Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lightlevel2"},
-			Value: fmt.Sprintf("%v", *m.Lightlevel2Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lightlevel2"},
+			Value: fmt.Sprintf("%v", *m.Lightlevel2Attr),
+		})
 	}
 	if m.Lightharsh2Attr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.Lightharsh2Attr.MarshalXMLAttr(xml.Name{Local: "lightharsh2"})

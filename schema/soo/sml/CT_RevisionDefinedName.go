@@ -77,98 +77,146 @@ func NewCT_RevisionDefinedName() *CT_RevisionDefinedName {
 
 func (m *CT_RevisionDefinedName) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.LocalSheetIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "localSheetId"},
-			Value: fmt.Sprintf("%v", *m.LocalSheetIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "localSheetId"},
+			Value: fmt.Sprintf("%v", *m.LocalSheetIdAttr),
+		})
 	}
 	if m.CustomViewAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "customView"},
-			Value: fmt.Sprintf("%d", b2i(*m.CustomViewAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "customView"},
+			Value: fmt.Sprintf("%d", b2i(*m.CustomViewAttr)),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.FunctionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "function"},
-			Value: fmt.Sprintf("%d", b2i(*m.FunctionAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "function"},
+			Value: fmt.Sprintf("%d", b2i(*m.FunctionAttr)),
+		})
 	}
 	if m.OldFunctionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldFunction"},
-			Value: fmt.Sprintf("%d", b2i(*m.OldFunctionAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oldFunction"},
+			Value: fmt.Sprintf("%d", b2i(*m.OldFunctionAttr)),
+		})
 	}
 	if m.FunctionGroupIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "functionGroupId"},
-			Value: fmt.Sprintf("%v", *m.FunctionGroupIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "functionGroupId"},
+			Value: fmt.Sprintf("%v", *m.FunctionGroupIdAttr),
+		})
 	}
 	if m.OldFunctionGroupIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldFunctionGroupId"},
-			Value: fmt.Sprintf("%v", *m.OldFunctionGroupIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oldFunctionGroupId"},
+			Value: fmt.Sprintf("%v", *m.OldFunctionGroupIdAttr),
+		})
 	}
 	if m.ShortcutKeyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "shortcutKey"},
-			Value: fmt.Sprintf("%v", *m.ShortcutKeyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "shortcutKey"},
+			Value: fmt.Sprintf("%v", *m.ShortcutKeyAttr),
+		})
 	}
 	if m.OldShortcutKeyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldShortcutKey"},
-			Value: fmt.Sprintf("%v", *m.OldShortcutKeyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oldShortcutKey"},
+			Value: fmt.Sprintf("%v", *m.OldShortcutKeyAttr),
+		})
 	}
 	if m.HiddenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hidden"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hidden"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr)),
+		})
 	}
 	if m.OldHiddenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldHidden"},
-			Value: fmt.Sprintf("%d", b2i(*m.OldHiddenAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oldHidden"},
+			Value: fmt.Sprintf("%d", b2i(*m.OldHiddenAttr)),
+		})
 	}
 	if m.CustomMenuAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "customMenu"},
-			Value: fmt.Sprintf("%v", *m.CustomMenuAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "customMenu"},
+			Value: fmt.Sprintf("%v", *m.CustomMenuAttr),
+		})
 	}
 	if m.OldCustomMenuAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldCustomMenu"},
-			Value: fmt.Sprintf("%v", *m.OldCustomMenuAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oldCustomMenu"},
+			Value: fmt.Sprintf("%v", *m.OldCustomMenuAttr),
+		})
 	}
 	if m.DescriptionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "description"},
-			Value: fmt.Sprintf("%v", *m.DescriptionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "description"},
+			Value: fmt.Sprintf("%v", *m.DescriptionAttr),
+		})
 	}
 	if m.OldDescriptionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldDescription"},
-			Value: fmt.Sprintf("%v", *m.OldDescriptionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oldDescription"},
+			Value: fmt.Sprintf("%v", *m.OldDescriptionAttr),
+		})
 	}
 	if m.HelpAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "help"},
-			Value: fmt.Sprintf("%v", *m.HelpAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "help"},
+			Value: fmt.Sprintf("%v", *m.HelpAttr),
+		})
 	}
 	if m.OldHelpAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldHelp"},
-			Value: fmt.Sprintf("%v", *m.OldHelpAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oldHelp"},
+			Value: fmt.Sprintf("%v", *m.OldHelpAttr),
+		})
 	}
 	if m.StatusBarAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "statusBar"},
-			Value: fmt.Sprintf("%v", *m.StatusBarAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "statusBar"},
+			Value: fmt.Sprintf("%v", *m.StatusBarAttr),
+		})
 	}
 	if m.OldStatusBarAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldStatusBar"},
-			Value: fmt.Sprintf("%v", *m.OldStatusBarAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oldStatusBar"},
+			Value: fmt.Sprintf("%v", *m.OldStatusBarAttr),
+		})
 	}
 	if m.CommentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "comment"},
-			Value: fmt.Sprintf("%v", *m.CommentAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "comment"},
+			Value: fmt.Sprintf("%v", *m.CommentAttr),
+		})
 	}
 	if m.OldCommentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldComment"},
-			Value: fmt.Sprintf("%v", *m.OldCommentAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oldComment"},
+			Value: fmt.Sprintf("%v", *m.OldCommentAttr),
+		})
 	}
 	if m.RIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rId"},
-			Value: fmt.Sprintf("%v", *m.RIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rId"},
+			Value: fmt.Sprintf("%v", *m.RIdAttr),
+		})
 	}
 	if m.UaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ua"},
-			Value: fmt.Sprintf("%d", b2i(*m.UaAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ua"},
+			Value: fmt.Sprintf("%d", b2i(*m.UaAttr)),
+		})
 	}
 	if m.RaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ra"},
-			Value: fmt.Sprintf("%d", b2i(*m.RaAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ra"},
+			Value: fmt.Sprintf("%d", b2i(*m.RaAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Formula != nil {

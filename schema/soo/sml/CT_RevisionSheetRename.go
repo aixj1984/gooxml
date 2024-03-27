@@ -36,23 +36,35 @@ func NewCT_RevisionSheetRename() *CT_RevisionSheetRename {
 }
 
 func (m *CT_RevisionSheetRename) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sheetId"},
-		Value: fmt.Sprintf("%v", m.SheetIdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldName"},
-		Value: fmt.Sprintf("%v", m.OldNameAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "newName"},
-		Value: fmt.Sprintf("%v", m.NewNameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sheetId"},
+		Value: fmt.Sprintf("%v", m.SheetIdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "oldName"},
+		Value: fmt.Sprintf("%v", m.OldNameAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "newName"},
+		Value: fmt.Sprintf("%v", m.NewNameAttr),
+	})
 	if m.RIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rId"},
-			Value: fmt.Sprintf("%v", *m.RIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rId"},
+			Value: fmt.Sprintf("%v", *m.RIdAttr),
+		})
 	}
 	if m.UaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ua"},
-			Value: fmt.Sprintf("%d", b2i(*m.UaAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ua"},
+			Value: fmt.Sprintf("%d", b2i(*m.UaAttr)),
+		})
 	}
 	if m.RaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ra"},
-			Value: fmt.Sprintf("%d", b2i(*m.RaAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ra"},
+			Value: fmt.Sprintf("%d", b2i(*m.RaAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

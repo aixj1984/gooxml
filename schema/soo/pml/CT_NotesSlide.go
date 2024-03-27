@@ -36,12 +36,16 @@ func NewCT_NotesSlide() *CT_NotesSlide {
 
 func (m *CT_NotesSlide) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ShowMasterSpAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showMasterSp"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowMasterSpAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showMasterSp"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowMasterSpAttr)),
+		})
 	}
 	if m.ShowMasterPhAnimAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showMasterPhAnim"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowMasterPhAnimAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showMasterPhAnim"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowMasterPhAnimAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	secSld := xml.StartElement{Name: xml.Name{Local: "p:cSld"}}

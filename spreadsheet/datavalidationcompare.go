@@ -53,6 +53,7 @@ type DataValidationCompare struct {
 func (d DataValidationCompare) SetValue(v string) {
 	d.x.Formula1 = &v
 }
+
 func (d DataValidationCompare) SetValue2(v string) {
 	d.x.Formula2 = &v
 }

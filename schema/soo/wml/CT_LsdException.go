@@ -38,27 +38,39 @@ func NewCT_LsdException() *CT_LsdException {
 }
 
 func (m *CT_LsdException) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.LockedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:locked"},
-			Value: fmt.Sprintf("%v", *m.LockedAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:locked"},
+			Value: fmt.Sprintf("%v", *m.LockedAttr),
+		})
 	}
 	if m.UiPriorityAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:uiPriority"},
-			Value: fmt.Sprintf("%v", *m.UiPriorityAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:uiPriority"},
+			Value: fmt.Sprintf("%v", *m.UiPriorityAttr),
+		})
 	}
 	if m.SemiHiddenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:semiHidden"},
-			Value: fmt.Sprintf("%v", *m.SemiHiddenAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:semiHidden"},
+			Value: fmt.Sprintf("%v", *m.SemiHiddenAttr),
+		})
 	}
 	if m.UnhideWhenUsedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:unhideWhenUsed"},
-			Value: fmt.Sprintf("%v", *m.UnhideWhenUsedAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:unhideWhenUsed"},
+			Value: fmt.Sprintf("%v", *m.UnhideWhenUsedAttr),
+		})
 	}
 	if m.QFormatAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:qFormat"},
-			Value: fmt.Sprintf("%v", *m.QFormatAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:qFormat"},
+			Value: fmt.Sprintf("%v", *m.QFormatAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

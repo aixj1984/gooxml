@@ -54,7 +54,6 @@ func (s Section) SetFooter(f Footer, t wml.ST_HdrFtr) {
 
 // SetPageMargins sets the page margins for a section
 func (s Section) SetPageMargins(top, right, bottom, left, header, footer, gutter measurement.Distance) {
-
 	margins := wml.NewCT_PageMar()
 	margins.TopAttr.Int64 = gooxml.Int64(int64(top / measurement.Twips))
 	margins.BottomAttr.Int64 = gooxml.Int64(int64(bottom / measurement.Twips))

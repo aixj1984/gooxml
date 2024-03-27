@@ -50,20 +50,28 @@ func NewCT_TableCellProperties() *CT_TableCellProperties {
 
 func (m *CT_TableCellProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.MarLAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "marL"},
-			Value: fmt.Sprintf("%v", *m.MarLAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "marL"},
+			Value: fmt.Sprintf("%v", *m.MarLAttr),
+		})
 	}
 	if m.MarRAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "marR"},
-			Value: fmt.Sprintf("%v", *m.MarRAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "marR"},
+			Value: fmt.Sprintf("%v", *m.MarRAttr),
+		})
 	}
 	if m.MarTAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "marT"},
-			Value: fmt.Sprintf("%v", *m.MarTAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "marT"},
+			Value: fmt.Sprintf("%v", *m.MarTAttr),
+		})
 	}
 	if m.MarBAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "marB"},
-			Value: fmt.Sprintf("%v", *m.MarBAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "marB"},
+			Value: fmt.Sprintf("%v", *m.MarBAttr),
+		})
 	}
 	if m.VertAttr != ST_TextVerticalTypeUnset {
 		attr, err := m.VertAttr.MarshalXMLAttr(xml.Name{Local: "vert"})
@@ -80,8 +88,10 @@ func (m *CT_TableCellProperties) MarshalXML(e *xml.Encoder, start xml.StartEleme
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.AnchorCtrAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "anchorCtr"},
-			Value: fmt.Sprintf("%d", b2i(*m.AnchorCtrAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "anchorCtr"},
+			Value: fmt.Sprintf("%d", b2i(*m.AnchorCtrAttr)),
+		})
 	}
 	if m.HorzOverflowAttr != ST_TextHorzOverflowTypeUnset {
 		attr, err := m.HorzOverflowAttr.MarshalXMLAttr(xml.Name{Local: "horzOverflow"})

@@ -47,12 +47,16 @@ func NewCT_Cell() *CT_Cell {
 
 func (m *CT_Cell) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-			Value: fmt.Sprintf("%v", *m.RAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r"},
+			Value: fmt.Sprintf("%v", *m.RAttr),
+		})
 	}
 	if m.SAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "s"},
-			Value: fmt.Sprintf("%v", *m.SAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "s"},
+			Value: fmt.Sprintf("%v", *m.SAttr),
+		})
 	}
 	if m.TAttr != ST_CellTypeUnset {
 		attr, err := m.TAttr.MarshalXMLAttr(xml.Name{Local: "t"})
@@ -62,16 +66,22 @@ func (m *CT_Cell) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.CmAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cm"},
-			Value: fmt.Sprintf("%v", *m.CmAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cm"},
+			Value: fmt.Sprintf("%v", *m.CmAttr),
+		})
 	}
 	if m.VmAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "vm"},
-			Value: fmt.Sprintf("%v", *m.VmAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "vm"},
+			Value: fmt.Sprintf("%v", *m.VmAttr),
+		})
 	}
 	if m.PhAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ph"},
-			Value: fmt.Sprintf("%d", b2i(*m.PhAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ph"},
+			Value: fmt.Sprintf("%d", b2i(*m.PhAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.F != nil {

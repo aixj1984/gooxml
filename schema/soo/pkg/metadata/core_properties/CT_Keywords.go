@@ -28,8 +28,10 @@ func NewCT_Keywords() *CT_Keywords {
 
 func (m *CT_Keywords) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.LangAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xml:lang"},
-			Value: fmt.Sprintf("%v", *m.LangAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "xml:lang"},
+			Value: fmt.Sprintf("%v", *m.LangAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Value != nil {

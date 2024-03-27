@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_TextBulletTypefaceFollowText struct {
-}
+type CT_TextBulletTypefaceFollowText struct{}
 
 func NewCT_TextBulletTypefaceFollowText() *CT_TextBulletTypefaceFollowText {
 	ret := &CT_TextBulletTypefaceFollowText{}

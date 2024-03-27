@@ -39,8 +39,10 @@ func NewOfcCT_Diagram() *OfcCT_Diagram {
 
 func (m *OfcCT_Diagram) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DgmstyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dgmstyle"},
-			Value: fmt.Sprintf("%v", *m.DgmstyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dgmstyle"},
+			Value: fmt.Sprintf("%v", *m.DgmstyleAttr),
+		})
 	}
 	if m.AutoformatAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.AutoformatAttr.MarshalXMLAttr(xml.Name{Local: "autoformat"})
@@ -64,24 +66,34 @@ func (m *OfcCT_Diagram) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DgmscalexAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dgmscalex"},
-			Value: fmt.Sprintf("%v", *m.DgmscalexAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dgmscalex"},
+			Value: fmt.Sprintf("%v", *m.DgmscalexAttr),
+		})
 	}
 	if m.DgmscaleyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dgmscaley"},
-			Value: fmt.Sprintf("%v", *m.DgmscaleyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dgmscaley"},
+			Value: fmt.Sprintf("%v", *m.DgmscaleyAttr),
+		})
 	}
 	if m.DgmfontsizeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dgmfontsize"},
-			Value: fmt.Sprintf("%v", *m.DgmfontsizeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dgmfontsize"},
+			Value: fmt.Sprintf("%v", *m.DgmfontsizeAttr),
+		})
 	}
 	if m.ConstrainboundsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "constrainbounds"},
-			Value: fmt.Sprintf("%v", *m.ConstrainboundsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "constrainbounds"},
+			Value: fmt.Sprintf("%v", *m.ConstrainboundsAttr),
+		})
 	}
 	if m.DgmbasetextscaleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dgmbasetextscale"},
-			Value: fmt.Sprintf("%v", *m.DgmbasetextscaleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dgmbasetextscale"},
+			Value: fmt.Sprintf("%v", *m.DgmbasetextscaleAttr),
+		})
 	}
 	if m.ExtAttr != ST_ExtUnset {
 		attr, err := m.ExtAttr.MarshalXMLAttr(xml.Name{Local: "ext"})

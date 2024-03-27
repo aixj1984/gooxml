@@ -37,36 +37,52 @@ func NewCT_Hyperlink() *CT_Hyperlink {
 
 func (m *CT_Hyperlink) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.InvalidUrlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "invalidUrl"},
-			Value: fmt.Sprintf("%v", *m.InvalidUrlAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "invalidUrl"},
+			Value: fmt.Sprintf("%v", *m.InvalidUrlAttr),
+		})
 	}
 	if m.ActionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "action"},
-			Value: fmt.Sprintf("%v", *m.ActionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "action"},
+			Value: fmt.Sprintf("%v", *m.ActionAttr),
+		})
 	}
 	if m.TgtFrameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tgtFrame"},
-			Value: fmt.Sprintf("%v", *m.TgtFrameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tgtFrame"},
+			Value: fmt.Sprintf("%v", *m.TgtFrameAttr),
+		})
 	}
 	if m.TooltipAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tooltip"},
-			Value: fmt.Sprintf("%v", *m.TooltipAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tooltip"},
+			Value: fmt.Sprintf("%v", *m.TooltipAttr),
+		})
 	}
 	if m.HistoryAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "history"},
-			Value: fmt.Sprintf("%d", b2i(*m.HistoryAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "history"},
+			Value: fmt.Sprintf("%d", b2i(*m.HistoryAttr)),
+		})
 	}
 	if m.HighlightClickAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "highlightClick"},
-			Value: fmt.Sprintf("%d", b2i(*m.HighlightClickAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "highlightClick"},
+			Value: fmt.Sprintf("%d", b2i(*m.HighlightClickAttr)),
+		})
 	}
 	if m.EndSndAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "endSnd"},
-			Value: fmt.Sprintf("%d", b2i(*m.EndSndAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "endSnd"},
+			Value: fmt.Sprintf("%d", b2i(*m.EndSndAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Snd != nil {

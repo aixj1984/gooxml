@@ -73,48 +73,70 @@ func NewCT_SheetView() *CT_SheetView {
 
 func (m *CT_SheetView) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.WindowProtectionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "windowProtection"},
-			Value: fmt.Sprintf("%d", b2i(*m.WindowProtectionAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "windowProtection"},
+			Value: fmt.Sprintf("%d", b2i(*m.WindowProtectionAttr)),
+		})
 	}
 	if m.ShowFormulasAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showFormulas"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowFormulasAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showFormulas"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowFormulasAttr)),
+		})
 	}
 	if m.ShowGridLinesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showGridLines"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowGridLinesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showGridLines"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowGridLinesAttr)),
+		})
 	}
 	if m.ShowRowColHeadersAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showRowColHeaders"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowRowColHeadersAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showRowColHeaders"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowRowColHeadersAttr)),
+		})
 	}
 	if m.ShowZerosAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showZeros"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowZerosAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showZeros"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowZerosAttr)),
+		})
 	}
 	if m.RightToLeftAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rightToLeft"},
-			Value: fmt.Sprintf("%d", b2i(*m.RightToLeftAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rightToLeft"},
+			Value: fmt.Sprintf("%d", b2i(*m.RightToLeftAttr)),
+		})
 	}
 	if m.TabSelectedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tabSelected"},
-			Value: fmt.Sprintf("%d", b2i(*m.TabSelectedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tabSelected"},
+			Value: fmt.Sprintf("%d", b2i(*m.TabSelectedAttr)),
+		})
 	}
 	if m.ShowRulerAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showRuler"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowRulerAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showRuler"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowRulerAttr)),
+		})
 	}
 	if m.ShowOutlineSymbolsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showOutlineSymbols"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowOutlineSymbolsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showOutlineSymbols"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowOutlineSymbolsAttr)),
+		})
 	}
 	if m.DefaultGridColorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "defaultGridColor"},
-			Value: fmt.Sprintf("%d", b2i(*m.DefaultGridColorAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "defaultGridColor"},
+			Value: fmt.Sprintf("%d", b2i(*m.DefaultGridColorAttr)),
+		})
 	}
 	if m.ShowWhiteSpaceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showWhiteSpace"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowWhiteSpaceAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showWhiteSpace"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowWhiteSpaceAttr)),
+		})
 	}
 	if m.ViewAttr != ST_SheetViewTypeUnset {
 		attr, err := m.ViewAttr.MarshalXMLAttr(xml.Name{Local: "view"})
@@ -124,31 +146,45 @@ func (m *CT_SheetView) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.TopLeftCellAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "topLeftCell"},
-			Value: fmt.Sprintf("%v", *m.TopLeftCellAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "topLeftCell"},
+			Value: fmt.Sprintf("%v", *m.TopLeftCellAttr),
+		})
 	}
 	if m.ColorIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "colorId"},
-			Value: fmt.Sprintf("%v", *m.ColorIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "colorId"},
+			Value: fmt.Sprintf("%v", *m.ColorIdAttr),
+		})
 	}
 	if m.ZoomScaleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "zoomScale"},
-			Value: fmt.Sprintf("%v", *m.ZoomScaleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "zoomScale"},
+			Value: fmt.Sprintf("%v", *m.ZoomScaleAttr),
+		})
 	}
 	if m.ZoomScaleNormalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "zoomScaleNormal"},
-			Value: fmt.Sprintf("%v", *m.ZoomScaleNormalAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "zoomScaleNormal"},
+			Value: fmt.Sprintf("%v", *m.ZoomScaleNormalAttr),
+		})
 	}
 	if m.ZoomScaleSheetLayoutViewAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "zoomScaleSheetLayoutView"},
-			Value: fmt.Sprintf("%v", *m.ZoomScaleSheetLayoutViewAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "zoomScaleSheetLayoutView"},
+			Value: fmt.Sprintf("%v", *m.ZoomScaleSheetLayoutViewAttr),
+		})
 	}
 	if m.ZoomScalePageLayoutViewAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "zoomScalePageLayoutView"},
-			Value: fmt.Sprintf("%v", *m.ZoomScalePageLayoutViewAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "zoomScalePageLayoutView"},
+			Value: fmt.Sprintf("%v", *m.ZoomScalePageLayoutViewAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "workbookViewId"},
-		Value: fmt.Sprintf("%v", m.WorkbookViewIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "workbookViewId"},
+		Value: fmt.Sprintf("%v", m.WorkbookViewIdAttr),
+	})
 	e.EncodeToken(start)
 	if m.Pane != nil {
 		sepane := xml.StartElement{Name: xml.Name{Local: "ma:pane"}}

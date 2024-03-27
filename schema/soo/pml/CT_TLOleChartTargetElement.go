@@ -35,8 +35,10 @@ func (m *CT_TLOleChartTargetElement) MarshalXML(e *xml.Encoder, start xml.StartE
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.LvlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lvl"},
-			Value: fmt.Sprintf("%v", *m.LvlAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lvl"},
+			Value: fmt.Sprintf("%v", *m.LvlAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

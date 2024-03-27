@@ -38,20 +38,28 @@ func NewCT_Shape() *CT_Shape {
 
 func (m *CT_Shape) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.MacroAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "macro"},
-			Value: fmt.Sprintf("%v", *m.MacroAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "macro"},
+			Value: fmt.Sprintf("%v", *m.MacroAttr),
+		})
 	}
 	if m.TextlinkAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "textlink"},
-			Value: fmt.Sprintf("%v", *m.TextlinkAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "textlink"},
+			Value: fmt.Sprintf("%v", *m.TextlinkAttr),
+		})
 	}
 	if m.FLocksTextAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fLocksText"},
-			Value: fmt.Sprintf("%d", b2i(*m.FLocksTextAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fLocksText"},
+			Value: fmt.Sprintf("%d", b2i(*m.FLocksTextAttr)),
+		})
 	}
 	if m.FPublishedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fPublished"},
-			Value: fmt.Sprintf("%d", b2i(*m.FPublishedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fPublished"},
+			Value: fmt.Sprintf("%d", b2i(*m.FPublishedAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	senvSpPr := xml.StartElement{Name: xml.Name{Local: "xdr:nvSpPr"}}

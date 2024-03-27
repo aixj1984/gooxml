@@ -36,16 +36,22 @@ func NewCT_NumericRule() *CT_NumericRule {
 
 func (m *CT_NumericRule) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "val"},
-			Value: fmt.Sprintf("%v", *m.ValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "val"},
+			Value: fmt.Sprintf("%v", *m.ValAttr),
+		})
 	}
 	if m.FactAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fact"},
-			Value: fmt.Sprintf("%v", *m.FactAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fact"},
+			Value: fmt.Sprintf("%v", *m.FactAttr),
+		})
 	}
 	if m.MaxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "max"},
-			Value: fmt.Sprintf("%v", *m.MaxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "max"},
+			Value: fmt.Sprintf("%v", *m.MaxAttr),
+		})
 	}
 	if m.TypeAttr != ST_ConstraintTypeUnset {
 		attr, err := m.TypeAttr.MarshalXMLAttr(xml.Name{Local: "type"})
@@ -62,8 +68,10 @@ func (m *CT_NumericRule) MarshalXML(e *xml.Encoder, start xml.StartElement) erro
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ForNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "forName"},
-			Value: fmt.Sprintf("%v", *m.ForNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "forName"},
+			Value: fmt.Sprintf("%v", *m.ForNameAttr),
+		})
 	}
 	if m.PtTypeAttr != ST_ElementTypeUnset {
 		attr, err := m.PtTypeAttr.MarshalXMLAttr(xml.Name{Local: "ptType"})

@@ -33,12 +33,16 @@ func NewCT_DdeValues() *CT_DdeValues {
 
 func (m *CT_DdeValues) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RowsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rows"},
-			Value: fmt.Sprintf("%v", *m.RowsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rows"},
+			Value: fmt.Sprintf("%v", *m.RowsAttr),
+		})
 	}
 	if m.ColsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cols"},
-			Value: fmt.Sprintf("%v", *m.ColsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cols"},
+			Value: fmt.Sprintf("%v", *m.ColsAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sevalue := xml.StartElement{Name: xml.Name{Local: "ma:value"}}

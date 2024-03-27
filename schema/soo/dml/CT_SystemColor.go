@@ -35,8 +35,10 @@ func (m *CT_SystemColor) MarshalXML(e *xml.Encoder, start xml.StartElement) erro
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.LastClrAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lastClr"},
-			Value: fmt.Sprintf("%v", *m.LastClrAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lastClr"},
+			Value: fmt.Sprintf("%v", *m.LastClrAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.EG_ColorTransform != nil {

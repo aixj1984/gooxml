@@ -13,6 +13,7 @@ import (
 )
 
 // ResultType is the type of the result
+//
 //go:generate stringer -type=ResultType
 type ResultType byte
 
@@ -114,6 +115,7 @@ func (r Result) ListValues() []Result {
 	}
 	return nil
 }
+
 func (r Result) AsString() Result {
 	switch r.Type {
 	case ResultTypeNumber:

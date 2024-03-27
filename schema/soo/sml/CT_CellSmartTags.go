@@ -29,8 +29,10 @@ func NewCT_CellSmartTags() *CT_CellSmartTags {
 }
 
 func (m *CT_CellSmartTags) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-		Value: fmt.Sprintf("%v", m.RAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r"},
+		Value: fmt.Sprintf("%v", m.RAttr),
+	})
 	e.EncodeToken(start)
 	secellSmartTag := xml.StartElement{Name: xml.Name{Local: "ma:cellSmartTag"}}
 	for _, c := range m.CellSmartTag {

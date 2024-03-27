@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_Path2DClose struct {
-}
+type CT_Path2DClose struct{}
 
 func NewCT_Path2DClose() *CT_Path2DClose {
 	ret := &CT_Path2DClose{}

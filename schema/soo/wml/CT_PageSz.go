@@ -35,12 +35,16 @@ func NewCT_PageSz() *CT_PageSz {
 
 func (m *CT_PageSz) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.WAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:w"},
-			Value: fmt.Sprintf("%v", *m.WAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:w"},
+			Value: fmt.Sprintf("%v", *m.WAttr),
+		})
 	}
 	if m.HAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:h"},
-			Value: fmt.Sprintf("%v", *m.HAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:h"},
+			Value: fmt.Sprintf("%v", *m.HAttr),
+		})
 	}
 	if m.OrientAttr != ST_PageOrientationUnset {
 		attr, err := m.OrientAttr.MarshalXMLAttr(xml.Name{Local: "w:orient"})
@@ -50,8 +54,10 @@ func (m *CT_PageSz) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.CodeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:code"},
-			Value: fmt.Sprintf("%v", *m.CodeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:code"},
+			Value: fmt.Sprintf("%v", *m.CodeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

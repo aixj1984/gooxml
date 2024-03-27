@@ -49,7 +49,7 @@ func (a CategoryAxisDataSource) SetValues(v []string) {
 		a.x.Choice.StrLit.Pt = append(a.x.Choice.StrLit.Pt,
 			&crt.CT_StrVal{
 				IdxAttr: uint32(i),
-				V:       x})
+				V:       x,
+			})
 	}
-
 }

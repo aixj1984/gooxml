@@ -25,8 +25,10 @@ func NewAG_Style() *AG_Style {
 
 func (m *AG_Style) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.StyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "style"},
-			Value: fmt.Sprintf("%v", *m.StyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "style"},
+			Value: fmt.Sprintf("%v", *m.StyleAttr),
+		})
 	}
 	return nil
 }

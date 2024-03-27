@@ -35,8 +35,10 @@ func NewCT_Textbox() *CT_Textbox {
 
 func (m *CT_Textbox) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.InsetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "inset"},
-			Value: fmt.Sprintf("%v", *m.InsetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "inset"},
+			Value: fmt.Sprintf("%v", *m.InsetAttr),
+		})
 	}
 	if m.SingleclickAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.SingleclickAttr.MarshalXMLAttr(xml.Name{Local: "singleclick"})
@@ -53,12 +55,16 @@ func (m *CT_Textbox) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.StyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "style"},
-			Value: fmt.Sprintf("%v", *m.StyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "style"},
+			Value: fmt.Sprintf("%v", *m.StyleAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TxbxContent != nil {

@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type URI struct {
-}
+type URI struct{}
 
 func NewURI() *URI {
 	ret := &URI{}

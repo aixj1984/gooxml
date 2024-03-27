@@ -40,11 +40,15 @@ func NewCT_CustomChartsheetView() *CT_CustomChartsheetView {
 }
 
 func (m *CT_CustomChartsheetView) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "guid"},
-		Value: fmt.Sprintf("%v", m.GuidAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "guid"},
+		Value: fmt.Sprintf("%v", m.GuidAttr),
+	})
 	if m.ScaleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "scale"},
-			Value: fmt.Sprintf("%v", *m.ScaleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "scale"},
+			Value: fmt.Sprintf("%v", *m.ScaleAttr),
+		})
 	}
 	if m.StateAttr != ST_SheetStateUnset {
 		attr, err := m.StateAttr.MarshalXMLAttr(xml.Name{Local: "state"})
@@ -54,8 +58,10 @@ func (m *CT_CustomChartsheetView) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ZoomToFitAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "zoomToFit"},
-			Value: fmt.Sprintf("%d", b2i(*m.ZoomToFitAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "zoomToFit"},
+			Value: fmt.Sprintf("%d", b2i(*m.ZoomToFitAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.PageMargins != nil {

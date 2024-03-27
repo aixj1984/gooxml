@@ -78,13 +78,14 @@ func TestEval(t *testing.T) {
 func TestReferenceSheet(t *testing.T) {
 	testSheet("formulareference.xlsx", t)
 }
+
 func TestMacExcelSheet(t *testing.T) {
 	testSheet("MacExcel365.xlsx", t)
 }
 
 func testSheet(fn string, t *testing.T) {
 	// TODO: uncomment once we quit building on 1.8
-	//t.Helper()
+	// t.Helper()
 	wb, err := spreadsheet.Open("testdata/" + fn)
 	if err != nil {
 		t.Fatalf("error opening reference sheet: %s", err)
@@ -177,5 +178,4 @@ func TestArrayFormula(t *testing.T) {
 	if got := sheet.Cell("F2").GetFormattedValue(); got != "8" {
 		t.Errorf("expected 8 in F2, got %s", got)
 	}
-
 }

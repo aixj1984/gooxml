@@ -28,12 +28,16 @@ func NewCT_Charset() *CT_Charset {
 
 func (m *CT_Charset) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:val"},
-			Value: fmt.Sprintf("%v", *m.ValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:val"},
+			Value: fmt.Sprintf("%v", *m.ValAttr),
+		})
 	}
 	if m.CharacterSetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:characterSet"},
-			Value: fmt.Sprintf("%v", *m.CharacterSetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:characterSet"},
+			Value: fmt.Sprintf("%v", *m.CharacterSetAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

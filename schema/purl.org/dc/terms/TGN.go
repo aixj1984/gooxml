@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type TGN struct {
-}
+type TGN struct{}
 
 func NewTGN() *TGN {
 	ret := &TGN{}

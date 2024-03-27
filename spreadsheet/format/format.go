@@ -19,8 +19,10 @@ import (
 
 // constants used when formatting generic values to determine when to start
 // rounding
-const maxGeneric = 1e11
-const minGeneric = 1e-10
+const (
+	maxGeneric = 1e11
+	minGeneric = 1e-10
+)
 
 // Format is a parsed number format.
 type Format struct {
@@ -41,6 +43,7 @@ type Format struct {
 }
 
 // FmtType is the type of a format token.
+//
 //go:generate stringer -type=FmtType
 type FmtType byte
 

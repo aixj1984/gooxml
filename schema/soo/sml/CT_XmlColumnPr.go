@@ -36,16 +36,24 @@ func NewCT_XmlColumnPr() *CT_XmlColumnPr {
 }
 
 func (m *CT_XmlColumnPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "mapId"},
-		Value: fmt.Sprintf("%v", m.MapIdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xpath"},
-		Value: fmt.Sprintf("%v", m.XpathAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "mapId"},
+		Value: fmt.Sprintf("%v", m.MapIdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "xpath"},
+		Value: fmt.Sprintf("%v", m.XpathAttr),
+	})
 	if m.DenormalizedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "denormalized"},
-			Value: fmt.Sprintf("%d", b2i(*m.DenormalizedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "denormalized"},
+			Value: fmt.Sprintf("%d", b2i(*m.DenormalizedAttr)),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlDataType"},
-		Value: fmt.Sprintf("%v", m.XmlDataTypeAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "xmlDataType"},
+		Value: fmt.Sprintf("%v", m.XmlDataTypeAttr),
+	})
 	e.EncodeToken(start)
 	if m.ExtLst != nil {
 		seextLst := xml.StartElement{Name: xml.Name{Local: "ma:extLst"}}

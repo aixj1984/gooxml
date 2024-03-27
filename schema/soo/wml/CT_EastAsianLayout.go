@@ -37,12 +37,16 @@ func NewCT_EastAsianLayout() *CT_EastAsianLayout {
 
 func (m *CT_EastAsianLayout) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.CombineAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:combine"},
-			Value: fmt.Sprintf("%v", *m.CombineAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:combine"},
+			Value: fmt.Sprintf("%v", *m.CombineAttr),
+		})
 	}
 	if m.CombineBracketsAttr != ST_CombineBracketsUnset {
 		attr, err := m.CombineBracketsAttr.MarshalXMLAttr(xml.Name{Local: "w:combineBrackets"})
@@ -52,12 +56,16 @@ func (m *CT_EastAsianLayout) MarshalXML(e *xml.Encoder, start xml.StartElement) 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.VertAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:vert"},
-			Value: fmt.Sprintf("%v", *m.VertAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:vert"},
+			Value: fmt.Sprintf("%v", *m.VertAttr),
+		})
 	}
 	if m.VertCompressAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:vertCompress"},
-			Value: fmt.Sprintf("%v", *m.VertCompressAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:vertCompress"},
+			Value: fmt.Sprintf("%v", *m.VertCompressAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

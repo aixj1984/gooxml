@@ -38,12 +38,16 @@ func (m *CT_Blip) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.EmbedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:embed"},
-			Value: fmt.Sprintf("%v", *m.EmbedAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:embed"},
+			Value: fmt.Sprintf("%v", *m.EmbedAttr),
+		})
 	}
 	if m.LinkAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:link"},
-			Value: fmt.Sprintf("%v", *m.LinkAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:link"},
+			Value: fmt.Sprintf("%v", *m.LinkAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Choice != nil {

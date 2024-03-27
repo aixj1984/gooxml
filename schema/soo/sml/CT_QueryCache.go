@@ -31,8 +31,10 @@ func NewCT_QueryCache() *CT_QueryCache {
 
 func (m *CT_QueryCache) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sequery := xml.StartElement{Name: xml.Name{Local: "ma:query"}}

@@ -35,18 +35,30 @@ func NewCT_FontSig() *CT_FontSig {
 }
 
 func (m *CT_FontSig) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:usb0"},
-		Value: fmt.Sprintf("%v", m.Usb0Attr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:usb1"},
-		Value: fmt.Sprintf("%v", m.Usb1Attr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:usb2"},
-		Value: fmt.Sprintf("%v", m.Usb2Attr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:usb3"},
-		Value: fmt.Sprintf("%v", m.Usb3Attr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:csb0"},
-		Value: fmt.Sprintf("%v", m.Csb0Attr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:csb1"},
-		Value: fmt.Sprintf("%v", m.Csb1Attr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:usb0"},
+		Value: fmt.Sprintf("%v", m.Usb0Attr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:usb1"},
+		Value: fmt.Sprintf("%v", m.Usb1Attr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:usb2"},
+		Value: fmt.Sprintf("%v", m.Usb2Attr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:usb3"},
+		Value: fmt.Sprintf("%v", m.Usb3Attr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:csb0"},
+		Value: fmt.Sprintf("%v", m.Csb0Attr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:csb1"},
+		Value: fmt.Sprintf("%v", m.Csb1Attr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

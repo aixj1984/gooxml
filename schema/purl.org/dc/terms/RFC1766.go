@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type RFC1766 struct {
-}
+type RFC1766 struct{}
 
 func NewRFC1766() *RFC1766 {
 	ret := &RFC1766{}

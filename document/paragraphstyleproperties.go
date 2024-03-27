@@ -127,6 +127,7 @@ func (p ParagraphStyleProperties) SetStartIndent(m measurement.Distance) {
 		p.x.Ind.StartAttr.Int64 = gooxml.Int64(int64(m / measurement.Twips))
 	}
 }
+
 // SetHangingIndent controls the hanging indent of the paragraph.
 func (p ParagraphStyleProperties) SetHangingIndent(m measurement.Distance) {
 	if p.x.Ind == nil {

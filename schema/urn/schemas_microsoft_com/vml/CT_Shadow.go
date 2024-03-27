@@ -58,36 +58,52 @@ func (m *CT_Shadow) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ColorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "color"},
-			Value: fmt.Sprintf("%v", *m.ColorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "color"},
+			Value: fmt.Sprintf("%v", *m.ColorAttr),
+		})
 	}
 	if m.OpacityAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "opacity"},
-			Value: fmt.Sprintf("%v", *m.OpacityAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "opacity"},
+			Value: fmt.Sprintf("%v", *m.OpacityAttr),
+		})
 	}
 	if m.OffsetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "offset"},
-			Value: fmt.Sprintf("%v", *m.OffsetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "offset"},
+			Value: fmt.Sprintf("%v", *m.OffsetAttr),
+		})
 	}
 	if m.Color2Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "color2"},
-			Value: fmt.Sprintf("%v", *m.Color2Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "color2"},
+			Value: fmt.Sprintf("%v", *m.Color2Attr),
+		})
 	}
 	if m.Offset2Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "offset2"},
-			Value: fmt.Sprintf("%v", *m.Offset2Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "offset2"},
+			Value: fmt.Sprintf("%v", *m.Offset2Attr),
+		})
 	}
 	if m.OriginAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "origin"},
-			Value: fmt.Sprintf("%v", *m.OriginAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "origin"},
+			Value: fmt.Sprintf("%v", *m.OriginAttr),
+		})
 	}
 	if m.MatrixAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "matrix"},
-			Value: fmt.Sprintf("%v", *m.MatrixAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "matrix"},
+			Value: fmt.Sprintf("%v", *m.MatrixAttr),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

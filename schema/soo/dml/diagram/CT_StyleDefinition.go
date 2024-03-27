@@ -35,12 +35,16 @@ func NewCT_StyleDefinition() *CT_StyleDefinition {
 
 func (m *CT_StyleDefinition) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.UniqueIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueId"},
-			Value: fmt.Sprintf("%v", *m.UniqueIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "uniqueId"},
+			Value: fmt.Sprintf("%v", *m.UniqueIdAttr),
+		})
 	}
 	if m.MinVerAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minVer"},
-			Value: fmt.Sprintf("%v", *m.MinVerAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minVer"},
+			Value: fmt.Sprintf("%v", *m.MinVerAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Title != nil {

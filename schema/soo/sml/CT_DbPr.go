@@ -32,19 +32,27 @@ func NewCT_DbPr() *CT_DbPr {
 }
 
 func (m *CT_DbPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "connection"},
-		Value: fmt.Sprintf("%v", m.ConnectionAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "connection"},
+		Value: fmt.Sprintf("%v", m.ConnectionAttr),
+	})
 	if m.CommandAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "command"},
-			Value: fmt.Sprintf("%v", *m.CommandAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "command"},
+			Value: fmt.Sprintf("%v", *m.CommandAttr),
+		})
 	}
 	if m.ServerCommandAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "serverCommand"},
-			Value: fmt.Sprintf("%v", *m.ServerCommandAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "serverCommand"},
+			Value: fmt.Sprintf("%v", *m.ServerCommandAttr),
+		})
 	}
 	if m.CommandTypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "commandType"},
-			Value: fmt.Sprintf("%v", *m.CommandTypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "commandType"},
+			Value: fmt.Sprintf("%v", *m.CommandTypeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

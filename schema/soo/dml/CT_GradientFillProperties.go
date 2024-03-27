@@ -40,8 +40,10 @@ func (m *CT_GradientFillProperties) MarshalXML(e *xml.Encoder, start xml.StartEl
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RotWithShapeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rotWithShape"},
-			Value: fmt.Sprintf("%d", b2i(*m.RotWithShapeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rotWithShape"},
+			Value: fmt.Sprintf("%d", b2i(*m.RotWithShapeAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.GsLst != nil {

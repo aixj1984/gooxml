@@ -25,8 +25,10 @@ func NewCT_F() *CT_F {
 
 func (m *CT_F) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.EqnAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "eqn"},
-			Value: fmt.Sprintf("%v", *m.EqnAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "eqn"},
+			Value: fmt.Sprintf("%v", *m.EqnAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

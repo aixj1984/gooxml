@@ -29,8 +29,10 @@ func NewCT_SampleData() *CT_SampleData {
 
 func (m *CT_SampleData) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.UseDefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "useDef"},
-			Value: fmt.Sprintf("%d", b2i(*m.UseDefAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "useDef"},
+			Value: fmt.Sprintf("%d", b2i(*m.UseDefAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.DataModel != nil {

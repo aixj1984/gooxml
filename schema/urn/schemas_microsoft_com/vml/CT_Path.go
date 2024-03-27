@@ -41,16 +41,22 @@ func NewCT_Path() *CT_Path {
 
 func (m *CT_Path) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.VAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "v"},
-			Value: fmt.Sprintf("%v", *m.VAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "v"},
+			Value: fmt.Sprintf("%v", *m.VAttr),
+		})
 	}
 	if m.LimoAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "limo"},
-			Value: fmt.Sprintf("%v", *m.LimoAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "limo"},
+			Value: fmt.Sprintf("%v", *m.LimoAttr),
+		})
 	}
 	if m.TextboxrectAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "textboxrect"},
-			Value: fmt.Sprintf("%v", *m.TextboxrectAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "textboxrect"},
+			Value: fmt.Sprintf("%v", *m.TextboxrectAttr),
+		})
 	}
 	if m.FillokAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.FillokAttr.MarshalXMLAttr(xml.Name{Local: "fillok"})
@@ -109,12 +115,16 @@ func (m *CT_Path) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ConnectlocsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:connectlocs"},
-			Value: fmt.Sprintf("%v", *m.ConnectlocsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:connectlocs"},
+			Value: fmt.Sprintf("%v", *m.ConnectlocsAttr),
+		})
 	}
 	if m.ConnectanglesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "o:connectangles"},
-			Value: fmt.Sprintf("%v", *m.ConnectanglesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "o:connectangles"},
+			Value: fmt.Sprintf("%v", *m.ConnectanglesAttr),
+		})
 	}
 	if m.ExtrusionokAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.ExtrusionokAttr.MarshalXMLAttr(xml.Name{Local: "extrusionok"})
@@ -124,8 +134,10 @@ func (m *CT_Path) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

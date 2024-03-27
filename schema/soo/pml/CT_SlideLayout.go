@@ -50,8 +50,10 @@ func NewCT_SlideLayout() *CT_SlideLayout {
 
 func (m *CT_SlideLayout) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.MatchingNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "matchingName"},
-			Value: fmt.Sprintf("%v", *m.MatchingNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "matchingName"},
+			Value: fmt.Sprintf("%v", *m.MatchingNameAttr),
+		})
 	}
 	if m.TypeAttr != ST_SlideLayoutTypeUnset {
 		attr, err := m.TypeAttr.MarshalXMLAttr(xml.Name{Local: "type"})
@@ -61,20 +63,28 @@ func (m *CT_SlideLayout) MarshalXML(e *xml.Encoder, start xml.StartElement) erro
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.PreserveAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "preserve"},
-			Value: fmt.Sprintf("%d", b2i(*m.PreserveAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "preserve"},
+			Value: fmt.Sprintf("%d", b2i(*m.PreserveAttr)),
+		})
 	}
 	if m.UserDrawnAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "userDrawn"},
-			Value: fmt.Sprintf("%d", b2i(*m.UserDrawnAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "userDrawn"},
+			Value: fmt.Sprintf("%d", b2i(*m.UserDrawnAttr)),
+		})
 	}
 	if m.ShowMasterSpAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showMasterSp"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowMasterSpAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showMasterSp"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowMasterSpAttr)),
+		})
 	}
 	if m.ShowMasterPhAnimAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showMasterPhAnim"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowMasterPhAnimAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showMasterPhAnim"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowMasterPhAnimAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	secSld := xml.StartElement{Name: xml.Name{Local: "p:cSld"}}

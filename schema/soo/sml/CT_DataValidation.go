@@ -85,39 +85,57 @@ func (m *CT_DataValidation) MarshalXML(e *xml.Encoder, start xml.StartElement) e
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.AllowBlankAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "allowBlank"},
-			Value: fmt.Sprintf("%d", b2i(*m.AllowBlankAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "allowBlank"},
+			Value: fmt.Sprintf("%d", b2i(*m.AllowBlankAttr)),
+		})
 	}
 	if m.ShowDropDownAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showDropDown"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowDropDownAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showDropDown"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowDropDownAttr)),
+		})
 	}
 	if m.ShowInputMessageAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showInputMessage"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowInputMessageAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showInputMessage"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowInputMessageAttr)),
+		})
 	}
 	if m.ShowErrorMessageAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showErrorMessage"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowErrorMessageAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showErrorMessage"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowErrorMessageAttr)),
+		})
 	}
 	if m.ErrorTitleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "errorTitle"},
-			Value: fmt.Sprintf("%v", *m.ErrorTitleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "errorTitle"},
+			Value: fmt.Sprintf("%v", *m.ErrorTitleAttr),
+		})
 	}
 	if m.ErrorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "error"},
-			Value: fmt.Sprintf("%v", *m.ErrorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "error"},
+			Value: fmt.Sprintf("%v", *m.ErrorAttr),
+		})
 	}
 	if m.PromptTitleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "promptTitle"},
-			Value: fmt.Sprintf("%v", *m.PromptTitleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "promptTitle"},
+			Value: fmt.Sprintf("%v", *m.PromptTitleAttr),
+		})
 	}
 	if m.PromptAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "prompt"},
-			Value: fmt.Sprintf("%v", *m.PromptAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "prompt"},
+			Value: fmt.Sprintf("%v", *m.PromptAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sqref"},
-		Value: fmt.Sprintf("%v", m.SqrefAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sqref"},
+		Value: fmt.Sprintf("%v", m.SqrefAttr),
+	})
 	e.EncodeToken(start)
 	if m.Formula1 != nil {
 		seformula1 := xml.StartElement{Name: xml.Name{Local: "ma:formula1"}}

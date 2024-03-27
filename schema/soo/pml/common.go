@@ -25,27 +25,35 @@ func ParseUnionST_TLTime(s string) (ST_TLTime, error) {
 func ParseUnionST_FixedPercentage(s string) (dml.ST_FixedPercentage, error) {
 	return dml.ParseUnionST_FixedPercentage(s)
 }
+
 func ParseStdlibTime(s string) (time.Time, error) {
 	return dml.ParseStdlibTime(s)
 }
+
 func ParseUnionST_Percentage(s string) (dml.ST_Percentage, error) {
 	return dml.ParseUnionST_Percentage(s)
 }
+
 func ParseUnionST_Coordinate32(s string) (dml.ST_Coordinate32, error) {
 	return dml.ParseUnionST_Coordinate32(s)
 }
+
 func ParseUnionST_PositiveFixedPercentage(s string) (dml.ST_PositiveFixedPercentage, error) {
 	return dml.ParseUnionST_PositiveFixedPercentage(s)
 }
+
 func ParseUnionST_TLTimeAnimateValueTime(s string) (ST_TLTimeAnimateValueTime, error) {
 	return ST_TLTimeAnimateValueTime{}, nil
 }
+
 func ParseUnionST_PositivePercentage(s string) (dml.ST_PositivePercentage, error) {
 	return dml.ParseUnionST_PositivePercentage(s)
 }
+
 func ParseUnionST_TransitionEightDirectionType(s string) (ST_TransitionEightDirectionType, error) {
 	return ST_TransitionEightDirectionType{}, nil
 }
+
 func b2i(b bool) uint8 {
 	if b {
 		return 1

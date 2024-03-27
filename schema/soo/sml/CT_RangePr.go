@@ -42,12 +42,16 @@ func NewCT_RangePr() *CT_RangePr {
 
 func (m *CT_RangePr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.AutoStartAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoStart"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoStartAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoStart"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoStartAttr)),
+		})
 	}
 	if m.AutoEndAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoEnd"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoEndAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoEnd"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoEndAttr)),
+		})
 	}
 	if m.GroupByAttr != ST_GroupByUnset {
 		attr, err := m.GroupByAttr.MarshalXMLAttr(xml.Name{Local: "groupBy"})
@@ -57,24 +61,34 @@ func (m *CT_RangePr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.StartNumAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "startNum"},
-			Value: fmt.Sprintf("%v", *m.StartNumAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "startNum"},
+			Value: fmt.Sprintf("%v", *m.StartNumAttr),
+		})
 	}
 	if m.EndNumAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "endNum"},
-			Value: fmt.Sprintf("%v", *m.EndNumAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "endNum"},
+			Value: fmt.Sprintf("%v", *m.EndNumAttr),
+		})
 	}
 	if m.StartDateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "startDate"},
-			Value: fmt.Sprintf("%v", *m.StartDateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "startDate"},
+			Value: fmt.Sprintf("%v", *m.StartDateAttr),
+		})
 	}
 	if m.EndDateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "endDate"},
-			Value: fmt.Sprintf("%v", *m.EndDateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "endDate"},
+			Value: fmt.Sprintf("%v", *m.EndDateAttr),
+		})
 	}
 	if m.GroupIntervalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "groupInterval"},
-			Value: fmt.Sprintf("%v", *m.GroupIntervalAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "groupInterval"},
+			Value: fmt.Sprintf("%v", *m.GroupIntervalAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -34,11 +34,15 @@ func NewCT_SmartTagRun() *CT_SmartTagRun {
 
 func (m *CT_SmartTagRun) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.UriAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:uri"},
-			Value: fmt.Sprintf("%v", *m.UriAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:uri"},
+			Value: fmt.Sprintf("%v", *m.UriAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:element"},
-		Value: fmt.Sprintf("%v", m.ElementAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:element"},
+		Value: fmt.Sprintf("%v", m.ElementAttr),
+	})
 	e.EncodeToken(start)
 	if m.SmartTagPr != nil {
 		sesmartTagPr := xml.StartElement{Name: xml.Name{Local: "w:smartTagPr"}}

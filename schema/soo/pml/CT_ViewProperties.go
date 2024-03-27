@@ -54,8 +54,10 @@ func (m *CT_ViewProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) e
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ShowCommentsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showComments"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowCommentsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showComments"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowCommentsAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.NormalViewPr != nil {

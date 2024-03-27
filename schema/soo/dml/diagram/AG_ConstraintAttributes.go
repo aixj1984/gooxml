@@ -42,8 +42,10 @@ func (m *AG_ConstraintAttributes) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ForNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "forName"},
-			Value: fmt.Sprintf("%v", *m.ForNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "forName"},
+			Value: fmt.Sprintf("%v", *m.ForNameAttr),
+		})
 	}
 	if m.PtTypeAttr != ST_ElementTypeUnset {
 		attr, err := m.PtTypeAttr.MarshalXMLAttr(xml.Name{Local: "ptType"})

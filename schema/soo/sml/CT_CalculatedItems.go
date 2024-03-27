@@ -31,8 +31,10 @@ func NewCT_CalculatedItems() *CT_CalculatedItems {
 
 func (m *CT_CalculatedItems) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	secalculatedItem := xml.StartElement{Name: xml.Name{Local: "ma:calculatedItem"}}

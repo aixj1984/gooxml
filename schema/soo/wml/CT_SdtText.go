@@ -28,8 +28,10 @@ func NewCT_SdtText() *CT_SdtText {
 
 func (m *CT_SdtText) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.MultiLineAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:multiLine"},
-			Value: fmt.Sprintf("%v", *m.MultiLineAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:multiLine"},
+			Value: fmt.Sprintf("%v", *m.MultiLineAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

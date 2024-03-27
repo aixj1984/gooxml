@@ -42,17 +42,17 @@ func init() {
 	RegisterFunction("REPT", Rept)
 	RegisterFunction("RIGHT", Right)
 	RegisterFunction("RIGHTB", Right) // for now
-	//RegisterFunction("SEARCH", )
-	//RegisterFunction("SEARCHB", )
-	//RegisterFunction("SUBSTITUTE", )
+	// RegisterFunction("SEARCH", )
+	// RegisterFunction("SEARCHB", )
+	// RegisterFunction("SUBSTITUTE", )
 	RegisterFunction("T", T)
-	//RegisterFunction("TEXT")
-	//RegisterFunction("TEXTJOIN")
+	// RegisterFunction("TEXT")
+	// RegisterFunction("TEXTJOIN")
 	RegisterFunction("TRIM", Trim)
 	RegisterFunction("_xlfn.UNICHAR", Char) // for now
 	RegisterFunction("_xlfn.UNICODE", Unicode)
 	RegisterFunction("UPPER", Upper)
-	//RegisterFunction("VALUE", )
+	// RegisterFunction("VALUE", )
 }
 
 // Char is an implementation of the Excel CHAR function that takes an integer in
@@ -186,7 +186,6 @@ func Left(args []Result) Result {
 		return MakeStringResult(v)
 	}
 	return MakeStringResult(v[0:n])
-
 }
 
 // Len is an implementation of the Excel LEN function that returns length of a string

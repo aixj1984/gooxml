@@ -42,28 +42,40 @@ func NewCT_LatentStyles() *CT_LatentStyles {
 
 func (m *CT_LatentStyles) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DefLockedStateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:defLockedState"},
-			Value: fmt.Sprintf("%v", *m.DefLockedStateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:defLockedState"},
+			Value: fmt.Sprintf("%v", *m.DefLockedStateAttr),
+		})
 	}
 	if m.DefUIPriorityAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:defUIPriority"},
-			Value: fmt.Sprintf("%v", *m.DefUIPriorityAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:defUIPriority"},
+			Value: fmt.Sprintf("%v", *m.DefUIPriorityAttr),
+		})
 	}
 	if m.DefSemiHiddenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:defSemiHidden"},
-			Value: fmt.Sprintf("%v", *m.DefSemiHiddenAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:defSemiHidden"},
+			Value: fmt.Sprintf("%v", *m.DefSemiHiddenAttr),
+		})
 	}
 	if m.DefUnhideWhenUsedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:defUnhideWhenUsed"},
-			Value: fmt.Sprintf("%v", *m.DefUnhideWhenUsedAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:defUnhideWhenUsed"},
+			Value: fmt.Sprintf("%v", *m.DefUnhideWhenUsedAttr),
+		})
 	}
 	if m.DefQFormatAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:defQFormat"},
-			Value: fmt.Sprintf("%v", *m.DefQFormatAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:defQFormat"},
+			Value: fmt.Sprintf("%v", *m.DefQFormatAttr),
+		})
 	}
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.LsdException != nil {

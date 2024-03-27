@@ -51,52 +51,76 @@ func NewCT_Ind() *CT_Ind {
 
 func (m *CT_Ind) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.StartAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:start"},
-			Value: fmt.Sprintf("%v", *m.StartAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:start"},
+			Value: fmt.Sprintf("%v", *m.StartAttr),
+		})
 	}
 	if m.StartCharsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:startChars"},
-			Value: fmt.Sprintf("%v", *m.StartCharsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:startChars"},
+			Value: fmt.Sprintf("%v", *m.StartCharsAttr),
+		})
 	}
 	if m.EndAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:end"},
-			Value: fmt.Sprintf("%v", *m.EndAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:end"},
+			Value: fmt.Sprintf("%v", *m.EndAttr),
+		})
 	}
 	if m.EndCharsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:endChars"},
-			Value: fmt.Sprintf("%v", *m.EndCharsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:endChars"},
+			Value: fmt.Sprintf("%v", *m.EndCharsAttr),
+		})
 	}
 	if m.LeftAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:left"},
-			Value: fmt.Sprintf("%v", *m.LeftAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:left"},
+			Value: fmt.Sprintf("%v", *m.LeftAttr),
+		})
 	}
 	if m.LeftCharsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:leftChars"},
-			Value: fmt.Sprintf("%v", *m.LeftCharsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:leftChars"},
+			Value: fmt.Sprintf("%v", *m.LeftCharsAttr),
+		})
 	}
 	if m.RightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:right"},
-			Value: fmt.Sprintf("%v", *m.RightAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:right"},
+			Value: fmt.Sprintf("%v", *m.RightAttr),
+		})
 	}
 	if m.RightCharsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:rightChars"},
-			Value: fmt.Sprintf("%v", *m.RightCharsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:rightChars"},
+			Value: fmt.Sprintf("%v", *m.RightCharsAttr),
+		})
 	}
 	if m.HangingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:hanging"},
-			Value: fmt.Sprintf("%v", *m.HangingAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:hanging"},
+			Value: fmt.Sprintf("%v", *m.HangingAttr),
+		})
 	}
 	if m.HangingCharsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:hangingChars"},
-			Value: fmt.Sprintf("%v", *m.HangingCharsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:hangingChars"},
+			Value: fmt.Sprintf("%v", *m.HangingCharsAttr),
+		})
 	}
 	if m.FirstLineAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:firstLine"},
-			Value: fmt.Sprintf("%v", *m.FirstLineAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:firstLine"},
+			Value: fmt.Sprintf("%v", *m.FirstLineAttr),
+		})
 	}
 	if m.FirstLineCharsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:firstLineChars"},
-			Value: fmt.Sprintf("%v", *m.FirstLineCharsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:firstLineChars"},
+			Value: fmt.Sprintf("%v", *m.FirstLineCharsAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

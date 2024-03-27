@@ -39,27 +39,39 @@ func NewCT_DateGroupItem() *CT_DateGroupItem {
 }
 
 func (m *CT_DateGroupItem) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "year"},
-		Value: fmt.Sprintf("%v", m.YearAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "year"},
+		Value: fmt.Sprintf("%v", m.YearAttr),
+	})
 	if m.MonthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "month"},
-			Value: fmt.Sprintf("%v", *m.MonthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "month"},
+			Value: fmt.Sprintf("%v", *m.MonthAttr),
+		})
 	}
 	if m.DayAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "day"},
-			Value: fmt.Sprintf("%v", *m.DayAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "day"},
+			Value: fmt.Sprintf("%v", *m.DayAttr),
+		})
 	}
 	if m.HourAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hour"},
-			Value: fmt.Sprintf("%v", *m.HourAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hour"},
+			Value: fmt.Sprintf("%v", *m.HourAttr),
+		})
 	}
 	if m.MinuteAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minute"},
-			Value: fmt.Sprintf("%v", *m.MinuteAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minute"},
+			Value: fmt.Sprintf("%v", *m.MinuteAttr),
+		})
 	}
 	if m.SecondAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "second"},
-			Value: fmt.Sprintf("%v", *m.SecondAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "second"},
+			Value: fmt.Sprintf("%v", *m.SecondAttr),
+		})
 	}
 	attr, err := m.DateTimeGroupingAttr.MarshalXMLAttr(xml.Name{Local: "dateTimeGrouping"})
 	if err != nil {

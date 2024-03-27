@@ -74,7 +74,6 @@ func TestEnsureRow(t *testing.T) {
 	if r101.X() != r102.X() {
 		t.Errorf("rows should wrap the same inner element")
 	}
-
 }
 
 func TestRowNumberValidation(t *testing.T) {
@@ -187,7 +186,6 @@ func TestSheetExtents(t *testing.T) {
 	if sheet.Extents() != exp {
 		t.Errorf("expected %s , got %s", exp, sheet.Extents())
 	}
-
 }
 
 func TestSheetClearCachedFormula(t *testing.T) {

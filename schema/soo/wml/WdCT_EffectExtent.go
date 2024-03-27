@@ -29,14 +29,22 @@ func NewWdCT_EffectExtent() *WdCT_EffectExtent {
 }
 
 func (m *WdCT_EffectExtent) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "l"},
-		Value: fmt.Sprintf("%v", m.LAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "t"},
-		Value: fmt.Sprintf("%v", m.TAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-		Value: fmt.Sprintf("%v", m.RAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "b"},
-		Value: fmt.Sprintf("%v", m.BAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "l"},
+		Value: fmt.Sprintf("%v", m.LAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "t"},
+		Value: fmt.Sprintf("%v", m.TAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r"},
+		Value: fmt.Sprintf("%v", m.RAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "b"},
+		Value: fmt.Sprintf("%v", m.BAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

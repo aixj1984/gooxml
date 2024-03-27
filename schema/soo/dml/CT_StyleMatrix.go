@@ -35,8 +35,10 @@ func NewCT_StyleMatrix() *CT_StyleMatrix {
 
 func (m *CT_StyleMatrix) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sefillStyleLst := xml.StartElement{Name: xml.Name{Local: "a:fillStyleLst"}}

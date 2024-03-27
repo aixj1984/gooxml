@@ -35,13 +35,19 @@ func NewCT_ChartFormat() *CT_ChartFormat {
 }
 
 func (m *CT_ChartFormat) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "chart"},
-		Value: fmt.Sprintf("%v", m.ChartAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "format"},
-		Value: fmt.Sprintf("%v", m.FormatAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "chart"},
+		Value: fmt.Sprintf("%v", m.ChartAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "format"},
+		Value: fmt.Sprintf("%v", m.FormatAttr),
+	})
 	if m.SeriesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "series"},
-			Value: fmt.Sprintf("%d", b2i(*m.SeriesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "series"},
+			Value: fmt.Sprintf("%d", b2i(*m.SeriesAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	sepivotArea := xml.StartElement{Name: xml.Name{Local: "ma:pivotArea"}}

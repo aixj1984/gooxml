@@ -7,8 +7,10 @@
 
 package chart
 
-import crt "github.com/carmel/gooxml/schema/soo/dml/chart"
-import "github.com/carmel/gooxml"
+import (
+	"github.com/carmel/gooxml"
+	crt "github.com/carmel/gooxml/schema/soo/dml/chart"
+)
 
 // PieChart is a Pie chart.
 type PieChart struct {
@@ -25,7 +27,6 @@ func (c PieChart) X() *crt.CT_PieChart {
 func (c PieChart) InitializeDefaults() {
 	c.x.VaryColors = crt.NewCT_Boolean()
 	c.x.VaryColors.ValAttr = gooxml.Bool(true)
-
 }
 
 // AddSeries adds a default series to an Pie chart.

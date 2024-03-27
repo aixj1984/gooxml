@@ -47,20 +47,28 @@ func NewCT_HeaderFooter() *CT_HeaderFooter {
 
 func (m *CT_HeaderFooter) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DifferentOddEvenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "differentOddEven"},
-			Value: fmt.Sprintf("%d", b2i(*m.DifferentOddEvenAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "differentOddEven"},
+			Value: fmt.Sprintf("%d", b2i(*m.DifferentOddEvenAttr)),
+		})
 	}
 	if m.DifferentFirstAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "differentFirst"},
-			Value: fmt.Sprintf("%d", b2i(*m.DifferentFirstAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "differentFirst"},
+			Value: fmt.Sprintf("%d", b2i(*m.DifferentFirstAttr)),
+		})
 	}
 	if m.ScaleWithDocAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "scaleWithDoc"},
-			Value: fmt.Sprintf("%d", b2i(*m.ScaleWithDocAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "scaleWithDoc"},
+			Value: fmt.Sprintf("%d", b2i(*m.ScaleWithDocAttr)),
+		})
 	}
 	if m.AlignWithMarginsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "alignWithMargins"},
-			Value: fmt.Sprintf("%d", b2i(*m.AlignWithMarginsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "alignWithMargins"},
+			Value: fmt.Sprintf("%d", b2i(*m.AlignWithMarginsAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.OddHeader != nil {

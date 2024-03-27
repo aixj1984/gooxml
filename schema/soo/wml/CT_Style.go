@@ -86,16 +86,22 @@ func (m *CT_Style) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.StyleIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:styleId"},
-			Value: fmt.Sprintf("%v", *m.StyleIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:styleId"},
+			Value: fmt.Sprintf("%v", *m.StyleIdAttr),
+		})
 	}
 	if m.DefaultAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:default"},
-			Value: fmt.Sprintf("%v", *m.DefaultAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:default"},
+			Value: fmt.Sprintf("%v", *m.DefaultAttr),
+		})
 	}
 	if m.CustomStyleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:customStyle"},
-			Value: fmt.Sprintf("%v", *m.CustomStyleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:customStyle"},
+			Value: fmt.Sprintf("%v", *m.CustomStyleAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Name != nil {

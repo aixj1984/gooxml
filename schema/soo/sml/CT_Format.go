@@ -43,8 +43,10 @@ func (m *CT_Format) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DxfIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dxfId"},
-			Value: fmt.Sprintf("%v", *m.DxfIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dxfId"},
+			Value: fmt.Sprintf("%v", *m.DxfIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sepivotArea := xml.StartElement{Name: xml.Name{Local: "ma:pivotArea"}}

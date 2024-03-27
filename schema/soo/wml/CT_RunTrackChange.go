@@ -29,14 +29,20 @@ func NewCT_RunTrackChange() *CT_RunTrackChange {
 }
 
 func (m *CT_RunTrackChange) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:author"},
-		Value: fmt.Sprintf("%v", m.AuthorAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:author"},
+		Value: fmt.Sprintf("%v", m.AuthorAttr),
+	})
 	if m.DateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:date"},
-			Value: fmt.Sprintf("%v", *m.DateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:date"},
+			Value: fmt.Sprintf("%v", *m.DateAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

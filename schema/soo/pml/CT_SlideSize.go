@@ -32,10 +32,14 @@ func NewCT_SlideSize() *CT_SlideSize {
 }
 
 func (m *CT_SlideSize) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cx"},
-		Value: fmt.Sprintf("%v", m.CxAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cy"},
-		Value: fmt.Sprintf("%v", m.CyAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "cx"},
+		Value: fmt.Sprintf("%v", m.CxAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "cy"},
+		Value: fmt.Sprintf("%v", m.CyAttr),
+	})
 	if m.TypeAttr != ST_SlideSizeTypeUnset {
 		attr, err := m.TypeAttr.MarshalXMLAttr(xml.Name{Local: "type"})
 		if err != nil {

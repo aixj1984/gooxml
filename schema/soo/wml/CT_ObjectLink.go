@@ -43,8 +43,10 @@ func (m *CT_ObjectLink) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.LockedFieldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:lockedField"},
-			Value: fmt.Sprintf("%v", *m.LockedFieldAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:lockedField"},
+			Value: fmt.Sprintf("%v", *m.LockedFieldAttr),
+		})
 	}
 	if m.DrawAspectAttr != ST_ObjectDrawAspectUnset {
 		attr, err := m.DrawAspectAttr.MarshalXMLAttr(xml.Name{Local: "w:drawAspect"})
@@ -53,19 +55,27 @@ func (m *CT_ObjectLink) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 		}
 		start.Attr = append(start.Attr, attr)
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.ProgIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:progId"},
-			Value: fmt.Sprintf("%v", *m.ProgIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:progId"},
+			Value: fmt.Sprintf("%v", *m.ProgIdAttr),
+		})
 	}
 	if m.ShapeIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:shapeId"},
-			Value: fmt.Sprintf("%v", *m.ShapeIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:shapeId"},
+			Value: fmt.Sprintf("%v", *m.ShapeIdAttr),
+		})
 	}
 	if m.FieldCodesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:fieldCodes"},
-			Value: fmt.Sprintf("%v", *m.FieldCodesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:fieldCodes"},
+			Value: fmt.Sprintf("%v", *m.FieldCodesAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

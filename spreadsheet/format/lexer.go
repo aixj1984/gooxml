@@ -16,9 +16,11 @@ import (
 )
 
 //line lexer.go:20
-const format_start int = 34
-const format_first_final int = 34
-const format_error int = -1
+const (
+	format_start       int = 34
+	format_first_final int = 34
+	format_error       int = -1
+)
 
 const format_en_main int = 34
 

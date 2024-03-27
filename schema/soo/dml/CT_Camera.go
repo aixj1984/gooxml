@@ -37,12 +37,16 @@ func (m *CT_Camera) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.FovAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fov"},
-			Value: fmt.Sprintf("%v", *m.FovAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fov"},
+			Value: fmt.Sprintf("%v", *m.FovAttr),
+		})
 	}
 	if m.ZoomAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "zoom"},
-			Value: fmt.Sprintf("%v", *m.ZoomAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "zoom"},
+			Value: fmt.Sprintf("%v", *m.ZoomAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Rot != nil {

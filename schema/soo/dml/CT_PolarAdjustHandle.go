@@ -34,28 +34,40 @@ func NewCT_PolarAdjustHandle() *CT_PolarAdjustHandle {
 
 func (m *CT_PolarAdjustHandle) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.GdRefRAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "gdRefR"},
-			Value: fmt.Sprintf("%v", *m.GdRefRAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "gdRefR"},
+			Value: fmt.Sprintf("%v", *m.GdRefRAttr),
+		})
 	}
 	if m.MinRAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minR"},
-			Value: fmt.Sprintf("%v", *m.MinRAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minR"},
+			Value: fmt.Sprintf("%v", *m.MinRAttr),
+		})
 	}
 	if m.MaxRAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxR"},
-			Value: fmt.Sprintf("%v", *m.MaxRAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxR"},
+			Value: fmt.Sprintf("%v", *m.MaxRAttr),
+		})
 	}
 	if m.GdRefAngAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "gdRefAng"},
-			Value: fmt.Sprintf("%v", *m.GdRefAngAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "gdRefAng"},
+			Value: fmt.Sprintf("%v", *m.GdRefAngAttr),
+		})
 	}
 	if m.MinAngAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minAng"},
-			Value: fmt.Sprintf("%v", *m.MinAngAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minAng"},
+			Value: fmt.Sprintf("%v", *m.MinAngAttr),
+		})
 	}
 	if m.MaxAngAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxAng"},
-			Value: fmt.Sprintf("%v", *m.MaxAngAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxAng"},
+			Value: fmt.Sprintf("%v", *m.MaxAngAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sepos := xml.StartElement{Name: xml.Name{Local: "a:pos"}}

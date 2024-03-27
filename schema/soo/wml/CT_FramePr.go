@@ -64,24 +64,34 @@ func (m *CT_FramePr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.LinesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:lines"},
-			Value: fmt.Sprintf("%v", *m.LinesAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:lines"},
+			Value: fmt.Sprintf("%v", *m.LinesAttr),
+		})
 	}
 	if m.WAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:w"},
-			Value: fmt.Sprintf("%v", *m.WAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:w"},
+			Value: fmt.Sprintf("%v", *m.WAttr),
+		})
 	}
 	if m.HAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:h"},
-			Value: fmt.Sprintf("%v", *m.HAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:h"},
+			Value: fmt.Sprintf("%v", *m.HAttr),
+		})
 	}
 	if m.VSpaceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:vSpace"},
-			Value: fmt.Sprintf("%v", *m.VSpaceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:vSpace"},
+			Value: fmt.Sprintf("%v", *m.VSpaceAttr),
+		})
 	}
 	if m.HSpaceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:hSpace"},
-			Value: fmt.Sprintf("%v", *m.HSpaceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:hSpace"},
+			Value: fmt.Sprintf("%v", *m.HSpaceAttr),
+		})
 	}
 	if m.WrapAttr != ST_WrapUnset {
 		attr, err := m.WrapAttr.MarshalXMLAttr(xml.Name{Local: "w:wrap"})
@@ -105,8 +115,10 @@ func (m *CT_FramePr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.XAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:x"},
-			Value: fmt.Sprintf("%v", *m.XAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:x"},
+			Value: fmt.Sprintf("%v", *m.XAttr),
+		})
 	}
 	if m.XAlignAttr != sharedTypes.ST_XAlignUnset {
 		attr, err := m.XAlignAttr.MarshalXMLAttr(xml.Name{Local: "w:xAlign"})
@@ -116,8 +128,10 @@ func (m *CT_FramePr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.YAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:y"},
-			Value: fmt.Sprintf("%v", *m.YAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:y"},
+			Value: fmt.Sprintf("%v", *m.YAttr),
+		})
 	}
 	if m.YAlignAttr != sharedTypes.ST_YAlignUnset {
 		attr, err := m.YAlignAttr.MarshalXMLAttr(xml.Name{Local: "w:yAlign"})
@@ -134,8 +148,10 @@ func (m *CT_FramePr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.AnchorLockAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:anchorLock"},
-			Value: fmt.Sprintf("%v", *m.AnchorLockAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:anchorLock"},
+			Value: fmt.Sprintf("%v", *m.AnchorLockAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

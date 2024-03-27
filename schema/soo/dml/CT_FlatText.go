@@ -25,8 +25,10 @@ func NewCT_FlatText() *CT_FlatText {
 
 func (m *CT_FlatText) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ZAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "z"},
-			Value: fmt.Sprintf("%v", *m.ZAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "z"},
+			Value: fmt.Sprintf("%v", *m.ZAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

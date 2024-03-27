@@ -32,16 +32,22 @@ func NewCT_LvlLegacy() *CT_LvlLegacy {
 
 func (m *CT_LvlLegacy) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.LegacyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:legacy"},
-			Value: fmt.Sprintf("%v", *m.LegacyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:legacy"},
+			Value: fmt.Sprintf("%v", *m.LegacyAttr),
+		})
 	}
 	if m.LegacySpaceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:legacySpace"},
-			Value: fmt.Sprintf("%v", *m.LegacySpaceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:legacySpace"},
+			Value: fmt.Sprintf("%v", *m.LegacySpaceAttr),
+		})
 	}
 	if m.LegacyIndentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:legacyIndent"},
-			Value: fmt.Sprintf("%v", *m.LegacyIndentAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:legacyIndent"},
+			Value: fmt.Sprintf("%v", *m.LegacyIndentAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

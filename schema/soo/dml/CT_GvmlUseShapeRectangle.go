@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_GvmlUseShapeRectangle struct {
-}
+type CT_GvmlUseShapeRectangle struct{}
 
 func NewCT_GvmlUseShapeRectangle() *CT_GvmlUseShapeRectangle {
 	ret := &CT_GvmlUseShapeRectangle{}

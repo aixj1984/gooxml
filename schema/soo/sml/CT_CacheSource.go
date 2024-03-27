@@ -43,8 +43,10 @@ func (m *CT_CacheSource) MarshalXML(e *xml.Encoder, start xml.StartElement) erro
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.ConnectionIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "connectionId"},
-			Value: fmt.Sprintf("%v", *m.ConnectionIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "connectionId"},
+			Value: fmt.Sprintf("%v", *m.ConnectionIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.WorksheetSource != nil {

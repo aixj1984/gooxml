@@ -28,8 +28,10 @@ func NewCT_TblWidth() *CT_TblWidth {
 
 func (m *CT_TblWidth) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.WAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:w"},
-			Value: fmt.Sprintf("%v", *m.WAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:w"},
+			Value: fmt.Sprintf("%v", *m.WAttr),
+		})
 	}
 	if m.TypeAttr != ST_TblWidthUnset {
 		attr, err := m.TypeAttr.MarshalXMLAttr(xml.Name{Local: "w:type"})

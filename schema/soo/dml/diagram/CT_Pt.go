@@ -33,8 +33,10 @@ func NewCT_Pt() *CT_Pt {
 }
 
 func (m *CT_Pt) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "modelId"},
-		Value: fmt.Sprintf("%v", m.ModelIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "modelId"},
+		Value: fmt.Sprintf("%v", m.ModelIdAttr),
+	})
 	if m.TypeAttr != ST_PtTypeUnset {
 		attr, err := m.TypeAttr.MarshalXMLAttr(xml.Name{Local: "type"})
 		if err != nil {
@@ -43,8 +45,10 @@ func (m *CT_Pt) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.CxnIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cxnId"},
-			Value: fmt.Sprintf("%v", *m.CxnIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cxnId"},
+			Value: fmt.Sprintf("%v", *m.CxnIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.PrSet != nil {

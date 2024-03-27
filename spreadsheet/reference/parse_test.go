@@ -72,30 +72,42 @@ func TestParseCellRangeReference(t *testing.T) {
 		ExpTo    reference.CellReference
 		HasError bool
 	}{
-		{"A1:B2",
+		{
+			"A1:B2",
 			reference.CellReference{RowIdx: 1, ColumnIdx: 0, Column: "A"},
 			reference.CellReference{RowIdx: 2, ColumnIdx: 1, Column: "B"},
-			false},
-		{"$A1:B$2",
+			false,
+		},
+		{
+			"$A1:B$2",
 			reference.CellReference{RowIdx: 1, ColumnIdx: 0, Column: "A", AbsoluteColumn: true},
 			reference.CellReference{RowIdx: 2, ColumnIdx: 1, Column: "B", AbsoluteRow: true},
-			false},
-		{"A1",
+			false,
+		},
+		{
+			"A1",
 			reference.CellReference{},
 			reference.CellReference{},
-			true},
-		{"A1:",
+			true,
+		},
+		{
+			"A1:",
 			reference.CellReference{},
 			reference.CellReference{},
-			true},
-		{"A1:A",
+			true,
+		},
+		{
+			"A1:A",
 			reference.CellReference{},
 			reference.CellReference{},
-			true},
-		{"ABC:BAC",
+			true,
+		},
+		{
+			"ABC:BAC",
 			reference.CellReference{},
 			reference.CellReference{},
-			true},
+			true,
+		},
 	}
 
 	for _, tc := range td {

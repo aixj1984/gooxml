@@ -35,16 +35,22 @@ func NewCT_Pane() *CT_Pane {
 
 func (m *CT_Pane) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.XSplitAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xSplit"},
-			Value: fmt.Sprintf("%v", *m.XSplitAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "xSplit"},
+			Value: fmt.Sprintf("%v", *m.XSplitAttr),
+		})
 	}
 	if m.YSplitAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ySplit"},
-			Value: fmt.Sprintf("%v", *m.YSplitAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ySplit"},
+			Value: fmt.Sprintf("%v", *m.YSplitAttr),
+		})
 	}
 	if m.TopLeftCellAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "topLeftCell"},
-			Value: fmt.Sprintf("%v", *m.TopLeftCellAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "topLeftCell"},
+			Value: fmt.Sprintf("%v", *m.TopLeftCellAttr),
+		})
 	}
 	if m.ActivePaneAttr != ST_PaneUnset {
 		attr, err := m.ActivePaneAttr.MarshalXMLAttr(xml.Name{Local: "activePane"})

@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type MESH struct {
-}
+type MESH struct{}
 
 func NewMESH() *MESH {
 	ret := &MESH{}

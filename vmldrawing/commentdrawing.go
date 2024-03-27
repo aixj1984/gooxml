@@ -51,7 +51,7 @@ func NewCommentShape(col, row int64) *vml.Shape {
 	shape.StyleAttr = gooxml.String("position:absolute;margin-left:80pt;margin-top:2pt;width:104pt;height:76pt;z-index:1;visibility:hidden")
 	shape.FillcolorAttr = gooxml.String("#fbf6d6")
 	shape.StrokecolorAttr = gooxml.String("#edeaa1")
-	//shape.InsetmodeAttr = vml.OfcST_InsetModeAuto
+	// shape.InsetmodeAttr = vml.OfcST_InsetModeAuto
 
 	fill := vml.NewEG_ShapeElements()
 	fill.Fill = vml.NewFill()

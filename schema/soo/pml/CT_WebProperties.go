@@ -46,28 +46,40 @@ func NewCT_WebProperties() *CT_WebProperties {
 
 func (m *CT_WebProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ShowAnimationAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showAnimation"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowAnimationAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showAnimation"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowAnimationAttr)),
+		})
 	}
 	if m.ResizeGraphicsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "resizeGraphics"},
-			Value: fmt.Sprintf("%d", b2i(*m.ResizeGraphicsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "resizeGraphics"},
+			Value: fmt.Sprintf("%d", b2i(*m.ResizeGraphicsAttr)),
+		})
 	}
 	if m.AllowPngAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "allowPng"},
-			Value: fmt.Sprintf("%d", b2i(*m.AllowPngAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "allowPng"},
+			Value: fmt.Sprintf("%d", b2i(*m.AllowPngAttr)),
+		})
 	}
 	if m.RelyOnVmlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "relyOnVml"},
-			Value: fmt.Sprintf("%d", b2i(*m.RelyOnVmlAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "relyOnVml"},
+			Value: fmt.Sprintf("%d", b2i(*m.RelyOnVmlAttr)),
+		})
 	}
 	if m.OrganizeInFoldersAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "organizeInFolders"},
-			Value: fmt.Sprintf("%d", b2i(*m.OrganizeInFoldersAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "organizeInFolders"},
+			Value: fmt.Sprintf("%d", b2i(*m.OrganizeInFoldersAttr)),
+		})
 	}
 	if m.UseLongFilenamesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "useLongFilenames"},
-			Value: fmt.Sprintf("%d", b2i(*m.UseLongFilenamesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "useLongFilenames"},
+			Value: fmt.Sprintf("%d", b2i(*m.UseLongFilenamesAttr)),
+		})
 	}
 	if m.ImgSzAttr != ST_WebScreenSizeUnset {
 		attr, err := m.ImgSzAttr.MarshalXMLAttr(xml.Name{Local: "imgSz"})
@@ -77,8 +89,10 @@ func (m *CT_WebProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) er
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.EncodingAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "encoding"},
-			Value: fmt.Sprintf("%v", *m.EncodingAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "encoding"},
+			Value: fmt.Sprintf("%v", *m.EncodingAttr),
+		})
 	}
 	if m.ClrAttr != ST_WebColorTypeUnset {
 		attr, err := m.ClrAttr.MarshalXMLAttr(xml.Name{Local: "clr"})

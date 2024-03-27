@@ -37,20 +37,32 @@ func NewCT_WritingStyle() *CT_WritingStyle {
 }
 
 func (m *CT_WritingStyle) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:lang"},
-		Value: fmt.Sprintf("%v", m.LangAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:vendorID"},
-		Value: fmt.Sprintf("%v", m.VendorIDAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:dllVersion"},
-		Value: fmt.Sprintf("%v", m.DllVersionAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:lang"},
+		Value: fmt.Sprintf("%v", m.LangAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:vendorID"},
+		Value: fmt.Sprintf("%v", m.VendorIDAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:dllVersion"},
+		Value: fmt.Sprintf("%v", m.DllVersionAttr),
+	})
 	if m.NlCheckAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:nlCheck"},
-			Value: fmt.Sprintf("%v", *m.NlCheckAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:nlCheck"},
+			Value: fmt.Sprintf("%v", *m.NlCheckAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:checkStyle"},
-		Value: fmt.Sprintf("%v", m.CheckStyleAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:appName"},
-		Value: fmt.Sprintf("%v", m.AppNameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:checkStyle"},
+		Value: fmt.Sprintf("%v", m.CheckStyleAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:appName"},
+		Value: fmt.Sprintf("%v", m.AppNameAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

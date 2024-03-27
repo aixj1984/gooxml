@@ -40,19 +40,27 @@ func (m *CT_PermStart) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.EdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:ed"},
-			Value: fmt.Sprintf("%v", *m.EdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:ed"},
+			Value: fmt.Sprintf("%v", *m.EdAttr),
+		})
 	}
 	if m.ColFirstAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:colFirst"},
-			Value: fmt.Sprintf("%v", *m.ColFirstAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:colFirst"},
+			Value: fmt.Sprintf("%v", *m.ColFirstAttr),
+		})
 	}
 	if m.ColLastAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:colLast"},
-			Value: fmt.Sprintf("%v", *m.ColLastAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:colLast"},
+			Value: fmt.Sprintf("%v", *m.ColLastAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.DisplacedByCustomXmlAttr != ST_DisplacedByCustomXmlUnset {
 		attr, err := m.DisplacedByCustomXmlAttr.MarshalXMLAttr(xml.Name{Local: "w:displacedByCustomXml"})
 		if err != nil {

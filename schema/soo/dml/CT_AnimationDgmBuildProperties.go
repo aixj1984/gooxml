@@ -27,12 +27,16 @@ func NewCT_AnimationDgmBuildProperties() *CT_AnimationDgmBuildProperties {
 
 func (m *CT_AnimationDgmBuildProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.BldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bld"},
-			Value: fmt.Sprintf("%v", *m.BldAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bld"},
+			Value: fmt.Sprintf("%v", *m.BldAttr),
+		})
 	}
 	if m.RevAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rev"},
-			Value: fmt.Sprintf("%d", b2i(*m.RevAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rev"},
+			Value: fmt.Sprintf("%d", b2i(*m.RevAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

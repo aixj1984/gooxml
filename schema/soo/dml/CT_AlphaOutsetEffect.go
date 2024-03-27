@@ -25,8 +25,10 @@ func NewCT_AlphaOutsetEffect() *CT_AlphaOutsetEffect {
 
 func (m *CT_AlphaOutsetEffect) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RadAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rad"},
-			Value: fmt.Sprintf("%v", *m.RadAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rad"},
+			Value: fmt.Sprintf("%v", *m.RadAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

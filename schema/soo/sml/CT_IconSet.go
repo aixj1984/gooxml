@@ -44,16 +44,22 @@ func (m *CT_IconSet) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ShowValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showValue"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowValueAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showValue"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowValueAttr)),
+		})
 	}
 	if m.PercentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "percent"},
-			Value: fmt.Sprintf("%d", b2i(*m.PercentAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "percent"},
+			Value: fmt.Sprintf("%d", b2i(*m.PercentAttr)),
+		})
 	}
 	if m.ReverseAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "reverse"},
-			Value: fmt.Sprintf("%d", b2i(*m.ReverseAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "reverse"},
+			Value: fmt.Sprintf("%d", b2i(*m.ReverseAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	secfvo := xml.StartElement{Name: xml.Name{Local: "ma:cfvo"}}

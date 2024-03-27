@@ -26,8 +26,10 @@ func NewCT_EightDirectionTransition() *CT_EightDirectionTransition {
 
 func (m *CT_EightDirectionTransition) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DirAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dir"},
-			Value: fmt.Sprintf("%v", *m.DirAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dir"},
+			Value: fmt.Sprintf("%v", *m.DirAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

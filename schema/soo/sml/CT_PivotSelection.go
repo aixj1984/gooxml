@@ -70,24 +70,34 @@ func (m *CT_PivotSelection) MarshalXML(e *xml.Encoder, start xml.StartElement) e
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ShowHeaderAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showHeader"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowHeaderAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showHeader"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowHeaderAttr)),
+		})
 	}
 	if m.LabelAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "label"},
-			Value: fmt.Sprintf("%d", b2i(*m.LabelAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "label"},
+			Value: fmt.Sprintf("%d", b2i(*m.LabelAttr)),
+		})
 	}
 	if m.DataAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "data"},
-			Value: fmt.Sprintf("%d", b2i(*m.DataAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "data"},
+			Value: fmt.Sprintf("%d", b2i(*m.DataAttr)),
+		})
 	}
 	if m.ExtendableAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "extendable"},
-			Value: fmt.Sprintf("%d", b2i(*m.ExtendableAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "extendable"},
+			Value: fmt.Sprintf("%d", b2i(*m.ExtendableAttr)),
+		})
 	}
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	if m.AxisAttr != ST_AxisUnset {
 		attr, err := m.AxisAttr.MarshalXMLAttr(xml.Name{Local: "axis"})
@@ -97,44 +107,64 @@ func (m *CT_PivotSelection) MarshalXML(e *xml.Encoder, start xml.StartElement) e
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.DimensionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dimension"},
-			Value: fmt.Sprintf("%v", *m.DimensionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dimension"},
+			Value: fmt.Sprintf("%v", *m.DimensionAttr),
+		})
 	}
 	if m.StartAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "start"},
-			Value: fmt.Sprintf("%v", *m.StartAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "start"},
+			Value: fmt.Sprintf("%v", *m.StartAttr),
+		})
 	}
 	if m.MinAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "min"},
-			Value: fmt.Sprintf("%v", *m.MinAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "min"},
+			Value: fmt.Sprintf("%v", *m.MinAttr),
+		})
 	}
 	if m.MaxAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "max"},
-			Value: fmt.Sprintf("%v", *m.MaxAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "max"},
+			Value: fmt.Sprintf("%v", *m.MaxAttr),
+		})
 	}
 	if m.ActiveRowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "activeRow"},
-			Value: fmt.Sprintf("%v", *m.ActiveRowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "activeRow"},
+			Value: fmt.Sprintf("%v", *m.ActiveRowAttr),
+		})
 	}
 	if m.ActiveColAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "activeCol"},
-			Value: fmt.Sprintf("%v", *m.ActiveColAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "activeCol"},
+			Value: fmt.Sprintf("%v", *m.ActiveColAttr),
+		})
 	}
 	if m.PreviousRowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "previousRow"},
-			Value: fmt.Sprintf("%v", *m.PreviousRowAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "previousRow"},
+			Value: fmt.Sprintf("%v", *m.PreviousRowAttr),
+		})
 	}
 	if m.PreviousColAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "previousCol"},
-			Value: fmt.Sprintf("%v", *m.PreviousColAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "previousCol"},
+			Value: fmt.Sprintf("%v", *m.PreviousColAttr),
+		})
 	}
 	if m.ClickAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "click"},
-			Value: fmt.Sprintf("%v", *m.ClickAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "click"},
+			Value: fmt.Sprintf("%v", *m.ClickAttr),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	sepivotArea := xml.StartElement{Name: xml.Name{Local: "ma:pivotArea"}}

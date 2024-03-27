@@ -29,8 +29,10 @@ func NewOfcCT_Ink() *OfcCT_Ink {
 
 func (m *OfcCT_Ink) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.IAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "i"},
-			Value: fmt.Sprintf("%v", *m.IAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "i"},
+			Value: fmt.Sprintf("%v", *m.IAttr),
+		})
 	}
 	if m.AnnotationAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.AnnotationAttr.MarshalXMLAttr(xml.Name{Local: "annotation"})
@@ -40,8 +42,10 @@ func (m *OfcCT_Ink) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ContentTypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "contentType"},
-			Value: fmt.Sprintf("%v", *m.ContentTypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "contentType"},
+			Value: fmt.Sprintf("%v", *m.ContentTypeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

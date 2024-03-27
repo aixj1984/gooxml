@@ -35,10 +35,12 @@ func (m Marker) SetSymbol(s crt.ST_MarkerStyle) {
 		m.x.Symbol.ValAttr = s
 	}
 }
+
 func (m Marker) SetSize(sz uint8) {
 	m.x.Size = crt.NewCT_MarkerSize()
 	m.x.Size.ValAttr = &sz
 }
+
 func (m Marker) Properties() drawing.ShapeProperties {
 	if m.x.SpPr == nil {
 		m.x.SpPr = dml.NewCT_ShapeProperties()

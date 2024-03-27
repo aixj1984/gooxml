@@ -30,12 +30,16 @@ func NewCT_BookmarkRange() *CT_BookmarkRange {
 
 func (m *CT_BookmarkRange) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ColFirstAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:colFirst"},
-			Value: fmt.Sprintf("%v", *m.ColFirstAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:colFirst"},
+			Value: fmt.Sprintf("%v", *m.ColFirstAttr),
+		})
 	}
 	if m.ColLastAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:colLast"},
-			Value: fmt.Sprintf("%v", *m.ColLastAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:colLast"},
+			Value: fmt.Sprintf("%v", *m.ColLastAttr),
+		})
 	}
 	if m.DisplacedByCustomXmlAttr != ST_DisplacedByCustomXmlUnset {
 		attr, err := m.DisplacedByCustomXmlAttr.MarshalXMLAttr(xml.Name{Local: "w:displacedByCustomXml"})
@@ -44,8 +48,10 @@ func (m *CT_BookmarkRange) MarshalXML(e *xml.Encoder, start xml.StartElement) er
 		}
 		start.Attr = append(start.Attr, attr)
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

@@ -42,8 +42,10 @@ func NewCT_OleObject() *CT_OleObject {
 
 func (m *CT_OleObject) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ProgIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "progId"},
-			Value: fmt.Sprintf("%v", *m.ProgIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "progId"},
+			Value: fmt.Sprintf("%v", *m.ProgIdAttr),
+		})
 	}
 	if m.DvAspectAttr != ST_DvAspectUnset {
 		attr, err := m.DvAspectAttr.MarshalXMLAttr(xml.Name{Local: "dvAspect"})
@@ -53,8 +55,10 @@ func (m *CT_OleObject) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.LinkAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "link"},
-			Value: fmt.Sprintf("%v", *m.LinkAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "link"},
+			Value: fmt.Sprintf("%v", *m.LinkAttr),
+		})
 	}
 	if m.OleUpdateAttr != ST_OleUpdateUnset {
 		attr, err := m.OleUpdateAttr.MarshalXMLAttr(xml.Name{Local: "oleUpdate"})
@@ -64,14 +68,20 @@ func (m *CT_OleObject) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.AutoLoadAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoLoad"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoLoadAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoLoad"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoLoadAttr)),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "shapeId"},
-		Value: fmt.Sprintf("%v", m.ShapeIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "shapeId"},
+		Value: fmt.Sprintf("%v", m.ShapeIdAttr),
+	})
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ObjectPr != nil {

@@ -29,20 +29,28 @@ func NewOfcCT_ColorMenu() *OfcCT_ColorMenu {
 
 func (m *OfcCT_ColorMenu) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.StrokecolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "strokecolor"},
-			Value: fmt.Sprintf("%v", *m.StrokecolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "strokecolor"},
+			Value: fmt.Sprintf("%v", *m.StrokecolorAttr),
+		})
 	}
 	if m.FillcolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fillcolor"},
-			Value: fmt.Sprintf("%v", *m.FillcolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fillcolor"},
+			Value: fmt.Sprintf("%v", *m.FillcolorAttr),
+		})
 	}
 	if m.ShadowcolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "shadowcolor"},
-			Value: fmt.Sprintf("%v", *m.ShadowcolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "shadowcolor"},
+			Value: fmt.Sprintf("%v", *m.ShadowcolorAttr),
+		})
 	}
 	if m.ExtrusioncolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "extrusioncolor"},
-			Value: fmt.Sprintf("%v", *m.ExtrusioncolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "extrusioncolor"},
+			Value: fmt.Sprintf("%v", *m.ExtrusioncolorAttr),
+		})
 	}
 	if m.ExtAttr != ST_ExtUnset {
 		attr, err := m.ExtAttr.MarshalXMLAttr(xml.Name{Local: "ext"})

@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type SimpleLiteral struct {
-}
+type SimpleLiteral struct{}
 
 func NewSimpleLiteral() *SimpleLiteral {
 	ret := &SimpleLiteral{}

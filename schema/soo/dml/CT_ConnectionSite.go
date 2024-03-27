@@ -28,8 +28,10 @@ func NewCT_ConnectionSite() *CT_ConnectionSite {
 }
 
 func (m *CT_ConnectionSite) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ang"},
-		Value: fmt.Sprintf("%v", m.AngAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "ang"},
+		Value: fmt.Sprintf("%v", m.AngAttr),
+	})
 	e.EncodeToken(start)
 	sepos := xml.StartElement{Name: xml.Name{Local: "a:pos"}}
 	e.EncodeElement(m.Pos, sepos)

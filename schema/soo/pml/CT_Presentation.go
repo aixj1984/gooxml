@@ -84,48 +84,70 @@ func NewCT_Presentation() *CT_Presentation {
 
 func (m *CT_Presentation) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ServerZoomAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "serverZoom"},
-			Value: fmt.Sprintf("%v", *m.ServerZoomAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "serverZoom"},
+			Value: fmt.Sprintf("%v", *m.ServerZoomAttr),
+		})
 	}
 	if m.FirstSlideNumAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "firstSlideNum"},
-			Value: fmt.Sprintf("%v", *m.FirstSlideNumAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "firstSlideNum"},
+			Value: fmt.Sprintf("%v", *m.FirstSlideNumAttr),
+		})
 	}
 	if m.ShowSpecialPlsOnTitleSldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showSpecialPlsOnTitleSld"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowSpecialPlsOnTitleSldAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showSpecialPlsOnTitleSld"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowSpecialPlsOnTitleSldAttr)),
+		})
 	}
 	if m.RtlAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rtl"},
-			Value: fmt.Sprintf("%d", b2i(*m.RtlAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rtl"},
+			Value: fmt.Sprintf("%d", b2i(*m.RtlAttr)),
+		})
 	}
 	if m.RemovePersonalInfoOnSaveAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "removePersonalInfoOnSave"},
-			Value: fmt.Sprintf("%d", b2i(*m.RemovePersonalInfoOnSaveAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "removePersonalInfoOnSave"},
+			Value: fmt.Sprintf("%d", b2i(*m.RemovePersonalInfoOnSaveAttr)),
+		})
 	}
 	if m.CompatModeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "compatMode"},
-			Value: fmt.Sprintf("%d", b2i(*m.CompatModeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "compatMode"},
+			Value: fmt.Sprintf("%d", b2i(*m.CompatModeAttr)),
+		})
 	}
 	if m.StrictFirstAndLastCharsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "strictFirstAndLastChars"},
-			Value: fmt.Sprintf("%d", b2i(*m.StrictFirstAndLastCharsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "strictFirstAndLastChars"},
+			Value: fmt.Sprintf("%d", b2i(*m.StrictFirstAndLastCharsAttr)),
+		})
 	}
 	if m.EmbedTrueTypeFontsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "embedTrueTypeFonts"},
-			Value: fmt.Sprintf("%d", b2i(*m.EmbedTrueTypeFontsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "embedTrueTypeFonts"},
+			Value: fmt.Sprintf("%d", b2i(*m.EmbedTrueTypeFontsAttr)),
+		})
 	}
 	if m.SaveSubsetFontsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "saveSubsetFonts"},
-			Value: fmt.Sprintf("%d", b2i(*m.SaveSubsetFontsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "saveSubsetFonts"},
+			Value: fmt.Sprintf("%d", b2i(*m.SaveSubsetFontsAttr)),
+		})
 	}
 	if m.AutoCompressPicturesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoCompressPictures"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoCompressPicturesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoCompressPictures"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoCompressPicturesAttr)),
+		})
 	}
 	if m.BookmarkIdSeedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bookmarkIdSeed"},
-			Value: fmt.Sprintf("%v", *m.BookmarkIdSeedAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bookmarkIdSeed"},
+			Value: fmt.Sprintf("%v", *m.BookmarkIdSeedAttr),
+		})
 	}
 	if m.ConformanceAttr != sharedTypes.ST_ConformanceClassUnset {
 		attr, err := m.ConformanceAttr.MarshalXMLAttr(xml.Name{Local: "conformance"})

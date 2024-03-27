@@ -41,32 +41,46 @@ func NewCT_WebPublishItem() *CT_WebPublishItem {
 }
 
 func (m *CT_WebPublishItem) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "divId"},
-		Value: fmt.Sprintf("%v", m.DivIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "divId"},
+		Value: fmt.Sprintf("%v", m.DivIdAttr),
+	})
 	attr, err := m.SourceTypeAttr.MarshalXMLAttr(xml.Name{Local: "sourceType"})
 	if err != nil {
 		return err
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.SourceRefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sourceRef"},
-			Value: fmt.Sprintf("%v", *m.SourceRefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sourceRef"},
+			Value: fmt.Sprintf("%v", *m.SourceRefAttr),
+		})
 	}
 	if m.SourceObjectAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sourceObject"},
-			Value: fmt.Sprintf("%v", *m.SourceObjectAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sourceObject"},
+			Value: fmt.Sprintf("%v", *m.SourceObjectAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "destinationFile"},
-		Value: fmt.Sprintf("%v", m.DestinationFileAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "destinationFile"},
+		Value: fmt.Sprintf("%v", m.DestinationFileAttr),
+	})
 	if m.TitleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "title"},
-			Value: fmt.Sprintf("%v", *m.TitleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "title"},
+			Value: fmt.Sprintf("%v", *m.TitleAttr),
+		})
 	}
 	if m.AutoRepublishAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "autoRepublish"},
-			Value: fmt.Sprintf("%d", b2i(*m.AutoRepublishAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "autoRepublish"},
+			Value: fmt.Sprintf("%d", b2i(*m.AutoRepublishAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

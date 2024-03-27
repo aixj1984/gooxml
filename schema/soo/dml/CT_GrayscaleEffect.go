@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_GrayscaleEffect struct {
-}
+type CT_GrayscaleEffect struct{}
 
 func NewCT_GrayscaleEffect() *CT_GrayscaleEffect {
 	ret := &CT_GrayscaleEffect{}

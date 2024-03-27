@@ -24,8 +24,10 @@ func NewCT_AlphaReplaceEffect() *CT_AlphaReplaceEffect {
 }
 
 func (m *CT_AlphaReplaceEffect) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "a"},
-		Value: fmt.Sprintf("%v", m.AAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "a"},
+		Value: fmt.Sprintf("%v", m.AAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

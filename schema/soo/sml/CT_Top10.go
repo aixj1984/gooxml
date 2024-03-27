@@ -33,18 +33,26 @@ func NewCT_Top10() *CT_Top10 {
 
 func (m *CT_Top10) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.TopAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "top"},
-			Value: fmt.Sprintf("%d", b2i(*m.TopAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "top"},
+			Value: fmt.Sprintf("%d", b2i(*m.TopAttr)),
+		})
 	}
 	if m.PercentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "percent"},
-			Value: fmt.Sprintf("%d", b2i(*m.PercentAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "percent"},
+			Value: fmt.Sprintf("%d", b2i(*m.PercentAttr)),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "val"},
-		Value: fmt.Sprintf("%v", m.ValAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "val"},
+		Value: fmt.Sprintf("%v", m.ValAttr),
+	})
 	if m.FilterValAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "filterVal"},
-			Value: fmt.Sprintf("%v", *m.FilterValAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "filterVal"},
+			Value: fmt.Sprintf("%v", *m.FilterValAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

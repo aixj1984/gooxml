@@ -39,19 +39,29 @@ func NewCT_LevelGroup() *CT_LevelGroup {
 }
 
 func (m *CT_LevelGroup) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueName"},
-		Value: fmt.Sprintf("%v", m.UniqueNameAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "caption"},
-		Value: fmt.Sprintf("%v", m.CaptionAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "uniqueName"},
+		Value: fmt.Sprintf("%v", m.UniqueNameAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "caption"},
+		Value: fmt.Sprintf("%v", m.CaptionAttr),
+	})
 	if m.UniqueParentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueParent"},
-			Value: fmt.Sprintf("%v", *m.UniqueParentAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "uniqueParent"},
+			Value: fmt.Sprintf("%v", *m.UniqueParentAttr),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	segroupMembers := xml.StartElement{Name: xml.Name{Local: "ma:groupMembers"}}

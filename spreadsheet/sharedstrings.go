@@ -22,8 +22,10 @@ type SharedStrings struct {
 
 // NewSharedStrings constructs a new Shared Strings table.
 func NewSharedStrings() SharedStrings {
-	return SharedStrings{x: sml.NewSst(),
-		cachedIDs: make(map[string]int)}
+	return SharedStrings{
+		x:         sml.NewSst(),
+		cachedIDs: make(map[string]int),
+	}
 }
 
 // X returns the inner wrapped XML type.

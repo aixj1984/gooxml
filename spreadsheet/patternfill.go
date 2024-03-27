@@ -36,10 +36,12 @@ func (f PatternFill) SetPattern(p sml.ST_PatternType) {
 func (f PatternFill) ClearBgColor() {
 	f.x.BgColor = nil
 }
+
 func (f PatternFill) SetBgColor(c color.Color) {
 	f.x.BgColor = sml.NewCT_Color()
 	f.x.BgColor.RgbAttr = c.AsRGBAString()
 }
+
 func (f PatternFill) ClearFgColor() {
 	f.x.FgColor = nil
 }

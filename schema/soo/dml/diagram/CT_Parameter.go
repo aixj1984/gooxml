@@ -31,8 +31,10 @@ func (m *CT_Parameter) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		return err
 	}
 	start.Attr = append(start.Attr, attr)
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "val"},
-		Value: fmt.Sprintf("%v", m.ValAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "val"},
+		Value: fmt.Sprintf("%v", m.ValAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

@@ -50,8 +50,10 @@ func (m *CT_ConditionalFormat) MarshalXML(e *xml.Encoder, start xml.StartElement
 		}
 		start.Attr = append(start.Attr, attr)
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "priority"},
-		Value: fmt.Sprintf("%v", m.PriorityAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "priority"},
+		Value: fmt.Sprintf("%v", m.PriorityAttr),
+	})
 	e.EncodeToken(start)
 	sepivotAreas := xml.StartElement{Name: xml.Name{Local: "ma:pivotAreas"}}
 	e.EncodeElement(m.PivotAreas, sepivotAreas)

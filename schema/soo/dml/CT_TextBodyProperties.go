@@ -54,12 +54,16 @@ func NewCT_TextBodyProperties() *CT_TextBodyProperties {
 
 func (m *CT_TextBodyProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RotAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rot"},
-			Value: fmt.Sprintf("%v", *m.RotAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rot"},
+			Value: fmt.Sprintf("%v", *m.RotAttr),
+		})
 	}
 	if m.SpcFirstLastParaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spcFirstLastPara"},
-			Value: fmt.Sprintf("%d", b2i(*m.SpcFirstLastParaAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spcFirstLastPara"},
+			Value: fmt.Sprintf("%d", b2i(*m.SpcFirstLastParaAttr)),
+		})
 	}
 	if m.VertOverflowAttr != ST_TextVertOverflowTypeUnset {
 		attr, err := m.VertOverflowAttr.MarshalXMLAttr(xml.Name{Local: "vertOverflow"})
@@ -90,36 +94,52 @@ func (m *CT_TextBodyProperties) MarshalXML(e *xml.Encoder, start xml.StartElemen
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.LInsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lIns"},
-			Value: fmt.Sprintf("%v", *m.LInsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lIns"},
+			Value: fmt.Sprintf("%v", *m.LInsAttr),
+		})
 	}
 	if m.TInsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tIns"},
-			Value: fmt.Sprintf("%v", *m.TInsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tIns"},
+			Value: fmt.Sprintf("%v", *m.TInsAttr),
+		})
 	}
 	if m.RInsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rIns"},
-			Value: fmt.Sprintf("%v", *m.RInsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rIns"},
+			Value: fmt.Sprintf("%v", *m.RInsAttr),
+		})
 	}
 	if m.BInsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "bIns"},
-			Value: fmt.Sprintf("%v", *m.BInsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "bIns"},
+			Value: fmt.Sprintf("%v", *m.BInsAttr),
+		})
 	}
 	if m.NumColAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "numCol"},
-			Value: fmt.Sprintf("%v", *m.NumColAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "numCol"},
+			Value: fmt.Sprintf("%v", *m.NumColAttr),
+		})
 	}
 	if m.SpcColAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "spcCol"},
-			Value: fmt.Sprintf("%v", *m.SpcColAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "spcCol"},
+			Value: fmt.Sprintf("%v", *m.SpcColAttr),
+		})
 	}
 	if m.RtlColAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rtlCol"},
-			Value: fmt.Sprintf("%d", b2i(*m.RtlColAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rtlCol"},
+			Value: fmt.Sprintf("%d", b2i(*m.RtlColAttr)),
+		})
 	}
 	if m.FromWordArtAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fromWordArt"},
-			Value: fmt.Sprintf("%d", b2i(*m.FromWordArtAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fromWordArt"},
+			Value: fmt.Sprintf("%d", b2i(*m.FromWordArtAttr)),
+		})
 	}
 	if m.AnchorAttr != ST_TextAnchoringTypeUnset {
 		attr, err := m.AnchorAttr.MarshalXMLAttr(xml.Name{Local: "anchor"})
@@ -129,20 +149,28 @@ func (m *CT_TextBodyProperties) MarshalXML(e *xml.Encoder, start xml.StartElemen
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.AnchorCtrAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "anchorCtr"},
-			Value: fmt.Sprintf("%d", b2i(*m.AnchorCtrAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "anchorCtr"},
+			Value: fmt.Sprintf("%d", b2i(*m.AnchorCtrAttr)),
+		})
 	}
 	if m.ForceAAAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "forceAA"},
-			Value: fmt.Sprintf("%d", b2i(*m.ForceAAAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "forceAA"},
+			Value: fmt.Sprintf("%d", b2i(*m.ForceAAAttr)),
+		})
 	}
 	if m.UprightAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "upright"},
-			Value: fmt.Sprintf("%d", b2i(*m.UprightAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "upright"},
+			Value: fmt.Sprintf("%d", b2i(*m.UprightAttr)),
+		})
 	}
 	if m.CompatLnSpcAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "compatLnSpc"},
-			Value: fmt.Sprintf("%d", b2i(*m.CompatLnSpcAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "compatLnSpc"},
+			Value: fmt.Sprintf("%d", b2i(*m.CompatLnSpcAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.PrstTxWarp != nil {

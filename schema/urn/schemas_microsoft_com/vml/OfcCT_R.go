@@ -30,8 +30,10 @@ func NewOfcCT_R() *OfcCT_R {
 }
 
 func (m *OfcCT_R) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-		Value: fmt.Sprintf("%v", m.IdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "id"},
+		Value: fmt.Sprintf("%v", m.IdAttr),
+	})
 	if m.TypeAttr != OfcST_RTypeUnset {
 		attr, err := m.TypeAttr.MarshalXMLAttr(xml.Name{Local: "type"})
 		if err != nil {
@@ -47,8 +49,10 @@ func (m *OfcCT_R) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.IdrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "idref"},
-			Value: fmt.Sprintf("%v", *m.IdrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "idref"},
+			Value: fmt.Sprintf("%v", *m.IdrefAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Proxy != nil {

@@ -45,12 +45,16 @@ func (m *OfcCT_Proxy) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.IdrefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "idref"},
-			Value: fmt.Sprintf("%v", *m.IdrefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "idref"},
+			Value: fmt.Sprintf("%v", *m.IdrefAttr),
+		})
 	}
 	if m.ConnectlocAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "connectloc"},
-			Value: fmt.Sprintf("%v", *m.ConnectlocAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "connectloc"},
+			Value: fmt.Sprintf("%v", *m.ConnectlocAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type W3CDTF struct {
-}
+type W3CDTF struct{}
 
 func NewW3CDTF() *W3CDTF {
 	ret := &W3CDTF{}

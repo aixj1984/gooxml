@@ -28,8 +28,10 @@ func NewCT_Vstream() *CT_Vstream {
 }
 
 func (m *CT_Vstream) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "version"},
-		Value: fmt.Sprintf("%v", m.VersionAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "version"},
+		Value: fmt.Sprintf("%v", m.VersionAttr),
+	})
 	e.EncodeElement(m.Content, start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

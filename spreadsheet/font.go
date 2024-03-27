@@ -39,6 +39,7 @@ func (f Font) SetBold(b bool) {
 		f.font.B = nil
 	}
 }
+
 func (f Font) SetItalic(b bool) {
 	if b {
 		f.font.I = []*sml.CT_BooleanProperty{{}}

@@ -25,8 +25,10 @@ func NewCT_XStringElement() *CT_XStringElement {
 }
 
 func (m *CT_XStringElement) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "v"},
-		Value: fmt.Sprintf("%v", m.VAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "v"},
+		Value: fmt.Sprintf("%v", m.VAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

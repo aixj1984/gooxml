@@ -28,16 +28,22 @@ func NewAG_RevData() *AG_RevData {
 
 func (m *AG_RevData) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rId"},
-			Value: fmt.Sprintf("%v", *m.RIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rId"},
+			Value: fmt.Sprintf("%v", *m.RIdAttr),
+		})
 	}
 	if m.UaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ua"},
-			Value: fmt.Sprintf("%d", b2i(*m.UaAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ua"},
+			Value: fmt.Sprintf("%d", b2i(*m.UaAttr)),
+		})
 	}
 	if m.RaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ra"},
-			Value: fmt.Sprintf("%d", b2i(*m.RaAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ra"},
+			Value: fmt.Sprintf("%d", b2i(*m.RaAttr)),
+		})
 	}
 	return nil
 }

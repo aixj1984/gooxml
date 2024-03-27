@@ -25,7 +25,6 @@ func (c RadarChartSeries) X() *crt.CT_RadarSer {
 
 // InitializeDefaults initializes an Radar series to the default values.
 func (c RadarChartSeries) InitializeDefaults() {
-
 }
 
 // SetText sets the series text.

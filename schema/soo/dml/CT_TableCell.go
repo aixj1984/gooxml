@@ -35,24 +35,34 @@ func NewCT_TableCell() *CT_TableCell {
 
 func (m *CT_TableCell) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RowSpanAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rowSpan"},
-			Value: fmt.Sprintf("%v", *m.RowSpanAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rowSpan"},
+			Value: fmt.Sprintf("%v", *m.RowSpanAttr),
+		})
 	}
 	if m.GridSpanAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "gridSpan"},
-			Value: fmt.Sprintf("%v", *m.GridSpanAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "gridSpan"},
+			Value: fmt.Sprintf("%v", *m.GridSpanAttr),
+		})
 	}
 	if m.HMergeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hMerge"},
-			Value: fmt.Sprintf("%d", b2i(*m.HMergeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hMerge"},
+			Value: fmt.Sprintf("%d", b2i(*m.HMergeAttr)),
+		})
 	}
 	if m.VMergeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "vMerge"},
-			Value: fmt.Sprintf("%d", b2i(*m.VMergeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "vMerge"},
+			Value: fmt.Sprintf("%d", b2i(*m.VMergeAttr)),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TxBody != nil {

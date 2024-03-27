@@ -55,64 +55,94 @@ func NewCT_WorkbookProtection() *CT_WorkbookProtection {
 
 func (m *CT_WorkbookProtection) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.WorkbookPasswordAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "workbookPassword"},
-			Value: fmt.Sprintf("%v", *m.WorkbookPasswordAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "workbookPassword"},
+			Value: fmt.Sprintf("%v", *m.WorkbookPasswordAttr),
+		})
 	}
 	if m.WorkbookPasswordCharacterSetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "workbookPasswordCharacterSet"},
-			Value: fmt.Sprintf("%v", *m.WorkbookPasswordCharacterSetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "workbookPasswordCharacterSet"},
+			Value: fmt.Sprintf("%v", *m.WorkbookPasswordCharacterSetAttr),
+		})
 	}
 	if m.RevisionsPasswordAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "revisionsPassword"},
-			Value: fmt.Sprintf("%v", *m.RevisionsPasswordAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "revisionsPassword"},
+			Value: fmt.Sprintf("%v", *m.RevisionsPasswordAttr),
+		})
 	}
 	if m.RevisionsPasswordCharacterSetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "revisionsPasswordCharacterSet"},
-			Value: fmt.Sprintf("%v", *m.RevisionsPasswordCharacterSetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "revisionsPasswordCharacterSet"},
+			Value: fmt.Sprintf("%v", *m.RevisionsPasswordCharacterSetAttr),
+		})
 	}
 	if m.LockStructureAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lockStructure"},
-			Value: fmt.Sprintf("%d", b2i(*m.LockStructureAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lockStructure"},
+			Value: fmt.Sprintf("%d", b2i(*m.LockStructureAttr)),
+		})
 	}
 	if m.LockWindowsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lockWindows"},
-			Value: fmt.Sprintf("%d", b2i(*m.LockWindowsAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lockWindows"},
+			Value: fmt.Sprintf("%d", b2i(*m.LockWindowsAttr)),
+		})
 	}
 	if m.LockRevisionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lockRevision"},
-			Value: fmt.Sprintf("%d", b2i(*m.LockRevisionAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lockRevision"},
+			Value: fmt.Sprintf("%d", b2i(*m.LockRevisionAttr)),
+		})
 	}
 	if m.RevisionsAlgorithmNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "revisionsAlgorithmName"},
-			Value: fmt.Sprintf("%v", *m.RevisionsAlgorithmNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "revisionsAlgorithmName"},
+			Value: fmt.Sprintf("%v", *m.RevisionsAlgorithmNameAttr),
+		})
 	}
 	if m.RevisionsHashValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "revisionsHashValue"},
-			Value: fmt.Sprintf("%v", *m.RevisionsHashValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "revisionsHashValue"},
+			Value: fmt.Sprintf("%v", *m.RevisionsHashValueAttr),
+		})
 	}
 	if m.RevisionsSaltValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "revisionsSaltValue"},
-			Value: fmt.Sprintf("%v", *m.RevisionsSaltValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "revisionsSaltValue"},
+			Value: fmt.Sprintf("%v", *m.RevisionsSaltValueAttr),
+		})
 	}
 	if m.RevisionsSpinCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "revisionsSpinCount"},
-			Value: fmt.Sprintf("%v", *m.RevisionsSpinCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "revisionsSpinCount"},
+			Value: fmt.Sprintf("%v", *m.RevisionsSpinCountAttr),
+		})
 	}
 	if m.WorkbookAlgorithmNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "workbookAlgorithmName"},
-			Value: fmt.Sprintf("%v", *m.WorkbookAlgorithmNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "workbookAlgorithmName"},
+			Value: fmt.Sprintf("%v", *m.WorkbookAlgorithmNameAttr),
+		})
 	}
 	if m.WorkbookHashValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "workbookHashValue"},
-			Value: fmt.Sprintf("%v", *m.WorkbookHashValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "workbookHashValue"},
+			Value: fmt.Sprintf("%v", *m.WorkbookHashValueAttr),
+		})
 	}
 	if m.WorkbookSaltValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "workbookSaltValue"},
-			Value: fmt.Sprintf("%v", *m.WorkbookSaltValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "workbookSaltValue"},
+			Value: fmt.Sprintf("%v", *m.WorkbookSaltValueAttr),
+		})
 	}
 	if m.WorkbookSpinCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "workbookSpinCount"},
-			Value: fmt.Sprintf("%v", *m.WorkbookSpinCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "workbookSpinCount"},
+			Value: fmt.Sprintf("%v", *m.WorkbookSpinCountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -26,6 +26,7 @@ func (n NumberDataSource) ensureChoice() {
 		n.x.Choice = crt.NewCT_NumDataSourceChoice()
 	}
 }
+
 func (n NumberDataSource) SetReference(s string) {
 	n.ensureChoice()
 	if n.x.Choice.NumRef == nil {
@@ -60,7 +61,7 @@ func (n NumberDataSource) SetValues(v []float64) {
 		n.x.Choice.NumLit.Pt = append(n.x.Choice.NumLit.Pt,
 			&crt.CT_NumVal{
 				IdxAttr: uint32(i),
-				V:       fmt.Sprintf("%g", x)})
+				V:       fmt.Sprintf("%g", x),
+			})
 	}
-
 }

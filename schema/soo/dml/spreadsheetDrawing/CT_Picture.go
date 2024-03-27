@@ -37,12 +37,16 @@ func NewCT_Picture() *CT_Picture {
 
 func (m *CT_Picture) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.MacroAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "macro"},
-			Value: fmt.Sprintf("%v", *m.MacroAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "macro"},
+			Value: fmt.Sprintf("%v", *m.MacroAttr),
+		})
 	}
 	if m.FPublishedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fPublished"},
-			Value: fmt.Sprintf("%d", b2i(*m.FPublishedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fPublished"},
+			Value: fmt.Sprintf("%d", b2i(*m.FPublishedAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	senvPicPr := xml.StartElement{Name: xml.Name{Local: "xdr:nvPicPr"}}

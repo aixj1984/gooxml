@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_GroupFillProperties struct {
-}
+type CT_GroupFillProperties struct{}
 
 func NewCT_GroupFillProperties() *CT_GroupFillProperties {
 	ret := &CT_GroupFillProperties{}

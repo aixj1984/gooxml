@@ -46,28 +46,40 @@ func NewCT_Hyperlink() *CT_Hyperlink {
 
 func (m *CT_Hyperlink) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.TgtFrameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:tgtFrame"},
-			Value: fmt.Sprintf("%v", *m.TgtFrameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:tgtFrame"},
+			Value: fmt.Sprintf("%v", *m.TgtFrameAttr),
+		})
 	}
 	if m.TooltipAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:tooltip"},
-			Value: fmt.Sprintf("%v", *m.TooltipAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:tooltip"},
+			Value: fmt.Sprintf("%v", *m.TooltipAttr),
+		})
 	}
 	if m.DocLocationAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:docLocation"},
-			Value: fmt.Sprintf("%v", *m.DocLocationAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:docLocation"},
+			Value: fmt.Sprintf("%v", *m.DocLocationAttr),
+		})
 	}
 	if m.HistoryAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:history"},
-			Value: fmt.Sprintf("%v", *m.HistoryAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:history"},
+			Value: fmt.Sprintf("%v", *m.HistoryAttr),
+		})
 	}
 	if m.AnchorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:anchor"},
-			Value: fmt.Sprintf("%v", *m.AnchorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:anchor"},
+			Value: fmt.Sprintf("%v", *m.AnchorAttr),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.FldSimple != nil {

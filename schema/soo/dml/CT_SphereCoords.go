@@ -30,12 +30,18 @@ func NewCT_SphereCoords() *CT_SphereCoords {
 }
 
 func (m *CT_SphereCoords) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lat"},
-		Value: fmt.Sprintf("%v", m.LatAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lon"},
-		Value: fmt.Sprintf("%v", m.LonAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rev"},
-		Value: fmt.Sprintf("%v", m.RevAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "lat"},
+		Value: fmt.Sprintf("%v", m.LatAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "lon"},
+		Value: fmt.Sprintf("%v", m.LonAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "rev"},
+		Value: fmt.Sprintf("%v", m.RevAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

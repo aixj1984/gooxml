@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_GrayscaleTransform struct {
-}
+type CT_GrayscaleTransform struct{}
 
 func NewCT_GrayscaleTransform() *CT_GrayscaleTransform {
 	ret := &CT_GrayscaleTransform{}

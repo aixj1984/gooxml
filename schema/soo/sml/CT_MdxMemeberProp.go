@@ -28,10 +28,14 @@ func NewCT_MdxMemeberProp() *CT_MdxMemeberProp {
 }
 
 func (m *CT_MdxMemeberProp) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "n"},
-		Value: fmt.Sprintf("%v", m.NAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "np"},
-		Value: fmt.Sprintf("%v", m.NpAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "n"},
+		Value: fmt.Sprintf("%v", m.NAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "np"},
+		Value: fmt.Sprintf("%v", m.NpAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

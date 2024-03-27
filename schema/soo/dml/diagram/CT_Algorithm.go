@@ -38,8 +38,10 @@ func (m *CT_Algorithm) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.RevAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rev"},
-			Value: fmt.Sprintf("%v", *m.RevAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rev"},
+			Value: fmt.Sprintf("%v", *m.RevAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Param != nil {

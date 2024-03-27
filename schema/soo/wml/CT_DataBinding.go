@@ -30,13 +30,19 @@ func NewCT_DataBinding() *CT_DataBinding {
 
 func (m *CT_DataBinding) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PrefixMappingsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:prefixMappings"},
-			Value: fmt.Sprintf("%v", *m.PrefixMappingsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:prefixMappings"},
+			Value: fmt.Sprintf("%v", *m.PrefixMappingsAttr),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:xpath"},
-		Value: fmt.Sprintf("%v", m.XpathAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:storeItemID"},
-		Value: fmt.Sprintf("%v", m.StoreItemIDAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:xpath"},
+		Value: fmt.Sprintf("%v", m.XpathAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:storeItemID"},
+		Value: fmt.Sprintf("%v", m.StoreItemIDAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

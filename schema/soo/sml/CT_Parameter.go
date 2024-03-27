@@ -45,12 +45,16 @@ func NewCT_Parameter() *CT_Parameter {
 
 func (m *CT_Parameter) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.SqlTypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sqlType"},
-			Value: fmt.Sprintf("%v", *m.SqlTypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sqlType"},
+			Value: fmt.Sprintf("%v", *m.SqlTypeAttr),
+		})
 	}
 	if m.ParameterTypeAttr != ST_ParameterTypeUnset {
 		attr, err := m.ParameterTypeAttr.MarshalXMLAttr(xml.Name{Local: "parameterType"})
@@ -60,32 +64,46 @@ func (m *CT_Parameter) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RefreshOnChangeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refreshOnChange"},
-			Value: fmt.Sprintf("%d", b2i(*m.RefreshOnChangeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refreshOnChange"},
+			Value: fmt.Sprintf("%d", b2i(*m.RefreshOnChangeAttr)),
+		})
 	}
 	if m.PromptAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "prompt"},
-			Value: fmt.Sprintf("%v", *m.PromptAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "prompt"},
+			Value: fmt.Sprintf("%v", *m.PromptAttr),
+		})
 	}
 	if m.BooleanAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "boolean"},
-			Value: fmt.Sprintf("%d", b2i(*m.BooleanAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "boolean"},
+			Value: fmt.Sprintf("%d", b2i(*m.BooleanAttr)),
+		})
 	}
 	if m.DoubleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "double"},
-			Value: fmt.Sprintf("%v", *m.DoubleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "double"},
+			Value: fmt.Sprintf("%v", *m.DoubleAttr),
+		})
 	}
 	if m.IntegerAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "integer"},
-			Value: fmt.Sprintf("%v", *m.IntegerAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "integer"},
+			Value: fmt.Sprintf("%v", *m.IntegerAttr),
+		})
 	}
 	if m.StringAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "string"},
-			Value: fmt.Sprintf("%v", *m.StringAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "string"},
+			Value: fmt.Sprintf("%v", *m.StringAttr),
+		})
 	}
 	if m.CellAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cell"},
-			Value: fmt.Sprintf("%v", *m.CellAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "cell"},
+			Value: fmt.Sprintf("%v", *m.CellAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

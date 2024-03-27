@@ -42,8 +42,10 @@ func (m *AG_ConstraintRefAttributes) MarshalXML(e *xml.Encoder, start xml.StartE
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.RefForNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "refForName"},
-			Value: fmt.Sprintf("%v", *m.RefForNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "refForName"},
+			Value: fmt.Sprintf("%v", *m.RefForNameAttr),
+		})
 	}
 	if m.RefPtTypeAttr != ST_ElementTypeUnset {
 		attr, err := m.RefPtTypeAttr.MarshalXMLAttr(xml.Name{Local: "refPtType"})

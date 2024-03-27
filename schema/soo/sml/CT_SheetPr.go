@@ -51,40 +51,58 @@ func NewCT_SheetPr() *CT_SheetPr {
 
 func (m *CT_SheetPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.SyncHorizontalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "syncHorizontal"},
-			Value: fmt.Sprintf("%d", b2i(*m.SyncHorizontalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "syncHorizontal"},
+			Value: fmt.Sprintf("%d", b2i(*m.SyncHorizontalAttr)),
+		})
 	}
 	if m.SyncVerticalAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "syncVertical"},
-			Value: fmt.Sprintf("%d", b2i(*m.SyncVerticalAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "syncVertical"},
+			Value: fmt.Sprintf("%d", b2i(*m.SyncVerticalAttr)),
+		})
 	}
 	if m.SyncRefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "syncRef"},
-			Value: fmt.Sprintf("%v", *m.SyncRefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "syncRef"},
+			Value: fmt.Sprintf("%v", *m.SyncRefAttr),
+		})
 	}
 	if m.TransitionEvaluationAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "transitionEvaluation"},
-			Value: fmt.Sprintf("%d", b2i(*m.TransitionEvaluationAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "transitionEvaluation"},
+			Value: fmt.Sprintf("%d", b2i(*m.TransitionEvaluationAttr)),
+		})
 	}
 	if m.TransitionEntryAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "transitionEntry"},
-			Value: fmt.Sprintf("%d", b2i(*m.TransitionEntryAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "transitionEntry"},
+			Value: fmt.Sprintf("%d", b2i(*m.TransitionEntryAttr)),
+		})
 	}
 	if m.PublishedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "published"},
-			Value: fmt.Sprintf("%d", b2i(*m.PublishedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "published"},
+			Value: fmt.Sprintf("%d", b2i(*m.PublishedAttr)),
+		})
 	}
 	if m.CodeNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "codeName"},
-			Value: fmt.Sprintf("%v", *m.CodeNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "codeName"},
+			Value: fmt.Sprintf("%v", *m.CodeNameAttr),
+		})
 	}
 	if m.FilterModeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "filterMode"},
-			Value: fmt.Sprintf("%d", b2i(*m.FilterModeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "filterMode"},
+			Value: fmt.Sprintf("%d", b2i(*m.FilterModeAttr)),
+		})
 	}
 	if m.EnableFormatConditionsCalculationAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "enableFormatConditionsCalculation"},
-			Value: fmt.Sprintf("%d", b2i(*m.EnableFormatConditionsCalculationAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "enableFormatConditionsCalculation"},
+			Value: fmt.Sprintf("%d", b2i(*m.EnableFormatConditionsCalculationAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.TabColor != nil {

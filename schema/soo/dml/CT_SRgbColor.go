@@ -27,8 +27,10 @@ func NewCT_SRgbColor() *CT_SRgbColor {
 }
 
 func (m *CT_SRgbColor) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "val"},
-		Value: fmt.Sprintf("%v", m.ValAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "val"},
+		Value: fmt.Sprintf("%v", m.ValAttr),
+	})
 	e.EncodeToken(start)
 	if m.EG_ColorTransform != nil {
 		for _, c := range m.EG_ColorTransform {

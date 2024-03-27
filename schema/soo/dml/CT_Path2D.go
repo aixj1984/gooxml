@@ -38,12 +38,16 @@ func NewCT_Path2D() *CT_Path2D {
 
 func (m *CT_Path2D) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.WAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w"},
-			Value: fmt.Sprintf("%v", *m.WAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w"},
+			Value: fmt.Sprintf("%v", *m.WAttr),
+		})
 	}
 	if m.HAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "h"},
-			Value: fmt.Sprintf("%v", *m.HAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "h"},
+			Value: fmt.Sprintf("%v", *m.HAttr),
+		})
 	}
 	if m.FillAttr != ST_PathFillModeUnset {
 		attr, err := m.FillAttr.MarshalXMLAttr(xml.Name{Local: "fill"})
@@ -53,12 +57,16 @@ func (m *CT_Path2D) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.StrokeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "stroke"},
-			Value: fmt.Sprintf("%d", b2i(*m.StrokeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "stroke"},
+			Value: fmt.Sprintf("%d", b2i(*m.StrokeAttr)),
+		})
 	}
 	if m.ExtrusionOkAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "extrusionOk"},
-			Value: fmt.Sprintf("%d", b2i(*m.ExtrusionOkAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "extrusionOk"},
+			Value: fmt.Sprintf("%d", b2i(*m.ExtrusionOkAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Close != nil {

@@ -35,8 +35,10 @@ func (m *AG_Fill) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.FillcolorAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fillcolor"},
-			Value: fmt.Sprintf("%v", *m.FillcolorAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fillcolor"},
+			Value: fmt.Sprintf("%v", *m.FillcolorAttr),
+		})
 	}
 	return nil
 }

@@ -28,11 +28,15 @@ func NewCT_VideoFile() *CT_VideoFile {
 }
 
 func (m *CT_VideoFile) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:link"},
-		Value: fmt.Sprintf("%v", m.LinkAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "r:link"},
+		Value: fmt.Sprintf("%v", m.LinkAttr),
+	})
 	if m.ContentTypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "contentType"},
-			Value: fmt.Sprintf("%v", *m.ContentTypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "contentType"},
+			Value: fmt.Sprintf("%v", *m.ContentTypeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

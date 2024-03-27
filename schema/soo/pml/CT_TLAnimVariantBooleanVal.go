@@ -26,8 +26,10 @@ func NewCT_TLAnimVariantBooleanVal() *CT_TLAnimVariantBooleanVal {
 }
 
 func (m *CT_TLAnimVariantBooleanVal) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "val"},
-		Value: fmt.Sprintf("%d", b2i(m.ValAttr))})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "val"},
+		Value: fmt.Sprintf("%d", b2i(m.ValAttr)),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

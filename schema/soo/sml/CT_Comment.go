@@ -40,17 +40,25 @@ func NewCT_Comment() *CT_Comment {
 }
 
 func (m *CT_Comment) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ref"},
-		Value: fmt.Sprintf("%v", m.RefAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "authorId"},
-		Value: fmt.Sprintf("%v", m.AuthorIdAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "ref"},
+		Value: fmt.Sprintf("%v", m.RefAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "authorId"},
+		Value: fmt.Sprintf("%v", m.AuthorIdAttr),
+	})
 	if m.GuidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "guid"},
-			Value: fmt.Sprintf("%v", *m.GuidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "guid"},
+			Value: fmt.Sprintf("%v", *m.GuidAttr),
+		})
 	}
 	if m.ShapeIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "shapeId"},
-			Value: fmt.Sprintf("%v", *m.ShapeIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "shapeId"},
+			Value: fmt.Sprintf("%v", *m.ShapeIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	setext := xml.StartElement{Name: xml.Name{Local: "ma:text"}}

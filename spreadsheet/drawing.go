@@ -93,8 +93,8 @@ func (d Drawing) AddChart(at AnchorType) (chart.Chart, Anchor) {
 	c.IdAttr = chartID
 	gf.Graphic.GraphicData.Any = []gooxml.Any{c}
 
-	//chart.Chart.PlotVisOnly = crt.NewCT_Boolean()
-	//chart.Chart.PlotVisOnly.ValAttr = gooxml.Bool(true)
+	// chart.Chart.PlotVisOnly = crt.NewCT_Boolean()
+	// chart.Chart.PlotVisOnly.ValAttr = gooxml.Bool(true)
 
 	chrt := chart.MakeChart(chartSpace)
 	chrt.Properties().SetSolidFill(color.White)

@@ -38,12 +38,16 @@ func (m *CT_DocGrid) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.LinePitchAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:linePitch"},
-			Value: fmt.Sprintf("%v", *m.LinePitchAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:linePitch"},
+			Value: fmt.Sprintf("%v", *m.LinePitchAttr),
+		})
 	}
 	if m.CharSpaceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:charSpace"},
-			Value: fmt.Sprintf("%v", *m.CharSpaceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:charSpace"},
+			Value: fmt.Sprintf("%v", *m.CharSpaceAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

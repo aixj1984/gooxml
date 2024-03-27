@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type CT_ComplementTransform struct {
-}
+type CT_ComplementTransform struct{}
 
 func NewCT_ComplementTransform() *CT_ComplementTransform {
 	ret := &CT_ComplementTransform{}

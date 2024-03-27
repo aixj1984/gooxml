@@ -26,10 +26,14 @@ func NewCT_Ratio() *CT_Ratio {
 }
 
 func (m *CT_Ratio) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "n"},
-		Value: fmt.Sprintf("%v", m.NAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "d"},
-		Value: fmt.Sprintf("%v", m.DAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "n"},
+		Value: fmt.Sprintf("%v", m.NAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "d"},
+		Value: fmt.Sprintf("%v", m.DAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

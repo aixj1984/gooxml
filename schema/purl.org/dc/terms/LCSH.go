@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type LCSH struct {
-}
+type LCSH struct{}
 
 func NewLCSH() *LCSH {
 	ret := &LCSH{}

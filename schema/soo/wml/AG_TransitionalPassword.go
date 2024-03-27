@@ -60,40 +60,58 @@ func (m *AG_TransitionalPassword) MarshalXML(e *xml.Encoder, start xml.StartElem
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.CryptAlgorithmSidAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:cryptAlgorithmSid"},
-			Value: fmt.Sprintf("%v", *m.CryptAlgorithmSidAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:cryptAlgorithmSid"},
+			Value: fmt.Sprintf("%v", *m.CryptAlgorithmSidAttr),
+		})
 	}
 	if m.CryptSpinCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:cryptSpinCount"},
-			Value: fmt.Sprintf("%v", *m.CryptSpinCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:cryptSpinCount"},
+			Value: fmt.Sprintf("%v", *m.CryptSpinCountAttr),
+		})
 	}
 	if m.CryptProviderAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:cryptProvider"},
-			Value: fmt.Sprintf("%v", *m.CryptProviderAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:cryptProvider"},
+			Value: fmt.Sprintf("%v", *m.CryptProviderAttr),
+		})
 	}
 	if m.AlgIdExtAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:algIdExt"},
-			Value: fmt.Sprintf("%v", *m.AlgIdExtAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:algIdExt"},
+			Value: fmt.Sprintf("%v", *m.AlgIdExtAttr),
+		})
 	}
 	if m.AlgIdExtSourceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:algIdExtSource"},
-			Value: fmt.Sprintf("%v", *m.AlgIdExtSourceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:algIdExtSource"},
+			Value: fmt.Sprintf("%v", *m.AlgIdExtSourceAttr),
+		})
 	}
 	if m.CryptProviderTypeExtAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:cryptProviderTypeExt"},
-			Value: fmt.Sprintf("%v", *m.CryptProviderTypeExtAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:cryptProviderTypeExt"},
+			Value: fmt.Sprintf("%v", *m.CryptProviderTypeExtAttr),
+		})
 	}
 	if m.CryptProviderTypeExtSourceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:cryptProviderTypeExtSource"},
-			Value: fmt.Sprintf("%v", *m.CryptProviderTypeExtSourceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:cryptProviderTypeExtSource"},
+			Value: fmt.Sprintf("%v", *m.CryptProviderTypeExtSourceAttr),
+		})
 	}
 	if m.HashAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:hash"},
-			Value: fmt.Sprintf("%v", *m.HashAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:hash"},
+			Value: fmt.Sprintf("%v", *m.HashAttr),
+		})
 	}
 	if m.SaltAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:salt"},
-			Value: fmt.Sprintf("%v", *m.SaltAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:salt"},
+			Value: fmt.Sprintf("%v", *m.SaltAttr),
+		})
 	}
 	return nil
 }

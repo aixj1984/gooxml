@@ -30,12 +30,16 @@ func NewCT_Column() *CT_Column {
 
 func (m *CT_Column) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.WAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:w"},
-			Value: fmt.Sprintf("%v", *m.WAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:w"},
+			Value: fmt.Sprintf("%v", *m.WAttr),
+		})
 	}
 	if m.SpaceAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:space"},
-			Value: fmt.Sprintf("%v", *m.SpaceAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:space"},
+			Value: fmt.Sprintf("%v", *m.SpaceAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

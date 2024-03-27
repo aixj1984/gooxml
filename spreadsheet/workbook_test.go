@@ -60,6 +60,7 @@ func TestConstructor(t *testing.T) {
 		t.Errorf("expected a non-nil stylesheet")
 	}
 }
+
 func TestWorkbookUnmarshal(t *testing.T) {
 	f, err := os.Open("testdata/workbook.xml")
 	if err != nil {
@@ -94,6 +95,7 @@ func TestSimpleSheet(t *testing.T) {
 	wb.Save(&got)
 	testhelper.CompareGoldenZip(t, "simple-1.xlsx", got.Bytes())
 }
+
 func TestOpen(t *testing.T) {
 	wb, err := spreadsheet.Open("testdata/simple-1.xlsx")
 	if err != nil {
@@ -121,7 +123,7 @@ func TestOpenExcel2016(t *testing.T) {
 		t.Errorf("created an invalid spreadsheet: %s", err)
 	}
 	wb.Save(&got)
-	//testhelper.CompareZip(t, "../../testdata/Office2016/Excel-Windows.xlsx", got.Bytes())
+	// testhelper.CompareZip(t, "../../testdata/Office2016/Excel-Windows.xlsx", got.Bytes())
 }
 
 func TestSheetCount(t *testing.T) {
@@ -242,6 +244,7 @@ func TestOpenComments(t *testing.T) {
 		t.Errorf("error reading comment author")
 	}
 }
+
 func TestWorkbookProtection(t *testing.T) {
 	wb := spreadsheet.New()
 	defer wb.Close()
@@ -288,5 +291,4 @@ func TestOpenOrderedSheets(t *testing.T) {
 			t.Errorf("expected sheet %d cell A1 = %s, got %s", i, expContent, got)
 		}
 	}
-
 }

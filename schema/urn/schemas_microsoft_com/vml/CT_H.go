@@ -35,16 +35,22 @@ func NewCT_H() *CT_H {
 
 func (m *CT_H) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PositionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "position"},
-			Value: fmt.Sprintf("%v", *m.PositionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "position"},
+			Value: fmt.Sprintf("%v", *m.PositionAttr),
+		})
 	}
 	if m.PolarAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "polar"},
-			Value: fmt.Sprintf("%v", *m.PolarAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "polar"},
+			Value: fmt.Sprintf("%v", *m.PolarAttr),
+		})
 	}
 	if m.MapAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "map"},
-			Value: fmt.Sprintf("%v", *m.MapAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "map"},
+			Value: fmt.Sprintf("%v", *m.MapAttr),
+		})
 	}
 	if m.InvxAttr != sharedTypes.ST_TrueFalseUnset {
 		attr, err := m.InvxAttr.MarshalXMLAttr(xml.Name{Local: "invx"})
@@ -68,16 +74,22 @@ func (m *CT_H) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.XrangeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xrange"},
-			Value: fmt.Sprintf("%v", *m.XrangeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "xrange"},
+			Value: fmt.Sprintf("%v", *m.XrangeAttr),
+		})
 	}
 	if m.YrangeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "yrange"},
-			Value: fmt.Sprintf("%v", *m.YrangeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "yrange"},
+			Value: fmt.Sprintf("%v", *m.YrangeAttr),
+		})
 	}
 	if m.RadiusrangeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "radiusrange"},
-			Value: fmt.Sprintf("%v", *m.RadiusrangeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "radiusrange"},
+			Value: fmt.Sprintf("%v", *m.RadiusrangeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

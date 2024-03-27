@@ -37,32 +37,46 @@ func NewCT_Shape() *CT_Shape {
 
 func (m *CT_Shape) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RotAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "rot"},
-			Value: fmt.Sprintf("%v", *m.RotAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "rot"},
+			Value: fmt.Sprintf("%v", *m.RotAttr),
+		})
 	}
 	if m.TypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "type"},
-			Value: fmt.Sprintf("%v", *m.TypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "type"},
+			Value: fmt.Sprintf("%v", *m.TypeAttr),
+		})
 	}
 	if m.BlipAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:blip"},
-			Value: fmt.Sprintf("%v", *m.BlipAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:blip"},
+			Value: fmt.Sprintf("%v", *m.BlipAttr),
+		})
 	}
 	if m.ZOrderOffAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "zOrderOff"},
-			Value: fmt.Sprintf("%v", *m.ZOrderOffAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "zOrderOff"},
+			Value: fmt.Sprintf("%v", *m.ZOrderOffAttr),
+		})
 	}
 	if m.HideGeomAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hideGeom"},
-			Value: fmt.Sprintf("%d", b2i(*m.HideGeomAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hideGeom"},
+			Value: fmt.Sprintf("%d", b2i(*m.HideGeomAttr)),
+		})
 	}
 	if m.LkTxEntryAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lkTxEntry"},
-			Value: fmt.Sprintf("%d", b2i(*m.LkTxEntryAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lkTxEntry"},
+			Value: fmt.Sprintf("%d", b2i(*m.LkTxEntryAttr)),
+		})
 	}
 	if m.BlipPhldrAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "blipPhldr"},
-			Value: fmt.Sprintf("%d", b2i(*m.BlipPhldrAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "blipPhldr"},
+			Value: fmt.Sprintf("%d", b2i(*m.BlipPhldrAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.AdjLst != nil {

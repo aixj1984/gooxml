@@ -51,8 +51,10 @@ func NewCT_ColorScheme() *CT_ColorScheme {
 }
 
 func (m *CT_ColorScheme) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	e.EncodeToken(start)
 	sedk1 := xml.StartElement{Name: xml.Name{Local: "a:dk1"}}
 	e.EncodeElement(m.Dk1, sedk1)

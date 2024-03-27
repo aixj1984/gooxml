@@ -256,5 +256,4 @@ func main() {
 		log.Fatalf("error during validation: %s", err)
 	}
 	doc.SaveToFile("tables.docx")
-
 }

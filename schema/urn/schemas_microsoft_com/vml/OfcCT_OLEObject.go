@@ -44,12 +44,16 @@ func (m *OfcCT_OLEObject) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ProgIDAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ProgID"},
-			Value: fmt.Sprintf("%v", *m.ProgIDAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ProgID"},
+			Value: fmt.Sprintf("%v", *m.ProgIDAttr),
+		})
 	}
 	if m.ShapeIDAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ShapeID"},
-			Value: fmt.Sprintf("%v", *m.ShapeIDAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ShapeID"},
+			Value: fmt.Sprintf("%v", *m.ShapeIDAttr),
+		})
 	}
 	if m.DrawAspectAttr != OfcST_OLEDrawAspectUnset {
 		attr, err := m.DrawAspectAttr.MarshalXMLAttr(xml.Name{Local: "DrawAspect"})
@@ -59,12 +63,16 @@ func (m *OfcCT_OLEObject) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.ObjectIDAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ObjectID"},
-			Value: fmt.Sprintf("%v", *m.ObjectIDAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ObjectID"},
+			Value: fmt.Sprintf("%v", *m.ObjectIDAttr),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.UpdateModeAttr != OfcST_OLEUpdateModeUnset {
 		attr, err := m.UpdateModeAttr.MarshalXMLAttr(xml.Name{Local: "UpdateMode"})

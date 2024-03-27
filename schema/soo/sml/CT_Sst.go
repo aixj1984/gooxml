@@ -34,12 +34,16 @@ func NewCT_Sst() *CT_Sst {
 
 func (m *CT_Sst) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	if m.UniqueCountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueCount"},
-			Value: fmt.Sprintf("%v", *m.UniqueCountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "uniqueCount"},
+			Value: fmt.Sprintf("%v", *m.UniqueCountAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Si != nil {

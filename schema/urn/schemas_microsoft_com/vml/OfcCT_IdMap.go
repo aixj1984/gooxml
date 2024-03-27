@@ -26,8 +26,10 @@ func NewOfcCT_IdMap() *OfcCT_IdMap {
 
 func (m *OfcCT_IdMap) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DataAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "data"},
-			Value: fmt.Sprintf("%v", *m.DataAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "data"},
+			Value: fmt.Sprintf("%v", *m.DataAttr),
+		})
 	}
 	if m.ExtAttr != ST_ExtUnset {
 		attr, err := m.ExtAttr.MarshalXMLAttr(xml.Name{Local: "ext"})

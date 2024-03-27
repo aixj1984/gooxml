@@ -29,8 +29,10 @@ func NewCT_VolMain() *CT_VolMain {
 }
 
 func (m *CT_VolMain) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "first"},
-		Value: fmt.Sprintf("%v", m.FirstAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "first"},
+		Value: fmt.Sprintf("%v", m.FirstAttr),
+	})
 	e.EncodeToken(start)
 	setp := xml.StartElement{Name: xml.Name{Local: "ma:tp"}}
 	for _, c := range m.Tp {

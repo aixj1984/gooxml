@@ -39,8 +39,10 @@ func NewCT_BackgroundProperties() *CT_BackgroundProperties {
 
 func (m *CT_BackgroundProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ShadeToTitleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "shadeToTitle"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShadeToTitleAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "shadeToTitle"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShadeToTitleAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.NoFill != nil {

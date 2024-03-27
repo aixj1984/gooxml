@@ -26,12 +26,16 @@ func NewCT_TextNormalAutofit() *CT_TextNormalAutofit {
 
 func (m *CT_TextNormalAutofit) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.FontScaleAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "fontScale"},
-			Value: fmt.Sprintf("%v", *m.FontScaleAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "fontScale"},
+			Value: fmt.Sprintf("%v", *m.FontScaleAttr),
+		})
 	}
 	if m.LnSpcReductionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "lnSpcReduction"},
-			Value: fmt.Sprintf("%v", *m.LnSpcReductionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "lnSpcReduction"},
+			Value: fmt.Sprintf("%v", *m.LnSpcReductionAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

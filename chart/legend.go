@@ -26,6 +26,7 @@ func MakeLegend(l *crt.CT_Legend) Legend {
 func (l Legend) X() *crt.CT_Legend {
 	return l.x
 }
+
 func (l Legend) InitializeDefaults() {
 	l.SetPosition(crt.ST_LegendPosR)
 	l.SetOverlay(false)

@@ -43,8 +43,10 @@ func NewCT_LineProperties() *CT_LineProperties {
 
 func (m *CT_LineProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.WAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w"},
-			Value: fmt.Sprintf("%v", *m.WAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w"},
+			Value: fmt.Sprintf("%v", *m.WAttr),
+		})
 	}
 	if m.CapAttr != ST_LineCapUnset {
 		attr, err := m.CapAttr.MarshalXMLAttr(xml.Name{Local: "cap"})

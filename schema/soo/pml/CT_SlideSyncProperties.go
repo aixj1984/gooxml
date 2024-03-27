@@ -33,12 +33,18 @@ func NewCT_SlideSyncProperties() *CT_SlideSyncProperties {
 }
 
 func (m *CT_SlideSyncProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "serverSldId"},
-		Value: fmt.Sprintf("%v", m.ServerSldIdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "serverSldModifiedTime"},
-		Value: fmt.Sprintf("%v", m.ServerSldModifiedTimeAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "clientInsertedTime"},
-		Value: fmt.Sprintf("%v", m.ClientInsertedTimeAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "serverSldId"},
+		Value: fmt.Sprintf("%v", m.ServerSldIdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "serverSldModifiedTime"},
+		Value: fmt.Sprintf("%v", m.ServerSldModifiedTimeAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "clientInsertedTime"},
+		Value: fmt.Sprintf("%v", m.ClientInsertedTimeAttr),
+	})
 	e.EncodeToken(start)
 	if m.ExtLst != nil {
 		seextLst := xml.StartElement{Name: xml.Name{Local: "p:extLst"}}

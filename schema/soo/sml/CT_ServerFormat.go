@@ -28,12 +28,16 @@ func NewCT_ServerFormat() *CT_ServerFormat {
 
 func (m *CT_ServerFormat) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.CultureAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "culture"},
-			Value: fmt.Sprintf("%v", *m.CultureAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "culture"},
+			Value: fmt.Sprintf("%v", *m.CultureAttr),
+		})
 	}
 	if m.FormatAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "format"},
-			Value: fmt.Sprintf("%v", *m.FormatAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "format"},
+			Value: fmt.Sprintf("%v", *m.FormatAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -37,28 +37,40 @@ func NewCT_PivotTableStyle() *CT_PivotTableStyle {
 
 func (m *CT_PivotTableStyle) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.ShowRowHeadersAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showRowHeaders"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowRowHeadersAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showRowHeaders"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowRowHeadersAttr)),
+		})
 	}
 	if m.ShowColHeadersAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showColHeaders"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowColHeadersAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showColHeaders"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowColHeadersAttr)),
+		})
 	}
 	if m.ShowRowStripesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showRowStripes"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowRowStripesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showRowStripes"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowRowStripesAttr)),
+		})
 	}
 	if m.ShowColStripesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showColStripes"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowColStripesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showColStripes"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowColStripesAttr)),
+		})
 	}
 	if m.ShowLastColumnAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showLastColumn"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowLastColumnAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showLastColumn"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowLastColumnAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

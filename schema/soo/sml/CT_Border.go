@@ -51,16 +51,22 @@ func NewCT_Border() *CT_Border {
 
 func (m *CT_Border) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.DiagonalUpAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "diagonalUp"},
-			Value: fmt.Sprintf("%d", b2i(*m.DiagonalUpAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "diagonalUp"},
+			Value: fmt.Sprintf("%d", b2i(*m.DiagonalUpAttr)),
+		})
 	}
 	if m.DiagonalDownAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "diagonalDown"},
-			Value: fmt.Sprintf("%d", b2i(*m.DiagonalDownAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "diagonalDown"},
+			Value: fmt.Sprintf("%d", b2i(*m.DiagonalDownAttr)),
+		})
 	}
 	if m.OutlineAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "outline"},
-			Value: fmt.Sprintf("%d", b2i(*m.OutlineAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "outline"},
+			Value: fmt.Sprintf("%d", b2i(*m.OutlineAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Start != nil {

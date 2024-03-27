@@ -17,38 +17,40 @@ type yySymType struct {
 	rows [][]Expression
 }
 
-const tokenHorizontalRange = 57346
-const tokenReservedName = 57347
-const tokenDDECall = 57348
-const tokenLexError = 57349
-const tokenNamedRange = 57350
-const tokenBool = 57351
-const tokenNumber = 57352
-const tokenString = 57353
-const tokenError = 57354
-const tokenErrorRef = 57355
-const tokenSheet = 57356
-const tokenCell = 57357
-const tokenFunctionBuiltin = 57358
-const tokenLBrace = 57359
-const tokenRBrace = 57360
-const tokenLParen = 57361
-const tokenRParen = 57362
-const tokenPlus = 57363
-const tokenMinus = 57364
-const tokenMult = 57365
-const tokenDiv = 57366
-const tokenExp = 57367
-const tokenEQ = 57368
-const tokenLT = 57369
-const tokenGT = 57370
-const tokenLEQ = 57371
-const tokenGEQ = 57372
-const tokenNE = 57373
-const tokenColon = 57374
-const tokenComma = 57375
-const tokenAmpersand = 57376
-const tokenSemi = 57377
+const (
+	tokenHorizontalRange = 57346
+	tokenReservedName    = 57347
+	tokenDDECall         = 57348
+	tokenLexError        = 57349
+	tokenNamedRange      = 57350
+	tokenBool            = 57351
+	tokenNumber          = 57352
+	tokenString          = 57353
+	tokenError           = 57354
+	tokenErrorRef        = 57355
+	tokenSheet           = 57356
+	tokenCell            = 57357
+	tokenFunctionBuiltin = 57358
+	tokenLBrace          = 57359
+	tokenRBrace          = 57360
+	tokenLParen          = 57361
+	tokenRParen          = 57362
+	tokenPlus            = 57363
+	tokenMinus           = 57364
+	tokenMult            = 57365
+	tokenDiv             = 57366
+	tokenExp             = 57367
+	tokenEQ              = 57368
+	tokenLT              = 57369
+	tokenGT              = 57370
+	tokenLEQ             = 57371
+	tokenGEQ             = 57372
+	tokenNE              = 57373
+	tokenColon           = 57374
+	tokenComma           = 57375
+	tokenAmpersand       = 57376
+	tokenSemi            = 57377
+)
 
 var yyToknames = [...]string{
 	"$end",
@@ -89,9 +91,11 @@ var yyToknames = [...]string{
 }
 var yyStatenames = [...]string{}
 
-const yyEofCode = 1
-const yyErrCode = 2
-const yyInitialStackSize = 16
+const (
+	yyEofCode          = 1
+	yyErrCode          = 2
+	yyInitialStackSize = 16
+)
 
 var yyExca = [...]int{
 	-1, 1,
@@ -104,7 +108,6 @@ const yyPrivate = 57344
 const yyLast = 179
 
 var yyAct = [...]int{
-
 	43, 3, 42, 30, 18, 38, 68, 44, 45, 28,
 	29, 30, 37, 46, 47, 30, 50, 41, 24, 13,
 	37, 19, 66, 52, 48, 23, 21, 53, 54, 55,
@@ -124,8 +127,8 @@ var yyAct = [...]int{
 	12, 49, 6, 7, 24, 14, 15, 16, 17, 0,
 	25, 23, 22, 39, 0, 12, 0, 6, 7,
 }
-var yyPact = [...]int{
 
+var yyPact = [...]int{
 	122, -1000, -1000, 68, 156, 103, 156, 156, -1000, -1000,
 	-1000, -1000, 156, -1000, -1000, -1000, -1000, -1000, -18, 10,
 	-1000, -1000, 141, -1000, -1000, -1000, 156, 156, 156, 156,
@@ -135,29 +138,29 @@ var yyPact = [...]int{
 	82, 82, 82, 82, -10, 32, -1000, 156, 156, -1000,
 	-1000, -1000, 156, -1000, -27, 68, -1000, 68,
 }
-var yyPgo = [...]int{
 
+var yyPgo = [...]int{
 	0, 0, 49, 48, 47, 4, 46, 45, 44, 43,
 	42, 40, 26, 21, 19, 17, 16, 2,
 }
-var yyR1 = [...]int{
 
+var yyR1 = [...]int{
 	0, 7, 3, 3, 3, 8, 8, 8, 8, 1,
 	1, 1, 2, 2, 2, 2, 2, 14, 15, 15,
 	17, 17, 4, 4, 4, 13, 5, 5, 6, 12,
 	12, 12, 12, 12, 12, 12, 12, 12, 12, 12,
 	12, 9, 9, 9, 16, 16, 11, 10, 10,
 }
-var yyR2 = [...]int{
 
+var yyR2 = [...]int{
 	0, 1, 1, 2, 4, 1, 1, 1, 1, 2,
 	2, 1, 1, 1, 1, 3, 1, 3, 1, 3,
 	1, 3, 1, 2, 1, 1, 1, 1, 3, 3,
 	3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
 	3, 1, 2, 3, 1, 3, 1, 1, 0,
 }
-var yyChk = [...]int{
 
+var yyChk = [...]int{
 	-1000, -7, -3, -1, 26, 17, 21, 22, -2, -8,
 	-4, -9, 19, -14, 9, 10, 11, 12, -5, -13,
 	-6, -12, 16, 15, 8, 14, 21, 22, 23, 24,
@@ -167,8 +170,8 @@ var yyChk = [...]int{
 	-1, -1, -1, -1, -1, -1, 18, 35, 33, 20,
 	-5, 20, 33, 18, -17, -1, -10, -1,
 }
-var yyDef = [...]int{
 
+var yyDef = [...]int{
 	0, -2, 1, 2, 0, 0, 0, 0, 11, 12,
 	13, 14, 0, 16, 5, 6, 7, 8, 22, 0,
 	24, 41, 0, 26, 27, 25, 0, 0, 0, 0,
@@ -178,17 +181,18 @@ var yyDef = [...]int{
 	36, 37, 38, 39, 40, 0, 17, 0, 0, 15,
 	28, 43, 48, 4, 19, 21, 45, 47,
 }
-var yyTok1 = [...]int{
 
+var yyTok1 = [...]int{
 	1,
 }
-var yyTok2 = [...]int{
 
+var yyTok2 = [...]int{
 	2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
 	12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
 	22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
 	32, 33, 34, 35,
 }
+
 var yyTok3 = [...]int{
 	0,
 }

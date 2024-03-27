@@ -68,60 +68,88 @@ func NewCT_SharedItems() *CT_SharedItems {
 
 func (m *CT_SharedItems) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ContainsSemiMixedTypesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "containsSemiMixedTypes"},
-			Value: fmt.Sprintf("%d", b2i(*m.ContainsSemiMixedTypesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "containsSemiMixedTypes"},
+			Value: fmt.Sprintf("%d", b2i(*m.ContainsSemiMixedTypesAttr)),
+		})
 	}
 	if m.ContainsNonDateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "containsNonDate"},
-			Value: fmt.Sprintf("%d", b2i(*m.ContainsNonDateAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "containsNonDate"},
+			Value: fmt.Sprintf("%d", b2i(*m.ContainsNonDateAttr)),
+		})
 	}
 	if m.ContainsDateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "containsDate"},
-			Value: fmt.Sprintf("%d", b2i(*m.ContainsDateAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "containsDate"},
+			Value: fmt.Sprintf("%d", b2i(*m.ContainsDateAttr)),
+		})
 	}
 	if m.ContainsStringAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "containsString"},
-			Value: fmt.Sprintf("%d", b2i(*m.ContainsStringAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "containsString"},
+			Value: fmt.Sprintf("%d", b2i(*m.ContainsStringAttr)),
+		})
 	}
 	if m.ContainsBlankAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "containsBlank"},
-			Value: fmt.Sprintf("%d", b2i(*m.ContainsBlankAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "containsBlank"},
+			Value: fmt.Sprintf("%d", b2i(*m.ContainsBlankAttr)),
+		})
 	}
 	if m.ContainsMixedTypesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "containsMixedTypes"},
-			Value: fmt.Sprintf("%d", b2i(*m.ContainsMixedTypesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "containsMixedTypes"},
+			Value: fmt.Sprintf("%d", b2i(*m.ContainsMixedTypesAttr)),
+		})
 	}
 	if m.ContainsNumberAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "containsNumber"},
-			Value: fmt.Sprintf("%d", b2i(*m.ContainsNumberAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "containsNumber"},
+			Value: fmt.Sprintf("%d", b2i(*m.ContainsNumberAttr)),
+		})
 	}
 	if m.ContainsIntegerAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "containsInteger"},
-			Value: fmt.Sprintf("%d", b2i(*m.ContainsIntegerAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "containsInteger"},
+			Value: fmt.Sprintf("%d", b2i(*m.ContainsIntegerAttr)),
+		})
 	}
 	if m.MinValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minValue"},
-			Value: fmt.Sprintf("%v", *m.MinValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minValue"},
+			Value: fmt.Sprintf("%v", *m.MinValueAttr),
+		})
 	}
 	if m.MaxValueAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxValue"},
-			Value: fmt.Sprintf("%v", *m.MaxValueAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxValue"},
+			Value: fmt.Sprintf("%v", *m.MaxValueAttr),
+		})
 	}
 	if m.MinDateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "minDate"},
-			Value: fmt.Sprintf("%v", *m.MinDateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "minDate"},
+			Value: fmt.Sprintf("%v", *m.MinDateAttr),
+		})
 	}
 	if m.MaxDateAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "maxDate"},
-			Value: fmt.Sprintf("%v", *m.MaxDateAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "maxDate"},
+			Value: fmt.Sprintf("%v", *m.MaxDateAttr),
+		})
 	}
 	if m.CountAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-			Value: fmt.Sprintf("%v", *m.CountAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "count"},
+			Value: fmt.Sprintf("%v", *m.CountAttr),
+		})
 	}
 	if m.LongTextAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "longText"},
-			Value: fmt.Sprintf("%d", b2i(*m.LongTextAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "longText"},
+			Value: fmt.Sprintf("%d", b2i(*m.LongTextAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.M != nil {

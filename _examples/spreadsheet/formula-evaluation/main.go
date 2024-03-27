@@ -33,5 +33,4 @@ func main() {
 	sheet.Cell("A4").SetFormulaRaw("SUM(A1:A3)+SUM(A1:A3)")
 	a4Value := formEv.Eval(sheet.FormulaContext(), "A4")
 	fmt.Println("A4 is", a4Value.Value())
-
 }

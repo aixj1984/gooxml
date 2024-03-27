@@ -25,8 +25,10 @@ func NewAG_Path() *AG_Path {
 
 func (m *AG_Path) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.PathAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "path"},
-			Value: fmt.Sprintf("%v", *m.PathAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "path"},
+			Value: fmt.Sprintf("%v", *m.PathAttr),
+		})
 	}
 	return nil
 }

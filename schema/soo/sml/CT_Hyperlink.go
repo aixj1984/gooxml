@@ -32,23 +32,33 @@ func NewCT_Hyperlink() *CT_Hyperlink {
 }
 
 func (m *CT_Hyperlink) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ref"},
-		Value: fmt.Sprintf("%v", m.RefAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "ref"},
+		Value: fmt.Sprintf("%v", m.RefAttr),
+	})
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	if m.LocationAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "location"},
-			Value: fmt.Sprintf("%v", *m.LocationAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "location"},
+			Value: fmt.Sprintf("%v", *m.LocationAttr),
+		})
 	}
 	if m.TooltipAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "tooltip"},
-			Value: fmt.Sprintf("%v", *m.TooltipAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "tooltip"},
+			Value: fmt.Sprintf("%v", *m.TooltipAttr),
+		})
 	}
 	if m.DisplayAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "display"},
-			Value: fmt.Sprintf("%v", *m.DisplayAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "display"},
+			Value: fmt.Sprintf("%v", *m.DisplayAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -37,12 +37,16 @@ func NewCT_FieldGroup() *CT_FieldGroup {
 
 func (m *CT_FieldGroup) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.ParAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "par"},
-			Value: fmt.Sprintf("%v", *m.ParAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "par"},
+			Value: fmt.Sprintf("%v", *m.ParAttr),
+		})
 	}
 	if m.BaseAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "base"},
-			Value: fmt.Sprintf("%v", *m.BaseAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "base"},
+			Value: fmt.Sprintf("%v", *m.BaseAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.RangePr != nil {

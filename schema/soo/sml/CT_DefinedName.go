@@ -40,63 +40,93 @@ func NewCT_DefinedName() *CT_DefinedName {
 }
 
 func (m *CT_DefinedName) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
 	if m.CommentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "comment"},
-			Value: fmt.Sprintf("%v", *m.CommentAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "comment"},
+			Value: fmt.Sprintf("%v", *m.CommentAttr),
+		})
 	}
 	if m.CustomMenuAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "customMenu"},
-			Value: fmt.Sprintf("%v", *m.CustomMenuAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "customMenu"},
+			Value: fmt.Sprintf("%v", *m.CustomMenuAttr),
+		})
 	}
 	if m.DescriptionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "description"},
-			Value: fmt.Sprintf("%v", *m.DescriptionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "description"},
+			Value: fmt.Sprintf("%v", *m.DescriptionAttr),
+		})
 	}
 	if m.HelpAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "help"},
-			Value: fmt.Sprintf("%v", *m.HelpAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "help"},
+			Value: fmt.Sprintf("%v", *m.HelpAttr),
+		})
 	}
 	if m.StatusBarAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "statusBar"},
-			Value: fmt.Sprintf("%v", *m.StatusBarAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "statusBar"},
+			Value: fmt.Sprintf("%v", *m.StatusBarAttr),
+		})
 	}
 	if m.LocalSheetIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "localSheetId"},
-			Value: fmt.Sprintf("%v", *m.LocalSheetIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "localSheetId"},
+			Value: fmt.Sprintf("%v", *m.LocalSheetIdAttr),
+		})
 	}
 	if m.HiddenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hidden"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hidden"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr)),
+		})
 	}
 	if m.FunctionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "function"},
-			Value: fmt.Sprintf("%d", b2i(*m.FunctionAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "function"},
+			Value: fmt.Sprintf("%d", b2i(*m.FunctionAttr)),
+		})
 	}
 	if m.VbProcedureAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "vbProcedure"},
-			Value: fmt.Sprintf("%d", b2i(*m.VbProcedureAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "vbProcedure"},
+			Value: fmt.Sprintf("%d", b2i(*m.VbProcedureAttr)),
+		})
 	}
 	if m.XlmAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xlm"},
-			Value: fmt.Sprintf("%d", b2i(*m.XlmAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "xlm"},
+			Value: fmt.Sprintf("%d", b2i(*m.XlmAttr)),
+		})
 	}
 	if m.FunctionGroupIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "functionGroupId"},
-			Value: fmt.Sprintf("%v", *m.FunctionGroupIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "functionGroupId"},
+			Value: fmt.Sprintf("%v", *m.FunctionGroupIdAttr),
+		})
 	}
 	if m.ShortcutKeyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "shortcutKey"},
-			Value: fmt.Sprintf("%v", *m.ShortcutKeyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "shortcutKey"},
+			Value: fmt.Sprintf("%v", *m.ShortcutKeyAttr),
+		})
 	}
 	if m.PublishToServerAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "publishToServer"},
-			Value: fmt.Sprintf("%d", b2i(*m.PublishToServerAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "publishToServer"},
+			Value: fmt.Sprintf("%d", b2i(*m.PublishToServerAttr)),
+		})
 	}
 	if m.WorkbookParameterAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "workbookParameter"},
-			Value: fmt.Sprintf("%d", b2i(*m.WorkbookParameterAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "workbookParameter"},
+			Value: fmt.Sprintf("%d", b2i(*m.WorkbookParameterAttr)),
+		})
 	}
 	e.EncodeElement(m.Content, start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

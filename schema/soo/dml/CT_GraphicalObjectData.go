@@ -27,8 +27,10 @@ func NewCT_GraphicalObjectData() *CT_GraphicalObjectData {
 }
 
 func (m *CT_GraphicalObjectData) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uri"},
-		Value: fmt.Sprintf("%v", m.UriAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "uri"},
+		Value: fmt.Sprintf("%v", m.UriAttr),
+	})
 	e.EncodeToken(start)
 	if m.Any != nil {
 		for _, c := range m.Any {

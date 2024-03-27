@@ -35,8 +35,10 @@ func NewCT_ExternalCell() *CT_ExternalCell {
 
 func (m *CT_ExternalCell) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.RAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r"},
-			Value: fmt.Sprintf("%v", *m.RAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r"},
+			Value: fmt.Sprintf("%v", *m.RAttr),
+		})
 	}
 	if m.TAttr != ST_CellTypeUnset {
 		attr, err := m.TAttr.MarshalXMLAttr(xml.Name{Local: "t"})
@@ -46,8 +48,10 @@ func (m *CT_ExternalCell) MarshalXML(e *xml.Encoder, start xml.StartElement) err
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.VmAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "vm"},
-			Value: fmt.Sprintf("%v", *m.VmAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "vm"},
+			Value: fmt.Sprintf("%v", *m.VmAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.V != nil {

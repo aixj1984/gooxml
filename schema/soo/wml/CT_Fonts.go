@@ -49,20 +49,28 @@ func (m *CT_Fonts) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.AsciiAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:ascii"},
-			Value: fmt.Sprintf("%v", *m.AsciiAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:ascii"},
+			Value: fmt.Sprintf("%v", *m.AsciiAttr),
+		})
 	}
 	if m.HAnsiAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:hAnsi"},
-			Value: fmt.Sprintf("%v", *m.HAnsiAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:hAnsi"},
+			Value: fmt.Sprintf("%v", *m.HAnsiAttr),
+		})
 	}
 	if m.EastAsiaAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:eastAsia"},
-			Value: fmt.Sprintf("%v", *m.EastAsiaAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:eastAsia"},
+			Value: fmt.Sprintf("%v", *m.EastAsiaAttr),
+		})
 	}
 	if m.CsAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:cs"},
-			Value: fmt.Sprintf("%v", *m.CsAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:cs"},
+			Value: fmt.Sprintf("%v", *m.CsAttr),
+		})
 	}
 	if m.AsciiThemeAttr != ST_ThemeUnset {
 		attr, err := m.AsciiThemeAttr.MarshalXMLAttr(xml.Name{Local: "w:asciiTheme"})

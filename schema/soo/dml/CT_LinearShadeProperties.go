@@ -27,12 +27,16 @@ func NewCT_LinearShadeProperties() *CT_LinearShadeProperties {
 
 func (m *CT_LinearShadeProperties) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.AngAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ang"},
-			Value: fmt.Sprintf("%v", *m.AngAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ang"},
+			Value: fmt.Sprintf("%v", *m.AngAttr),
+		})
 	}
 	if m.ScaledAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "scaled"},
-			Value: fmt.Sprintf("%d", b2i(*m.ScaledAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "scaled"},
+			Value: fmt.Sprintf("%d", b2i(*m.ScaledAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

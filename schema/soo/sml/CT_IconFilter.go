@@ -35,8 +35,10 @@ func (m *CT_IconFilter) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 	}
 	start.Attr = append(start.Attr, attr)
 	if m.IconIdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "iconId"},
-			Value: fmt.Sprintf("%v", *m.IconIdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "iconId"},
+			Value: fmt.Sprintf("%v", *m.IconIdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -42,29 +42,43 @@ func NewCT_CalculatedMember() *CT_CalculatedMember {
 }
 
 func (m *CT_CalculatedMember) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-		Value: fmt.Sprintf("%v", m.NameAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "mdx"},
-		Value: fmt.Sprintf("%v", m.MdxAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "name"},
+		Value: fmt.Sprintf("%v", m.NameAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "mdx"},
+		Value: fmt.Sprintf("%v", m.MdxAttr),
+	})
 	if m.MemberNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "memberName"},
-			Value: fmt.Sprintf("%v", *m.MemberNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "memberName"},
+			Value: fmt.Sprintf("%v", *m.MemberNameAttr),
+		})
 	}
 	if m.HierarchyAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hierarchy"},
-			Value: fmt.Sprintf("%v", *m.HierarchyAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hierarchy"},
+			Value: fmt.Sprintf("%v", *m.HierarchyAttr),
+		})
 	}
 	if m.ParentAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "parent"},
-			Value: fmt.Sprintf("%v", *m.ParentAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "parent"},
+			Value: fmt.Sprintf("%v", *m.ParentAttr),
+		})
 	}
 	if m.SolveOrderAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "solveOrder"},
-			Value: fmt.Sprintf("%v", *m.SolveOrderAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "solveOrder"},
+			Value: fmt.Sprintf("%v", *m.SolveOrderAttr),
+		})
 	}
 	if m.SetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "set"},
-			Value: fmt.Sprintf("%d", b2i(*m.SetAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "set"},
+			Value: fmt.Sprintf("%d", b2i(*m.SetAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.ExtLst != nil {

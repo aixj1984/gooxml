@@ -87,7 +87,6 @@ func TestRelationshipsCreationUnordered(t *testing.T) {
 	if rel.ID() != exp {
 		t.Errorf("expected %s, got %s", exp, rel.ID())
 	}
-
 }
 
 func TestRelationshipsRemoval(t *testing.T) {

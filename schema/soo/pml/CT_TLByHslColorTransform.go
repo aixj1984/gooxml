@@ -32,12 +32,18 @@ func NewCT_TLByHslColorTransform() *CT_TLByHslColorTransform {
 }
 
 func (m *CT_TLByHslColorTransform) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "h"},
-		Value: fmt.Sprintf("%v", m.HAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "s"},
-		Value: fmt.Sprintf("%v", m.SAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "l"},
-		Value: fmt.Sprintf("%v", m.LAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "h"},
+		Value: fmt.Sprintf("%v", m.HAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "s"},
+		Value: fmt.Sprintf("%v", m.SAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "l"},
+		Value: fmt.Sprintf("%v", m.LAttr),
+	})
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil

@@ -49,12 +49,18 @@ func NewCT_RevisionComment() *CT_RevisionComment {
 }
 
 func (m *CT_RevisionComment) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sheetId"},
-		Value: fmt.Sprintf("%v", m.SheetIdAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "cell"},
-		Value: fmt.Sprintf("%v", m.CellAttr)})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "guid"},
-		Value: fmt.Sprintf("%v", m.GuidAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "sheetId"},
+		Value: fmt.Sprintf("%v", m.SheetIdAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "cell"},
+		Value: fmt.Sprintf("%v", m.CellAttr),
+	})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "guid"},
+		Value: fmt.Sprintf("%v", m.GuidAttr),
+	})
 	if m.ActionAttr != ST_RevisionActionUnset {
 		attr, err := m.ActionAttr.MarshalXMLAttr(xml.Name{Local: "action"})
 		if err != nil {
@@ -63,30 +69,44 @@ func (m *CT_RevisionComment) MarshalXML(e *xml.Encoder, start xml.StartElement) 
 		start.Attr = append(start.Attr, attr)
 	}
 	if m.AlwaysShowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "alwaysShow"},
-			Value: fmt.Sprintf("%d", b2i(*m.AlwaysShowAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "alwaysShow"},
+			Value: fmt.Sprintf("%d", b2i(*m.AlwaysShowAttr)),
+		})
 	}
 	if m.OldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "old"},
-			Value: fmt.Sprintf("%d", b2i(*m.OldAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "old"},
+			Value: fmt.Sprintf("%d", b2i(*m.OldAttr)),
+		})
 	}
 	if m.HiddenRowAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hiddenRow"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenRowAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hiddenRow"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenRowAttr)),
+		})
 	}
 	if m.HiddenColumnAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hiddenColumn"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenColumnAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hiddenColumn"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenColumnAttr)),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "author"},
-		Value: fmt.Sprintf("%v", m.AuthorAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "author"},
+		Value: fmt.Sprintf("%v", m.AuthorAttr),
+	})
 	if m.OldLengthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oldLength"},
-			Value: fmt.Sprintf("%v", *m.OldLengthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oldLength"},
+			Value: fmt.Sprintf("%v", *m.OldLengthAttr),
+		})
 	}
 	if m.NewLengthAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "newLength"},
-			Value: fmt.Sprintf("%v", *m.NewLengthAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "newLength"},
+			Value: fmt.Sprintf("%v", *m.NewLengthAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

@@ -76,89 +76,133 @@ func NewCT_CacheHierarchy() *CT_CacheHierarchy {
 }
 
 func (m *CT_CacheHierarchy) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "uniqueName"},
-		Value: fmt.Sprintf("%v", m.UniqueNameAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "uniqueName"},
+		Value: fmt.Sprintf("%v", m.UniqueNameAttr),
+	})
 	if m.CaptionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "caption"},
-			Value: fmt.Sprintf("%v", *m.CaptionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "caption"},
+			Value: fmt.Sprintf("%v", *m.CaptionAttr),
+		})
 	}
 	if m.MeasureAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "measure"},
-			Value: fmt.Sprintf("%d", b2i(*m.MeasureAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "measure"},
+			Value: fmt.Sprintf("%d", b2i(*m.MeasureAttr)),
+		})
 	}
 	if m.SetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "set"},
-			Value: fmt.Sprintf("%d", b2i(*m.SetAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "set"},
+			Value: fmt.Sprintf("%d", b2i(*m.SetAttr)),
+		})
 	}
 	if m.ParentSetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "parentSet"},
-			Value: fmt.Sprintf("%v", *m.ParentSetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "parentSet"},
+			Value: fmt.Sprintf("%v", *m.ParentSetAttr),
+		})
 	}
 	if m.IconSetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "iconSet"},
-			Value: fmt.Sprintf("%v", *m.IconSetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "iconSet"},
+			Value: fmt.Sprintf("%v", *m.IconSetAttr),
+		})
 	}
 	if m.AttributeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "attribute"},
-			Value: fmt.Sprintf("%d", b2i(*m.AttributeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "attribute"},
+			Value: fmt.Sprintf("%d", b2i(*m.AttributeAttr)),
+		})
 	}
 	if m.TimeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "time"},
-			Value: fmt.Sprintf("%d", b2i(*m.TimeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "time"},
+			Value: fmt.Sprintf("%d", b2i(*m.TimeAttr)),
+		})
 	}
 	if m.KeyAttributeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "keyAttribute"},
-			Value: fmt.Sprintf("%d", b2i(*m.KeyAttributeAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "keyAttribute"},
+			Value: fmt.Sprintf("%d", b2i(*m.KeyAttributeAttr)),
+		})
 	}
 	if m.DefaultMemberUniqueNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "defaultMemberUniqueName"},
-			Value: fmt.Sprintf("%v", *m.DefaultMemberUniqueNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "defaultMemberUniqueName"},
+			Value: fmt.Sprintf("%v", *m.DefaultMemberUniqueNameAttr),
+		})
 	}
 	if m.AllUniqueNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "allUniqueName"},
-			Value: fmt.Sprintf("%v", *m.AllUniqueNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "allUniqueName"},
+			Value: fmt.Sprintf("%v", *m.AllUniqueNameAttr),
+		})
 	}
 	if m.AllCaptionAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "allCaption"},
-			Value: fmt.Sprintf("%v", *m.AllCaptionAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "allCaption"},
+			Value: fmt.Sprintf("%v", *m.AllCaptionAttr),
+		})
 	}
 	if m.DimensionUniqueNameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "dimensionUniqueName"},
-			Value: fmt.Sprintf("%v", *m.DimensionUniqueNameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "dimensionUniqueName"},
+			Value: fmt.Sprintf("%v", *m.DimensionUniqueNameAttr),
+		})
 	}
 	if m.DisplayFolderAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "displayFolder"},
-			Value: fmt.Sprintf("%v", *m.DisplayFolderAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "displayFolder"},
+			Value: fmt.Sprintf("%v", *m.DisplayFolderAttr),
+		})
 	}
 	if m.MeasureGroupAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "measureGroup"},
-			Value: fmt.Sprintf("%v", *m.MeasureGroupAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "measureGroup"},
+			Value: fmt.Sprintf("%v", *m.MeasureGroupAttr),
+		})
 	}
 	if m.MeasuresAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "measures"},
-			Value: fmt.Sprintf("%d", b2i(*m.MeasuresAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "measures"},
+			Value: fmt.Sprintf("%d", b2i(*m.MeasuresAttr)),
+		})
 	}
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "count"},
-		Value: fmt.Sprintf("%v", m.CountAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "count"},
+		Value: fmt.Sprintf("%v", m.CountAttr),
+	})
 	if m.OneFieldAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "oneField"},
-			Value: fmt.Sprintf("%d", b2i(*m.OneFieldAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "oneField"},
+			Value: fmt.Sprintf("%d", b2i(*m.OneFieldAttr)),
+		})
 	}
 	if m.MemberValueDatatypeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "memberValueDatatype"},
-			Value: fmt.Sprintf("%v", *m.MemberValueDatatypeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "memberValueDatatype"},
+			Value: fmt.Sprintf("%v", *m.MemberValueDatatypeAttr),
+		})
 	}
 	if m.UnbalancedAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "unbalanced"},
-			Value: fmt.Sprintf("%d", b2i(*m.UnbalancedAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "unbalanced"},
+			Value: fmt.Sprintf("%d", b2i(*m.UnbalancedAttr)),
+		})
 	}
 	if m.UnbalancedGroupAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "unbalancedGroup"},
-			Value: fmt.Sprintf("%d", b2i(*m.UnbalancedGroupAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "unbalancedGroup"},
+			Value: fmt.Sprintf("%d", b2i(*m.UnbalancedGroupAttr)),
+		})
 	}
 	if m.HiddenAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "hidden"},
-			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "hidden"},
+			Value: fmt.Sprintf("%d", b2i(*m.HiddenAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	if m.FieldsUsage != nil {

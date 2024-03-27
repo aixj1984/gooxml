@@ -31,8 +31,10 @@ func NewCT_MapInfo() *CT_MapInfo {
 }
 
 func (m *CT_MapInfo) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "SelectionNamespaces"},
-		Value: fmt.Sprintf("%v", m.SelectionNamespacesAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "SelectionNamespaces"},
+		Value: fmt.Sprintf("%v", m.SelectionNamespacesAttr),
+	})
 	e.EncodeToken(start)
 	seSchema := xml.StartElement{Name: xml.Name{Local: "ma:Schema"}}
 	for _, c := range m.Schema {

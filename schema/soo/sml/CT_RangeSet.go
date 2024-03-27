@@ -40,36 +40,52 @@ func NewCT_RangeSet() *CT_RangeSet {
 
 func (m *CT_RangeSet) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.I1Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "i1"},
-			Value: fmt.Sprintf("%v", *m.I1Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "i1"},
+			Value: fmt.Sprintf("%v", *m.I1Attr),
+		})
 	}
 	if m.I2Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "i2"},
-			Value: fmt.Sprintf("%v", *m.I2Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "i2"},
+			Value: fmt.Sprintf("%v", *m.I2Attr),
+		})
 	}
 	if m.I3Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "i3"},
-			Value: fmt.Sprintf("%v", *m.I3Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "i3"},
+			Value: fmt.Sprintf("%v", *m.I3Attr),
+		})
 	}
 	if m.I4Attr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "i4"},
-			Value: fmt.Sprintf("%v", *m.I4Attr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "i4"},
+			Value: fmt.Sprintf("%v", *m.I4Attr),
+		})
 	}
 	if m.RefAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "ref"},
-			Value: fmt.Sprintf("%v", *m.RefAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "ref"},
+			Value: fmt.Sprintf("%v", *m.RefAttr),
+		})
 	}
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.SheetAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "sheet"},
-			Value: fmt.Sprintf("%v", *m.SheetAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "sheet"},
+			Value: fmt.Sprintf("%v", *m.SheetAttr),
+		})
 	}
 	if m.IdAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "r:id"},
-			Value: fmt.Sprintf("%v", *m.IdAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "r:id"},
+			Value: fmt.Sprintf("%v", *m.IdAttr),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})

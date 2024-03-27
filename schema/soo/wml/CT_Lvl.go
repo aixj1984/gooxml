@@ -57,15 +57,21 @@ func NewCT_Lvl() *CT_Lvl {
 }
 
 func (m *CT_Lvl) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:ilvl"},
-		Value: fmt.Sprintf("%v", m.IlvlAttr)})
+	start.Attr = append(start.Attr, xml.Attr{
+		Name:  xml.Name{Local: "w:ilvl"},
+		Value: fmt.Sprintf("%v", m.IlvlAttr),
+	})
 	if m.TplcAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:tplc"},
-			Value: fmt.Sprintf("%v", *m.TplcAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:tplc"},
+			Value: fmt.Sprintf("%v", *m.TplcAttr),
+		})
 	}
 	if m.TentativeAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "w:tentative"},
-			Value: fmt.Sprintf("%v", *m.TentativeAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "w:tentative"},
+			Value: fmt.Sprintf("%v", *m.TentativeAttr),
+		})
 	}
 	e.EncodeToken(start)
 	if m.Start != nil {

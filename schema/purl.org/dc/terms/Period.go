@@ -14,8 +14,7 @@ import (
 	"fmt"
 )
 
-type Period struct {
-}
+type Period struct{}
 
 func NewPeriod() *Period {
 	ret := &Period{}

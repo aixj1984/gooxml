@@ -35,24 +35,34 @@ func NewCT_TableStyleInfo() *CT_TableStyleInfo {
 
 func (m *CT_TableStyleInfo) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.NameAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "name"},
-			Value: fmt.Sprintf("%v", *m.NameAttr)})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "name"},
+			Value: fmt.Sprintf("%v", *m.NameAttr),
+		})
 	}
 	if m.ShowFirstColumnAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showFirstColumn"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowFirstColumnAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showFirstColumn"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowFirstColumnAttr)),
+		})
 	}
 	if m.ShowLastColumnAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showLastColumn"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowLastColumnAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showLastColumn"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowLastColumnAttr)),
+		})
 	}
 	if m.ShowRowStripesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showRowStripes"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowRowStripesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showRowStripes"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowRowStripesAttr)),
+		})
 	}
 	if m.ShowColumnStripesAttr != nil {
-		start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "showColumnStripes"},
-			Value: fmt.Sprintf("%d", b2i(*m.ShowColumnStripesAttr))})
+		start.Attr = append(start.Attr, xml.Attr{
+			Name:  xml.Name{Local: "showColumnStripes"},
+			Value: fmt.Sprintf("%d", b2i(*m.ShowColumnStripesAttr)),
+		})
 	}
 	e.EncodeToken(start)
 	e.EncodeToken(xml.EndElement{Name: start.Name})
